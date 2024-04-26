@@ -1,0 +1,13 @@
+= SEMIC Core Vocabularies Handbook
+:description: SEMIC Core Vocabularies Handbook
+:sectanchors:
+:url-repo: https://github.com/SEMICeu/core-vocs-handbook
+
+
+Abstract to be provided here answering the questions:
+
+* what is this ?
+
+* how shall first time readers read it  ?
+
+* how shall second time readers read it ?

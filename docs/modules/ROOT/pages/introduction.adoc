@@ -1,0 +1,85 @@
+== Introduction
+
+[[sec:what-is-interoperability]]
+=== What is interoperability?
+Interoperability in the EU context refers to the capacity of systems or organisations, including public administrations,
+businesses, and citizens, to collaborate effectively and pursue common objectives across borders. This capability is crucial
+for providing efficient digital public services, facilitating economic transactions, and supporting the free movement of goods,
+services, people, and data. The European Interoperability Framework (EIF) [[ref:1]], [[ref:2]] and Interoperable Europe Act
+(IEA) [[ref:3]] emphasise that interoperability involves the seamless exchange of information and trusted data sharing across
+sectors and administrative layers, which is essential for improving policy-making and public service delivery.
+
+The term itself combines ‘inter’ (Latin for between), ‘opera’ (Latin for work), and ‘ability’, suggesting the intrinsic nature
+of systems or entities working together to achieve shared goals. Solutions in interoperability are akin to toy bricks that can
+be exchanged, reused, and connected regardless of their differences in form or function.
+
+[[sec:the-need-for-semantic-interoperability]]
+=== The need for semantic interoperability
+
+Semantic interoperability is essential to mitigate the inefficiencies that undermine public services across Europe, characterised
+by the unnecessary repetition of information requests to citizens and businesses. In the complex environment of EU data exchange,
+the lack of a unified interoperability framework and standard data specifications leads to significant challenges. Governments
+at various levels, from local to European, face difficulties in accessing and sharing crucial data, resulting in costly and
+time-consuming administrative processes. This inefficacy is worsened by reliance on outdated methods such as exchanging PDF
+documents for verification, instead of leveraging modern, fully automated digital systems that could simplify and accelerate
+these processes.
+
+Furthermore, the absence of semantic interoperability severely limits the capacity of public administrations to introduce and
+integrate digital solutions effectively across different sectors and geographical areas. This limitation often manifests early
+in the policy-making process, leading to legislation that is costly, complex to implement, and potentially unable to achieve
+its goals. Such scenarios not only stifle innovation within public administrations but also impede their ability to respond
+swiftly in crisis situations. The root of these interoperability conflicts often lies in the discrepancies in interpreting
+administrative procedures and legislation, the lack of widely accepted data models, and the absence of universal reference
+data, underscoring the critical need for standardised data practices that ensure clear, consistent, and expedient information
+exchange and decision-making at all governmental levels.
+
+[[sec:interoperability-through-semantic-specifications]]
+=== Interoperability through semantic specifications
+The EIF [[ref:1]], [[ref:2]] identifies four crucial layers of interoperability necessary for effective data exchange across the
+EU: Legal, Organisational, Semantic, and Technical. The Semantic and Technical layers, in particular, play pivotal roles in ensuring
+that data is not only exchanged efficiently but also understood consistently by all parties involved.
+
+Semantic interoperability, as defined by EIF, involves ensuring that the precise meaning of exchanged data is maintained throughout
+its transmission, adhering to the principle that "what is sent is what is understood." This layer encompasses both the semantic
+and syntactic aspects of data. The semantic aspect focuses on the meaning of data elements and their relationships, whereas
+the syntactic aspect deals with the structure or format of the data as it is exchanged. On the other hand, technical interoperability
+covers the infrastructures and applications that facilitate the linkage between systems and services. This includes aspects
+such as data representation, transmission methods, API design, access rights management, security, and overall system performance.
+
+To address these aspects, semantic data specifications come into play. These are detailed, standardised data modelling descriptions
+that help manage how data is defined, represented, and communicated across different systems. They comprise various artefacts
+that are both machine-readable and human-understandable, thus supporting consistent interpretation and utilisation across
+diverse IT environments and stakeholders (e.g. developers, business experts, end users, administrators, etc.).
+
+The SEMIC Style Guide [[ref:4]] serves as an important resource in this context, providing essential guidelines on creating
+and managing  such specifications. It covers naming conventions, syntax, and the organisation of artefacts within two critical
+types of semantic data specifications: Core Vocabularies and Application Profiles.
+
+Core Vocabulary semantic data specifications are instrumental for the semantic interoperability layer. They enable public
+administrations to standardise data exchange processes, thus enhancing the clarity and consistency of data across different
+systems and sectors. By leveraging these standards, administrations can effectively bridge the gap between differing data
+practices, ensuring seamless service delivery that meets the needs of citizens and businesses alike.
+What are the Core Vocabularies?
+
+In the vision document “e-Government Core Vocabularies” [EC11], Core Vocabularies are defined as simplified, reusable and
+extensible data models that capture the fundamental characteristics of a data entity in a context-neutral and syntax-neutral
+fashion. SEMIC style guide provides a terminological clarification about the Core Vocabularies [[ref:6]] and elaborates that they
+are context-neutral semantic building blocks, like the Dublin Core Terms [[ref:7]] or the Organization Ontology [[ref:8]], that can
+be extended into context-specific semantic data specifications. The use of the Core Vocabularies as a common building block
+for developing context-specific data models guarantees a minimum of semantic consistency. When the Core Vocabularies are extended
+to create domain specifications and information exchange models, additional meaning (semantics) is added to the specifications,
+due to the contextualisation.
+
+[[sec:scope]]
+=== Scope
+This handbook describes approaches for: +
+    (i) re-using Core Vocabularies in creating new semantic data specifications or stand-alone data models, and +
+    (ii) mapping existent data models to the Core Vocabularies.
+
+The following aspects are NOT included in this handbook:
+
+* a complete methodology for syntax binding and toolset for creating data model specifications, as the Core Vocabularies intend
+to remain syntax neutral.
+
+* specific methodology recommendations, data model library, or tools. Such choices are heavily dependent on the domain and
+the task at hand.
