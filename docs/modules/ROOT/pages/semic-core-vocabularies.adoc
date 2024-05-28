@@ -1,0 +1,114 @@
+== SEMIC Core Vocabularies
+
+This section contains a brief overview of the Core Vocabularies, indicating how they were developed and how they are maintained.
+
+Since 2011 the European Commission facilitates international working groups to forge consensus and maintain the SEMIC Core Vocabularies.
+A short description of these vocabularies is included in the Table [below]. The latest release of the Core Vocabularies can be
+retrieved via the SEMIC Support Center[[ref:9]], or directly in the GitHub repository[[ref:10]].
+
+|===
+|Vocabulary|Description
+
+||The Core Person Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics
+of a person, e.g. the name, the gender, the date of birth, the location etc.
+
+This specification enables interoperability among registers and any other ICT based solutions exchanging and processing
+person-related information.
+
+||The Core Business Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics
+of a legal entity, e.g. the legal name, the activity, address, etc.
+
+The Core Business Vocabulary includes a minimal number of classes and properties modelled to capture the typical details
+recorded by business registers. It facilitates information exchange between business registers despite differences in what
+they record and publish.
+
+||The Core Location Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics
+of a location, represented as an address, a geographic name, or a geometry.
+
+The Location Core Vocabulary provides a minimum set of classes and properties for describing a location represented as an
+address, a geographic name, or a geometry. This specification enables interoperability among land registers and any other
+ICT based solution exchanging and processing location information.
+
+|
+a|The Core Criterion and Core Evidence Vocabulary (CCCEV) supports the exchange of information between organisations that
+define criteria and organisations that respond to these criteria by means of evidences.
+
+The Core Evidence and Core Criterion Vocabulary (CCCEV) addresses specific needs of businesses, public administrations and
+citizens across the European Union, including the following use cases:
+
+* *Facilitate development of interoperable information systems:* the use of common vocabularies to describe criteria and evidence
+facilitates the development of information systems and improves their interoperability.
+* *Create a repository of reusable criteria in machine-readable formats:* the use of common vocabularies promotes the creation
+of a repository of criteria and evidence information.
+* *Automate the assessment of criteria:* the Core Vocabulary describing the criterion responses allows systems to easily compare
+the information collected from different parties and enables automatic assessment of the responses for a specific criterion.
+* *Automate scoring of responses:* weighting criteria, the assessment can be followed by an automate scoring of the responses
+provided by different parties.
+* *Promote cross-border participation in public procurement:* the use of the Core Vocabulary for electronic criterion and evidence
+allows for removing language barriers thereby improving the cross border exchange of information, and the cross-border participation
+in pan-European selection processes.
+* *Calculating statistics:* standardising data for criterion, criterion responses and evidences allows calculating statistical
+information on the most common used criteria for a given process, the most relevant evidences, etc.
+* *Create a registry of mappings of criteria:* using the Core Vocabulary, it is possible to create a registry of mappings to
+allow cross-checking of the criteria with the evidences of each particular Member State.
+
+|
+a|The Core Public Organisation Vocabulary provides a common data model for describing public organisations in the European Union.
+
+The Core Public Organisation Vocabulary (CPOV) addresses specific needs of businesses, public administrations and citizens across the European Union, including the following use cases:
+
+* *Facilitate information sharing:* the CPOV enables G2G (Government-to-Government), G2B (Government-to-Business) and G2C
+(Government-to-Citizen) information sharing.
+* *Facilitate the development of common information systems:* the use of existing data models for the development of common
+information systems facilitates the development of those systems and improves their interoperability.
+* *Linked Open Organograms:* the Core Public Organisation Vocabulary has the potential to link organograms to each other
+and to high-value data sets.
+* *Cross border information exchange:* the CPOV allows to manage a cross-border repository of public services and organisations.
+* *Find a PO by its function:* the public organisation portfolio facilitates discovery of which public authorities and departments
+are responsible for given areas of the public task.
+* *Increase efficiency:* the CPOV helps to identify where responsibilities and functions are duplicated or overlap.
+
+||The Core Public Event Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics
+of a public event, e.g. the title, the date, the location, the organiser etc.
+
+The Core Public Event Vocabulary aspires to become a common data model for describing public events (conferences, summits, etc.)
+in the European Union. This specification enables interoperability among registers and any other ICT based solutions exchanging
+and processing information related to public events.
+
+|===
+
+[[sec:representation-formats]]
+=== Representation formats
+The Core Vocabularies are semantic data specifications that are disseminated as the following artefacts:
+
+* lightweight ontology [[ref:11]] for vocabulary definition expressed in OWL[[ref:12]],
+* loose data shape specification [[ref:13]] expressed in SHACL[[ref:14]],
+* human-readable reference documentation [[ref:15]] in HTML (based on ReSpec[[ref:16]]),
+* JSON-LD [[ref:17]] context definitions[[ref:18]],
+* conceptual model specification [[ref:19]] expressed in UML[[ref20]].
+
+[[sec:licensing-conditions]]
+=== Licensing conditions
+The Core Vocabularies are published under the CC-BY 4.0 licence [[ref:21]].
+
+[[sec:core-vocabularies-lifecycle]]
+=== Core Vocabularies lifecycle
+The Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [[ref:22]].
+The Core Vocabularies have an open change and release management process [[ref:23]], supported by SEMIC, that ensures continuous
+improvement and relevance to evolving user needs.
+
+This process begins with the identification of needs from stakeholders or issues raised in existing implementations. The Working Group
+members, SEMIC team or community of users propose changes that are thoroughly assessed for their impact and feasibility.
+Once a change is deemed necessary, it undergoes a drafting phase where the technical details are fleshed out, followed by
+public consultations to gather wider input and ensure transparency.
+
+Following consultations, the changes are refined and prepared for implementation. This stage may involve further iteration
+based on feedback or additional insights from ongoing discussions. The finalised changes are then formally approved and documented,
+ensuring they are well-understood and agreed upon by all relevant parties.
+
+The release management of Core Vocabularies follows a structured timeline that includes pre-announced releases and public
+consultation periods to allow users to prepare for changes. Each release includes detailed documentation to support implementation,
+ensuring users can integrate new versions with minimal disruption. This process not only maintains the quality and relevance
+of the Core Vocabularies, but also supports a dynamic and responsive framework for semantic interoperability within digital
+public services.
+

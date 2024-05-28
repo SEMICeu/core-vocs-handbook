@@ -8,6 +8,22 @@
 . [[ref:6]] The SEMIC Style Guide for Semantic Engineers: What is a Core Vocabulary (CV) specification?. Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification
 . [[ref:7]] DCMI Metadata Terms. Available at: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-1
 . [[ref:8]] The Organization Ontology. Available at: https://www.w3.org/TR/vocab-org/
+. [[ref:9]] SEMIC Support Center. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/specifications
+. [[ref:10]] Semantic Interoperability Community GitHub repository. Available at: https://github.com/SEMICeu
+. [[ref:11]] The SEMIC Style Guide for Semantic Engineers: What is an ontology? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-an-ontology
+. [[ref:12]] Motik, B., Patel-Schneider, P. F., Parsia, B., Bock, C., Fokoue, A., Haase, P., …​ & Smith, M. (2009). OWL 2 web ontology language: Structural specification and functional-style syntax. W3C recommendation, 27(65), 159. Available at: http://www.w3.org/TR/2012/REC-owl2-syntax-20121211/
+. [[ref:13]] The SEMIC Style Guide for Semantic Engineers: What is a data shape specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-data-shape-contraint
+. [[ref:14]] Knublauch, H., & Kontokostas, D. (2017). Shapes Constraint Language (SHACL), W3C Recommendation. World Wide Web Consortium. Available at: https://www.w3.org/TR/shacl/
+. [[ref:15]] The SEMIC Style Guide for Semantic Engineers: What is a data specification document? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
+. [[ref:16]] ReSpec Documentation. Available at: https://respec.org/docs/
+. [[ref:17]] Sporny, M., Longley, D., Kellogg, G., Lanthaler, M., & Lindström, N. (2020). JSON-LD 1.1. W3C Recommendation, Jul.
+. [[ref:18]] The SEMIC Style Guide for Semantic Engineers: Technical artefacts and concerns. Available at: https://semiceu.github.io/style-guide/1.0.0/arhitectural-clarifications.html#sec:technical-concerns-and-artefacts
+. [[ref:19]] The SEMIC Style Guide for Semantic Engineers: What is a conceptual model? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model
+. [[ref:20]] Unified Modeling Language. Available at: https://www.omg.org/spec/UML
+. [[ref:21]] CC-BY 4.0 licence. Available at: https://creativecommons.org/licenses/by/4.0/
+. [[ref:22]] EC11a
+. [[ref:23]] D3.1 – PROCESS AND METHODOLOGY FOR CORE VOCABULARIES. Available at: https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf
+. [[ref:24]]
 
-. [[ref:9]] Barthelemy, F. et al. (2022) Core Person Vocabulary, Core person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
-. [[ref:10]] Barthelemy, F. et al. (2022) Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://semiceu.github.io/CPSV-AP/releases/3.1.0
+. [[ref:99]] Barthelemy, F. et al. (2022) Core Person Vocabulary, Core person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
+. [[ref:100]] Barthelemy, F. et al. (2022) Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://semiceu.github.io/CPSV-AP/releases/3.1.0
