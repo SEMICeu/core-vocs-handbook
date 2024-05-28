@@ -23,7 +23,7 @@
 . [[ref:21]] CC-BY 4.0 licence. Available at: https://creativecommons.org/licenses/by/4.0/
 . [[ref:22]] EC11a
 . [[ref:23]] D3.1 – PROCESS AND METHODOLOGY FOR CORE VOCABULARIES. Available at: https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf
-. [[ref:24]]
+. [[ref:24]] The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html
 
 . [[ref:99]] Barthelemy, F. et al. (2022) Core Person Vocabulary, Core person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
 . [[ref:100]] Barthelemy, F. et al. (2022) Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://semiceu.github.io/CPSV-AP/releases/3.1.0
