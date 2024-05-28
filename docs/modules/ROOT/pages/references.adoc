@@ -26,3 +26,6 @@
 . [[ref:24]] The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html
 . [[ref:25]] Swagger OpenAPI Guide: Components Section. Available at: https://swagger.io/docs/specification/components/
 . [[ref:26]] The SEMIC Style Guide for Semantic Engineers: What is a semantic data specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
+. [[ref:27]] Diataxis. Available at: https://diataxis.fr/
+. [[ref:28]] Barthelemy, F. et al. Core Person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
+. [[ref:29]] Barthelemy, F. et al. Core Business Vocabulary. Available at: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/
