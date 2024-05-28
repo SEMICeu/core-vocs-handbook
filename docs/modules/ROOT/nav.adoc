@@ -1,5 +1,6 @@
 * xref:introduction.adoc[Introduction]
-* xref:[Terminological clarifications]
+* xref:semic-core-vocabularies.adoc[SEMIC Core Vocabularies]
+* xref:conceptual-framework.adoc[Conceptual framework]
 
 * Back matter
 ** xref:references.adoc[References]
