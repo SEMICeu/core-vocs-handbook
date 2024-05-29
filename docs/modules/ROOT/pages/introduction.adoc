@@ -76,7 +76,7 @@ due to the contextualisation.
 This handbook describes approaches for:
 
 * re-using Core Vocabularies in creating new semantic data specifications or stand-alone data models, and +
-* mapping existent data models to the Core Vocabularies.
+* mapping existing data models to the Core Vocabularies.
 
 The following aspects are NOT included in this handbook:
 
