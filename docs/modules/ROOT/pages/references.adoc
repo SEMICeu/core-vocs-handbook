@@ -29,3 +29,4 @@
 . [[ref:27]] Diataxis. Available at: https://diataxis.fr/
 . [[ref:28]] Barthelemy, F. et al. Core Person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
 . [[ref:29]] Barthelemy, F. et al. Core Business Vocabulary. Available at: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/
+. [[ref:30]] According to the classification of A. Cockburn in “Writing Effective Use Cases” Cockburn99, pg 14-15
