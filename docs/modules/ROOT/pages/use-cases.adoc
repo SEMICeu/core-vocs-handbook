@@ -138,62 +138,130 @@ _Example:_ Mapping Core Person to Schema.org [https://github.com/SEMICeu/Semanti
 |*Note:* A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.rebab4rmrvo9[Formal ontology mapping to Core Vocabularies Under review] section.
 |===
 
-*Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary* +
-_Goal:_ Define the data transformation rules for the mapping of an XSD schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation. +
-_Primary Actors:_ Semantic Engineer +
-_Actors:_ Domain Expert, Business Analyst, Software Engineer +
-_Description:_ The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
-Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.  +
-_Example: _ISA2core SAWSDL mapping [https://tietomallit.suomi.fi/model/isa2core/[ref]] +
-_Note:_ A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.326bv3hou3s[XSD schema mapping In progress] section.
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Define the data transformation rules for the mapping of an XSD schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+
+|*Primary Actors:* Semantic Engineer
+
+|*Actors:* Domain Expert, Business Analyst, Software Engineer
+
+|*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
+Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+
+|*Example:* ISA2core SAWSDL mapping [https://tietomallit.suomi.fi/model/isa2core/[ref]] +
+|*Note:* A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.326bv3hou3s[XSD schema mapping In progress] section.
+|===
 
 [[sec:unaddressed-use-cases]]
 === Unaddressed use cases
 
-*Use Case UC3: Create a new Semantic data specification* +
-_Goal:_ Create a new semantic data specification that reuses terms from Core Vocabularies. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.  +
-_Example:_ The https://github.com/OP-TED/ePO[eProcurement Ontology] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies. +
-_Note:_ Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3: Create a new Semantic data specification*
 
-*Use Case UC3.1: Create a new Core Vocabulary* +
-_Goal:_ Create a new Core Vocabulary that reuses terms from other Core Vocabularies. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.  +
-_Example:_ The https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organization Vocabulary (CPOV)]. +
-_Note:_ Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new semantic data specification that reuses terms from Core Vocabularies.
 
-*Use Case UC3.2: Create a new Application Profile* +
-_Goal:_ Create a new Application Profile that reuses terms from other Core Vocabularies and specifies how they should be used. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.  +
-_Example:_ The https://github.com/SEMICeu/CPSV-AP[Core Public Service Vocabulary Application Profile (CPSV-AP)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)]. +
-_Note:_ Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Primary Actor:* Semantic Engineer
 
-*Use Case UC4: Create a new data model* +
-_Goal:_ Create a new standalone data model artefact that reuses terms from Core Vocabularies. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a new data model artefact that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. Such an artefact can be of different nature both according to their interoperability layer (ranging from vocabulary and ontology, to data shape and data schema) and also according to their abstraction level (ranging from upper layer, through domain layer to application layer). +
-_Note:_ Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.4f9xc2v8rnsa[Addressed use cases] section.
+*Description:* The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.
 
-*Use Case UC4.1: Create a new ontology* +
-_Goal:_ Create a new standalone ontology that reuses terms from Core Vocabularies. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. +
-_Example:_ The https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eprocurement-ontology[eProcurement Ontology (ePO)] is built reusing terms from multiple CVs, including the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)]https://github.com/SEMICeu/Core-Location-Vocabulary[, ] https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)] and https://github.com/SEMICeu/CCCEV[Core Criterion and Core Evidence Vocabulary (CCCEV)]. +
-_Note:_ Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section and the various https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
+*Example:* The https://github.com/OP-TED/ePO[eProcurement Ontology] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
 
-*Use Case UC4.2: Create a new data shape* +
-_Goal:_ Create a new standalone data shape that specifies restrictions on the use of terms from Core Vocabularies. +
-_Primary Actor:_ Semantic Engineer +
-_Description:_ The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs. +
-_Note:_ Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] and https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html[Data shape conventions] sections), and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
 
-*Use Case UC2.3: Map an existing JSON Schema to a Core Vocabulary* +
-_Goal:_ Define data transformation rules from an JSON schema to terms from Core Vocabularies. Create a mapping of JSON data that was created according to an existing JSON schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation. +
-_Primary Actors:_ Semantic Engineer +
-_Actors:_ Domain Expert, Business Analyst, Software Engineer +
-_Description:_ The goal is to create a formal mapping using Semantic Web technology (e.g. RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in an JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3.1: Create a new Core Vocabulary*
 
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new Core Vocabulary that reuses terms from other Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.
+
+*Example:* The https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organization Vocabulary (CPOV)].
+
+*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3.2: Create a new Application Profile*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new Application Profile that reuses terms from other Core Vocabularies and specifies how they should be used.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.
+
+*Example:* The https://github.com/SEMICeu/CPSV-AP[Core Public Service Vocabulary Application Profile (CPSV-AP)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)].
+
+*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4: Create a new data model*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone data model artefact that reuses terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new data model artefact that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. Such an artefact can be of different nature both according to their interoperability layer (ranging from vocabulary and ontology, to data shape and data schema) and also according to their abstraction level (ranging from upper layer, through domain layer to application layer).
+
+*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.4f9xc2v8rnsa[Addressed use cases] section.
+|===
+
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4.1: Create a new ontology*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone ontology that reuses terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible.
+
+*Example:* The https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eprocurement-ontology[eProcurement Ontology (ePO)] is built reusing terms from multiple CVs, including the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)]https://github.com/SEMICeu/Core-Location-Vocabulary[, ] https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)] and https://github.com/SEMICeu/CCCEV[Core Criterion and Core Evidence Vocabulary (CCCEV)].
+
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section and the various https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
+|===
+
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4.2: Create a new data shape*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone data shape that specifies restrictions on the use of terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs.
+
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] and https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html[Data shape conventions] sections), and therefore will not be addressed in this handbook.
+|===
+
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC2.3: Map an existing JSON Schema to a Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Define data transformation rules from an JSON schema to terms from Core Vocabularies. Create a mapping of JSON data that was created according to an existing JSON schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+
+*Primary Actors:* Semantic Engineer
+
+*Actors:* Domain Expert, Business Analyst, Software Engineer
+
+*Description:* The goal is to create a formal mapping using Semantic Web technology (e.g. RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in an JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+|===
 
