@@ -1,8 +1,12 @@
 * xref:introduction.adoc[Introduction]
 * xref:semic-core-vocabularies.adoc[SEMIC Core Vocabularies]
 * xref:conceptual-framework.adoc[Conceptual framework]
+* xref:use-cases.adoc[Use cases]
+* xref:how-to-create-new-data-models.adoc[How to create new data models]
+* xref:how-to-map-existing-data-models.adoc[How to map existing data models]
+* xref:glossary.adoc[Glossary]
 
 * Back matter
 ** xref:references.adoc[References]
-** xref:[Handbook as a whole]
+** xref:handbook-as-a-whole.adoc[Handbook as a whole]
 

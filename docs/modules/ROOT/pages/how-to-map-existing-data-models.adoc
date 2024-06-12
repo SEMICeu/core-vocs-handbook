@@ -261,7 +261,7 @@ A comprehensive mapping package typically includes:
 * *Descriptive Metadata:* Contains essential data about the mapping package, such as identification, title, description, and versions of the mapping, ontology, and source schemas. This metadata aids in the management and application of the package.
 This package is designed to be self-contained, ensuring that it can be immediately integrated and operational within various data transformation pipelines. The included components support not only the application, but also the governance of the mappings, ensuring they are maintained and utilised correctly in diverse IT environments. This systematic packaging addresses critical needs for usability, maintainability, and standardisation, which are essential for widespread adoption and operational success in data transformation initiatives.
 
-*Inputs:* Conceptual Mapping spreadsheet, Ontologies, SHACL Data Shapes, Sample XML data*, *Sample data transformed into RDF, Conceptual Mapping, SHACL data shapes, Validation reports
+*Inputs:* Conceptual Mapping spreadsheet, Ontologies, SHACL Data Shapes, Sample XML data, Sample data transformed into RDF, Conceptual Mapping, SHACL data shapes, Validation reports
 
 *Outputs:* Comprehensive Mapping Package
 
