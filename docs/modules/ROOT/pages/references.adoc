@@ -1,11 +1,11 @@
 == References
 
-- *[[ref:eif]][eif]* New European Interoperability Framework. Available at: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
+- *[[ref:1]][eif]* New European Interoperability Framework. Available at: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
 - *[[ref:2]][eif2]* European Interoperability Framework – Implementation Strategy. Available at: https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_1&format=PDF
 - *[[ref:3]][reg24-903]* REGULATION (EU) 2024/903. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400903
 - *[[ref:4]][sem-sg]* The SEMIC Style Guide for Semantic Engineers. Available at: https://semiceu.github.io/style-guide
 - *[[ref:5]][cv-hb]* e-Government Core Vocabularies handbook. Available at: https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf
-- *[[ref:6]][sem--sg-cvs]* The SEMIC Style Guide for Semantic Engineers: What is a Core Vocabulary (CV) specification?. Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification
+- *[[ref:6]][sem-sg-cvs]* The SEMIC Style Guide for Semantic Engineers: What is a Core Vocabulary (CV) specification?. Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification
 - *[[ref:7]][dcmi]* DCMI Metadata Terms. Available at: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-1
 - *[[ref:8]][org]* The Organization Ontology. Available at: https://www.w3.org/TR/vocab-org/
 - *[[ref:9]][semic]* SEMIC Support Center. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/specifications
