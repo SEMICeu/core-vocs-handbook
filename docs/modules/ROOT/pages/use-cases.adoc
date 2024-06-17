@@ -34,7 +34,7 @@ Table: Listing of addressed use cases
 |===
 Table: Listing of unaddressed use cases
 
-The use cases provided in this handbook are written in white-box point of style oriented towards user goals[[ref:30]].
+The use cases provided in this handbook are written in white-box point of style oriented towards user goals[[ref:30]][weuc].
 
 We will use the following template to describe the relevant use cases that were listed above:
 
@@ -84,7 +84,7 @@ We will use the following template to describe the relevant use cases that were 
 
 |*Description:* The goal is to design and create a new XSD schema that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, an XSD Schema can be used to create and validate XML data to be exchanged between information systems.
 
-|*Example:* OOTS XML schema mappings [[ref:31]]
+|*Example:* OOTS XML schema mappings [[ref:31]][oots]
 
 |*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD schema]
 |===
@@ -100,7 +100,7 @@ We will use the following template to describe the relevant use cases that were 
 
 |*Description:* The goal is to design and create a new JSON-LD context definition that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, a JSON-LD context definition can be integrated in describing data, building APIs, and other operations involved in information exchange.
 
-|*Example:* Core Person Vocabulary [[ref:32]], Core Business Vocabulary [[ref:33]]
+|*Example:* Core Person Vocabulary [[ref:32]][cpv-json-ld], Core Business Vocabulary [[ref:33]][cbv-json-ld]
 
 |*Note:* A detailed methodology to be applied for use cases will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-json-ld-context-definition[Create a new JSON-LD context definition] section.
 |===
@@ -134,7 +134,7 @@ We will use the following template to describe the relevant use cases that were 
 
 |*Description:* The goal is to create a formal mapping expressed in Semantic Web terminology (for example using +rdfs:subClassOf, rdfs:subPropertyOf+, +owl:equivalentClass+, +owl:equivalentProperty, owl:sameAs+ properties), associating the terms in an existing ontology that defines relevant concepts in a given domain, to terms defined in one or more CVs. This activity is usually performed by a semantic engineer based on input received from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping associates the terms in an existing ontology, which defines relevant concepts within a specific  domain, to terms defined in one or more SEMIC Core Vocabularies. The result of the formal mapping can be used later by software engineers to build information exchange systems.
 
-*Example:* Mapping Core Person to Schema.org[[ref:34]], Core Business to Schema.org[[ref:35]], etc.
+*Example:* Mapping Core Person to Schema.org[[ref:34]][map-cp2org], Core Business to Schema.org[[ref:35]][map-cb2org], etc.
 
 |*Note:* A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.rebab4rmrvo9[Formal ontology mapping to Core Vocabularies Under review] section.
 |===

@@ -5,8 +5,8 @@
 Interoperability in the EU context refers to the capacity of systems or organisations, including public administrations,
 businesses, and citizens, to collaborate effectively and pursue common objectives across borders. This capability is crucial
 for providing efficient digital public services, facilitating economic transactions, and supporting the free movement of goods,
-services, people, and data. The European Interoperability Framework (EIF) [[ref:1]], [[ref:2]] and Interoperable Europe Act
-(IEA) [[ref:3]] emphasise that interoperability involves the seamless exchange of information and trusted data sharing across
+services, people, and data. The European Interoperability Framework (EIF)[xref:references.adoc#ref:eif[eif]], [[ref:2]][eif2] and Interoperable Europe Act
+(IEA) [[ref:3]][reg24-903] emphasise that interoperability involves the seamless exchange of information and trusted data sharing across
 sectors and administrative layers, which is essential for improving policy-making and public service delivery.
 
 The term itself combines ‘inter’ (Latin for between), ‘opera’ (Latin for work), and ‘ability’, suggesting the intrinsic nature
@@ -35,7 +35,7 @@ and decision-making at all governmental levels.
 
 [[sec:interoperability-through-semantic-specifications]]
 === Interoperability through semantic specifications
-The EIF [[ref:1]], [[ref:2]] identifies four crucial layers of interoperability necessary for effective data exchange across the
+The EIF [[ref:1]], [[ref:2]][eif2] identifies four crucial layers of interoperability necessary for effective data exchange across the
 EU: Legal, Organisational, Semantic, and Technical. The Semantic and Technical layers, in particular, play pivotal roles in ensuring
 that data is not only exchanged efficiently but also understood consistently by all parties involved.
 
@@ -51,7 +51,7 @@ that help manage how data is defined, represented, and communicated across diffe
 that are both machine-readable and human-understandable, thus supporting consistent interpretation and utilisation across
 diverse IT environments and stakeholders (e.g. developers, business experts, end users, administrators, etc.).
 
-The SEMIC Style Guide [[ref:4]] serves as an important resource in this context, providing essential guidelines on creating
+The SEMIC Style Guide [[ref:4]][sem-sg] serves as an important resource in this context, providing essential guidelines on creating
 and managing  such specifications. It covers naming conventions, syntax, and the organisation of artefacts within two critical
 types of semantic data specifications: Core Vocabularies and Application Profiles.
 
@@ -62,10 +62,10 @@ practices, ensuring seamless service delivery that meets the needs of citizens a
 
 [[sec:what-are-the-core-vocabularies]]
 === What are the Core Vocabularies?
-In the vision document “e-Government Core Vocabularies” [[ref:5]], Core Vocabularies are defined as simplified, reusable and
+In the vision document “e-Government Core Vocabularies” [[ref:5]][cv-hb], Core Vocabularies are defined as simplified, reusable and
 extensible data models that capture the fundamental characteristics of a data entity in a context-neutral and syntax-neutral
-fashion. SEMIC style guide provides a terminological clarification about the Core Vocabularies [[ref:6]] and elaborates that they
-are context-neutral semantic building blocks, like the Dublin Core Terms [[ref:7]] or the Organization Ontology [[ref:8]], that can
+fashion. SEMIC style guide provides a terminological clarification about the Core Vocabularies [[ref:6]][sem--sg-cvs] and elaborates that they
+are context-neutral semantic building blocks, like the Dublin Core Terms [[ref:7]][dcmi] or the Organization Ontology [[ref:8]][org], that can
 be extended into context-specific semantic data specifications. The use of the Core Vocabularies as a common building block
 for developing context-specific data models guarantees a minimum of semantic consistency. When the Core Vocabularies are extended
 to create domain specifications and information exchange models, additional meaning (semantics) is added to the specifications,
