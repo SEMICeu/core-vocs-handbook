@@ -1135,7 +1135,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 </div>
 </div>
 <div class="paragraph">
-<p>In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create for the reused URIs the corresponding XML element definitions in the new XSD schema. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency. For example “AgentType” must be defined within the <em>“http://data.europa.eu/m8g/”</em> namespace of the Core Vocabularies.</p>
+<p>In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create for the reused URIs the corresponding XML element definitions in the new XSD schema. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency. For example “AgentType” must be defined within the <strong><em>“http://data.europa.eu/m8g/”</em></strong> namespace of the Core Vocabularies.</p>
 </div>
 <div class="paragraph">
 <p>Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the core vocabulary&#8217;s data shape-specifically, which properties are optional and which are mandatory - within the XSD schema element definitions.</p>
@@ -1144,10 +1144,10 @@ Such activity can be done by semantic engineers based on input from domain exper
 <div class="sect4">
 <h5 id="_shape_xml_document_structure"><a class="anchor" href="#_shape_xml_document_structure"></a>Shape XML document structure</h5>
 <div class="paragraph">
-<p>In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The <em>Venetian Blind</em> and <em>Garden of Eden</em> patterns [<a href="https://www.oracle.com/technical-resources/articles/java/design-patterns.html">ref </a>cite patterns] stand out as preferable for their ability to allow complex types to be reused by different elements [<a href="https://joinup.ec.europa.eu/collection/semic-support-centre/mapping-graph-tree-data-structure-case-study-using-core-vocabularies">ref</a>].<br></p>
+<p>In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The <em>Venetian Blind</em> and <em>Garden of Eden</em> <a href="references.html#ref:44" class="xref page">patterns</a> stand out as preferable for their ability to allow complex types to be reused by different elements [<a href="references.html#ref:44" class="xref page">sem-map</a>].</p>
 </div>
 <div class="paragraph">
-<p>The Venetian Blind pattern is characterised by having a single global element that serves as the entry point for the XML document, from which all the elements can be reached. This pattern implies a certain directionality and starting point, analogous to choosing a primary class in an ontology that has direct relationships to other classes, and from which one can navigate to the rest of the classes.<br></p>
+<p>The Venetian Blind pattern is characterised by having a single global element that serves as the entry point for the XML document, from which all the elements can be reached. This pattern implies a certain directionality and starting point, analogous to choosing a primary class in an ontology that has direct relationships to other classes, and from which one can navigate to the rest of the classes.</p>
 </div>
 <div class="paragraph">
 <p>For instance, in the Core Business Vocabulary, if one were to select the "Legal Entity" class as the starting point, it would shape the XML schema in such a way that all other classes could be reached from this entry point, reflecting its central role within the ontology. A possible implementation with Venetian Blind with “Legal Entity” as the root element would be:</p>
@@ -1169,13 +1169,13 @@ Such activity can be done by semantic engineers based on input from domain exper
 </div>
 </div>
 <div class="paragraph">
-<p>Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as NIEM [ref] and UBL [ref], which recommend such flexibility for broader applicability and ease of information representation.<br></p>
+<p>Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as <a href="references.html#ref:46" class="xref page">NIEM</a> and <a href="references.html#ref:47" class="xref page">UBL</a>, which recommend such flexibility for broader applicability and ease of information representation.</p>
 </div>
 <div class="paragraph">
-<p>However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a SOAP API [<a href="https://www.w3.org/TR/2007/REC-soap12-part0-20070427/">ref</a>], the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.<br></p>
+<p>However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a <a href="references.html#ref:48" class="xref page">SOAP API</a>, the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.</p>
 </div>
 <div class="paragraph">
-<p>Overall, the choice between these patterns should be informed by the intended use of the schema, the level of abstraction of the ontology it represents, and the needs of the end-users, aiming to strike a balance between structure and flexibility. <br></p>
+<p>Overall, the choice between these patterns should be informed by the intended use of the schema, the level of abstraction of the ontology it represents, and the needs of the end-users, aiming to strike a balance between structure and flexibility.</p>
 </div>
 <div class="paragraph">
 <p><strong>Recommendation:</strong> We consider the Garden of Eden pattern suitable for designing XSD schemas at the level of core or domain semantic data specifications, and the Venetian Blind pattern suitable for XSD schemas at the level of specific Application Profiles.</p>
@@ -1185,7 +1185,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 <div class="sect3">
 <h4 id="sec:create-a-new-json-ld-context-definition"><a class="anchor" href="#sec:create-a-new-json-ld-context-definition"></a>2.2. Create a new JSON-LD context definition</h4>
 <div class="paragraph">
-<p>This section provides detailed instructions for addressing use case UC1.2.<br></p>
+<p>This section provides detailed instructions for addressing use case UC1.2.</p>
 </div>
 <div class="paragraph">
 <p>JSON-LD combines the simplicity, power, and web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. Here’s a guide on how to create new JSON-LD contexts for existing CVs, using the Core Person Vocabulary as an example.</p>
@@ -1203,7 +1203,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 <div class="sect4">
 <h5 id="_import_or_define_elements_2"><a class="anchor" href="#_import_or_define_elements_2"></a>Import or define elements</h5>
 <div class="paragraph">
-<p>When a CV has defined an associated JSON-LD context, it is not only easy, but also advisable to directly import this context using the <code>@import</code> keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.<br></p>
+<p>When a CV has defined an associated JSON-LD context, it is not only easy, but also advisable to directly import this context using the <code>@import</code> keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1211,13 +1211,13 @@ Such activity can be done by semantic engineers based on input from domain exper
 </div>
 </div>
 <div class="paragraph">
-<p>In cases where the CV does not provide an JSON-LD context, it is necessary to create for the reused URIs the corresponding field element definitions. To start, gather all the terms from the Core Person Vocabulary that you want to include in your JSON-LD context. Terms can include properties like <code><a href="http://xmlns.com/foaf/0.1/givenName">given name</a></code>, <code><a href="http://xmlns.com/foaf/0.1/familyName">family name</a></code>, <code><a href="http://data.europa.eu/m8g/birthDate">date of birth</a></code>, and relationships like <code><a href="http://www.w3.org/ns/person#residency">residency</a></code> or <code><a href="http://data.europa.eu/m8g/contactPoint">contact point</a></code>. <br></p>
+<p>In cases where the CV does not provide an JSON-LD context, it is necessary to create for the reused URIs the corresponding field element definitions. To start, gather all the terms from the Core Person Vocabulary that you want to include in your JSON-LD context. Terms can include properties like <code><a href="references.html#ref:49" class="xref page">given name</a></code>, <code><a href="references.html#ref:50" class="xref page">family name</a></code>, <code><a href="references.html#ref:51" class="xref page">date of birth</a></code>, and relationships like <code><a href="references.html#ref:52" class="xref page">residency</a></code> or <code><a href="references.html#ref:53" class="xref page">contact point</a></code>.</p>
 </div>
 <div class="paragraph">
-<p>Then, decide the desired structure of the JSON-LD file, by defining the corresponding keys, for example <code>Person.givenName</code>, <code>Person.familyName</code>, <code>Person.dateOfBirth</code>, <code>Person.residency</code>, <code>Person.contactPoint</code>. These new fields must adhere to the naming defined by the CV to maintain consistency. <br></p>
+<p>Then, decide the desired structure of the JSON-LD file, by defining the corresponding keys, for example <code>Person.givenName</code>, <code>Person.familyName</code>, <code>Person.dateOfBirth</code>, <code>Person.residency</code>, <code>Person.contactPoint</code>. These new fields must adhere to the naming defined by the CV to maintain consistency.</p>
 </div>
 <div class="paragraph">
-<p>Finally, assign URIs to keys. Each term in your JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in CVs to JSON keys using the same CV terms. For example:<br></p>
+<p>Finally, assign URIs to keys. Each term in your JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in CVs to JSON keys using the same CV terms. For example:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1225,7 +1225,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 </div>
 </div>
 <div class="paragraph">
-<p>The ones that are imported by the CVs, shall be used as originally defined, for example from FOAF:<br></p>
+<p>The ones that are imported by the CVs, shall be used as originally defined, for example from FOAF:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1236,13 +1236,13 @@ Such activity can be done by semantic engineers based on input from domain exper
 <div class="sect4">
 <h5 id="_shape_structure"><a class="anchor" href="#_shape_structure"></a>Shape structure</h5>
 <div class="paragraph">
-<p>Start defining the structure of the context by relating class terms with property terms and then, if necessary, property terms with other classes. <br></p>
+<p>Start defining the structure of the context by relating class terms with property terms and then, if necessary, property terms with other classes.</p>
 </div>
 <div class="paragraph">
-<p>Commence by creating a JSON structure that starts with an @context field. This field will contain mappings from your vocabulary terms to their respective URIs. Continue by defining fields for Classes and subfields for their properties.<br></p>
+<p>Commence by creating a JSON structure that starts with a <code>@context</code> field. This field will contain mappings from your vocabulary terms to their respective URIs. Continue by defining fields for Classes and subfields for their properties.</p>
 </div>
 <div class="paragraph">
-<p>If the JSON-LD context is developed with the aim of being used directly in exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise <code>@type</code> references linking to the specific Class. For example:<br></p>
+<p>If the JSON-LD context is developed with the aim of being used directly in exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise <code>@type</code> references linking to the specific Class. For example:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1250,25 +1250,12 @@ Such activity can be done by semantic engineers based on input from domain exper
 </div>
 </div>
 <div class="paragraph">
-<p>If the aim of the developed JSON-LD context is rather ensuring semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects. For example:<br></p>
+<p>If the aim of the developed JSON-LD context is rather ensuring semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects. For example:</p>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>"Person.contactPoint": {"@id": "http://data.europa.eu/m8g/contactPoint", "@type": "@id"}</pre>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_editorial_refs"><a class="anchor" href="#_editorial_refs"></a>Editorial refs</h5>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://w3c.github.io/json-ld-bp/">https://w3c.github.io/json-ld-bp/</a></p>
-</li>
-<li>
-<p><a href="https://paulfrazee.medium.com/pauls-notes-on-how-json-ld-works-965732ea559d">https://paulfrazee.medium.com/pauls-notes-on-how-json-ld-works-965732ea559d</a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -1285,10 +1272,10 @@ Such activity can be done by semantic engineers based on input from domain exper
 <p>To navigate this complexity, a more nuanced approach is required—one that seeks to establish connections across models without imposing uniformity. This is where the concepts of ontology mapping and the broader spectrum of model alignment methodologies come into play. Moreover, the mapping endeavour encompasses not only ontological artefacts, but also various technical artefacts—ranging from data shapes defined in SHACL or ShEx, XSD schemas for XML, to JSON Schemas for JSON data. Each of these artefacts represents a different facet of knowledge modelling. Thus, mapping in this broader sense involves creating links between these semantic and technical artefacts and Core Vocabularies.</p>
 </div>
 <div class="paragraph">
-<p>The past couple decades have witnessed extensive efforts in ontology and data mapping, resulting in a plethora of tools, methods, and technologies aimed at enhancing semantic interoperability. These endeavours underscore the vast landscape of potential strategies available for mapping. These strategies range from conceptual methodologies that explore the semantic congruence and contextual relevance of entities and relationships, to formal methodologies that operationalize these conceptual mappings as technical data transformation rules. It&#8217;s important to acknowledge that there is no one-size-fits-all method; instead, the field offers a spectrum of approaches suited to various needs and contexts.</p>
+<p>The past couple decades have witnessed extensive efforts in ontology and data mapping, resulting in a plethora of tools, methods, and technologies aimed at enhancing semantic interoperability. These endeavours underscore the vast landscape of potential strategies available for mapping. These strategies range from conceptual methodologies that explore the semantic congruence and contextual relevance of entities and relationships, to formal methodologies that operationalise these conceptual mappings as technical data transformation rules. It&#8217;s important to acknowledge that there is no one-size-fits-all method; instead, the field offers a spectrum of approaches suited to various needs and contexts.</p>
 </div>
 <div class="paragraph">
-<p>The subsequent sections will delve into the specific methodologies of mapping—both conceptual and formal—, providing a blueprint for navigating and bridging the world of semantic and technical artefacts, empowering stakeholders to make informed decisions that best suit their interoperability needs.</p>
+<p>The subsequent sections will delve into the specific methodologies of mapping —both conceptual and formal—, providing a blueprint for navigating and bridging the world of semantic and technical artefacts, empowering stakeholders to make informed decisions that best suit their interoperability needs.</p>
 </div>
 <div class="sect3">
 <h4 id="sec:map-an-existing-ontology"><a class="anchor" href="#sec:map-an-existing-ontology"></a>3.1. Map an existing Ontology</h4>
