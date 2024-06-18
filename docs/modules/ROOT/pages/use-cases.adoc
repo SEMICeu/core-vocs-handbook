@@ -136,7 +136,7 @@ We will use the following template to describe the relevant use cases that were 
 
 *Example:* Mapping Core Person to Schema.org [xref:references.adoc#ref:34[map-cp2org]], Core Business to Schema.org [xref:references.adoc#ref:35[map-cb2org]], etc.
 
-|*Note:* A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.rebab4rmrvo9[Formal ontology mapping to Core Vocabularies Under review] section.
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology[Map an existing Ontology] section.
 |===
 
 |===
@@ -153,8 +153,8 @@ We will use the following template to describe the relevant use cases that were 
 |*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
 Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 
-|*Example:* ISA2core SAWSDL mapping [https://tietomallit.suomi.fi/model/isa2core/[ref]] +
-|*Note:* A detailed methodology to be applied for this use case will be provided in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.326bv3hou3s[XSD schema mapping In progress] section.
+|*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref:36[isa2-map]]
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-xsd-schema[Map an existing XSD schema] section.
 |===
 
 [[sec:unaddressed-use-cases]]
@@ -171,9 +171,9 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.
 
-*Example:* The https://github.com/OP-TED/ePO[eProcurement Ontology] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
+*Example:* The eProcurement Ontology [xref:references.adoc#ref:37[epo]] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
 
-*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 |===
@@ -187,9 +187,9 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.
 
-*Example:* The https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organization Vocabulary (CPOV)].
+*Example:* The Core Business Vocabulary (CBV) [xref:references.adoc#ref:29[cbv]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organization Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
 
-*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 |===
@@ -203,9 +203,9 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.
 
-*Example:* The https://github.com/SEMICeu/CPSV-AP[Core Public Service Vocabulary Application Profile (CPSV-AP)] is built reusing terms from the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)] and https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)].
+*Example:* The Core Public Service Vocabulary Application Profile (CPSV-AP) [xref:references.adoc#ref:40[cpsv-ap]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
 
-*Note:* Recommendation on how to address this use case can be found in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 |===
@@ -219,7 +219,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a new data model artefact that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. Such an artefact can be of different nature both according to their interoperability layer (ranging from vocabulary and ontology, to data shape and data schema) and also according to their abstraction level (ranging from upper layer, through domain layer to application layer).
 
-*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the https://docs.google.com/document/d/1MUhPUq-6ByTreuY1S81sIUSxsPib5ameHxkfNiBRTb4/edit#heading=h.4f9xc2v8rnsa[Addressed use cases] section.
+*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the xref:use-cases.adoc#sec:addressed-use-cases[Addressed use cases] section.
 |===
 
 |===
@@ -233,9 +233,9 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible.
 
-*Example:* The https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eprocurement-ontology[eProcurement Ontology (ePO)] is built reusing terms from multiple CVs, including the https://github.com/SEMICeu/Core-Location-Vocabulary[Core Location Vocabulary (CLV)]https://github.com/SEMICeu/Core-Location-Vocabulary[, ] https://github.com/SEMICeu/CPOV[Core Public Organisation Vocabulary (CPOV)] and https://github.com/SEMICeu/CCCEV[Core Criterion and Core Evidence Vocabulary (CCCEV)].
+*Example:* The eProcurement Ontology (ePO) [xref:references.adoc#ref:37[epo]] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]], Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]] and Core Criterion and Core Evidence Vocabulary (CCCEV) [xref:references.adoc#ref:41[cccev]].
 
-*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] section and the various https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] section and the various xref:references.adoc#ref:42[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
 |===
 
 |===
@@ -249,7 +249,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 *Description:* The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs.
 
-*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html[Clarification on “reuse”] and https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html[Data shape conventions] sections), and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
 
 |===

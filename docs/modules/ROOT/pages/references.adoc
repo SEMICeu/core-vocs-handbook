@@ -35,5 +35,11 @@
 - *[[ref:33]][cbv-json-ld]* Core Business Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.2.0/context/core-business-ap.jsonld
 - *[[ref:34]][map-cp2org]* Mapping Core Person to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Person/Schema.org
 - *[[ref:35]][map-cb2org]* Mapping Core Business to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business/Schema.org
-
-- *[[ref:344]][epo]* eProcurement Ontology. Available at:
+- *[[ref:36]][isa2-map]* ISA2core SAWSDL mapping. Available at: https://tietomallit.suomi.fi/model/isa2core/
+- *[[ref:37]][epo]* eProcurement Ontology. Available at: https://github.com/OP-TED/ePO
+- *[[ref:38]][clv]* Barthelemy, F. et al. Core Location vocabulary. Available at: https://github.com/SEMICeu/Core-Location-Vocabulary/
+- *[[ref:39]][cpov]* Barthelemy, F. et al. Core Public Organisation vocabulary. Available at: https://github.com/SEMICeu/CPOV/
+- *[[ref:40]][cpsv-ap]* Barthelemy, F. et al. Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://github.com/SEMICeu/CPSV-AP/
+- *[[ref:41]][cccev]* Barthelemy, F. et al. Core Criterion and Core Evidence Vocabulary (CCCEV). Available at: https://github.com/SEMICeu/CCCEV/
+- *[[ref:42]][sem-sg-gc]* The SEMIC Style Guide for Semantic Engineers: Guidelines and conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html
+- *[[ref:43]][sem-sg-dsc]* The SEMIC Style Guide for Semantic Engineers: Data shape conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html
