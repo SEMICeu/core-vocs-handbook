@@ -4,10 +4,19 @@
 :url-repo: https://github.com/SEMICeu/core-vocs-handbook
 
 
-Abstract to be provided here answering the questions:
+This Handbook explains how to use SEMIC Core Vocabularies (CV) in a easy and transparent way. It is meant for the business users who want to understand where can the Core Vocabularies be useful, and for the semantic engineers who seek straightforward guidance suitable to specific use cases.
 
-* what is this ?
+We organise this handbook in two parts.  The first part is explanatory while the second part offers hands-on instructions.
 
-* how shall first time readers read it  ?
+If you read this Handbook for the first time then you may want to make sure you read the first part. It xref:introduction.adoc[introduces interoperability] and the role Core Vocabularies play in it, the important xref:use-cases.adoc[use cases] and which ones are addressed here, and a xref:conceptual-framework.adoc[conceptual framework] for understanding the semantic data specifications.
 
-* how shall second time readers read it ?
+
+If you are familiar with the SEMIC Core Vocabularies and seek practical guidance, then skp to the second part of the Handbook. It describes approaches and methodology recommendations for:
+
+* xref:how-to-create-new-data-models.adoc[creating new semantic data specifications or stand-alone data models] (re-)using Core Vocabularies, and
+* xref:how-to-map-existing-data-models.adoc[mapping existing data models] to the Core Vocabularies.
+
+The following aspects are NOT included in this handbook:
+
+* a complete methodology for syntax binding and toolset for creating data model specifications, as the Core Vocabularies intend to remain syntax neutral.
+* data model library, or tools. Such choices are heavily dependent on the domain and the task at hand.
