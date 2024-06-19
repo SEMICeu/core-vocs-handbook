@@ -15,7 +15,7 @@ The subsequent sections will delve into the specific methodologies of mapping â€
 
 This section provides detailed instructions for addressing use case UC2.1.
 
-In this section we adopt the definition from [https://www.researchgate.net/publication/319160792_A_Multi-strategy_Approach_for_Ontology_Reuse_Through_Matching_and_Integration_Techniques[ref]] of the following concepts:
+In this section we adopt the definition from this xref:references.adoc#ref:54[paper] of the following concepts:
 
 * *Ontology matching*: the process of finding relationships or correspondences between entities of different ontologies.
 * *Ontology alignment*: a set of correspondences between 2 or more ontologies, as outcome of ontology matching process.
@@ -30,7 +30,7 @@ To create an ontology alignment, the following steps need to be observed:
 . *Align and map:* prepare, create the alignment, and render mappings
 . *Application:* make the alignment available for use in applications
 
-This methodology has been used in mapping the Core Vocabularies to Schema.org. This work is available on the SEMIC GitHub repository [https://github.com/SEMICeu/Semantic-Mappings/tree/main[ref]] dedicated to Semantic Mappings, and documented here [https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf[ref]]. Next sections describe this methodology in more detail.
+This methodology has been used in mapping the Core Vocabularies to Schema.org. This work is available on the SEMIC GitHub repository dedicated to xref:references.adoc#ref:55[Semantic Mappings], and documented xref:references.adoc#ref:56[here]. Next sections describe this methodology in more detail.
 
 ==== Staging
 
@@ -54,7 +54,7 @@ The following is an indicative, but not exhaustive, list of aspects to consider 
 
 In the ontology mapping lifecycle, the reuse stage is pivotal, facilitating the integration of pre-existing alignments into the project's workflow. Following the initial characterisation, this stage entails discovery and a rigorous evaluation of available alignments against the project's defined requirements. These requirements are instrumental in appraising whether an existing alignment can be directly adopted, necessitates modifications for reuse, or if a new alignment should be constructed from the ground up.
 
-Ontology alignments are often expressed in Alignment Format (AF) [ref] or EDOAL [ref]. An example statement in a Turtle file representing an ontology alignment (taken from the https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl[Core Business Vocabulary to Schema.org alignment]), could look something like this:
+Ontology alignments are often expressed in xref:references.adoc#ref:57[Alignment Format (AF)] or xref:references.adoc#ref:58[EDOAL]. An example statement in a Turtle file representing an ontology alignment (taken from the xref:references.adoc#ref:59[Core Business Vocabulary to Schema.org alignment]), could look something like this:
 
 ----
 <http://mapping.semic.eu/business/sdo/cell/1> a align:Cell;

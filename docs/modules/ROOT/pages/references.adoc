@@ -44,7 +44,7 @@
 - *[[ref:42]][sem-sg-gc]* The SEMIC Style Guide for Semantic Engineers: Guidelines and conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html
 - *[[ref:43]][sem-sg-dsc]* The SEMIC Style Guide for Semantic Engineers: Data shape conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html
 - *[[ref:44]][dsg-ptr]* Ayub Khan and Marina Sum. Introducing Design Patterns in XML Schemas. Available at: https://www.oracle.com/technical-resources/articles/java/design-patterns.html
-- *[[ref:45]][sem-map]* Mapping a graph to a tree data structure: a case study using the Core Vocabularies. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/mapping-graph-tree-data-structure-case-study-using-core-vocabularies
+- *[[ref:45]][sem-graph-map]* Mapping a graph to a tree data structure: a case study using the Core Vocabularies. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/mapping-graph-tree-data-structure-case-study-using-core-vocabularies
 - *[[ref:46]][niem]* The National Information Exchange Model (NIEM). Avaialble at: https://www.niem.gov/niem-standard
 - *[[ref:47]][ubl]* OASIS Universal Business Language (UBL) TC. Avaialble at: https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=556949c8-dac8-40e6-bb16-018dc7ce54d6
 - *[[ref:48]][soap-api]* SOAP API. Available at: https://www.w3.org/TR/2007/REC-soap12-part0-20070427
@@ -53,3 +53,9 @@
 - *[[ref:51]][birth-date]* birthDate term. Available at: http://data.europa.eu/m8g/birthDate
 - *[[ref:52]][residency]* residency term. Available at: http://www.w3.org/ns/person#residency
 - *[[ref:53]][contact-point]* contactPoint term. Available at: http://data.europa.eu/m8g/contactPoint
+- *[[ref:54]][paper]* Enrico G. Caldarola, Antonio M. Rinaldi. A Multi-strategy Approach for Ontology Reuse Through Matching and Integration Techniques. Available at: https://www.researchgate.net/publication/319160792_A_Multi-strategy_Approach_for_Ontology_Reuse_Through_Matching_and_Integration_Techniques
+- *[[ref:55]][sem-map]* SEMIC Semantic Mappings. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main
+- *[[ref:56]][sem-map-met]* Alignment of Core Vocabularies with Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf
+- *[[ref:57]][paper2]* J. Euzenat. An API for ontology alignment. Available at: https://doi.org/10.1007/978-3-540-30475-3_48
+- *[[ref:58]][paper3]* J. David, J. Euzenat, F. Scharﬀe, and C. T. dos Santos. The alignment API 4.0. Available at: https://www.semantic-web-journal.net/content/alignment-api-40
+- *[[ref:59]][map-cb2org-ttl]* Mapping Core Business to Schema.org - Turtle file. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl
