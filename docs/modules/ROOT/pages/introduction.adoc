@@ -72,15 +72,15 @@ to create domain specifications and information exchange models, additional mean
 due to the contextualisation.
 
 [[sec:scope]]
-=== Scope
-This handbook describes approaches for:
-
-* re-using Core Vocabularies in creating new semantic data specifications or stand-alone data models, and +
-* mapping existing data models to the Core Vocabularies.
-
-The following aspects are NOT included in this handbook:
-
-* a complete methodology for syntax binding and toolset for creating data model specifications, as the Core Vocabularies intend
-to remain syntax neutral.
-* specific methodology recommendations, data model library, or tools. Such choices are heavily dependent on the domain and
-the task at hand.
+// === Scope
+// This handbook describes approaches for:
+//
+// * re-using Core Vocabularies in creating new semantic data specifications or stand-alone data models, and +
+// * mapping existing data models to the Core Vocabularies.
+//
+// The following aspects are NOT included in this handbook:
+//
+// * a complete methodology for syntax binding and toolset for creating data model specifications, as the Core Vocabularies intend
+// to remain syntax neutral.
+// * specific methodology recommendations, data model library, or tools. Such choices are heavily dependent on the domain and
+// the task at hand.
