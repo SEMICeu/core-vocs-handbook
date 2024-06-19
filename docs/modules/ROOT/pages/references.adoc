@@ -59,3 +59,8 @@
 - *[[ref:57]][paper2]* J. Euzenat. An API for ontology alignment. Available at: https://doi.org/10.1007/978-3-540-30475-3_48
 - *[[ref:58]][paper3]* J. David, J. Euzenat, F. Scharﬀe, and C. T. dos Santos. The alignment API 4.0. Available at: https://www.semantic-web-journal.net/content/alignment-api-40
 - *[[ref:59]][map-cb2org-ttl]* Mapping Core Business to Schema.org - Turtle file. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl
+- *[[ref:60]][paper4]* Lorena Otero-Cerdeira, Francisco J. Rodríguez-Martínez, Alma Gómez-Rodríguez. Ontology matching: A literature review. Available at: http://dit.unitn.it/~p2p/RelatedWork/Matching/Cerdeira-Ontology%20Matching-2015.pdf
+- *[[ref:61]][edoal]* EDOAL: Expressive and Declarative Ontology Alignment Language. Available at: https://moex.gitlabpages.inria.fr/alignapi/edoal.html
+- *[[ref:62]][silk]* System for Internet-Level Knowledge (SiLK). Available at: https://tools.netsa.cert.org/silk/
+- *[[ref:63]][vocbench]* VocBench. Available at: https://vocbench.op.europa.eu/
+- *[[ref:63]][vocbench]*

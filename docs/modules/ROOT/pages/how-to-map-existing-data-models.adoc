@@ -84,19 +84,19 @@ This section delves into automatic and semi-automatic approaches to finding the 
 
 Utilising both automated tools and manual expertise, this phase focuses on identifying potential correspondences between entities in the source and target models. The matching process may employ various methodologies, including semantic similarity measures, pattern recognition, or lexical analysis, to propose candidate alignments. These candidates are then critically evaluated for their accuracy, relevance, and completeness, ensuring they meet the predefined requirements and are logically sound. This stage is delineated into three main activities: planning, execution, and evaluation.
 
-In the *planning* activity, the approach to ontology matching is meticulously strategized. The planning encompasses selecting appropriate algorithms and methods, fine-tuning parameters, determining thresholds for similarity and identity functions, and setting evaluative criteria. These preparations are informed by a thorough understanding of the project's requirements and the outcomes of previous reuse evaluations.
+In the *planning* activity, the approach to ontology matching is meticulously strategised. The planning encompasses selecting appropriate algorithms and methods, fine-tuning parameters, determining thresholds for similarity and identity functions, and setting evaluative criteria. These preparations are informed by a thorough understanding of the project's requirements and the outcomes of previous reuse evaluations.
 
-Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for in-depth discussions, see [http://dit.unitn.it/~p2p/RelatedWork/Matching/Cerdeira-Ontology%20Matching-2015.pdf[ref], ]). The main classes of ontology matching techniques are listed below in the order of their relevance to  for this handbook:
+Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for in-depth discussions, see xref:references.adoc#ref:60[paper]). The main classes of ontology matching techniques are listed below in the order of their relevance to this handbook:
 
 * *Terminological* techniques draw on the textual content within ontologies, such as entity labels and comments, employing methods from natural language processing and information retrieval, including string distances and statistical text analysis.
 * *Structural* techniques analyse the relationships and constraints between ontology entities, using methods like graph matching to explore the topology of ontology structures.
 * *Semantic* techniques apply formal logic and inference to deduce the implications of proposed alignments, aiding in the expansion of alignments or detection of conflicts.
 * *Extensional* techniques compare entity sets, or instances, potentially involving analysis of shared resources across ontologies to establish similarity measures.
-Following planning, the *execution* activity implements the chosen matchers. Automated or semi-automated tools are deployed to carry out the matching process, resulting in a list of candidate correspondences. This list typically includes suggested links between elements of the source and target ontologies, each with an associated confidence level computed by the algorithms. EDOAL [https://moex.gitlabpages.inria.fr/alignapi/edoal.html[ref]], a representation framework for expressing such correspondences, is commonly utilised to encapsulate these potential alignments.
+Following planning, the *execution* activity implements the chosen matchers. Automated or semi-automated tools are deployed to carry out the matching process, resulting in a list of candidate correspondences. This list typically includes suggested links between elements of the source and target ontologies, each with an associated confidence level computed by the algorithms. xref:references.adoc#ref:61[EDOAL], a representation framework for expressing such correspondences, is commonly utilised to encapsulate these potential alignments.
 
 Finally, in the *evaluation* activity, the candidate correspondences are rigorously assessed for their suitability. The evaluation measures the candidates against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements. This assessment ensures that only the most suitable correspondences are carried forward for the creation of an alignment, thereby upholding the integrity and logical soundness of the mapping process.
 
-*Tools:* Tools such as Silk [ref] can be used in this stage.
+*Tools:* Tools such as xref:references.adoc#ref:62[Silk] can be used in this stage.
 
 *Inputs:* Matcher configurations, additional resources (if any), candidate correspondences from previous matching iterations.
 
@@ -105,6 +105,8 @@ Finally, in the *evaluation* activity, the candidate correspondences are rigorou
 ==== Align and Map
 
 Following the identification of suitable matches, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase encompasses preparation, creation, and rendering activities that solidify the relationships between ontology entities into a coherent alignment and actionable mappings. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.
+
+The alignment process should be considered as part of the governance of a vocabulary or ontology that would include engaging communication with third parties to validate the alignment. Furthermore, the process has technical implications that should be evaluated upfront such as the machine interpretation and execution of the mapping.
 
 *Preparation* involves stakeholder consensus on the Alignment Plan. This plan guides stakeholders through the systematic refinement of candidate correspondences, considering not only the relevance of the matches, but also the type of relationship between the elements. This plan might include the removal of irrelevant correspondences or strategic amendments to existing relationships. The chosen candidate correspondences are those that have been determined to be an adequate starting point for the alignment. The type of asset—be it an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The table [below] elucidates potential relationship types that can be established:
 |===
@@ -123,13 +125,13 @@ This table is indicative of the variety of semantic connections that can be real
 The *Creation* step is the execution of the Alignment Plan, entailing the selection and refinement of correspondences. This activity involves human intervention to select and refine those correspondences for transitioning into a deliberate alignment. The selection is conducted manually according to the project’s objectives.
 
 *Rendering* translates the refined alignment into a mapping—a directed version that can be interpreted and executed by software agents. This process is straightforward, producing a machine-executable artefact. Most often this is a simple export of the alignment statements from the editing tool or the materialisation of the alignment in a triple store. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms. +
-*Tools:* Tools such as VocBench3 [ref] can be used in this stage, but more generic ones, such as MS Excel or Google Sheets spreadsheets, can be used as well.  +
+*Tools:* Tools such as xref:references.adoc#ref:63[VocBench3] can be used in this stage, but more generic ones, such as MS Excel or Google Sheets spreadsheets, can be used as well.  +
 *Inputs:* Evaluated candidate correspondences, stakeholders' amendment plans, requirements for the formalism of the mapping. +
-*Outputs:* Created alignment and mapping, alignment amendment strategy, stored versions in an alignment repository [ref core vocs-schema.org mapping repo].
+*Outputs:* Created alignment and mapping, alignment amendment strategy, stored versions in an xref:references.adoc#ref:55[alignment repository].
 
 ==== Application
 
-The final stage focuses on operationalizing the created alignment, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves publishing the alignment in a standardised, machine-readable format and integrating it within ontology management or data integration tools.
+The final stage focuses on operationalising the created alignment, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves publishing the alignment in a standardised, machine-readable format and integrating it within ontology management or data integration tools.
 
 Additionally, mechanisms for maintaining, updating, and governing the alignment are established, facilitating its long-term utility and relevance.
 
@@ -138,16 +140,6 @@ Moreover, this stage involves the creation of *maintenance protocols* to preserv
 *Inputs:* Finalised mappings, application context, feedback mechanisms.
 
 *Outputs:* Applied mappings in use, insights from application, triggers for potential updates, governance actions for lifecycle management.
-
-==== Section Refs
-
-* Core Voc to Schema.org mapping
-https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf[https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf]
-* SOTA http://dit.unitn.it/~p2p/RelatedWork/Matching/Cerdeira-Ontology%20Matching-2015.pdf[http://dit.unitn.it/~p2p/RelatedWork/Matching/Cerdeira-Ontology%20Matching-2015.pdf]
-* Lecture notes: https://exmo.inria.fr/teaching/swc/ontoalign.pdf[https://exmo.inria.fr/teaching/swc/ontoalign.pdf]
-* EDOAL format https://moex.gitlabpages.inria.fr/alignapi/edoal.html[https://moex.gitlabpages.inria.fr/alignapi/edoal.html]
-* VocBench for editing EDOAL: https://vocbench.uniroma2.it/doc/user/edoal_editing.jsf[https://vocbench.uniroma2.it/doc/user/edoal_editing.jsf]
-* https://www.academia.edu/70179066/Towards_a_Metadata_Model_and_Lifecycle_for_Ontology_Mapping_Governance[https://www.academia.edu/70179066/Towards_a_Metadata_Model_and_Lifecycle_for_Ontology_Mapping_Governance]
 
 [[sec:map-an-existing-xsd-schema]]
 === Map an existing XSD schema
