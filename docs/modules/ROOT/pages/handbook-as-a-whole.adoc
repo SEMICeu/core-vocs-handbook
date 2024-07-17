@@ -10,9 +10,15 @@ ifndef::ebook-format[:leveloffset: 1]
 :icons: font
 
 include::introduction.adoc[]
+
 include::semic-core-vocabularies.adoc[]
+
 include::conceptual-framework.adoc[]
+
 include::use-cases.adoc[]
+
 include::how-to-create-new-data-models.adoc[]
+
 include::how-to-map-existing-data-models.adoc[]
+
 include::glossary.adoc[]
