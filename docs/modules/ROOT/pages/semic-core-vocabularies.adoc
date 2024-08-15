@@ -6,6 +6,7 @@ Since 2011 the European Commission facilitates international working groups to f
 A short description of these vocabularies is included in the Table [below]. The latest release of the Core Vocabularies can be
 retrieved via the SEMIC Support Center[xref:references.adoc#ref:9[semic]], or directly in the GitHub repository[xref:references.adoc#ref:10[semic-gh]].
 
+[cols="1,3"]
 |===
 |Vocabulary|Description
 
