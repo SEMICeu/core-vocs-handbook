@@ -31,7 +31,7 @@ Each artefact, while unique in its form and function, represents different facet
 
 * *Visual Representation:* The semantic data specification is much easier to understand once it is presented in a visual format. Typically class diagrams are the most suitable to encapsulate the concepts and the relations between boosting significantly comprehension.
 
-* Data Serialisation: The technical artefacts of the specification, such as information exchange data models for various serialisation formats (e.g., JSON-LD, XML), ensure that the data can be correctly serialised, deserialized, and exchanged across systems and platforms. They cater for  the technical requirements of data transport (and storage).
+* *Data Serialisation:* The technical artefacts of the specification, such as information exchange data models for various serialisation formats (e.g., JSON-LD, XML), ensure that the data can be correctly serialised, deserialized, and exchanged across systems and platforms. They cater for  the technical requirements of data transport (and storage).
 
 The coherence among these artefacts ensures that despite their different purposes and audiences, they all align in their representation of the domain knowledge. This alignment guarantees that whether a stakeholder is interpreting the model conceptually, engaging with it through documentation, or implementing it technically, they are presented with a unified and consistent view of the semantic data specification. This cohesive approach is pivotal for maintaining semantic integrity across various applications and systems.
 
