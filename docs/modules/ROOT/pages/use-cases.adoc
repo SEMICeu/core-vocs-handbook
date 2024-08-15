@@ -34,7 +34,6 @@ Table: Listing of addressed use cases
 |UC4|Create a NEW|Data model
 |UC4.1|Create a NEW|Ontology
 |UC4.2|Create a NEW|Data shape
-|||
 |UC2.3|Map to a Core Vocabulary an EXISTING|JSON schema
 |===
 Table: Listing of unaddressed use cases
