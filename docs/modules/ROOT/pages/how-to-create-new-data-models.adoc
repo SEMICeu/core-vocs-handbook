@@ -3,7 +3,7 @@
 [[sec:create-a-new-xsd-schema]]
 === Create a new XSD schema
 
-This section provides detailed instructions for addressing use case UC1.1. +
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc11[UC1.1].
 
 To create a new XSD schema, the following steps need to be observed:
 
@@ -51,7 +51,7 @@ Overall, the choice between these patterns should be informed by the intended us
 [[sec:create-a-new-json-ld-context-definition]]
 === Create a new JSON-LD context definition
 
-This section provides detailed instructions for addressing use case UC1.2.
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc12[UC1.2].
 
 JSON-LD combines the simplicity, power, and web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. Here’s a guide on how to create new JSON-LD contexts for existing CVs, using the Core Person Vocabulary as an example.
 

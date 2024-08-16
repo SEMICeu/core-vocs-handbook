@@ -13,7 +13,7 @@ The subsequent sections will delve into the specific methodologies of mapping â€
 [[sec:map-an-existing-ontology]]
 === Map an existing Ontology
 
-This section provides detailed instructions for addressing use case UC2.1.
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc21[UC2.1].
 
 In this section we adopt the definition from this xref:references.adoc#ref:54[paper] of the following concepts:
 
@@ -144,7 +144,7 @@ Moreover, this stage involves the creation of *maintenance protocols* to preserv
 [[sec:map-an-existing-xsd-schema]]
 === Map an existing XSD schema
 
-This section provides detailed instructions for addressing use case UC2.2.
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc22[UC2.2]
 
 In order to create an XSD mapping one needs to decide on the purpose and level of specificity of the XSD schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a fully fledged executable set of rules for data transformation.
 

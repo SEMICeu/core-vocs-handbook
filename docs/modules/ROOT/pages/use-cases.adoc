@@ -77,6 +77,7 @@ We will use the following template to describe the relevant use cases that were 
 |*Note:* As this is a more generic use case it will be broken down into concrete use cases that focus on specific data formats.
 |===
 
+[[sec:uc11]]
 |===
 |{set:cellbgcolor: #a8c6f7}
 *Use Case UC1.1: Create a new XSD schema*
@@ -93,6 +94,7 @@ We will use the following template to describe the relevant use cases that were 
 |*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD schema]
 |===
 
+[[sec:uc12]]
 |===
 |{set:cellbgcolor: #a8c6f7}
 *Use Case UC1.2: Create a new JSON-LD context definition*
@@ -125,6 +127,7 @@ We will use the following template to describe the relevant use cases that were 
 |*Note:* Since this is a more generic use case it will be broken down into concrete use cases that focus on specific data models and/or data formats. Some of those use cases will be described in detail below, while others will be included in the xref:use-cases.adoc#sec:unaddressed-use-cases[next section], which is dedicated to the unaddressed use cases.
 |===
 
+[[sec:uc21]]
 |===
 |{set:cellbgcolor: #a8c6f7}
 *Use Case UC2.1: Map an existing Ontology to a Core Vocabulary*
@@ -143,6 +146,7 @@ We will use the following template to describe the relevant use cases that were 
 |*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology[Map an existing Ontology] section.
 |===
 
+[[sec:uc22]]
 |===
 |{set:cellbgcolor: #a8c6f7}
 *Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary*
