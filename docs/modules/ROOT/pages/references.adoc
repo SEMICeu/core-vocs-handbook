@@ -63,4 +63,15 @@
 - *[[ref:61]][edoal]* EDOAL: Expressive and Declarative Ontology Alignment Language. Available at: https://moex.gitlabpages.inria.fr/alignapi/edoal.html
 - *[[ref:62]][silk]* System for Internet-Level Knowledge (SiLK). Available at: https://tools.netsa.cert.org/silk/
 - *[[ref:63]][vocbench]* VocBench. Available at: https://vocbench.op.europa.eu/
-- *[[ref:63]][vocbench]*
+- *[[ref:64]][sawsdl]* SAWSDL. Available at: https://www.w3.org/TR/sawsdl/#annotateXSD
+- *[[ref:65]][paper5]* Ben De Meester, Pieter Heyvaert, Ruben Verborgh and Anastasia Dimou. Mapping Language Analysis of Comparative Characteristics. Available at: https://ceur-ws.org/Vol-2489/paper4.pdf
+- *[[ref:66]][xslt]* XSL Transformations (XSLT) Version 3.0. Available at: https://www.w3.org/TR/xslt-30/
+- *[[ref:67]][rml]* RDF Mapping Language (RML). Available at: https://rml.io/specs/rml/
+- *[[ref:68]][sparql-anything]* SPARQL-Anything. Available at: https://github.com/SPARQL-Anything/sparql.anything
+- *[[ref:69]][yarrrml]* YARRRML. Available at: https://rml.io/yarrrml/spec/
+- *[[ref:70]][rml-mapper]* RML Mapper. Available at: https://github.com/RMLio/rmlmapper-java
+- *[[ref:71]][rml-streamer]* RML Sreamer. Available at: https://github.com/RMLio/RMLStreamer
+- *[[ref:72]][rml-gen]* Generate RDF from an XML file. Available at: https://rml.io/docs/rml/tutorials/xml/
+- *[[ref:73]][iso2dcat-ap]* Reference XSLT-based implementation of GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap
+- *[[ref:74]][geo-dcat-ap]* GeoDCAT Application Profile for data portals in Europe. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
+- *[[ref:75]][iso2dacat-ap-mappings]* Mappings defined in GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap/blob/master/documentation/Mappings.md
