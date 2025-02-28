@@ -12,7 +12,7 @@ content:
   sources:
 #    - url: .
     - url: https://github.com/SEMICeu/core-vocs-handbook
-      branches: [ feature/bootstrap-repo ]
+      branches: [ feature/SM16-32 ]
       start_path: docs
 ui:
   bundle:
