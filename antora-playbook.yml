@@ -14,7 +14,7 @@ content:
     start_path: docs
     branches: [ develop, feature/SM16-31 ]
     tags:
-    - 1.*
+    - 1.0.0
 
 ui:
   bundle:
