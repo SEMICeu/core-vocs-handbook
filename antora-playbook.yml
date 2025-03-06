@@ -10,8 +10,14 @@ site:
 
 content:
   sources:
-    - url: .
-      start_path: docs
+  - url: https://github.com/SEMICeu/core-vocs-handbook
+    start_path: docs
+    branches: [ develop ]   # Add a name of your feature branch 
+    # (e.g. feature/SM16-31) after a comma. The feature branch must be removed
+    # from the list above before submitting a PR to develop.
+    tags:   # Refer to stable versions only by using tags
+    - 1.0.0
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
