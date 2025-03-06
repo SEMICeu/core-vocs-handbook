@@ -1,0 +1,6 @@
+name: ROOT
+version: 1.0.0
+title: SEMIC Core Vocabularies Handbook
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
