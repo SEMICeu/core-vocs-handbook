@@ -58,8 +58,8 @@ We will use the following template to describe the relevant use cases:
 [[sec:uc1]]
 [[sec:addressed-use-cases]]
 === Addressed use cases
-image::images/image-2025-02-27-14-08-05-543.png[]
 
+image::image-2025-02-27-14-08-05-543.png[]
 |===
 |{set:cellbgcolor: #a8c6f7}
 *Use Case UC1: Create a new information exchange data model*
@@ -165,8 +165,8 @@ Such activity can be done by semantic engineers based on input from domain exper
 
 [[sec:unaddressed-use-cases]]
 === Unaddressed use cases
+image::image-2025-02-27-14-09-01-559.png[]
 
-image::images/image-2025-02-27-14-09-01-559.png[]
 [[sec:uc3]]
 |===
 |{set:cellbgcolor: #a8c6f7}
