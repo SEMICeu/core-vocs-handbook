@@ -3,20 +3,21 @@
 
 Welcome to the SEMIC Core Vocabularies Handbook. This document is designed to guide public administrations in putting Core Vocabularies into practice to achieve semantic interoperability across the EU. It explains the underlying concepts, outlines practical use cases, and provides step-by-step methodologies for implementing data models and mappings.
 
-## Intended Audience
-Public administrations involve both legal/administrative experts and technical professionals. Although these groups may not always "speak the same language," they must work together to ensure smooth digital transformation. Semantics provides the common foundation that enables them to bridge their differences, fostering effective collaboration and improved public services.
+## Who shall read this Handbook
 
-This handbook is designed for two primary audiences:
+This book is intended for two main audiences: 1) administrative professionals and legal experts, and 2) technical experts and IT professionals.  
+Public administrations involve both legal/administrative experts and technical professionals. While they may not always **"speak the same language"**, they must *work together* to ensure smooth digital transformation. Semantics provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services.  
+Each intended audience will gain new insights relevant for their respective roles.
 
 ### Administrative Professionals & Legal Experts
+
+Domain experts will, upon reading the handbook:
+
 - Understand the role of semantic interoperability at the EU level.
-- Gain insights into how structured data and shared vocabularies enhance legal clarity, data exchange, and cross-border cooperation.
+- Gain insight about how structured data and shared vocabularies enhance legal clarity, data exchange, and cross-border cooperation.
 - Gain insights into how interoperability supports public services and reduces administrative burdens.
 
-### Technical Experts & IT Professionals
-- Learn how to implement Core Vocabularies in practical projects.
-- Understand methodologies for creating and mapping data models to achieve semantic interoperability.
-- Access detailed guidelines to align technical implementations with administrative requirements.
+It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions about financing and prioritising IT projects that align with interoperability goals.
 
 ## Handbook Structure
 The handbook is organised into the following sections:
