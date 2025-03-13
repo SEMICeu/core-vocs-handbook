@@ -18,6 +18,16 @@ Domain experts will, upon reading the handbook:
 - Gain insights into how interoperability supports public services and reduces administrative burdens.
 
 It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions about financing and prioritising IT projects that align with interoperability goals.
+### Technical Experts & IT Professionals
+
+The technical experts and IT professionals who design, implement, and maintain the software ecosystem will, upon reading the handbook:
+
+- Learn how to design and implement interoperable systems using Core Vocabularies and semantic data models.
+- Understand methodologies for creating, mapping, and integrating semantic data models in public administration systems.
+- Be able to apply best practices for data exchange, ensuring consistency and accuracy across different systems.
+- Use standardised approaches to enhance data accessibility, transparency, and reuse in line with FAIR principles.
+
+It is expected that this will not only facilitate communication with the domain experts but also further streamline software development conformant to the user specification and, ultimately, benefit the citizens by providing more smoothly functioning digital services.
 
 ## Handbook Structure
 The handbook is organised into the following sections:
