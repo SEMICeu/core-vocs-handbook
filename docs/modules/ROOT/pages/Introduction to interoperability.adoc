@@ -1,5 +1,5 @@
 
-= Core Vocs Handbook
+= Core Vocabularies Handbook
 [[sec:intro-to-interoperability]]
 
 This Handbook aims to explain the role of Core Vocabularies in enabling semantic interoperability at the EU level and to practically guide public administrations in achieving semantic interoperability. This section introduces what interoperability is, what makes it semantic, and how Core Vocabularies contribute to it.
