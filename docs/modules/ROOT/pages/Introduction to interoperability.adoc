@@ -1,0 +1,84 @@
+
+= Core Vocabularies Handbook
+[[sec:intro-to-interoperability]]
+
+This Handbook aims to explain the role of Core Vocabularies in enabling semantic interoperability at the EU level and to practically guide public administrations in achieving semantic interoperability. This section introduces what interoperability is, what makes it semantic, and how Core Vocabularies contribute to it.
+
+== Introduction to interoperability
+
+Sharing data easily is indispensable for effective and efficient public services. The European Union has set rules and guidelines that intend to foster achieving that, including the https://digital-strategy.ec.europa.eu/en/policies/data-act[Data Act],
+the https://digital-strategy.ec.europa.eu/en/policies/data-governance-act[Data Governance Act], the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)], and the https://interoperable-europe.ec.europa.eu/interoperable-europe/interoperable-europe-act[Interoperable Europe Act], which underscore the importance of harmonised data practices across member states. These initiatives emphasise that true interoperability goes far beyond just connecting systems at a technical level. They stress that data must be shared with a common understanding such that the meaning of the data is preserved as it moves from one system or agency to another. The Data Act lays out clear rules for fair data access and reuse, while the Data Governance Act builds trust in data sharing by establishing secure and transparent practices. The EIF provides practical guidelines on how systems should work together, not only in terms of technology but also in understanding and using data uniformly. The Interoperable Europe Act is aimed at removing barriers to public sector data sharing.
+It envisions a “network of networks” for seamless cross-border cooperation, supported by mandatory assessments and an Interoperable Europe Portal.
+In the public sector, interoperability refers to the capacity of different governmental bodies to collaborate effectively, allowing for the smooth exchange of information and delivery of services across various regions, sectors, and organisational boundaries.
+This capability ensures that data is shared and interpreted consistently, promoting reliable data sharing and access across multiple sectors and administrative levels, thereby enhancing policymaking and implementation. +
+At its core, interoperability is about working together to achieve shared objectives, regardless of organisational or geographical distances between participants.
+To achieve this, one has to  elucidate interoperability’s multiple interacting sub-components. This could be along the line of the high-level conceptual model of the https://interoperable-europe.ec.europa.eu/collection/nifo-national-interoperability-framework-observatory/european-interoperability-framework-detail[EIF], which intersects with national interoperability frameworks and domain-specific interoperability frameworks such as the https://knowledge-base.inspire.ec.europa.eu/index_en[INSPIRE Directive].
+In EIF, each higher layer rests upon an interoperable lower layer of infrastructure; e.g., organisational interoperability requires semantic operability such that information can be exchanged seamlessly, which, in turn, requires IT infrastructure interoperability.  +
+They also can be viewed as layers of local, provincial, national, and EU-wide levels of interoperability to accommodate a plethora of e-Goverment information exchange scenarios. Alternatively, an interoperability framework can be envisioned as foundations upon which government services are built, or as one of the constituent pillars that enable goals such as citizen convenience, increased productivity, and lower costs of government operations.  +
+In sum, there are two key reasons to seek interoperability:
+
+. *Instrumental Value* – Standardised data and information exchange simplifies cross-border operations, enabling organisations to:
+** comply with regulations more easily; 
+** reduce overhead costs by automating processes and paperwork across ministries that would have to be carried out only once; 
+** streamline administrative tasks and data accuracy, preventing misinterpretation of data through standardised data exchange; 
+** improve service delivery.
+. *Legal Requirements* – EU regulations such as the _Data Act_, _Data Governance Act_, and the _European Interoperability Framework _mandate structured and secure data exchange. Compliance ensures smoother interactions with public authorities.
+
+==  How to achieve semantic interoperability
+
+While data exchange is an evident requirement for interoperability, there is a fine but crucial distinction between data format interoperability and semantic interoperability. A standardised and shared data format to store data lets one exchange data, such as creating an SQL database dump in one tool and seamlessly reopening it in another, or lets one send and receive emails that arrive properly in each other’s inbox.  +
+Interoperability at the semantic level concerns the meaning of that data. One may have a format and language to represent data, such as XML, but with a tag <bank> … </bank>, neither the software nor the humans can determine from just that what sort of bank is enclosed within the tags. Such meaning is defined in artefacts including vocabularies, thesauri, and ontologies. A “<fin:bank>” tag in a document is then an implemented version of its definition at the semantic layer, where it has a definition and a number of properties specified, like that the fin:bank is a type of organisation with a board of directors and a location for its headquarters. This enables not only correct sending and receiving of data, but also exchanging data reliably, accessing the right data when querying for information and obtaining relevant data in the query answer, and merging data.   +
+ One recommended way to achieve semantic interoperability is to use  https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification:~:text=types%20of%20assets.-,What%20is%20a%20Core%20Vocabulary%20(CV)%20specification%3F,-Definition%0AA%20Core[*Core Vocabularies]*, which is where the terms are specified and disambiguated. 
+
+== What is a Core Vocabulary?
+
+A Core Vocabulary (CV) is a basic, reusable, and extensible specification for adding semantics to data and information that captures the essential characteristics of an entity in a context-neutral manner. Its primary purpose is to provide standardised terms that can be reused across various domains, typically realised as a lightweight ontology (optionally accompanied by a permissive data shape) and documented in a concise specification. +
+Core Vocabularies provide simplified, reusable, and extensible models that are subject domain agnostic  and capture the fundamental characteristics of entities usually handled by public administrations.
+
+== A Practical Example
+
+Imagine you are starting a business in another EU country. To complete the registration, you need to submit a criminal record certificate and a diploma certificate to multiple public organisations. In many countries, this process is still manual—people must physically visit different ministries, request documents, and submit them in person or via email. Each organisation may use different formats and terminology, making it difficult for institutions to interpret and process the information correctly, possibly making mistakes during data entry that subsequently have to be corrected. Without a common reference vocabulary, these organizations interpret the data differently, making seamless exchange impossible. +
+Now, imagine an alternative scenario, one where this entire process is fully automated. Instead of individuals having to visit multiple offices, the ministries and public administrations would communicate directly with each other, exchanging the necessary information in a structured and consistent manner. The citizen could simply grant approval to the administration office to fetch the data from their home country that already had recorded the relevant data. This would eliminate the need for duplicate document submissions and avoid possible data entry issues, thereby reducing the hassle and costs of mobility. This is also the aim of the https://ec.europa.eu/digital-building-blocks/sites/display/OOTS/OOTSHUB+Home[Once-Only Technical System (OOTS)]. Defining the _what_ is one step; the _how_ to achieve it is another.   +
+How can different systems and institutions "talk" to each other effectively at the level of software applications and databases? The challenge is not only technical but also semantic. It is not enough for systems to simply exchange data—they must also be able to interpret the meaning behind the data in a consistent way such that it will not result in errors or so-called ‘dirty’–incorrect or incomplete–data. This requires a common language and (multilingual) structured vocabulary at both the business process level and the IT systems level. +
+This is where *standards to declare the semantics* play a crucial role. By using *core vocabularies,* public administrations can ensure that data and information is structured in a way understood by both humans and machines. Standardised models allow different organisations to recognise and process information without discrepancies, therewith reducing errors and the need for manual intervention. As a result, governments can facilitate seamless data exchange, ensuring that information is accurately shared, interpreted, and processed across systems, leading to more efficient approvals and interactions for businesses, governmental organisations, and citizens.
+
+== Who shall read this Handbook
+
+This book is intended for two main audiences: 1) administrative professionals and legal experts, and 2) technical experts and IT professionals. +
+Public administrations involve both legal/administrative experts and technical professionals. While they may not always __“__speak the same language__”__, they must* work together* to ensure smooth digital transformation. Semantics provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. +
+Each intended audience will gain new insights relevant for their respective roles
+
+=== Administrative Professionals & Legal Experts
+
+Domain experts will, upon reading the handbook: 
+
+* Understand the role of semantic interoperability at the EU level.
+*  Gain insight about how structured data and shared vocabularies enhance legal clarity, data exchange, and cross-border cooperation.
+* Gain insights into how interoperability supports public services and reduces administrative burdens.
+It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions about financing and prioritising IT projects that align with interoperability goals.
+
+=== Technical Experts & IT Professionals
+
+The technical experts and IT professionals who design, implement, and maintain the software ecosystem will, upon reading the handbook:
+
+* Learn how to design and implement interoperable systems using Core Vocabularies and semantic data models.
+* Understand methodologies for creating, mapping, and integrating semantic data models in public administration systems.
+* Be able to apply best practices for data exchange, ensuring consistency and accuracy across different systems.
+* Use standardised approaches to enhance data accessibility, transparency, and reuse in line with FAIR principles.
+It is expected that this will not only facilitate communication with the domain experts, but also further streamline software development conformant to the user specification and, ultimately, the citizens who benefit from more smoothly functioning digital services. 
+
+==  How this Handbook is structured
+
+The *SEMIC Core Vocabularies Handbook* is designed to practically guide public administrations in achieving semantic interoperability. It provides clear guidance on how to use controlled vocabularies to create semantic data specifications that align with EU initiatives, how to reuse them, and how to implement them. Additionally, it outlines key https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#_use_cases:~:text=Unaddressed%20use%20cases-,Use%20cases,-This%20handbook%20serves[use cases] demonstrating practical applications of these vocabularies. +
+The Handbook has two types of content:
+
+* *Explanatory Sections*:  Intended for administrative professionals and legal experts. This section introduces interoperability and explains the role of Core Vocabularies, along with relevant use cases and a conceptual framework. It helps non-technical stakeholders understand why semantic interoperability matters and how it supports policy implementation.
+* *Practical Guidance*: Designed for technical experts, data architects, and IT professionals,
+this section provides methodologies and step-by-step tutorials for adopting and implementing Core Vocabularies. It includes instructions on creating new semantic data specifications by extending Core Vocabularies, mapping existing data models to them, and ensuring interoperability through standardised practices.
+
+The *structure of the main part of the handbook* is as follows.
+First, several principal *use cases* will be introduced, which feature the most common, challenging, and interesting scenarios.
+It is augmented with other scenarios to indicate further possible usage.
+This is followed by *guidelines for implementation*, which includes procedures for how to create new models and how to map existing ones.
+These guidelines are demonstrated in the *tutorials and examples* for the use cases.
+Finally, it contains a *glossary of terms* for easy reference.
