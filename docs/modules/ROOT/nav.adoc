@@ -5,9 +5,12 @@
 ** xref:use-cases.adoc[Use cases]
 ** xref:conceptual-framework.adoc[Conceptual framework]
 
-* Guidelines
+* Guidelines for use cases implementation
 ** xref:how-to-create-new-data-models.adoc[How to create new data models]
 ** xref:how-to-map-existing-data-models.adoc[How to map existing data models]
+
+* Tutorials & examples for use cases
+** xref:creating JSON-LD context (UC 1.2).adoc[How to create JSON-LD context]
 
 * Back matter
 ** xref:references.adoc[References]
