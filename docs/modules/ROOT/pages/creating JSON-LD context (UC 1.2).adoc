@@ -8,7 +8,7 @@ For example, the terms Service and RequiredEvidence were introduced in https://g
 
 . Service allows for describing not only public services but also general ones, enabling the representation of services provided through partnerships or private organizations.
 . RequiredEvidence provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for health insurance registration.
-To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service *and *RequiredEvidence*, which are defined by reusing concepts from the Core Business Vocabulary (CBV), following ideas from CPSV-AP-NO. +
+To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service* and *RequiredEvidence*, which are defined by reusing concepts from the Core Business Vocabulary (CBV), following ideas from CPSV-AP-NO. +
 By extending CPSV-AP and using JSON-LD, public administrations can better organize their data, making it easier to share and integrate across systems while supporting a wider range of use cases.
 
 === Steps to Create a JSON-LD Context
@@ -220,7 +220,7 @@ Add CBV terms to enhance the description of the Service entity.
 |===
 
 ==== Map Extended Properties in a Service Instance:
-Use the extended properties to describe more aspects of *Service *instances. For example:
+Use the extended properties to describe more aspects of *Service* instances. For example:
 |===
 |
 {
