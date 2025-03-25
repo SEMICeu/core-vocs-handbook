@@ -78,16 +78,10 @@ By extending CPSV-AP and using JSON-LD, public administrations can better organi
 
 =====  Import or Define Elements:
 Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the @import statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
-|===
-|
-{
-  "@context":
 
-{
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  }
 
-|===
+  "@context":{ @import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"} "
+
 If a context that we can reuse does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms like PublicService and ContactPoint. These terms must be mapped to URIs.
 |===
 | {
