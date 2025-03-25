@@ -31,68 +31,33 @@ If a context needs to be extended, define the new elements explicitly. For examp
  { "@context":{
     "Service": "http://data.europa.eu/m8g/cpsvap#Service",
     "RequiredEvidence": "http://data.europa.eu/m8g/cpsvap#RequiredEvidence"  }
-
 }
 
-
-
-|===
 
 ==== Shape the Structure
 Once you've imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardized and machine-readable format. +
 Let’s look at an example where we define a Service and some of its key properties, such as contactPoint, description, name and hasRequiredEvidence.
-|===
 
   "@context":
-
-{
     "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-
-"Service": "http://data.europa.eu/m8g/cpsvap#Service",
-
- "Service.hasRequiredEvidence": {
-
+     "Service": "http://data.europa.eu/m8g/cpsvap#Service",
+     "Service.hasRequiredEvidence": {
       "@container": "@set",
-
-      "@id": "http://data.europa.eu/m8g/cpsvap#RequiredEvidence"
-
-    },
-
-    "Service.description":
-{
+      "@id": "http://data.europa.eu/m8g/cpsvap#RequiredEvidence"},
+    "Service.description":{
       "@container": "@set",
-
       "@id": "http://purl.org/dc/terms/description",
-
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-
-},
-
-    "Service.contactPoint":
-{
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"},
+    "Service.contactPoint":{
       "@container": "@set",
-
       "@id": "http://data.europa.eu/m8g/contactPoint",
-
-      "@type": "@id"
-    },
-
-    "Service.name":
-
-{
+      "@type": "@id" },
+    "Service.name":{
       "@container": "@set",
-
       "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"}
+} }
 
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    }
-
-}
-
-}
-
-
-|===
 ===== Explanation of JSON-LD Keywords Used
 
 * *@context*: Defines the mapping between terms (e.g., PublicService) and their corresponding IRIs.
@@ -113,56 +78,26 @@ To illustrate this, we’ve created a JSON-LD context  representation of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
-|===
-|
-{
-  "@context":
 
-{
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
 
-},
-
+  {"@context": { "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"},
   "Service": {
-    "Service.hasRequiredEvidence": [
+  "Service.hasRequiredEvidence": [
       "http://example.org/RequiredEvidence/ProofOfAddress"
     ],
-
-    "Service.name": "Health Insurance Registration",
-
+  "Service.name": "Health Insurance Registration",
     "Service.description": "A service for registering for health insurance.",
-
-    "Service.contactPoint":
-{
+    "Service.contactPoint":{
       "@type": "ContactPoint",
-
       "hasTelephone": "+420776723338"
-    }
-
-}
-
-}
-
-
-
-|===
+   } } }
 
 ==== Extend the Context by reusing terms from Core Vocabularies
 To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as LegalEntity, Organization, and ContactPoint, to enrich your *Service* descriptions.
-|===
-|{
-  "@context":
 
-[
-    {
-
-      "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-
-    },
-
-    {
-
-      "@import": "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"}  ]}
+  {"@context": [ {
+      "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld" },
+    { "@import": "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"}  ]}
 
 ====  Define Additional Properties from the Core Business Vocabulary
 Add CBV terms to enhance the description of the Service entity.
