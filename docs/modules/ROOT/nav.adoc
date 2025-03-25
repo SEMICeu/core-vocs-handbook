@@ -6,7 +6,15 @@
 *** xref:use-cases.adoc#sec:addressed-use-cases[Addressed use cases]
 **** xref:use-cases.adoc#sec:uc1[UC1: Create a new information exchange data model]
 ***** xref:use-cases.adoc#sec:uc11[UC1.1: Create a new XSD schema]
+****** xref:UC1.2-description.adoc#sec:uc12-d[UC1.2 Description]
+****** Create a new XSD schema guideline
+****** Tutorial
+
 ***** xref:use-cases.adoc#sec:uc12[UC1.2: Create a new JSON-LD context definition]
+****** xref:UC1.2-description.adoc#sec:uc12-d[UC1.2 Description]
+****** xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[UC1.2 methodology]
+****** xref:UC1.2-description.adoc#sec:create-a-json-ld-definition[UC1.2 tutorial]
+
 **** xref:use-cases.adoc#sec:uc2[UC2: Map an existing data model to a Core Vocabulary]
 ***** xref:use-cases.adoc#sec:uc21[UC2.1: Map an existing Ontology to a Core Vocabulary]
 ***** xref:use-cases.adoc#sec:uc22[UC2.2:  Map an existing XSD Schema to a Core Vocabulary]
