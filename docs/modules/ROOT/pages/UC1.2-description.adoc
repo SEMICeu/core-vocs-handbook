@@ -18,7 +18,7 @@
 |===
 
 [[sec:create-a-new-json-ld-context-definition]]
-=== Create a new JSON-LD context definition
+=== Methodology to create a new JSON-LD context definition
 
 This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc12[UC1.2].
 
