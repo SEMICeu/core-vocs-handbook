@@ -3,11 +3,30 @@
 * Core Vocabularies
 ** xref:semic-core-vocabularies.adoc[SEMIC Core Vocabularies]
 ** xref:use-cases.adoc[Use cases]
-** xref:conceptual-framework.adoc[Conceptual framework]
+*** xref:use-cases.adoc#sec:addressed-use-cases[Addressed use cases]
+**** xref:use-cases.adoc#sec:uc1[UC1: Create a new information exchange data model]
+***** xref:use-cases.adoc#sec:uc11[UC1.1: Create a new XSD schema]
+***** xref:use-cases.adoc#sec:uc12[UC1.2: Create a new JSON-LD context definition]
+**** xref:use-cases.adoc#sec:uc2[UC2: Map an existing data model to a Core Vocabulary]
+***** xref:use-cases.adoc#sec:uc21[UC2.1: Map an existing Ontology to a Core Vocabulary]
+***** xref:use-cases.adoc#sec:uc22[UC2.2:  Map an existing XSD Schema to a Core Vocabulary]
+*** xref:use-cases.adoc#sec:unaddressed-use-cases[Unaddressed use cases]
+**** xref:use-cases.adoc#sec:uc3[UC3: Create a new Semantic data specification]
+***** xref:use-cases.adoc#sec:uc31[UC3.1: Create a new Core Vocabulary]
+***** xref:use-cases.adoc#sec:uc32[UC3.2: Create a new Application Profile]
+**** xref:use-cases.adoc#sec:uc4[UC4: Create a new data model]
+***** xref:use-cases.adoc#sec:uc31[UC4.1: Create a new ontology]
+***** xref:use-cases.adoc#sec:uc31[UC4.2: Create a new data shape]
+**** xref:use-cases.adoc#sec:uc23[UC2.3: Map an existing JSON Schema to a Core Vocabulary]
 
-* Guidelines
-** xref:how-to-create-new-data-models.adoc[How to create new data models]
-** xref:how-to-map-existing-data-models.adoc[How to map existing data models]
+** Guidelines for use case implementation
+*** xref:how-to-create-new-data-models.adoc[How to create new data models]
+**** xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD schema]
+**** xref:how-to-create-new-data-models.adoc#sec:create-a-new-json-ld-context-definition[Create a new JSON-LD context definition]
+*** xref:how-to-map-existing-data-models.adoc[How to map existing data models]
+**** xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology[Map an existing Ontology]
+**** xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-xsd-schema[Map an existing XSD schema]
+** xref:conceptual-framework.adoc[Conceptual framework]
 
 * Back matter
 ** xref:references.adoc[References]
