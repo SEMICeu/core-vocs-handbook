@@ -2,7 +2,7 @@
 
 === Introduction
 
-Public administrations often need to share information about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. +
+Public administrations often need to share information  about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. +
 The Core Public Service Vocabulary Application Profile (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*) provides a generic framework to describe public services in a machine-readable way. It helps public administrations share and organise information about services. However, sometimes CPSV-AP needs to be extended with new concepts or restrictions to address more general or specific use cases. +
 For example, the terms Service and RequiredEvidence were introduced in https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO] to extend the CPSV-AP model such that it can fulfil the specific needs identified in Norway, where:
 
