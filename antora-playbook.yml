@@ -10,12 +10,10 @@ site:
 
 content:
   sources:
-#    - url: .
     - url: https://github.com/SEMICeu/core-vocs-handbook
-      branches: [ develop ]
+      branches: [ main, develop ]
       start_path: docs
-      tags:
-      - 1.0.0
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
