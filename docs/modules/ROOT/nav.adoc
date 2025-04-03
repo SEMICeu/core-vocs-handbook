@@ -28,6 +28,9 @@
 **** xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-xsd-schema[Map an existing XSD schema]
 ** xref:conceptual-framework.adoc[Conceptual framework]
 
+* Tutorials & examples for use cases
+** xref:creating JSON-LD context (UC 1.2).adoc[How to create JSON-LD context]
+
 * Back matter
 ** xref:references.adoc[References]
 ** xref:glossary.adoc[Glossary]
