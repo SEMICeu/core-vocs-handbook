@@ -3,24 +3,24 @@
 ** xref:semic-core-vocabularies.adoc[Core Vocabularies]
 * Creating a new data model
 ** xref:use-cases.adoc#sec:uc1[Use cases Overview]
-*** xref:use-cases.adoc#sec:uc11[Create a new XSD schema (UC1.1)]
-**** Description
-**** Guideline
-**** Tutorial
-*** xref:use-cases.adoc#sec:uc12[Create a new JSON-LD context definition (UC1.2)]
-**** xref:UC1.2-description.adoc#sec:uc12-d[Description]
-**** xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[Guideline]
-**** xref:UC1.2-description.adoc#sec:create-a-json-ld-definition[Tutorial]
+** xref:use-cases.adoc#sec:uc11[Create a new XSD schema (UC1.1)]
+*** Description
+*** Guideline
+*** Tutorial
+** xref:use-cases.adoc#sec:uc12[Create a new JSON-LD context definition (UC1.2)]
+*** xref:UC1.2-description.adoc#sec:uc12-d[Description]
+*** xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[Guideline]
+*** xref:UC1.2-description.adoc#sec:create-a-json-ld-definition[Tutorial]
 * Re-using core vocabularies
 ** xref:use-cases.adoc#sec:uc2[Use cases Overview]
-*** xref:use-cases.adoc#sec:uc21[Map an existing Ontology to a Core Vocabulary (UC2.1)]
-**** Description
-**** Guideline
-**** Tutorial
-*** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
-**** Description
-**** Guideline
-**** Tutorial
+** xref:use-cases.adoc#sec:uc21[Map an existing Ontology to a Core Vocabulary (UC2.1)]
+*** Description
+*** Guideline
+*** Tutorial
+** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
+*** Description
+*** Guideline
+*** Tutorial
 
 * Appendix
 ** xref:use-cases.adoc#sec:unaddressed-use-cases[Other use cases]
