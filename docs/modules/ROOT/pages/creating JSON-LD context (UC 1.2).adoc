@@ -11,9 +11,9 @@ For example, the terms Service and RequiredEvidence were introduced in https://g
 To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service* and *RequiredEvidence*, which are defined by reusing concepts from the Core Business Vocabulary (CBV), following ideas from CPSV-AP-NO. +
 By extending CPSV-AP and using JSON-LD, public administrations can better organize their data, making it easier to share and integrate across systems while supporting a wider range of use cases.
 
-=== Steps to Create a JSON-LD Context
+=== Steps to create a JSON-LD context
 
-====  Import or Define Elements:
+====  Import or define elements:
 Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the @import statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
 [source,json]
   {
@@ -44,7 +44,7 @@ If a context needs to be extended, define the new elements explicitly. For examp
 
 
 
-==== Shape the Structure
+==== Shape the structure
 Once you've imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardized and machine-readable format. +
 Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a Service and some of its key properties, such as contactPoint, description, name and hasRequiredEvidence.
 [source,json]
@@ -75,7 +75,7 @@ Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a 
 }
 
 
-===== Explanation of JSON-LD Keywords Used
+===== Explanation of JSON-LD keywords used
 
 * *@context*: Defines the mapping between terms (e.g., PublicService) and their corresponding IRIs.
 * *@container*: Specifies how values are structured. For instance,
@@ -84,10 +84,10 @@ Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a 
 * *@type*: Specifies the type of a value. Commonly used for linking to classes or data types.
 * *@import*:  Imports another JSON-LD context, allowing reuse of its terms.
 
-==== Example of a simple Service Instance
+==== Example of a simple service instance
 After defining the context and structure, you can now describe an actual Service instance by referencing the terms you defined earlier.
 
-===== Example Scenario
+===== Example scenario
 
 Let’s assume a public administration offers a service called *"Health Insurance Registration"*. This service allows citizens to register for health insurance, which requires certain documents (evidence) to complete the process. Citizens might need to contact the administration for guidance, and the service details should be structured in a way that makes it easy to share and integrate across systems. +
 To illustrate this, we’ve created a JSON-LD context representation  of this service, highlighting
@@ -115,11 +115,11 @@ Try this in JSON-LD Playground link:https://tinyurl.com/instance-ex[here]
   }
 }
 
-==== Aliasing Keywords for API Compatibility (REST API Example)
+==== Aliasing keywords for API compatibility (REST API example)
 
 When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to `url` and `@type` to `type` to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
-===== Example of Aliasing Keywords
+===== Example of aliasing keywords
 
 [source,json]
 
@@ -144,7 +144,7 @@ In this example:
 
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
-==== Extend the Context by reusing terms from Core Vocabularies
+==== Extend the context by reusing terms from Core Vocabularies
 To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as LegalEntity, Organization, and ContactPoint, to enrich your *Service* descriptions.
 [source,json]
   {
@@ -159,7 +159,7 @@ To highlight the reuse of terms from existing CVs, we can import the *Core Busin
 }
 
 
-====  Define Additional Properties from the Core Business Vocabulary
+====  Define additional properties from the Core Business Vocabulary
 Add CBV terms to enhance the description of the Service entity.
 [source,json]
   {
@@ -174,7 +174,7 @@ Add CBV terms to enhance the description of the Service entity.
 
 
 
-==== Map Extended Properties in a Service Instance:
+==== Map extended properties in a service instance:
 Use the extended properties to describe more aspects of *Service* instances. For link:https://json-ld.org/playground/?startTab=tab-expanded&json-ld=%7B%22%40context%22%3A%7B%22%40import%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSEMICeu%2FCPSV-AP%2Fmaster%2Freleases%2F3.2.0%2Fcontext%2Fcpsv-ap.jsonld%22%7D%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fservice%2FhealthInsuranceRegistration%22%2C%22%40type%22%3A%22cpsv%3APublicService%22%2C%22name%22%3A%22Health%20Insurance%20Registration%22%2C%22description%22%3A%22A%20service%20for%20registering%20for%20health%20insurance.%22%2C%22hasRequiredEvidence%22%3A%5B%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2FRequiredEvidence%2FProofOfAddress%22%2C%22name%22%3A%22Proof%20of%20Address%22%7D%5D%2C%22contactPoint%22%3A%7B%22%40type%22%3A%22cpsv%3AContactPoint%22%2C%22hasTelephone%22%3A%22%2B420776723338%22%7D%2C%22providedBy%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2FlegalEntity%2FhealthDepartment%22%7D%7D[example]:
 
 
@@ -202,12 +202,12 @@ Use the extended properties to describe more aspects of *Service* instances. For
   }
 }
 
-==== Final Review and Validation
+==== Final review and validation
 Use an online tool like the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
 
 image::image-2025-04-14-14-25-55-451.png[]
 
-===== Error Example:
+===== Error example:
 
 If the @import URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:
 
@@ -219,6 +219,6 @@ If the @import URLs for external contexts are incorrect or unavailable, the vali
 
 
 image::image-2025-04-14-14-26-17-475.png[]
-===== How to Fix:
+===== How to fix:
 
 Ensure that the @import URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a cURL command to ensure they return the correct JSON-LD data. Update the URLs to the correct ones.
