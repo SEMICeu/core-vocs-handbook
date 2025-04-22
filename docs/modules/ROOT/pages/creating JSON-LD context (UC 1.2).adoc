@@ -8,7 +8,7 @@ For example, the terms Service and RequiredEvidence were introduced in https://g
 
 . Service allows for describing not only public services but also general ones, enabling the representation of services provided through partnerships or private organisations.
 . RequiredEvidence provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for health insurance registration.
-To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service* and *RequiredEvidence*, which are defined by reusing concepts from the Core Business Vocabulary (CBV), following ideas from CPSV-AP-NO. +
+To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service* and *RequiredEvidence*, which are defined by reusing concepts from the link:https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)], following ideas from CPSV-AP-NO. +
 By extending CPSV-AP and using JSON-LD, public administrations can better organise their data, making it easier to share and integrate across systems while supporting a wider range of use cases.
 
 === Steps to create a JSON-LD context
@@ -98,20 +98,37 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 Try this in JSON-LD Playground link:https://tinyurl.com/instance-ex[here]
 
 [source,json]
-  {
+ {
   "@context": {
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  },
-  "Service": {
-    "Service.name": "Health Insurance Registration",
-    "Service.description": "A service for registering for health insurance.",
-    "Service.hasRequiredEvidence": [
-      "http://example.org/RequiredEvidence/ProofOfAddress"
-    ],
-    "Service.contactPoint": {
-      "@type": "ContactPoint",
-      "hasTelephone": "+420776723338"
+    "cpsv": "http://purl.org/vocab/cpsv#",
+    "dct": "http://purl.org/dc/terms/",
+    "PublicService": "cpsv:PublicService",
+    "title": "dct:title",
+    "description": "dct:description",
+     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "hasRequiredEvidence": {
+      "@id": "cpsv:hasRequiredEvidence",
+      "@type": "@id"
+    },
+    "contactPoint": {
+      "@id": "cpsv:contactPoint"
+    },
+    "hasTelephone": {
+      "@id": "http://example.org/vocab/hasTelephone",
+      "@type": "xsd:string"
     }
+  },
+  "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "title": "Health Insurance Registration",
+  "description": "A service for registering for health insurance.",
+  "hasRequiredEvidence": {
+    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
+    "title": "Proof of Address"
+  },
+  "contactPoint": {
+    "@type": "cpsv:ContactPoint",
+    "hasTelephone": "+420776723338"
   }
 }
 
@@ -181,18 +198,37 @@ Use the extended properties to describe more aspects of *Service* instances. For
 [source,json]
 {
   "@context": {
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+    "cpsv": "http://purl.org/vocab/cpsv#",
+    "LegalEntity": "http://example.com/legal#LegalEntity",
+    "dct": "http://purl.org/dc/terms/",
+    "PublicService": "cpsv:PublicService",
+    "title": "dct:title",
+    "description": "dct:description",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "hasRequiredEvidence": {
+      "@id": "cpsv:hasRequiredEvidence",
+      "@type": "@id"
+    },
+    "contactPoint": {
+      "@id": "cpsv:contactPoint"
+    },
+    "hasTelephone": {
+      "@id": "http://example.org/vocab/hasTelephone",
+      "@type": "xsd:string"
+    },
+    "providedBy": {
+      "@id": "cpsv:providedBy",
+      "@type": "@id"
+    }
   },
   "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "cpsv:PublicService",
-  "name": "Health Insurance Registration",
+  "@type": "PublicService",
+  "title": "Health Insurance Registration",
   "description": "A service for registering for health insurance.",
-  "hasRequiredEvidence": [
-    {
-      "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-      "name": "Proof of Address"
-    }
-  ],
+  "hasRequiredEvidence": {
+    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
+    "title": "Proof of Address"
+  },
   "contactPoint": {
     "@type": "cpsv:ContactPoint",
     "hasTelephone": "+420776723338"
@@ -201,6 +237,7 @@ Use the extended properties to describe more aspects of *Service* instances. For
     "@id": "http://example.org/legalEntity/healthDepartment"
   }
 }
+
 
 ==== Final review and validation
 Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
@@ -218,7 +255,8 @@ If the @import URLs for external contexts are incorrect or unavailable, the vali
   {"@context":[ { @import": "https://invalid-url/cpsv-ap.jsonld" }  ] }
 
 
-image::image-2025-04-14-14-26-17-475.png[]
+// image::image-2025-04-14-14-26-17-475.png[]
+image::image-2025-04-22-22-04-11-289.png[]
 ===== How to fix:
 
 Ensure that the @import URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a cURL command to ensure they return the correct JSON-LD data. Update the URLs to the correct ones.
