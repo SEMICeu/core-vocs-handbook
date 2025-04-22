@@ -2,14 +2,14 @@
 
 === Introduction
 
-Public administrations often need to share information about their services with other organizations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. +
-The Core Public Service Vocabulary Application Profile (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*) provides a generic framework to describe public services in a machine-readable way. It helps public administrations share and organize information about services. However, sometimes CPSV-AP needs to be extended with new concepts or restrictions to address more general or specific use cases. +
+Public administrations often need to share information about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. +
+The Core Public Service Vocabulary Application Profile (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*) provides a generic framework to describe public services in a machine-readable way. It helps public administrations share and organise information about services. However, sometimes CPSV-AP needs to be extended with new concepts or restrictions to address more general or specific use cases. +
 For example, the terms Service and RequiredEvidence were introduced in https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO] to extend the CPSV-AP model such that it can fulfil the specific needs identified in Norway, where:
 
-. Service allows for describing not only public services but also general ones, enabling the representation of services provided through partnerships or private organizations.
+. Service allows for describing not only public services but also general ones, enabling the representation of services provided through partnerships or private organisations.
 . RequiredEvidence provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for health insurance registration.
 To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like *Service* and *RequiredEvidence*, which are defined by reusing concepts from the Core Business Vocabulary (CBV), following ideas from CPSV-AP-NO. +
-By extending CPSV-AP and using JSON-LD, public administrations can better organize their data, making it easier to share and integrate across systems while supporting a wider range of use cases.
+By extending CPSV-AP and using JSON-LD, public administrations can better organise their data, making it easier to share and integrate across systems while supporting a wider range of use cases.
 
 === Steps to create a JSON-LD context
 
@@ -23,7 +23,7 @@ Since CPSV-AP provides an existing JSON-LD context, we can import it in our own 
 }
 
 
-If a context that we can reuse does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms like PublicService and ContactPoint. These terms must be mapped to URIs.
+If a context that we can reuse does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms such as PublicService and ContactPoint. These terms must be mapped to URIs.
 [source,json]
   {
   "@context": {
@@ -45,7 +45,7 @@ If a context needs to be extended, define the new elements explicitly. For examp
 
 
 ==== Shape the structure
-Once you've imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardized and machine-readable format. +
+Once you've imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardised and machine-readable format. +
 Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a Service and some of its key properties, such as contactPoint, description, name and hasRequiredEvidence.
 [source,json]
   {
@@ -145,7 +145,7 @@ In this example:
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
 ==== Extend the context by reusing terms from Core Vocabularies
-To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as LegalEntity, Organization, and ContactPoint, to enrich your *Service* descriptions.
+To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as LegalEntity, Organisation, and ContactPoint, to enrich your *Service* descriptions.
 [source,json]
   {
   "@context": [
@@ -203,7 +203,7 @@ Use the extended properties to describe more aspects of *Service* instances. For
 }
 
 ==== Final review and validation
-Use an online tool like the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
+Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
 
 image::image-2025-04-14-14-25-55-451.png[]
 
