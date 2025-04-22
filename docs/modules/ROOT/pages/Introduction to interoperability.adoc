@@ -21,6 +21,7 @@ In the context of public sector interoperability specifically, it functions as a
 
 * will contribute to GDP growth and will be a cost-saver: an "estimated increase of 0.4% in EU GDP" and saving individuals "up to 24 million hours a year, or EUR 543 million", whereas "[b]usinesses could save 30 billion hours or EUR 568 billion a year." (referenced https://publications.jrc.ec.europa.eu/repository/handle/JRC127330[source])
 * will contribute positively to public values, as it already has done for multilingualism and inclusive public services. 
+
 and it is "to ensure the proper functioning of the internal market" both within and between sectors https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R0868[Data governance act].
 
 Mechanisms that foster interoperability contribute to improving individuals’ and businesses’ access to data to encourage data-driven innovation and a more integrated and efficient data economy. A prerequisite for this is that the data must have a clearly specified meaning so that it will be used correctly by all users sharing the same understanding about that data. This, in turn, also contributes to clear data provenance and correctness for the data stored and used, which is important for increasing trust and data availability.  These capabilities could further contribute to consistent interpretation and foster reliable data sharing and access across multiple sectors and administrative levels, which may also contribute to policymaking and implementation.
