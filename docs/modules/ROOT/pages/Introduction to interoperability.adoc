@@ -18,6 +18,7 @@ Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.p
 The requirement for interoperability has been identified at the EC level and consequently different actions and regulations are established to facilitate and support interoperability (summarised in the next section). They stress that data must be shared with a shared understanding [EIF] such that the meaning of the data is preserved over time, when it is shared between co-legislators and across agencies in whole or in part, when it is transferred between systems of different agencies, and when it is used in the various information systems implemented with distinct technologies.
 
 In the context of public sector interoperability specifically, it functions as an enabler of a number of benefits. Among others, the EC has identified in EUR-Lex - 52022DC0710 - EN - EUR-Lex that it 
+
 * will contribute to GDP growth and will be a cost-saver: an "estimated increase of 0.4% in EU GDP" and saving individuals "up to 24 million hours a year, or EUR 543 million", whereas "[b]usinesses could save 30 billion hours or EUR 568 billion a year." (referenced https://publications.jrc.ec.europa.eu/repository/handle/JRC127330[source])
 * will contribute positively to public values, as it already has done for multilingualism and inclusive public services. 
 and it is "to ensure the proper functioning of the internal market" both within and between sectors https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R0868[Data governance act].
