@@ -95,13 +95,13 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
-Try this in JSON-LD Playground link:https://tinyurl.com/mrpyse2u[here]
+Try this in JSON-LD Playground link:https://tinyurl.com/3azpbtyj[here]
 
 [source,json]
  {
-  "@context": {
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  },
+  "@context":
+   [ "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+  ],
   "@id": "http://example.org/service/healthInsuranceRegistration",
   "@type": "cpsv:PublicService",
   "dct:title": "Health Insurance Registration",
@@ -178,14 +178,15 @@ Add CBV terms to enhance the description of the Service entity.
 
 
 ==== Map extended properties in a service instance:
-Use the extended properties to describe more aspects of *Service* instances. For link:https://json-ld.org/playground/?startTab=tab-expanded&json-ld=%7B%22%40context%22%3A%7B%22%40import%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSEMICeu%2FCPSV-AP%2Fmaster%2Freleases%2F3.2.0%2Fcontext%2Fcpsv-ap.jsonld%22%7D%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fservice%2FhealthInsuranceRegistration%22%2C%22%40type%22%3A%22cpsv%3APublicService%22%2C%22name%22%3A%22Health%20Insurance%20Registration%22%2C%22description%22%3A%22A%20service%20for%20registering%20for%20health%20insurance.%22%2C%22hasRequiredEvidence%22%3A%5B%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2FRequiredEvidence%2FProofOfAddress%22%2C%22name%22%3A%22Proof%20of%20Address%22%7D%5D%2C%22contactPoint%22%3A%7B%22%40type%22%3A%22cpsv%3AContactPoint%22%2C%22hasTelephone%22%3A%22%2B420776723338%22%7D%2C%22providedBy%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2FlegalEntity%2FhealthDepartment%22%7D%7D[example]:
+Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/jdv5z62t[example]:
 
 
 [source,json]
 {
-  "@context": {
-    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  },
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
+    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"
+  ],
   "@id": "http://example.org/service/healthInsuranceRegistration",
   "@type": "cpsv:PublicService",
   "dct:title": "Health Insurance Registration",
@@ -196,13 +197,14 @@ Use the extended properties to describe more aspects of *Service* instances. For
   },
   "cpsv:contactPoint": {
     "@type": "cpsv:ContactPoint",
-    "http://example.org/vocab/hasTelephone": "+420776723338"
+    "hasTelephone": "+420776723338"
   },
   "cpsv:providedBy": {
     "@id": "http://example.org/legalEntity/healthDepartment",
-    "@type": "http://example.com/legal#LegalEntity"
+    "@type": "legal:LegalEntity"
   }
 }
+
 
 
 
