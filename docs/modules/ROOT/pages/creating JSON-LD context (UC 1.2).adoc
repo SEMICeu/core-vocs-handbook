@@ -95,42 +95,28 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
-Try this in JSON-LD Playground link:https://tinyurl.com/instance-ex[here]
+Try this in JSON-LD Playground link:https://tinyurl.com/mrpyse2u[here]
 
 [source,json]
  {
   "@context": {
-    "cpsv": "http://purl.org/vocab/cpsv#",
-    "dct": "http://purl.org/dc/terms/",
-    "PublicService": "cpsv:PublicService",
-    "title": "dct:title",
-    "description": "dct:description",
-     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "hasRequiredEvidence": {
-      "@id": "cpsv:hasRequiredEvidence",
-      "@type": "@id"
-    },
-    "contactPoint": {
-      "@id": "cpsv:contactPoint"
-    },
-    "hasTelephone": {
-      "@id": "http://example.org/vocab/hasTelephone",
-      "@type": "xsd:string"
-    }
+    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
   },
   "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "PublicService",
-  "title": "Health Insurance Registration",
-  "description": "A service for registering for health insurance.",
-  "hasRequiredEvidence": {
+  "@type": "cpsv:PublicService",
+  "dct:title": "Health Insurance Registration",
+  "dct:description": "A service for registering for health insurance.",
+  "cpsv:hasRequiredEvidence": {
     "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "title": "Proof of Address"
+    "dct:title": "Proof of Address"
   },
-  "contactPoint": {
+  "cpsv:contactPoint": {
     "@type": "cpsv:ContactPoint",
-    "hasTelephone": "+420776723338"
+    "http://example.org/vocab/hasTelephone": "+420776723338"
   }
+
 }
+
 
 ==== Aliasing keywords for API compatibility (REST API example)
 
@@ -198,45 +184,26 @@ Use the extended properties to describe more aspects of *Service* instances. For
 [source,json]
 {
   "@context": {
-    "cpsv": "http://purl.org/vocab/cpsv#",
-    "LegalEntity": "http://example.com/legal#LegalEntity",
-    "dct": "http://purl.org/dc/terms/",
-    "PublicService": "cpsv:PublicService",
-    "title": "dct:title",
-    "description": "dct:description",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "hasRequiredEvidence": {
-      "@id": "cpsv:hasRequiredEvidence",
-      "@type": "@id"
-    },
-    "contactPoint": {
-      "@id": "cpsv:contactPoint"
-    },
-    "hasTelephone": {
-      "@id": "http://example.org/vocab/hasTelephone",
-      "@type": "xsd:string"
-    },
-    "providedBy": {
-      "@id": "cpsv:providedBy",
-      "@type": "@id"
-    }
+    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
   },
   "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "PublicService",
-  "title": "Health Insurance Registration",
-  "description": "A service for registering for health insurance.",
-  "hasRequiredEvidence": {
+  "@type": "cpsv:PublicService",
+  "dct:title": "Health Insurance Registration",
+  "dct:description": "A service for registering for health insurance.",
+  "cpsv:hasRequiredEvidence": {
     "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "title": "Proof of Address"
+    "dct:title": "Proof of Address"
   },
-  "contactPoint": {
+  "cpsv:contactPoint": {
     "@type": "cpsv:ContactPoint",
-    "hasTelephone": "+420776723338"
+    "http://example.org/vocab/hasTelephone": "+420776723338"
   },
-  "providedBy": {
-    "@id": "http://example.org/legalEntity/healthDepartment"
+  "cpsv:providedBy": {
+    "@id": "http://example.org/legalEntity/healthDepartment",
+    "@type": "http://example.com/legal#LegalEntity"
   }
 }
+
 
 
 ==== Final review and validation
