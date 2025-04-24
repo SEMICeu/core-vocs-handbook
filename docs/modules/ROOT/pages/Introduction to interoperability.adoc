@@ -1,9 +1,3 @@
-
-= Core Vocabularies Handbook
-[[sec:intro-to-interoperability]]
-
-This Handbook aims to explain the role of Core Vocabularies in enabling semantic interoperability at the EU level and to practically guide public administrations in using Core Vocabularies to achieve this goal. This section introduces what interoperability is, what makes it semantic, and how Core Vocabularies contribute to it.
-
 == Introduction to interoperability
 
 Sharing data easily is indispensable for effective and efficient public services. Sharing may be through offering one point of access, and often involves reusing the data in multiple applications across multiple departments and organisations. To make this work, the systems need to be interoperable.  
