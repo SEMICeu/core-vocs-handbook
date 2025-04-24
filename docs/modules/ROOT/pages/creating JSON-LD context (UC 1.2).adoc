@@ -213,19 +213,25 @@ Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playgroun
 
 image::image-2025-04-14-14-25-55-451.png[]
 
-===== Error example:
+==== Error example:
 
-If the @import URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:
+If the `@import` URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:
 
 * "Error loading remote context" or
 * "Context could not be retrieved."
 
 [source,json]
-  {"@context":[ { @import": "https://invalid-url/cpsv-ap.jsonld" }  ] }
+----
+{
+  "@context": [
+    { "@import": "https://invalid-url/cpsv-ap.jsonld" }
+  ]
+}
+----
+These errors typically occur when the referenced context URL is malformed or unreachable, as shown in the following figure:
 
+image::image-2025-04-22-22-04-11-289.png[Example error shown in the validator interface]
 
-// image::image-2025-04-14-14-26-17-475.png[]
-image::image-2025-04-22-22-04-11-289.png[]
-===== How to fix:
+==== How to fix:
 
 Ensure that the @import URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a cURL command to ensure they return the correct JSON-LD data. Update the URLs to the correct ones.
