@@ -57,7 +57,7 @@ According to the https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0fa
 
 == What is a Core Vocabulary?
 
-A Core Vocabulary (CV) is a basic, reusable, and extensible specification that captures the relevant characteristics of entities, which can be used to add semantics to data and information that captures the essential characteristics of an entity in a context-neutral manner. Its primary purpose is to provide standardised terms that can be reused across various application domains, typically realised as a lightweight ontology (optionally accompanied by a permissive data shape) and documented in a concise specification. Core vocabularies for SEMIC were created as part of the https://ec.europa.eu/isa2/home_en/[ISA^2^ program].
+A Core Vocabulary (CV) is a basic, reusable, and extensible specification that captures the relevant characteristics of entities, which can be used to add semantics to data and information that captures the essential characteristics of an entity in a context-neutral manner. Its primary purpose is to provide standardised terms that can be reused across various application domains, typically realised as a lightweight ontology (optionally accompanied by a permissive data shape) and documented in a concise specification. Core vocabularies for SEMIC were created as part of the https://ec.europa.eu/isa2/home_en/[ISA^2^ program] and are described further below in the xref:semic-core-vocabularies.adoc#corevocabs[Core Vocabularies] section.
 
 == A Practical Example
 
