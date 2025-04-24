@@ -1,3 +1,4 @@
+[#corevocabs]
 == SEMIC Core Vocabularies
 
 This section contains a brief overview of the Core Vocabularies, indicating how they were developed and how they are maintained.
