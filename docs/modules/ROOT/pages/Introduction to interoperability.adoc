@@ -74,7 +74,7 @@ This is where *standards to declare the semantics* play a crucial role. By using
 == Who shall read this Handbook
 
 This handbook is intended for two main audiences: 1) administrative professionals and legal experts, and 2) technical experts and IT professionals. +
-Public administrations involve both legal/administrative experts and technical professionals. While they may not always __“__speak the same language__”__, they must* work together* to ensure smooth digital transformation. Semantic interoperability provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. +
+Public administrations involve both legal/administrative experts and technical professionals. While they may not always __“__speak the same language__”__, they must *work together* to ensure smooth digital transformation. Semantic interoperability provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. +
 Each intended audience will gain new insights relevant for their respective roles
 
 === Administrative Professionals & Legal Experts
