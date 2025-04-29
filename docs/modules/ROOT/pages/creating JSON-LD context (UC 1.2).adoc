@@ -95,42 +95,24 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
-Try this in JSON-LD Playground link:https://tinyurl.com/2fztw96p[here]
+Try this in JSON-LD Playground link:https://tinyurl.com/4vtmjdxy[here]
 
 [source,json]
 {
   "@context": [
-    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-    {
-      "ex": "http://example.org/vocab/",
-      "ex:hasTelephone": {
-        "@type": "xsd:string"
-      }
-    }
-  ],
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+     ],
   "@id": "http://example.org/service/healthInsuranceRegistration",
   "@type": "PublicService",
-  "dct:title": {
+  "PublicService.name": {
     "@value": "Health Insurance Registration",
     "@language": "en"
   },
-  "dct:description": {
+  "PublicService.description": {
     "@value": "A service for registering for health insurance.",
     "@language": "en"
-  },
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": {
-      "@value": "Proof of Address",
-      "@language": "en"
-    }
-  },
-  "cpsv:contactPoint": {
-    "@type": "ContactPoint",
-    "ex:hasTelephone": "+420776723338"
   }
 }
-
 
 
 ==== Aliasing keywords for API compatibility (REST API example)
@@ -145,7 +127,7 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
   "@context": {
     "url": "@id",
     "type": "@type",
-    "Service": "http://data.europa.eu/m8g/cpsv#PublicService",
+    "Service": http://purl.org/vocab/cpsv#PublicService",
     "Service.name": "http://purl.org/dc/terms/title",
     "Service.description": "http://purl.org/dc/terms/description"
   },
@@ -194,7 +176,7 @@ Add CBV terms to enhance the description of the Service entity.
 
 
 ==== Map extended properties in a service instance:
-Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/zke95vmc[example]:
+Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/4mjavsmu[example]:
 
 
 [source,json]
@@ -203,33 +185,17 @@ Use the extended properties to describe more aspects of *Service* instances. For
   "@context": [
     "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
         "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
-    {
-      "ex": "http://example.org/vocab/",
-      "ex:hasTelephone": {
-        "@type": "xsd:string"
-      }
-    }
+    {"cpsv":"http://purl.org/vocab/cpsv#"}
   ],
-  "@id": "http://example.org/service/healthInsuranceRegistration",
+ "@id": "http://example.org/service/healthInsuranceRegistration",
   "@type": "PublicService",
-  "dct:title": {
+  "PublicService.name": {
     "@value": "Health Insurance Registration",
     "@language": "en"
   },
-  "dct:description": {
+  "PublicService.description": {
     "@value": "A service for registering for health insurance.",
     "@language": "en"
-  },
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": {
-      "@value": "Proof of Address",
-      "@language": "en"
-    }
-  },
-  "cpsv:contactPoint": {
-    "@type": "ContactPoint",
-    "ex:hasTelephone": "+420776723338"
   },
   "cpsv:providedBy": {
     "@id": "http://example.org/legalEntity/healthDepartment",
