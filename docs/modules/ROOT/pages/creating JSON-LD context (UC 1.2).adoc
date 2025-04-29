@@ -209,7 +209,8 @@ Use the extended properties to describe more aspects of *Service* instances. For
 ==== Final review and validation
 Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
 
-image::image-2025-04-14-14-26-17-475.png[]
+// image::image-2025-04-14-14-26-17-475.png[]
+image::image-2025-04-29-10-44-25-959.png[]
 
 ==== Error example:
 
