@@ -312,8 +312,9 @@ Let’s look at an <a href="https://tinyurl.com/2794ygga">example</a> where we d
 }</code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_explanation_of_json_ld_keywords_used"><a class="anchor" href="#_explanation_of_json_ld_keywords_used"></a>Explanation of JSON-LD keywords used</h5>
+</div>
+<div class="sect3">
+<h4 id="_explanation_of_json_ld_keywords_used"><a class="anchor" href="#_explanation_of_json_ld_keywords_used"></a>Explanation of JSON-LD keywords used</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -341,14 +342,14 @@ Let’s look at an <a href="https://tinyurl.com/2794ygga">example</a> where we d
 </ul>
 </div>
 </div>
-</div>
 <div class="sect3">
 <h4 id="_example_of_a_simple_service_instance"><a class="anchor" href="#_example_of_a_simple_service_instance"></a>Example of a simple service instance</h4>
 <div class="paragraph">
 <p>After defining the context and structure, you can now describe an actual Service instance by referencing the terms you defined earlier.</p>
 </div>
-<div class="sect4">
-<h5 id="_example_scenario"><a class="anchor" href="#_example_scenario"></a>Example scenario</h5>
+</div>
+<div class="sect3">
+<h4 id="_example_scenario"><a class="anchor" href="#_example_scenario"></a>Example scenario</h4>
 <div class="paragraph">
 <p>Let’s assume a public administration offers a service called <strong>"Health Insurance Registration"</strong>. This service allows citizens to register for health insurance, which requires certain documents (evidence) to complete the process. Citizens might need to contact the administration for guidance, and the service details should be structured in a way that makes it easy to share and integrate across systems.<br>
 To illustrate this, we’ve created a JSON-LD context representation  of this service, highlighting</p>
@@ -362,33 +363,30 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 <p>The service&#8217;s name and description for clarity.</p>
 </li>
 <li>
-<p>Contact information for users who may need assistance.
-Try this in JSON-LD Playground <a href="https://tinyurl.com/3azpbtyj">here</a></p>
+<p>Contact information for users who may need assistance.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Try this in JSON-LD Playground <a href="https://tinyurl.com/4vtmjdxy">here</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"> {
-  "@context":
-   [ "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  ],
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+     ],
   "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "cpsv:PublicService",
-  "dct:title": "Health Insurance Registration",
-  "dct:description": "A service for registering for health insurance.",
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": "Proof of Address"
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
   },
-  "cpsv:contactPoint": {
-    "@type": "cpsv:ContactPoint",
-    "http://example.org/vocab/hasTelephone": "+420776723338"
-  }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -397,15 +395,18 @@ Try this in JSON-LD Playground <a href="https://tinyurl.com/3azpbtyj">here</a></
 <div class="paragraph">
 <p>When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD&#8217;s <code>@id</code> to <code>url</code> and <code>@type</code> to <code>type</code> to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.</p>
 </div>
-<div class="sect4">
-<h5 id="_example_of_aliasing_keywords"><a class="anchor" href="#_example_of_aliasing_keywords"></a>Example of aliasing keywords</h5>
+</div>
+<div class="sect3">
+<h4 id="_example_of_aliasing_keywords"><a class="anchor" href="#_example_of_aliasing_keywords"></a>Example of aliasing keywords</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "@context": {
     "url": "@id",
     "type": "@type",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.name": "http://purl.org/dc/terms/title",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.description": "http://purl.org/dc/terms/description"
   },
   "url": "http://example.com/service/healthInsuranceRegistration",
@@ -430,7 +431,6 @@ Try this in JSON-LD Playground <a href="https://tinyurl.com/3azpbtyj">here</a></
 </div>
 <div class="paragraph">
 <p>By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.</p>
-</div>
 </div>
 </div>
 <div class="sect3">
@@ -466,39 +466,64 @@ Try this in JSON-LD Playground <a href="https://tinyurl.com/3azpbtyj">here</a></
       "@id": "http://example.com/legal#providedBy",
       "@type": "http://example.com/legal#LegalEntity"
     },
-    "LegalEntity": "http://example.com/legal#LegalEntity"
-  }
-}</code></pre>
+    "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  }
+}</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_map_extended_properties_in_a_service_instance"><a class="anchor" href="#_map_extended_properties_in_a_service_instance"></a>Map extended properties in a service instance:</h4>
 <div class="paragraph">
-<p>Use the extended properties to describe more aspects of <strong>Service</strong> instances. For <a href="https://tinyurl.com/jdv5z62t">example</a>:</p>
+<p>Use the extended properties to describe more aspects of <strong>Service</strong> instances. For <a href="https://tinyurl.com/chtayj3h">example</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"> {
   "@context": [
     "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"
+        "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
+    {"cpsv":"http://purl.org/vocab/cpsv#"}
   ],
-  "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "cpsv:PublicService",
-  "dct:title": "Health Insurance Registration",
-  "dct:description": "A service for registering for health insurance.",
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": "Proof of Address"
+ "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
   },
-  "cpsv:contactPoint": {
-    "@type": "cpsv:ContactPoint",
-    "hasTelephone": "+420776723338"
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
   },
   "cpsv:providedBy": {
     "@id": "http://example.org/legalEntity/healthDepartment",
-    "@type": "legal:LegalEntity"
+    "@type": "LegalEntity"
+  }
+}{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
+    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
+    {
+      "ex": "http://example.org/"
+    }
+  ],
+  "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
+  },
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
+  },
+  "ex:providedBy": {
+    "@id": "http://example.org/legalEntity/healthDepartment",
+    "@type": "LegalEntity"
   }
 }</code></pre>
 </div>
@@ -511,7 +536,7 @@ Try this in JSON-LD Playground <a href="https://tinyurl.com/3azpbtyj">here</a></
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/image-2025-04-14-14-25-55-451.png" alt="image 2025 04 14 14 25 55 451">
+<img src="_images/image-2025-04-30-11-23-00-959.png" alt="image 2025 04 30 11 23 00 959">
 </div>
 </div>
 </div>
