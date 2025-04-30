@@ -75,7 +75,7 @@ Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a 
 }
 
 
-===== Explanation of JSON-LD keywords used
+==== Explanation of JSON-LD keywords used
 
 * *@context*: Defines the mapping between terms (e.g., PublicService) and their corresponding IRIs.
 * *@container*: Specifies how values are structured. For instance,
@@ -87,7 +87,7 @@ Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a 
 ==== Example of a simple service instance
 After defining the context and structure, you can now describe an actual Service instance by referencing the terms you defined earlier.
 
-===== Example scenario
+==== Example scenario
 
 Let’s assume a public administration offers a service called *"Health Insurance Registration"*. This service allows citizens to register for health insurance, which requires certain documents (evidence) to complete the process. Citizens might need to contact the administration for guidance, and the service details should be structured in a way that makes it easy to share and integrate across systems. +
 To illustrate this, we’ve created a JSON-LD context representation  of this service, highlighting
@@ -95,26 +95,24 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
-Try this in JSON-LD Playground link:https://tinyurl.com/3azpbtyj[here]
+
+Try this in JSON-LD Playground link:https://tinyurl.com/4vtmjdxy[here]
 
 [source,json]
- {
-  "@context":
-   [ "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
-  ],
+{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+     ],
   "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "cpsv:PublicService",
-  "dct:title": "Health Insurance Registration",
-  "dct:description": "A service for registering for health insurance.",
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": "Proof of Address"
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
   },
-  "cpsv:contactPoint": {
-    "@type": "cpsv:ContactPoint",
-    "http://example.org/vocab/hasTelephone": "+420776723338"
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
   }
-
 }
 
 
@@ -122,7 +120,7 @@ Try this in JSON-LD Playground link:https://tinyurl.com/3azpbtyj[here]
 
 When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to `url` and `@type` to `type` to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
-===== Example of aliasing keywords
+==== Example of aliasing keywords
 
 [source,json]
 
@@ -130,7 +128,9 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
   "@context": {
     "url": "@id",
     "type": "@type",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.name": "http://purl.org/dc/terms/title",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.description": "http://purl.org/dc/terms/description"
   },
   "url": "http://example.com/service/healthInsuranceRegistration",
@@ -138,7 +138,6 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
   "Service.name": "Health Insurance Registration",
   "Service.description": "A service for registering for health insurance."
 }
-
 
 In this example:
 
@@ -171,37 +170,61 @@ Add CBV terms to enhance the description of the Service entity.
       "@id": "http://example.com/legal#providedBy",
       "@type": "http://example.com/legal#LegalEntity"
     },
-    "LegalEntity": "http://example.com/legal#LegalEntity"
+    "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"
+
   }
 }
 
 
 
 ==== Map extended properties in a service instance:
-Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/jdv5z62t[example]:
+
+Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/chtayj3h[example]:
 
 
 [source,json]
-{
+
+ {
   "@context": [
     "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"
+        "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
+    {"cpsv":"http://purl.org/vocab/cpsv#"}
   ],
-  "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "cpsv:PublicService",
-  "dct:title": "Health Insurance Registration",
-  "dct:description": "A service for registering for health insurance.",
-  "cpsv:hasRequiredEvidence": {
-    "@id": "http://example.org/RequiredEvidence/ProofOfAddress",
-    "dct:title": "Proof of Address"
+ "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
   },
-  "cpsv:contactPoint": {
-    "@type": "cpsv:ContactPoint",
-    "hasTelephone": "+420776723338"
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
   },
   "cpsv:providedBy": {
     "@id": "http://example.org/legalEntity/healthDepartment",
-    "@type": "legal:LegalEntity"
+    "@type": "LegalEntity"
+  }
+}{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
+    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
+    {
+      "ex": "http://example.org/"
+    }
+  ],
+  "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
+  },
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
+  },
+  "ex:providedBy": {
+    "@id": "http://example.org/legalEntity/healthDepartment",
+    "@type": "LegalEntity"
   }
 }
 
@@ -211,7 +234,8 @@ Use the extended properties to describe more aspects of *Service* instances. For
 ==== Final review and validation
 Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
 
-image::image-2025-04-14-14-25-55-451.png[]
+// image::image-2025-04-29-10-44-25-959.png[]
+image::image-2025-04-30-11-23-00-959.png[]
 
 ==== Error example:
 
