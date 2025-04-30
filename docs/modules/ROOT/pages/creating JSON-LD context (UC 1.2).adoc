@@ -130,7 +130,7 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
     "type": "@type",
     "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.name": "http://purl.org/dc/terms/title",
-    "Service": http://purl.org/vocab/cpsv#PublicService",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
     "Service.description": "http://purl.org/dc/terms/description"
   },
   "url": "http://example.com/service/healthInsuranceRegistration",
