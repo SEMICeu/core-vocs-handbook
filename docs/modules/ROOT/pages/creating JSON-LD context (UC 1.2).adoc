@@ -74,7 +74,6 @@ Let’s look at an link:https://tinyurl.com/2794ygga[example] where we define a 
   }
 }
 
-
 ===== Explanation of JSON-LD keywords used
 
 * *@context*: Defines the mapping between terms (e.g., PublicService) and their corresponding IRIs.
@@ -95,6 +94,7 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 * The required evidence for registration (e.g., Proof of Address).
 * The service's name and description for clarity.
 * Contact information for users who may need assistance.
+
 Try this in JSON-LD Playground link:https://tinyurl.com/4vtmjdxy[here]
 
 [source,json]
@@ -128,7 +128,6 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
     "url": "@id",
     "type": "@type",
     "Service": http://purl.org/vocab/cpsv#PublicService",
-    "Service.name": "http://purl.org/dc/terms/title",
     "Service.description": "http://purl.org/dc/terms/description"
   },
   "url": "http://example.com/service/healthInsuranceRegistration",
@@ -136,7 +135,6 @@ When working with REST APIs, it is often beneficial to alias certain JSON-LD key
   "Service.name": "Health Insurance Registration",
   "Service.description": "A service for registering for health insurance."
 }
-
 
 In this example:
 
@@ -170,12 +168,14 @@ Add CBV terms to enhance the description of the Service entity.
       "@type": "http://example.com/legal#LegalEntity"
     },
     "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"
+
   }
 }
 
 
 
 ==== Map extended properties in a service instance:
+
 Use the extended properties to describe more aspects of *Service* instances. For link:https://tinyurl.com/4mjavsmu[example]:
 
 
@@ -209,8 +209,10 @@ Use the extended properties to describe more aspects of *Service* instances. For
 ==== Final review and validation
 Use an online tool such as the https://json-ld.org/playground/[JSON-LD Playground ]to validate JSON-LD context and make sure there are no errors.
 
+
 // image::image-2025-04-14-14-26-17-475.png[]
 image::image-2025-04-29-10-44-25-959.png[]
+
 
 ==== Error example:
 
