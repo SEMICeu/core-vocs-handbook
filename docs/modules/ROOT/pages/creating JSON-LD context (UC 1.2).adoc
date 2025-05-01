@@ -171,7 +171,6 @@ Add CBV terms to enhance the description of the Service entity.
       "@type": "http://example.com/legal#LegalEntity"
     },
     "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"
-
   }
 }
 
@@ -184,27 +183,7 @@ Use the extended properties to describe more aspects of *Service* instances. For
 
 [source,json]
 
- {
-  "@context": [
-    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-        "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
-    {"cpsv":"http://purl.org/vocab/cpsv#"}
-  ],
- "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "PublicService",
-  "PublicService.name": {
-    "@value": "Health Insurance Registration",
-    "@language": "en"
-  },
-  "PublicService.description": {
-    "@value": "A service for registering for health insurance.",
-    "@language": "en"
-  },
-  "cpsv:providedBy": {
-    "@id": "http://example.org/legalEntity/healthDepartment",
-    "@type": "LegalEntity"
-  }
-}{
+{
   "@context": [
     "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
     "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
