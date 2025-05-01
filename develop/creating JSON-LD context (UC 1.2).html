@@ -466,13 +466,9 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
       "@id": "http://example.com/legal#providedBy",
       "@type": "http://example.com/legal#LegalEntity"
     },
-    "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"</code></pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  }
-}</pre>
+    "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -483,27 +479,7 @@ To illustrate this, we’ve created a JSON-LD context representation  of this se
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"> {
-  "@context": [
-    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
-        "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
-    {"cpsv":"http://purl.org/vocab/cpsv#"}
-  ],
- "@id": "http://example.org/service/healthInsuranceRegistration",
-  "@type": "PublicService",
-  "PublicService.name": {
-    "@value": "Health Insurance Registration",
-    "@language": "en"
-  },
-  "PublicService.description": {
-    "@value": "A service for registering for health insurance.",
-    "@language": "en"
-  },
-  "cpsv:providedBy": {
-    "@id": "http://example.org/legalEntity/healthDepartment",
-    "@type": "LegalEntity"
-  }
-}{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "@context": [
     "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
     "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
