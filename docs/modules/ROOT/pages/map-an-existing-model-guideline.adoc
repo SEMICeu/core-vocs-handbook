@@ -82,7 +82,7 @@ Following planning, the *execution* activity implements the chosen matchers. Aut
 
 Finally, in the *evaluation* activity, the alignments found are rigorously assessed for their suitability. The evaluation measures the alignments against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements. This assessment ensures that only the most suitable alignments are carried forward for the creation of a mapping, thereby upholding the integrity and logical soundness of the matching process.
 
-*Tools:* Tools such as xref:references.adoc#ref:62[Silk], LIMES, and LogMap may be used in this stage.
+*Tools:* Tools such as xref:references.adoc#ref:62[Silk], xref:references.adoc#ref:76[LIMES], and xref:references.adoc#ref:77[LogMap]LogMap may be used in this stage.
 
 *Inputs:* Matcher configurations, additional resources (if any), correspondences from previous matching iterations.
 
