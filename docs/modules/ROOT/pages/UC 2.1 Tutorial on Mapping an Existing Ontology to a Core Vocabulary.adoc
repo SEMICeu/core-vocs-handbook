@@ -1,4 +1,4 @@
-= UC 2.1 tutorial on Mapping an existing Ontology to a Core Vocabulary
+= UC 2.1 Tutorial on Mapping an existing Model to a Core Vocabulary
 
 == Introduction
 
@@ -6,7 +6,7 @@ Imagine different organisations speaking different dialects of the same language
 Ontology alignment and mapping helps solve this problem by creating bridges between different models, allowing each organisation to keep their unique vocabulary while ensuring that the meaning is preserved.
 
 This tutorial demonstrates how to map the link:https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary]  *(CBV)* to link:https://schema.org[Schema.org], addressing *Use Case* link:https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC2.1%3A%20Map%20an%20existing%20Ontology%20to%20a%20Core%20Vocabulary[UC2.1].
-By following the link:https://semiceu.github.io/core-vocs-handbook/public-review/how-to-map-existing-data-models.html#sec:map-an-existing-ontology:~:text=their%20interoperability%20needs.-,Map%20an%20existing%20Ontology,-This%20section%20provides[map an existing ontology]  **methodology**,
+By following the link:https://semiceu.github.io/core-vocs-handbook/public-review/how-to-map-existing-data-models.html#sec:map-an-existing-ontology:~:text=their%20interoperability%20needs.-,Map%20an%20existing%20Ontology,-This%20section%20provides[map an existing model]  **methodology**,
 you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 == Phase1: Staging (Defining the Requirements)
@@ -51,7 +51,7 @@ The aim of this phase is to analyse the structure, vocabulary, and semantics of 
 === Procedure for CBV and Schema.org
 
 First, list the features on which to compare the source and the target, which concerns principally the ‘meta’ information, or: information _about_ the artefacts, rather than its contents about the subject domain. This includes typical features such as the serialisation format(s) in which the artefacts are available, naming conventions of the terminology, and version management.  +
-The features can have adverse or facilitating consequences for the mapping task. Let’s consider three of them here and relate them to our case. First, are the files available in the same *format?* This is indeed the case for CBV and Schema.org, and even leaves the choice for using their RDF or JSON-LD format. The *natural language* of CVB and Schema.org, that is,  the rendering of the entities’ names and labels, are both in one language, and so translating entities’ names is not needed. Regarding frequency of *version* updates, there is a notable difference. CBV is relatively stable with two main releases, whereas Schema.org has frequent releases and it is currently in its 29th main release cycle. . +
+The features can have adverse or facilitating consequences for the mapping task. Let’s consider three of them here and relate them to our case. First, are the files available in the same format? This is indeed the case for CBV and Schema.org, and even leaves the choice for using their RDF or JSON-LD format. The *natural language* of CVB and Schema.org, that is,  the rendering of the entities’ names and labels, are both in one language, and so translating entities’ names is not needed. Regarding frequency of *version* updates, there is a notable difference. CBV is relatively stable with two main releases, whereas Schema.org has frequent releases and it is currently in its 29th main release cycle. . +
 Second, we list the selected features in a table, and for each feature, find the answer for CBV and Schema.org.  For the CBV and Schema.org metadata comparison, we had to consult the documentation, the developer release pages, and inspect the files to obtain the answers. The selected features and comparison with the values is shown in the table below.
 |===
 |*_Feature_*|*Core Business Vocabulary*|*Schema.org*
@@ -242,7 +242,6 @@ We assume:
 * An alignment file +(++Alignment-CoreBusiness-2.2.0-schemaorg.tt++l+) defines a mapping from +legal:LegalEntity+ to +schema:Organization.+
 
 ===== *SPARQL Query*
-=== SPARQL Query
 [source,sparql]
 
 PREFIX xyz: http://sparql.xyz/facade-x/data/
@@ -274,7 +273,7 @@ FILTER (?entity1 = legal:LegalEntity)
 
 It checks for instances of +legal:LegalEntity+ in the data file, and if the alignment file contains a mapping for it, it infers the equivalent or related Schema.org class (+schema:Organization+).
 
-=== Output
+==== Output
 [source,turtle]
 
 http://example.org/entities/Company123 a https://schema.org/Organization .

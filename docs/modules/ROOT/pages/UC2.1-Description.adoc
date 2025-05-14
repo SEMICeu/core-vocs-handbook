@@ -21,7 +21,7 @@
 [[sec:map-an-existing-ontology]]
 === Map an existing Ontology
 
-This section provides detailed instructions for addressing use case xref:UC2.1-Descrtion.adoc#sec:uc21[UC2.1].
+This section provides detailed instructions for addressing use case xref:UC2.1-Description.adoc#sec:uc21[UC2.1].
 
 In this section we adopt the definition from this xref:references.adoc#ref:54[paper] of the following concepts:
 
