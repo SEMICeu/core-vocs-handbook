@@ -14,9 +14,9 @@
 * Re-using core vocabularies
 ** xref:use-cases.adoc#sec:uc2[Use cases Overview]
 ** xref:use-cases.adoc#sec:uc21[Map an existing Ontology to a Core Vocabulary (UC2.1)]
-*** Description
-*** Guideline
-*** Tutorial
+*** xref:UC2.1-Descrtion.adoc#sec:uc21[Description]
+*** xref:UC2.1-Descrtion.adoc#sec:map-an-existing-model[Guideline]
+*** xref:UC2.1-Descrtion.adoc#sec:mapping-existing-ontology-to-vocabulary[Tutorial]
 ** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
 *** Description
 *** Guideline
