@@ -13,7 +13,7 @@
 *** xref:UC1.2-description.adoc#sec:create-a-json-ld-definition[Tutorial]
 * Re-using core vocabularies
 ** xref:use-cases.adoc#sec:uc2[Use cases Overview]
-** xref:use-cases.adoc#sec:uc21[Map an existing Ontology to a Core Vocabulary (UC2.1)]
+** xref:use-cases.adoc#sec:uc21[Map an existing Model to a Core Vocabulary (UC2.1)]
 *** xref:UC2.1-Description.adoc#sec:uc21[Description]
 *** xref:UC2.1-Description.adoc#sec:map-an-existing-ontology[Guideline]
 *** xref:UC2.1-Description.adoc#sec:mapping-existing-ontology-to-vocabulary[Tutorial]
