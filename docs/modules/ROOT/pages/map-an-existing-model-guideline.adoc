@@ -2,12 +2,12 @@
 
 This section provides general guidelines to address use case xref:use-cases.adoc#sec:uc21[UC2.1], matching an ontology to a core vocabulary The term ‘ontology’ is used loosely, and may also be similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies.  
 
-In this section we adopt the definition from this xref:references.adoc#ref:54[EuzenatShvaiko13] of the following concepts:
+In this section we adopt the definitions from the ontology matching handbook xref:references.adoc#ref:54[EuzenatShvaiko13] for the following concepts:
 
 * *Ontology matching process*: given a pair of ontologies, an input alignment, a set of parameters and a set of oracles and resources, the process returns an alignment between these ontologies
-* * Correspondence: given a pair of ontologies, a set of alignment relations (typically equivalence and subsumption) and a confidence structure for those alignments, then a correspondence is a 5-tuple consisting of an identifier of the correspondence, the two entities (one from each ontology), how the two entities relate, and a measure of the confidence in that alignment.
+* *Correspondence*: given a pair of ontologies, a set of alignment relations (typically equivalence and subsumption) and a confidence structure for those alignments, then a correspondence is a 5-tuple consisting of an identifier of the correspondence, the two entities (one from each ontology), how the two entities relate, and a measure of the confidence in that alignment.
 * *Alignment*: a set of correspondences between pairs of entities belonging to two ontologies.
-* *Mapping*:a set of correspondences between pairs of entities belonging to two ontologies, and this mapping is satisfiable and does not lead to unsatisfiable entities in either of the two ontologies that are being matched.  
+* *Mapping*: a set of correspondences between pairs of entities belonging to two ontologies, and this mapping is satisfiable and does not lead to unsatisfiable entities in either of the two ontologies that are being matched.  
 
 To create an ontology mapping, the following steps need to be observed:
 
@@ -20,7 +20,7 @@ To create an ontology mapping, the following steps need to be observed:
 . *Application:* publish the mappings and establish governance of the mappings
 
 
-This section provides an overview of the guideline, which will be demonstrated in the tutorial section where we map the Core Business Vocabulary to Schema.org. 
+This section provides an overview of the guideline, which will be demonstrated in the xref:map-an-exiting-model-tutorialUC21.adoc[tutorial] section where we map the Core Business Vocabulary to Schema.org. 
 
 === Phase 1: Staging
 
@@ -89,7 +89,7 @@ Finally, in the *evaluation* activity, the alignments found are rigorously asses
 *Outputs:* Generated alignments, evaluation reports.
 
 
-==== Phase 5: Validate Alignments
+=== Phase 5: Validate Alignments
 
 Following the identification of alignments, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase encompasses preparation, creation, and rendering activities that solidify the relationships between ontology entities into a coherent mapping that is actionable. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.
 
@@ -112,7 +112,7 @@ This table is indicative of the variety of semantic connections that can be real
 
 The *Creation* step is the execution of the mapping, entailing the selection of the relation, and assertion of the mapping This activity involves human intervention and the selection is conducted manually according to the project’s objectives and semantic appropriateness of the candidate mapping.
 
-*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward  export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format, EDOAL, Simple Standard for Sharing Ontological Mapping SSSOM, and the Semantic Mapping Vocabulary SEMAPV for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms. +
+*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward  export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as https://moex.gitlabpages.inria.fr/alignapi/format.html[Alignment Format], https://moex.gitlabpages.inria.fr/alignapi/edoal.html[EDOAL], Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM], and the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms. +
 *Tools:* Tools such as xref:references.adoc#ref:63[VocBench3] can be used in this stage, or generic office tools if the stakeholders so prefer, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.  +
 *Inputs:* Evaluated correspondences (the alignments), stakeholders' amendment plans, requirements for the formalism of the mapping. +
 *Outputs:* Created mapping, alignment amendment strategy, stored versions in an xref:references.adoc#ref:55[alignment repository].
