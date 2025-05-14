@@ -53,13 +53,13 @@
 - *[[ref:51]][birth-date]* birthDate term. Available at: http://data.europa.eu/m8g/birthDate
 - *[[ref:52]][residency]* residency term. Available at: http://www.w3.org/ns/person#residency
 - *[[ref:53]][contact-point]* contactPoint term. Available at: http://data.europa.eu/m8g/contactPoint
-- *[[ref:54]][paper]* Enrico G. Caldarola, Antonio M. Rinaldi. A Multi-strategy Approach for Ontology Reuse Through Matching and Integration Techniques. Available at: https://www.researchgate.net/publication/319160792_A_Multi-strategy_Approach_for_Ontology_Reuse_Through_Matching_and_Integration_Techniques
+- *[[ref:54]][paper]* Euzenat, Jérôme and Shvaiko, Pavel. Ontology Matching. Springer, 2013. 511p. doi.org/10.1007/978-3-642-38721-0
 - *[[ref:55]][sem-map]* SEMIC Semantic Mappings. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main
 - *[[ref:56]][sem-map-met]* Alignment of Core Vocabularies with Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf
 - *[[ref:57]][paper2]* J. Euzenat. An API for ontology alignment. Available at: https://doi.org/10.1007/978-3-540-30475-3_48
 - *[[ref:58]][paper3]* J. David, J. Euzenat, F. Scharﬀe, and C. T. dos Santos. The alignment API 4.0. Available at: https://www.semantic-web-journal.net/content/alignment-api-40
 - *[[ref:59]][map-cb2org-ttl]* Mapping Core Business to Schema.org - Turtle file. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl
-- *[[ref:60]][paper4]* Lorena Otero-Cerdeira, Francisco J. Rodríguez-Martínez, Alma Gómez-Rodríguez. Ontology matching: A literature review. Available at: http://dit.unitn.it/~p2p/RelatedWork/Matching/Cerdeira-Ontology%20Matching-2015.pdf
+- *[[ref:60]][OteroEtAl15]* Otero-Cerdeira, Lorena, Francisco J. Rodríguez-Martínez, and Alma Gómez-Rodríguez. "Ontology matching: A literature review." Expert Systems with Applications, 2015, 42.2: 949-971.
 - *[[ref:61]][edoal]* EDOAL: Expressive and Declarative Ontology Alignment Language. Available at: https://moex.gitlabpages.inria.fr/alignapi/edoal.html
 - *[[ref:62]][silk]* System for Internet-Level Knowledge (SiLK). Available at: https://tools.netsa.cert.org/silk/
 - *[[ref:63]][vocbench]* VocBench. Available at: https://vocbench.op.europa.eu/
@@ -75,3 +75,5 @@
 - *[[ref:73]][iso2dcat-ap]* Reference XSLT-based implementation of GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap
 - *[[ref:74]][geo-dcat-ap]* GeoDCAT Application Profile for data portals in Europe. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
 - *[[ref:75]][iso2dacat-ap-mappings]* Mappings defined in GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap/blob/master/documentation/Mappings.md
+- *[[ref:76]][LIMES]* Ngomo, Axel-Cyrille Ngonga and Auer, Sören. Limes-a time-efficient approach for large-scale link discovery on the web of data. Integration,2011,  15.3.
+- *[[ref:77]][LogMap]* Jiménez-Ruiz, Ernesto and Cuenca Grau, Bernardo. Logmap: Logic-based and scalable ontology matching. In: International Semantic Web Conference (ISWC'11)). Berlin, Heidelberg: Springer Berlin Heidelberg, 2011. pp. 273-288.
