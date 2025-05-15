@@ -1,3 +1,5 @@
+NOTE: THIS PAGE IS DEPRECATED. WE STILL NEED TO INCORPORATE THE SECOND PART FOR SCHEMAS IN THAT GUIDELINE IN  THAT NEW SECTION AND THEN DELETE THIS FILE
+
 == How to map existing data models
 
 In the vast and diverse landscape of knowledge representation and data modelling, sources of knowledge are articulated through various means, each adopting its distinct methodology for expression. This diversity manifests not only in the choice of technology and representation languages, but also in the vocabularies used and the specific models created. Such heterogeneity, while enriching, introduces significant challenges for semantic interoperability—the ability of different systems to understand and use the information seamlessly across various contexts.
