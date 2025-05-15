@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SEMIC Core Vocabularies Handbook :: SEMIC</title>
-    <meta name="description" content="SEMIC Core Vocabularies Handbook">
+    <title>Untitled :: SEMIC</title>
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -89,7 +88,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="description-map-model.html">Description</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -199,57 +198,44 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
+    <li>Re-using core vocabularies</li>
+    <li><a href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a></li>
+    <li><a href="description-map-model.html">Description</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">develop</button>
   <div class="version-menu">
-    <a class="version" href="../public-review/index.html">public-review</a>
-    <a class="version is-current" href="index.html">develop</a>
+    <a class="version is-missing" href="../public-review/index.html">public-review</a>
+    <a class="version is-current" href="description-map-model.html">develop</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/description-map-model.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">SEMIC Core Vocabularies Handbook</h1>
+<div class="sect1">
+<h2 id="_how_to_map_existing_data_models"><a class="anchor" href="#_how_to_map_existing_data_models"></a>How to map existing data models</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>This Handbook provides a clear and straightforward guide on how to use SEMIC Core Vocabularies (CV). It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.</p>
-</div>
-<div class="paragraph">
-<p>This handbook is organised in two parts.  The first part is explanatory while the second part offers hands-on instructions.</p>
-</div>
-<div class="paragraph">
-<p>For first-time readers of this Handbook, starting with the first part is recommended <a href="introduction.html" class="xref page">introduces interoperability</a>, where interoperability is introduced and the role Core Vocabularies is explained, together with important <a href="use-cases.html" class="xref page">use cases</a> and a <a href="conceptual-framework.html" class="xref page">conceptual framework</a> for understanding the semantic data specifications.</p>
+<p>In the vast and diverse landscape of knowledge representation and data modelling, sources of knowledge are articulated through various means, each adopting its distinct methodology for expression. This diversity manifests not only in the choice of technology and representation languages, but also in the vocabularies used and the specific models created. Such heterogeneity, while enriching, introduces significant challenges for semantic interoperability—the ability of different systems to understand and use the information seamlessly across various contexts.</p>
 </div>
 <div class="paragraph">
-<p>Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance are advised to go directly to the second part of the Handbook. It describes approaches and methodology recommendations for:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-to-create-new-data-models.html" class="xref page">creating new semantic data specifications or stand-alone data models</a> (re-)using Core Vocabularies, and</p>
-</li>
-<li>
-<p><a href="how-to-map-existing-data-models.html" class="xref page">mapping existing data models</a> to the Core Vocabularies.</p>
-</li>
-</ul>
+<p>The idea of unifying this rich spectrum of knowledge under a single model and a single representation language, though conceptually appealing, is pragmatically unfeasible and, arguably, undesirable. The diversity of knowledge sources is not merely a by-product of historical development, but a reflection of the varied domains, perspectives, and requirements these sources serve.</p>
 </div>
 <div class="paragraph">
-<p>The Core Vocabularies Handbook does NOT cover the following:</p>
+<p>To navigate this complexity, a more nuanced approach is required—one that seeks to establish connections across models without imposing uniformity. This is where the concepts of ontology matching and the broader spectrum of model alignment methodologies come into play. Moreover, the matching endeavour encompasses not only ontological artefacts,  vocabularies and application profiles, but also various technical artefacts—ranging from data shapes defined in SHACL or ShEx, XSD schemas for XML, to JSON Schemas for JSON data. Each of these artefacts represents a different facet of information modelling and knowledge representation. Thus, mapping in this broader sense involves creating links between these semantic and technical artefacts and Core Vocabularies.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>a complete methodology for syntax binding and toolset for creating data model specifications, as the Core Vocabularies intend to remain syntax neutral.</p>
-</li>
-<li>
-<p>data model library, or tools. Such choices are heavily dependent on the domain and the task at hand.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The past couple decades have witnessed extensive efforts in ontology and attendant model matching, resulting in a plethora of tools, methods, and technologies aimed at enhancing semantic interoperability. These endeavours underscore the vast landscape of potential strategies available for matching. These strategies range from conceptual methodologies that explore the semantic congruence and contextual relevance of entities and relationships, to formal methodologies that operationalise these conceptual mappings as technical data transformation rules. It is important to acknowledge that there is no one-size-fits-all method; instead, the field offers a spectrum of approaches suited to various needs and contexts.</p>
+</div>
+<div class="paragraph">
+<p>The subsequent sections will describe the specific methodologies of matching—both conceptual and formal—and thereby providing a blueprint for navigating and bridging the world of semantic and technical artefacts, empowering stakeholders to make informed decisions that best suit their interoperability needs.</p>
+</div>
+</div>
 </div>
 </article>
   </div>
