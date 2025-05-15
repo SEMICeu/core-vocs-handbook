@@ -1,0 +1,154 @@
+== Mapping an existing Ontology to a Core Vocabulary
+
+[[sec:uc21]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC2.1: Map an existing Ontology to a Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a mapping between the terms of an existing ontology and the terms of Core Vocabularies.
+
+|*Primary Actors:* Semantic Engineer
+
+|*Actors:* Domain Expert, Business Analyst, Software Engineer
+
+|*Description:* The goal is to create a formal mapping expressed in Semantic Web terminology (for example using +rdfs:subClassOf, rdfs:subPropertyOf+, +owl:equivalentClass+, +owl:equivalentProperty, owl:sameAs+ properties), associating the terms in an existing ontology that defines relevant concepts in a given domain, to terms defined in one or more CVs. This activity is usually performed by a semantic engineer based on input received from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping associates the terms in an existing ontology, which defines relevant concepts within a specific  domain, to terms defined in one or more SEMIC Core Vocabularies. The result of the formal mapping can be used later by software engineers to build information exchange systems.
+
+*Example:* Mapping Core Person to Schema.org [xref:references.adoc#ref:34[map-cp2org]], Core Business to Schema.org [xref:references.adoc#ref:35[map-cb2org]], etc.
+*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology[Map an existing Ontology] section.
+|===
+
+[[sec:map-an-existing-ontology]]
+=== Map an existing Ontology
+
+This section provides detailed instructions for addressing use case xref:UC2.1-Description.adoc#sec:uc21[UC2.1].
+
+In this section we adopt the definition from this xref:references.adoc#ref:54[paper] of the following concepts:
+
+* *Ontology matching*: the process of finding relationships or correspondences between entities of different ontologies.
+* *Ontology alignment*: a set of correspondences between 2 or more ontologies, as outcome of ontology matching process.
+* *Ontology mapping*: the oriented, or directed, version of an alignment, i.e., it maps the entities of one ontology to at most one entity of another ontology.
+
+To create an ontology alignment, the following steps need to be observed:
+
+. *Staging:* defining the requirements
+. *Characterisation:* defining source and target data and performing data analysis
+. *Reuse:* discover, evaluate, and reuse existing alignments
+. *Matching:* execute and evaluate matching
+. *Align and map:* prepare, create the alignment, and render mappings
+. *Application:* make the alignment available for use in applications
+
+This methodology has been used in mapping the Core Vocabularies to Schema.org. This work is available on the SEMIC GitHub repository dedicated to xref:references.adoc#ref:55[Semantic Mappings], and documented xref:references.adoc#ref:56[here]. Next sections describe this methodology in more detail.
+
+==== Staging
+
+This initial phase involves a comprehensive understanding of the project’s scope, identifying the specific goals of the mapping exercise, and the key requirements it must fulfil. Stakeholders collaborate to articulate the purpose of the ontology or data model alignment, setting clear objectives that will guide the entire process. Defining these requirements upfront ensures that subsequent steps are aligned with the mapping exercise overarching goals, stakeholder expectations and fitting the use cases.
+
+*Inputs:* Stakeholder knowledge, project goals, available resources, domain expertise.
+
+*Outputs:* Mapping project specification document comprising a defined mapping project scope and comprehensive list of requirements.
+
+==== Characterisation
+
+In this stage, a thorough analysis of both source and target ontologies is conducted to ascertain their structures, vocabularies, and the semantics they encapsulate. This involves an in-depth examination of the conceptual frameworks, data representation languages, and any existing constraints within both models. Understanding the nuances of both the source and target is critical for identifying potential challenges and opportunities in the mapping process, ensuring that the alignment is both feasible and meaningful.
+
+The following is an indicative, but not exhaustive, list of aspects to consider in this analysis: specifications documentation, representation language and representation formats, deprecation mechanism, inheritance policy (single inheritance only or multiple inheritance are also allowed), natural language(s) used, label specification, label conventions, definition specification, definition conventions, version management and release cycles, etc.
+
+*Inputs:* Source and target ontologies, initial requirements, domain constraints.
+
+*Outputs:* Analysis reports comprising a comparative characterisation table, identified difficulties, risks and amenability assessments, selected source and target for mapping.
+
+==== Reuse
+
+In the ontology mapping lifecycle, the reuse stage is pivotal, facilitating the integration of pre-existing alignments into the project's workflow. Following the initial characterisation, this stage entails discovery and a rigorous evaluation of available alignments against the project's defined requirements. These requirements are instrumental in appraising whether an existing alignment can be directly adopted, necessitates modifications for reuse, or if a new alignment should be constructed from the ground up.
+
+Ontology alignments are often expressed in xref:references.adoc#ref:57[Alignment Format (AF)] or xref:references.adoc#ref:58[EDOAL]. An example statement in a Turtle file representing an ontology alignment (taken from the xref:references.adoc#ref:59[Core Business Vocabulary to Schema.org alignment]), could look something like this:
+
+----
+<http://mapping.semic.eu/business/sdo/cell/1> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#Address>;
+  align:entity2 <https://schema.org/PostalAddress>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+----
+
+The outcome of this stage splits into three distinct pathways:
+
+* *direct reuse* of alignments that are immediately applicable,
+* *adaptive reuse* where existing alignments provide a partial fit and serve as a basis for refinement (i.e. we can improve certain alignment statements, or add new statements in the alignment map), and
+* the initiation of a *new alignment* when existing resources are not suitable.
+
+This structured approach to reuse optimises resource utilisation, promotes efficiency, and tailors the mapping process to the project's unique objectives.
+
+*Inputs:* repository of existing alignments (for the source and target ontologies), evaluation criteria based on requirements.
+
+*Outputs:* Assessment report on existing alignments, decisions on reuse, adaptation, or creation of a new alignment.
+
+==== Matching
+
+This section delves into automatic and semi-automatic approaches to finding the alignment candidates. However, in cases of small vocabularies and ontologies fully manual efforts are likely more efficient.
+
+Utilising both automated tools and manual expertise, this phase focuses on identifying potential correspondences between entities in the source and target models. The matching process may employ various methodologies, including semantic similarity measures, pattern recognition, or lexical analysis, to propose candidate alignments. These candidates are then critically evaluated for their accuracy, relevance, and completeness, ensuring they meet the predefined requirements and are logically sound. This stage is delineated into three main activities: planning, execution, and evaluation.
+
+In the *planning* activity, the approach to ontology matching is meticulously strategised. The planning encompasses selecting appropriate algorithms and methods, fine-tuning parameters, determining thresholds for similarity and identity functions, and setting evaluative criteria. These preparations are informed by a thorough understanding of the project's requirements and the outcomes of previous reuse evaluations.
+
+Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for in-depth discussions, see xref:references.adoc#ref:60[paper]). The main classes of ontology matching techniques are listed below in the order of their relevance to this handbook:
+
+* *Terminological* techniques draw on the textual content within ontologies, such as entity labels and comments, employing methods from natural language processing and information retrieval, including string distances and statistical text analysis.
+* *Structural* techniques analyse the relationships and constraints between ontology entities, using methods like graph matching to explore the topology of ontology structures.
+* *Semantic* techniques apply formal logic and inference to deduce the implications of proposed alignments, aiding in the expansion of alignments or detection of conflicts.
+* *Extensional* techniques compare entity sets, or instances, potentially involving analysis of shared resources across ontologies to establish similarity measures.
+Following planning, the *execution* activity implements the chosen matchers. Automated or semi-automated tools are deployed to carry out the matching process, resulting in a list of candidate correspondences. This list typically includes suggested links between elements of the source and target ontologies, each with an associated confidence level computed by the algorithms. xref:references.adoc#ref:61[EDOAL], a representation framework for expressing such correspondences, is commonly utilised to encapsulate these potential alignments.
+
+Finally, in the *evaluation* activity, the candidate correspondences are rigorously assessed for their suitability. The evaluation measures the candidates against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements. This assessment ensures that only the most suitable correspondences are carried forward for the creation of an alignment, thereby upholding the integrity and logical soundness of the mapping process.
+
+*Tools:* Tools such as xref:references.adoc#ref:62[Silk] can be used in this stage.
+
+*Inputs:* Matcher configurations, additional resources (if any), candidate correspondences from previous matching iterations.
+
+*Outputs:* Generated candidate correspondences, evaluation reports, finalised list of potential alignments.
+
+==== Align and Map
+
+Following the identification of suitable matches, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase encompasses preparation, creation, and rendering activities that solidify the relationships between ontology entities into a coherent alignment and actionable mappings. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.
+
+The alignment process should be considered as part of the governance of a vocabulary or ontology that would include engaging communication with third parties to validate the alignment. Furthermore, the process has technical implications that should be evaluated upfront such as the machine interpretation and execution of the mapping.
+
+*Preparation* involves stakeholder consensus on the Alignment Plan. This plan guides stakeholders through the systematic refinement of candidate correspondences, considering not only the relevance of the matches, but also the type of relationship between the elements. This plan might include the removal of irrelevant correspondences or strategic amendments to existing relationships. The chosen candidate correspondences are those that have been determined to be an adequate starting point for the alignment. The type of asset—be it an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The table [below] elucidates potential relationship types that can be established:
+|===
+|*Relation / Element type*|*Property*|*Concept*|*Class*|*Individual*
+
+|**=**|owl:equivalentProperty; owl:sameAs|skos:exactMatch; skos:closeMatch|owl:equivalentClass; owl:sameAs|owl:sameAs
+|**>**||skos:narrowMatch||
+|**<**|rdfs:subPropertyOf|skos:broadMatch|rdfs:subClassOf|
+|**%**|owl:propertyDisjointWith||owl:disjointWith|owl:differentFrom
+|*instanceOf*|rdf:type|skos:broadMatch; rdf:type|rdf:type|rdf:type
+|*hasInstance*||skos:narrowMatch||
+|===
+
+This table is indicative of the variety of semantic connections that can be realised, ranging from equivalence and subclass relations to disjointness and type instantiation. This nuanced approach to the preparation stage is essential in ensuring that the eventual alignment and rendered mapping accurately represent the semantic intricacies of the relationships defined in the project scope, thereby fulfilling the project's defined requirements.
+
+The *Creation* step is the execution of the Alignment Plan, entailing the selection and refinement of correspondences. This activity involves human intervention to select and refine those correspondences for transitioning into a deliberate alignment. The selection is conducted manually according to the project’s objectives.
+
+*Rendering* translates the refined alignment into a mapping—a directed version that can be interpreted and executed by software agents. This process is straightforward, producing a machine-executable artefact. Most often this is a simple export of the alignment statements from the editing tool or the materialisation of the alignment in a triple store. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms. +
+*Tools:* Tools such as xref:references.adoc#ref:63[VocBench3] can be used in this stage, but more generic ones, such as MS Excel or Google Sheets spreadsheets, can be used as well.  +
+*Inputs:* Evaluated candidate correspondences, stakeholders' amendment plans, requirements for the formalism of the mapping. +
+*Outputs:* Created alignment and mapping, alignment amendment strategy, stored versions in an xref:references.adoc#ref:55[alignment repository].
+
+==== Application
+
+The final stage focuses on operationalising the created alignment, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves publishing the alignment in a standardised, machine-readable format and integrating it within ontology management or data integration tools.
+
+Additionally, mechanisms for maintaining, updating, and governing the alignment are established, facilitating its long-term utility and relevance.
+
+Moreover, this stage involves the creation of *maintenance protocols* to preserve the alignment's relevance over time. This includes procedures for regular updates in response to changes in ontology structures or evolving requirements, as well as governance mechanisms to oversee these adaptations. As the mapping is applied, new insights may emerge, prompting discussions within the stakeholder community about potential refinements or the development of a new iteration of the mapping. The dynamic nature of data sources means that the application stage is both an endpoint, as well as a starting point for continuous improvement. Some processes may be automated to enhance efficiency, such as the monitoring of ontologies for changes that would necessitate updates to the mapping.
+
+*Inputs:* Finalised mappings, application context, feedback mechanisms.
+
+*Outputs:* Applied mappings in use, insights from application, triggers for potential updates, governance actions for lifecycle management.
+
+
+[[sec:mapping-existing-ontology-to-vocabulary]]
+include::UC 2.1 Tutorial on Mapping an Existing Ontology to a Core Vocabulary.adoc[Creating JSON-LD Mapping an existing Ontology to a Core Vocabulary (UC 2.1)]
