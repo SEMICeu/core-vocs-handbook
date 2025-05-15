@@ -28,7 +28,7 @@ For this tutorial, we aim to map the Core Business Vocabulary (CBV) to Schema.or
 
 === Procedure for CBV and Schema.org
 
-The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: legal:LegalEntity vs. schema:Organization +
+The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: legal:LegalEntity vs. schema:Organization. +
 It may also need to take into account ‘externalities’, such as regulatory compliance that may dictate the use of one version of a schema over another for some business reason. For the current exercise, there are no regulatory compliance requirements in place. Therefore, the latest official releases of both vocabularies will be used (Schema.org version 29.1 and CBV version 2.2.0). +
 Next, clear mapping goals should be established.
 For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation from the Core Business Vocabulary (CBV) to Schema.org.
@@ -226,8 +226,7 @@ After alignments have been validated, the final step is to *apply* them in pract
 
 === Procedure for CBV and Schema.org
 
-The mapping file (in RDF/Turtle format) resulting from our mapping exercise is *published* on the link:https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business[ SEMIC GitHub repository]. This allows for integration of the mapping output into validation tools used by Member States and other implementers to check CBV-compliant data against Schema.org requirements
-. For *testing*, one could attempt to load the files in an editor that can read in file of the chosen format, being Turtle for CBV, the Turtle version of Schema.org, and the alignment file, or run it trough a syntax validator to verify that all is in order for deployment.  +
+The mapping file (in RDF/Turtle format) resulting from our mapping exercise is *published* on the link:https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business[ SEMIC GitHub repository]. This allows for integration of the mapping output into validation tools used by Member States and other implementers to check CBV-compliant data against Schema.org requirements. For *testing*, one could attempt to load the files in an editor that can read in file of the chosen format, being Turtle for CBV, the Turtle version of Schema.org, and the alignment file, or run it trough a syntax validator to verify that all is in order for deployment.  +
 The *governance structure* for CBV and its mapping to Schema.org is on the side of CBV that reuses Schema.org. SEMIC is responsible for regularly checking if there are updates in either the CBV vocabulary or Schema.org (e.g., new classes, renamed terms, deprecated elements) and update where needed, see to it that logged issues are addressed, and verify that all links and namespaces still in working order. It may also consider updates to CBV due to changing requirements (e.g., to make CBV multilingual) and plan any consequent updates to CBV and any potential effects it may have on the mappings with link:https:Schema.org[Schema.org].
 
 ==== Real Example Using SPARQL Anything
