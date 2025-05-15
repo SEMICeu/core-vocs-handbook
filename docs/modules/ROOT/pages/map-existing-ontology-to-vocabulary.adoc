@@ -5,7 +5,7 @@
 Imagine different organisations speaking different dialects of the same language. One might say “Organisation,” another says “LegalEntity.” They’re both talking about similar things—but how do we get them to understand each other? +
 Ontology alignment and mapping helps solve this problem by creating bridges between different models, allowing each organisation to keep their unique vocabulary while ensuring that the meaning is preserved.
 
-This tutorial demonstrates how to map the link:https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary]  *(CBV)* to link:https://schema.org[Schema.org], addressing *Use Case* link:https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC2.1%3A%20Map%20an%20existing%20Ontology%20to%20a%20Core%20Vocabulary[UC2.1].
+This tutorial demonstrates how to map the link:https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary]  *(CBV)* to link:https://schema.org[Schema.org], addressing *Use Case* link:https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC2.1%3A%20Map%20an%20existing%20Ontology%20to%20a%20Core%20Vocabulary[*UC2.1*].
 By following the link:https://semiceu.github.io/core-vocs-handbook/public-review/how-to-map-existing-data-models.html#sec:map-an-existing-ontology:~:text=their%20interoperability%20needs.-,Map%20an%20existing%20Ontology,-This%20section%20provides[map an existing model]  **methodology**,
 you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
@@ -145,7 +145,7 @@ image::data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9MAAACGCAYAAADeptmcAAApAUl
 
 ==== Manual Alignment Process
 
-Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, *CBV’s LegalEntity* (that is an *org:Organization*) maps to *Schema.org’s Organization* based on their similar roles in representing business-related concepts, and likewise for CBV’s *Address* (imported from Core Location Vocabulary) with Schema.org *PostalAddress*. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.
+Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, *CBV’s LegalEntity* (that is an *org:Organization*) maps to *Schema.org’s Organization* based on their similar roles in representing business-related concepts, and likewise for *CBV’s Address* (imported from Core Location Vocabulary) with *Schema.org PostalAddress*. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.
 
 
 == Phase 5: Validate Alignments
