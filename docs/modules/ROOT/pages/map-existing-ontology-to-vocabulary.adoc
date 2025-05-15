@@ -33,7 +33,7 @@ It may also need to take into account ‘externalities’, such as regulatory co
 Next, clear mapping goals should be established.
 For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation from the Core Business Vocabulary (CBV) to Schema.org.
 
-== Phase 2: Characterisation: Defining Source and Target Data
+== Phase 2: Characterisation (Defining Source and Target Data)
 
 The aim of this phase is to analyse the structure, vocabulary, and semantics of the Core Business Vocabulary that we shall take as *Source ontology* and Schema.org that will be set as *Target ontology*. The key steps and outputs are as follows.
 
@@ -68,7 +68,7 @@ Second, we list the selected features in a table, and for each feature, find the
 |_Latest version inspected_|Latest (v 2.0.0, 6-5-2024). 1 or 2 releases per year|29.0 (24-3-2025). 1 or 2 releases per year
 |_Developer location_|https://github.com/SEMICeu/Core-Business-Vocabulary[https://github.com/SEMICeu/Core-Business-Vocabulary]|https://schema.org/docs/developers.html[https://schema.org/docs/developers.html]
 |===
-== Phase 3: Reuse
+== Phase 3: Reuse of Existing Mappings
 
 The aim of this phase is to avoid doing duplicate work by checking if any existing mappings between CBV and Schema.org are available for reuse or if there are any alignments that can be adapted for this project.
 
@@ -210,7 +210,7 @@ sssom:mapping_justification semapv:MappingReview .
 where it can be seen that the “<” relation corresponds to rdfs:subClassOf and the mapping justification is MappingReview, which is as approved as it can be in SEMAPV terminology. +
 Other alignment examples and a complete file including prefixes can be viewed https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl[here].
 
-== Phase 6: Application: Operationalise the Mappings
+== Phase 6: Application (Operationalise the Mappings)
 
 After alignments have been validated, the final step is to *apply* them in practice. This involves both *technical integration* and the establishment of a *governance framework* to ensure the mappings remain up to date and useful over time.
 
