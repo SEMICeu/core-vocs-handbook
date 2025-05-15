@@ -9,7 +9,7 @@ This tutorial demonstrates how to map the link:https://github.com/SEMICeu/Core-B
 By following the link:https://semiceu.github.io/core-vocs-handbook/public-review/how-to-map-existing-data-models.html#sec:map-an-existing-ontology:~:text=their%20interoperability%20needs.-,Map%20an%20existing%20Ontology,-This%20section%20provides[map an existing model]  **methodology**,
 you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
-== Phase1: Staging (Defining the Requirements)
+== Phase 1: Staging (Defining the Requirements)
 
 
 In this phase, the aim is to understand what needs to be mapped and why.
@@ -148,7 +148,7 @@ image::data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9MAAACGCAYAAADeptmcAAApAUl
 Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, *CBV’s LegalEntity* (that is an *org:Organization*) maps to *Schema.org’s Organization* based on their similar roles in representing business-related concepts, and likewise for CBV’s *Address* (imported from Core Location Vocabulary) with Schema.org *PostalAddress*. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.
 
 
-== Phase 5 : Validate Alignments
+== Phase 5: Validate Alignments
 
 After alignments (i.e., candidate mappings) have been generated—whether by automated tools  or through manual assessment—each proposed mapping must be *validated*. This process aims at checking whether the candidate links represent semantically meaningful relationships between classes or properties from the two ontologies.
 
@@ -210,7 +210,7 @@ sssom:mapping_justification semapv:MappingReview .
 where it can be seen that the “<” relation corresponds to rdfs:subClassOf and the mapping justification is MappingReview, which is as approved as it can be in SEMAPV terminology. +
 Other alignment examples and a complete file including prefixes can be viewed https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl[here].
 
-== Phase 6 Application: Operationalise the Mapping
+== Phase 6: Application: Operationalise the Mappings
 
 After alignments have been validated, the final step is to *apply* them in practice. This involves both *technical integration* and the establishment of a *governance framework* to ensure the mappings remain up to date and useful over time.
 
