@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>UC 2.1 Tutorial on Mapping an existing Model to a Core Vocabulary :: SEMIC</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="..">SEMIC</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="develop">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">SEMIC Core Vocabularies Handbook</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Introduction%20to%20interoperability.html">Interoperability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="semic-core-vocabularies.html">Core Vocabularies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Creating a new data model</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc1">Use cases Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Description</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Guideline</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Tutorial</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc12">Create a new JSON-LD context definition (UC1.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:uc12-d">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-new-json-ld-context-definition">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-json-ld-definition">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Re-using core vocabularies</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc2">Use cases Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="description-map-model.html">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-an-existing-model-guideline.html">Guideline</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="map-existing-ontology-to-vocabulary.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc22">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Description</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Guideline</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Tutorial</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:unaddressed-use-cases">Other use cases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc23">Map an existing JSON Schema to a Core Vocabulary (UC2.3)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc3">Create a new Semantic data specification (UC3)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new Core Vocabulary (UC3.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc32">Create a new Application Profile (UC3.2)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc4">Create a new data model (UC4)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new ontology (UC4.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new data shape (UC4.2)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="references.html">References</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handbook-as-a-whole.html">Handbook as a whole</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">SEMIC Core Vocabularies Handbook</span>
+    <span class="version">develop</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../public-review/index.html">SEMIC Core Vocabularies Handbook</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../public-review/index.html">public-review</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">develop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../public-review/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
+    <li>Re-using core vocabularies</li>
+    <li><a href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a></li>
+    <li><a href="map-existing-ontology-to-vocabulary.html">Tutorial</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">develop</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../public-review/index.html">public-review</a>
+    <a class="version is-current" href="map-existing-ontology-to-vocabulary.html">develop</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/map-existing-ontology-to-vocabulary.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">UC 2.1 Tutorial on Mapping an existing Model to a Core Vocabulary</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Imagine different organisations speaking different dialects of the same language. One might say “Organisation,” another says “LegalEntity.” They’re both talking about similar things—but how do we get them to understand each other?<br>
+Ontology alignment and mapping helps solve this problem by creating bridges between different models, allowing each organisation to keep their unique vocabulary while ensuring that the meaning is preserved.</p>
+</div>
+<div class="paragraph">
+<p>This tutorial demonstrates how to map the <a href="https://github.com/SEMICeu/Core-Business-Vocabulary">Core Business Vocabulary</a>  <strong>(CBV)</strong> to <a href="https://schema.org">Schema.org</a>, addressing <strong>Use Case</strong> <a href="https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC2.1%3A%20Map%20an%20existing%20Ontology%20to%20a%20Core%20Vocabulary"><strong>UC2.1</strong></a>.
+By following the <a href="https://semiceu.github.io/core-vocs-handbook/public-review/how-to-map-existing-data-models.html#sec:map-an-existing-ontology:~:text=their%20interoperability%20needs.-,Map%20an%20existing%20Ontology,-This%20section%20provides">map an existing model</a>  <strong>methodology</strong>,
+you’ll learn how to align these two vocabularies step-by-step—covering <strong>staging, characterisation, reuse, matching, alignment, and application</strong>—to ensure interoperability between the CBV and Schema.org.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_1_staging_defining_the_requirements"><a class="anchor" href="#_phase_1_staging_defining_the_requirements"></a>Phase 1: Staging (Defining the Requirements)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this phase, the aim is to understand what needs to be mapped and why.
+For this tutorial, we aim to map the Core Business Vocabulary (CBV) to Schema.org, enabling data interoperability.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps"><a class="anchor" href="#_steps"></a>Steps:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Determine the purpose of the mapping</strong>: What are the key areas of business data that need to be interoperable between CBV and Schema.org? This is carried out in collaboration with stakeholders.</p>
+</li>
+<li>
+<p><strong>Define Scope</strong>: What parts of the Core Business Vocabulary need to be mapped to Schema.org? Are there specific concepts (e.g.,Contact Point, Organization, etc.) that must be represented? Which version of each ontology or vocabulary will be mapped?</p>
+</li>
+<li>
+<p><strong>Set mapping Goals</strong>: Define the intended outcomes of the mapping, such as ensuring semantic alignment between CBV and Schema.org entities. For example, one key goal may be to clarify the relationship between  <a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a> and <a href="https://schema.org/Organization">schema:Organization</a>
+(Issue <a href="https://github.com/SEMICeu/Core-Business-Vocabulary/issues/38">#38</a>)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output"><a class="anchor" href="#_output"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A short project specification listing target concepts and mapping objectives.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org"><a class="anchor" href="#_procedure_for_cbv_and_schema_org"></a>Procedure for CBV and Schema.org</h3>
+<div class="paragraph">
+<p>The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: legal:LegalEntity vs. schema:Organization.<br>
+It may also need to take into account ‘externalities’, such as regulatory compliance that may dictate the use of one version of a schema over another for some business reason. For the current exercise, there are no regulatory compliance requirements in place. Therefore, the latest official releases of both vocabularies will be used (Schema.org version 29.1 and CBV version 2.2.0).<br>
+Next, clear mapping goals should be established.
+For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation from the Core Business Vocabulary (CBV) to Schema.org.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_2_characterisation_defining_source_and_target_data"><a class="anchor" href="#_phase_2_characterisation_defining_source_and_target_data"></a>Phase 2: Characterisation (Defining Source and Target Data)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The aim of this phase is to analyse the structure, vocabulary, and semantics of the Core Business Vocabulary that we shall take as <strong>Source ontology</strong> and Schema.org that will be set as <strong>Target ontology</strong>. The key steps and outputs are as follows.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps_2"><a class="anchor" href="#_steps_2"></a>Steps:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Examine both ontologies for:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Entity structures, definitions, and formats.</p>
+</li>
+<li>
+<p>Deprecation policies and inheritance mechanisms, natural language(s) used, label specification, label conventions, definition specification, definition conventions, version management and release cycles, etc.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_2"><a class="anchor" href="#_output_2"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A comparison in the form of a table</p>
+</li>
+<li>
+<p>Optionally: a brief report containing a list of obstacles that need to be overcome before model matching can take place</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org_2"><a class="anchor" href="#_procedure_for_cbv_and_schema_org_2"></a>Procedure for CBV and Schema.org</h3>
+<div class="paragraph">
+<p>First, list the features on which to compare the source and the target, which concerns principally the ‘meta’ information, or: information <em>about</em> the artefacts, rather than its contents about the subject domain. This includes typical features such as the serialisation format(s) in which the artefacts are available, naming conventions of the terminology, and version management. <br>
+The features can have adverse or facilitating consequences for the mapping task. Let’s consider three of them here and relate them to our case. First, are the files available in the same <strong>format</strong>? This is indeed the case for CBV and Schema.org, and even leaves the choice for using their RDF or JSON-LD format. The <strong>natural language</strong> of CVB and Schema.org, that is,  the rendering of the entities’ names and labels, are both in one language, and so translating entities’ names is not needed. Regarding frequency of <strong>version</strong> updates, there is a notable difference. CBV is relatively stable with two main releases, whereas Schema.org has frequent releases and it is currently in its 29th main release cycle. .<br>
+Second, we list the selected features in a table, and for each feature, find the answer for CBV and Schema.org.  For the CBV and Schema.org metadata comparison, we had to consult the documentation, the developer release pages, and inspect the files to obtain the answers. The selected features and comparison with the values is shown in the table below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong><em>Feature</em></strong></th>
+<th class="tableblock halign-left valign-top"><strong>Core Business Vocabulary</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Schema.org</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Specification</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML document</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML document</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Computer processable formats</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UML, RDF, JSON-LD, SHACL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OWL, RDF (ttl, rdf/xml), CSV, JSON-LD, NQ, NT, SHACL, SHEXJ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Inheritance</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single inheritance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple inheritance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Label</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:label, shacl:name (within SHACL shapes)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:label</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Naming scheme</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelCase for classes (e.g., LegalEntity) and lowerCamelCase for properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelCase for classes (e.g., EducationalOrganization)and lowerCamelCase for properties</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Label formatting</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">With spaces (e.g., Legal Entity)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In CamelCase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Language</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">English</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">English</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Deprecation</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Definitions</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:comment, shacl:description within SHACL shapes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Written in rdfs:comment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Latest version inspected</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest (v 2.0.0, 6-5-2024). 1 or 2 releases per year</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29.0 (24-3-2025). 1 or 2 releases per year</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Developer location</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SEMICeu/Core-Business-Vocabulary">https://github.com/SEMICeu/Core-Business-Vocabulary</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://schema.org/docs/developers.html">https://schema.org/docs/developers.html</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_reuse_of_existing_mappings"><a class="anchor" href="#_phase_3_reuse_of_existing_mappings"></a>Phase 3: Reuse of Existing Mappings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The aim of this phase is to avoid doing duplicate work by checking if any existing mappings between CBV and Schema.org are available for reuse or if there are any alignments that can be adapted for this project.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps_3"><a class="anchor" href="#_steps_3"></a>Steps:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Search for Existing Alignments</strong>: Looking for any pre-existing alignments that may have been created by others or as part of previous work by consulting the <a href="https://github.com/SEMICeu">SEMIC GitHub repository</a> for relevant mappings.</p>
+</li>
+<li>
+<p><strong>Evaluate Reusability</strong>: Determine whether these existing alignments meet your project’s requirements. If they do, they can be reused directly.</p>
+</li>
+<li>
+<p><strong>Adapt Existing Alignments</strong>: If the existing alignments are close but need modification, adapt them to suit the specific project goals.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_3"><a class="anchor" href="#_output_3"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A document listing:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>which type of alignment was chosen for which existing alignments.</p>
+</li>
+<li>
+<p>The decisions: A new alignment needs to be created.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org_3"><a class="anchor" href="#_procedure_for_cbv_and_schema_org_3"></a>Procedure for CBV and Schema.org</h3>
+<div class="paragraph">
+<p>There are three distinct pathways, being direct use, adaptive reuse, and creating a new alignment. Let’s look at each in turn.<br>
+For the CBV and Schema.org, we first look for pre-existing alignments of related vocabularies. They may be in the files themselves, but we also can search a relevant repository with other files that may have relevant mappings, such the <a href="https://github.com/SEMICeu"><strong>SEMIC GitHub repository</a></strong> in this case, and using alignment frameworks such as <a href="https://moex.gitlabpages.inria.fr/alignapi/edoal.html"><strong>EDOAL</strong></a> or <a href="https://mapping-commons.github.io/sssom/"><strong>SSSOM</strong></a>.<br>
+From searching through the SEMIC repository, we found several vocabularies that have alignments to Schema.org already, which may be reusable. They are listed in the following table, alongside with the location and at which date we checked the mapping, as it may change with different versions (recall the <a href="?tab=t.0#heading=h.6xona2nbxjyi">Source and Target Characterisation</a>, above).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Mapping From</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Mapping To</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Location</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CBV</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schema.org</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><u>https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business</u></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CBV v2.2.0 – Schema.org v29.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>We then look at the intersection of CBV concepts and relationships with either of these. If so, we check if there is already a mapping from that element to Schema.org. This takes us to the <em>Evaluate reusability</em> step: and if it is an agreeable mapping between the two entities, we can reuse that mapping. <br>
+Alternatively, it may be the case of adaptive reuse, which  involves refinements to better suit the mapping objectives.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: An existing alignment for LegalEntity to Organization was evaluated. However, it was missing relationships for organizational properties like schema:legalName and schema:taxID. So, the original alignment was extended to include new mappings for these properties.
+They may also be new alignments when existing resources are not suitable<u>,</u> which is the case for this tutorial.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: Add alignment to answer the question: What is the relation between <a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a> and <a href="https://schema.org/Organization">schema:Organization</a>?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_4_matching_execute_and_filter_matching_candidates"><a class="anchor" href="#_phase_4_matching_execute_and_filter_matching_candidates"></a>Phase 4: Matching (Execute and Filter Matching Candidates)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At this step, we will perform the actual mapping, which we shall bootstrap by producing candidate mappings between classes and between properties, typically automatically,semi-automatically, or manually, and then assess the results.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps_4"><a class="anchor" href="#_steps_4"></a>Steps:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Select Matching Technique</strong>: Decide on a method for automatically or semi-automatically matching entities.</p>
+</li>
+<li>
+<p><strong>Perform Matching</strong>: Prepare the inputs and use the chosen tool to generate potential matches between CBV and Schema.org entities.</p>
+</li>
+<li>
+<p><strong>Candidate Evaluation</strong>: The knowledge engineer assesses the candidate correspondences for their consistency, accuracy, relevance, and alignment with the project’s requirements.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_4"><a class="anchor" href="#_output_4"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>List of alignments.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org_4"><a class="anchor" href="#_procedure_for_cbv_and_schema_org_4"></a>Procedure for CBV and Schema.org</h3>
+<div class="paragraph">
+<p>In this tutorial, we use <a href="http://limes.sf.net"><strong>LIMES</a></strong> to automate link discovery in the mapping process between the <strong>CBV</strong> and <strong>Schema.org</strong>. While other tools could also be used, LIMES was selected for its simplicity and efficiency in performing lexical similarity-based alignments.</p>
+</div>
+<div class="sect3">
+<h4 id="_set_up_data_sources"><a class="anchor" href="#_set_up_data_sources"></a>Set Up Data Sources</h4>
+<div class="paragraph">
+<p>Preparing the data sources depends on the files and the alignment tool chosen. To determine this, the table of features compiled in Phase 2 is useful: there it lists whether alignment should be run on the class name or the label, the file format, and any other algorithmic peculiarities that may be asked for, such as a similarity threshold. For our use case with CBV and Schema.org and LIMES,  we begin by configuring the <strong>SPARQL endpoints</strong>, which allow us to extract the relevant classes and properties for comparison. We focus on aligning entities by their <strong>rdfs:label</strong> whose value is the name or description of the entity, which is the most straightforward way to identify potential mappings.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apply_matching_algorithm"><a class="anchor" href="#_apply_matching_algorithm"></a>Apply Matching Algorithm</h4>
+<div class="paragraph">
+<p>LIMES uses a <strong>similarity metric</strong>  to compare the <strong>rdfs:label</strong> values of entities from both files. This metric generates similarity scores based on the string matching of the labels and, optionally, their descriptions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_analyse_results"><a class="anchor" href="#_analyse_results"></a>Analyse Results</h4>
+<div class="paragraph">
+<p>Tools such as LIMES and Silk do not determine the semantic nature of the match (e.g., equivalence vs. subclass). They only suggest candidate pairs based on similarity metrics. It is up to the human expert to choose the appropriate relation, using knowledge of the domain and the ontology documentation. <br>
+Once the matching process is complete, we inspect the results. In the case of the CBV and Schema.org alignment, <strong>no matches were found with LIMES</strong>. This means that the automated tool did not identify any significant similarities between entities based on the chosen similarity metric. Consequently, we  need to either try with another alignment tool or manually review and align the entities.<br>
+While we opt for the latter, let us first illustrate how the output would look if there had been  potential matches. For instance, the <strong>Core Public Service Vocabulary</strong> (<strong>CPSV</strong>) as source against Schema.org does yield interesting results. LIMES output includes three key columns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Source entity: a URI from the source ontology (e.g., CPSV).</p>
+</li>
+<li>
+<p>Target entity: a URI from the target ontology (e.g., Schema.org).</p>
+</li>
+<li>
+<p>Similarity score: a numerical value (typically from 0 to 1) indicating the strength of the lexical similarity between the two entities.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,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" alt="AV8jn7v6I7SwAAAAAElFTkSuQmCC">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_manual_alignment_process"><a class="anchor" href="#_manual_alignment_process"></a>Manual Alignment Process</h4>
+<div class="paragraph">
+<p>Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, <strong>CBV’s LegalEntity</strong> (that is an <strong>org:Organization</strong>) maps to <strong>Schema.org’s Organization</strong> based on their similar roles in representing business-related concepts, and likewise for <strong>CBV’s Address</strong> (imported from Core Location Vocabulary) with <strong>Schema.org PostalAddress</strong>. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_5_validate_alignments"><a class="anchor" href="#_phase_5_validate_alignments"></a>Phase 5: Validate Alignments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After alignments (i.e., candidate mappings) have been generated—whether by automated tools  or through manual assessment—each proposed mapping must be <strong>validated</strong>. This process aims at checking whether the candidate links represent semantically meaningful relationships between classes or properties from the two ontologies.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps_5"><a class="anchor" href="#_steps_5"></a>Steps</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Confirm candidate correspondences with domain experts.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Review proposed alignments</p>
+</li>
+<li>
+<p>Decide on the appropriate semantic relation. Common types that we focus on here include:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Equivalence</strong>: When two entities are conceptually and functionally the same
+→ rendered as owl:equivalentClass or owl:equivalentProperty</p>
+</li>
+<li>
+<p><strong>Subsumption</strong>: When one entity is more specific than the other (i.e., subclass or subproperty)
+→ rendered as rdfs:subClassOf or rdfs:subPropertyOf</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Formalise the alignment into a mapping following conventions from the <a href="https://moex.gitlabpages.inria.fr/alignapi/format.html">Alignment format</a> or <strong>EDOAL<strong></strong>.</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Render Mappings in a Machine-Readable Format</strong>.
+The mapping file can be rendered in RDF/XML, Turtle, or other formats like <strong>JSON-LD</strong>, depending on the tool or system in use. The choice of format should align with the needs of the stakeholders and the technical requirements of the project.
+While RDF/XML is a standard format for machine-readable ontology representations, it may not be ideal for human consumption due to its complexity. However, RDF/XML (or other syntaxes such as Turtle) is often used in formal contexts for consistency and integration with other semantic web tools. If ease of use for human review is desired, a <strong>Graphical User Interface (GUI)</strong> or tools that visualize RDF data can provide a more intuitive way to view and edit mappings.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_5"><a class="anchor" href="#_output_5"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Final alignment in RDF for integration</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org_5"><a class="anchor" href="#_procedure_for_cbv_and_schema_org_5"></a>Procedure for CBV and Schema.org</h3>
+<div class="sect3">
+<h4 id="_review_proposed_alignments"><a class="anchor" href="#_review_proposed_alignments"></a>Review Proposed Alignments</h4>
+<div class="paragraph">
+<p>Each candidate correspondence is checked for correctness and relevance. For CBV and Schema.org, we use a manual inspection by ontology engineers first , which includes cross-referencing documentation or definitions. CBV’s LegalEntity is “A self-employed person, company, or organization that has legal rights and obligations.” and Schema.org’s Organization is “An organization such as a school, NGO, corporation, club, etc.”. For Address, the descriptions are as follows: “A spatial object that in a human-readable way identifies a fixed location.” with a usage note indicating it to be understood as a postal address, and “The mailing address.”, respectively.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_decide_the_appropriate_semantic_relation"><a class="anchor" href="#_decide_the_appropriate_semantic_relation"></a>Decide the Appropriate Semantic Relation</h4>
+<div class="paragraph">
+<p>For each validated candidate pair, determine the type of semantic relation.<br>
+For our running example, CBV’s LegalEntity is almost the same as Schema.org’s Organization, but the latter does not have the “legal rights” constraint, and therefore, the appropriate semantic relation is that of <em>subsumption.</em>  For the respective addresses, while CBV’s imported Address’ definition is broader than PostalAddress, and therefore suggesting a subsumption alignment as well, taking into account CBV’s usage note, it can be an <em>equivalence</em> alignment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_formalise_the_alignment"><a class="anchor" href="#_formalise_the_alignment"></a>Formalise the Alignment</h4>
+<div class="paragraph">
+<p>Once the relation is chosen, each alignment is encoded as a <strong>machine-readable RDF triple</strong>, typically in RDF/XML or Turtle format, suitable for integration and reuse.<br>
+<strong> </strong>The <strong>result</strong> is a validated alignment file, where each mapping is represented based on the <a href="https://moex.gitlabpages.inria.fr/alignapi/format.html">Alignment Format</a> or an extension thereof, such as <a href="https://moex.gitlabpages.inria.fr/alignapi/edoal.html">EDOAL</a>, as an align:Cell with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The aligned entities (align:entity1 and align:entity2)</p>
+</li>
+<li>
+<p>The chosen relation (align:relation), being either subsumption “&lt;” or equivalence “=”</p>
+</li>
+<li>
+<p>An optional confidence measure</p>
+</li>
+<li>
+<p>Its corresponding meaning in the ontology (owl:annotatedProperty)</p>
+</li>
+<li>
+<p>Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping <a href="https://w3id.org/sssom/">SSSOM</a> that, in turn, reuses the Semantic Mapping Vocabulary <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">SEMAPV</a> for the mapping justification values.
+Example output of adding an alignment between <a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a> and <a href="https://schema.org/Organization">schema:Organization</a>:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">http://mapping.semic.eu/business/sdo/cell/21 a align:Cell;
+align:entity1 http://www.w3.org/ns/legal#LegalEntity;
+align:entity2 https://schema.org/Organization;
+align:relation "&lt;";
+align:measure "1"^^xsd:float;
+owl:annotatedProperty rdfs:subClassOf;
+sssom:mapping_justification semapv:MappingReview .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where it can be seen that the “&lt;” relation corresponds to rdfs:subClassOf and the mapping justification is MappingReview, which is as approved as it can be in SEMAPV terminology.<br>
+Other alignment examples and a complete file including prefixes can be viewed <a href="https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_6_application_operationalise_the_mappings"><a class="anchor" href="#_phase_6_application_operationalise_the_mappings"></a>Phase 6: Application (Operationalise the Mappings)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After alignments have been validated, the final step is to <strong>apply</strong> them in practice. This involves both <strong>technical integration</strong> and the establishment of a <strong>governance framework</strong> to ensure the mappings remain up to date and useful over time.</p>
+</div>
+<div class="sect2">
+<h3 id="_steps_6"><a class="anchor" href="#_steps_6"></a>Steps:</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Publish the Mappings</strong>: Share the mappings in a standard format via a repository.</p>
+</li>
+<li>
+<p><strong>Integrate and Test</strong>: Apply the mappingsalignment in semantic web tools or data integration workflows.</p>
+</li>
+<li>
+<p><strong>Establish Governance</strong>: Define a process for updating the mappings in response to changes in the source or target ontologies.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_6"><a class="anchor" href="#_output_6"></a>Output:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Published mappings and insights for potential refinements.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_for_cbv_and_schema_org_6"><a class="anchor" href="#_procedure_for_cbv_and_schema_org_6"></a>Procedure for CBV and Schema.org</h3>
+<div class="paragraph">
+<p>The mapping file (in RDF/Turtle format) resulting from our mapping exercise is <strong>published</strong> on the <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business"> SEMIC GitHub repository</a>. This allows for integration of the mapping output into validation tools used by Member States and other implementers to check CBV-compliant data against Schema.org requirements. For <strong>testing</strong>, one could attempt to load the files in an editor that can read in file of the chosen format, being Turtle for CBV, the Turtle version of Schema.org, and the alignment file, or run it trough a syntax validator to verify that all is in order for deployment. <br>
+The <strong>governance structure</strong> for CBV and its mapping to Schema.org is on the side of CBV that reuses Schema.org. SEMIC is responsible for regularly checking if there are updates in either the CBV vocabulary or Schema.org (e.g., new classes, renamed terms, deprecated elements) and update where needed, see to it that logged issues are addressed, and verify that all links and namespaces still in working order. It may also consider updates to CBV due to changing requirements (e.g., to make CBV multilingual) and plan any consequent updates to CBV and any potential effects it may have on the mappings with <a href="https:Schema.org">Schema.org</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_real_example_using_sparql_anything"><a class="anchor" href="#_real_example_using_sparql_anything"></a>Real Example Using SPARQL Anything</h4>
+<div class="paragraph">
+<p>To demonstrate the practical value of the mapping between CBV and Schema.org, we use <a href="https://github.com/SPARQL-Anything/sparql.anything">SPARQL Anything</a> to query instance data alongside the alignment file.</p>
+</div>
+<div class="sect4">
+<h5 id="_scenario"><a class="anchor" href="#_scenario"></a><strong>Scenario</strong></h5>
+<div class="paragraph">
+<p>We assume:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A data file (core-business-ap.ttl) contains an instance of legal:LegalEntity</p>
+</li>
+<li>
+<p>An alignment file (Alignment-CoreBusiness-2.2.0-schemaorg.ttl) defines a mapping from legal:LegalEntity to schema:Organization.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_sparql_query"><a class="anchor" href="#_sparql_query"></a><strong>SPARQL Query</strong></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX xyz: http://sparql.xyz/facade-x/data/
+PREFIX legal: http://www.w3.org/ns/legal#
+PREFIX align: http://knowledgeweb.semanticweb.org/heterogeneity/alignment#
+PREFIX rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+CONSTRUCT {
+?s a ?entity2 .
+}
+WHERE {
+SERVICE x-sparql-anyhintg:app/core-business-ap.ttl {
+?s a ?entity1 .
+}
+SERVICE x-sparql-anything:app/Alignment-CoreBusiness-2.2.0-schemaorg.ttl {
+?align a align:Cell ;
+align:entity1 ?entity1 ;
+align:entity2 ?entity2 .
+FILTER (?entity1 = legal:LegalEntity)
+}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_what_this_query_does"><a class="anchor" href="#_what_this_query_does"></a>What This Query Does</h5>
+<div class="paragraph">
+<p>It checks for instances of legal:LegalEntity in the data file, and if the alignment file contains a mapping for it, it infers the equivalent or related Schema.org class (schema:Organization).</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_output_7"><a class="anchor" href="#_output_7"></a>Output</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">http://example.org/entities/Company123 a https://schema.org/Organization .</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Comission and is licensed under the terms of EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
