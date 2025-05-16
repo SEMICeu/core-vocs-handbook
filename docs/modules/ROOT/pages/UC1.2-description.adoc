@@ -1,4 +1,8 @@
-=== Create a new JSON-LD context definition
+= Create a new JSON-LD context definition
+
+== Description
+
+Use case 1.2 to create a new JSON-LD context definition is specified as follows.
 
 [[sec:uc12-d]]
 |===
@@ -22,7 +26,7 @@
 
 This section provides guidelines for addressing use case xref:use-cases.adoc#sec:uc12[UC1.2].
 
-https://www.w3.org/TR/json-ld11/[JSON-LD] is a W3CRecommendation for serialising Linked Data, combining the simplicity, power, and Web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. This guide describes how to create new JSON-LD contexts for existing Core Vocabularies.
+https://www.w3.org/TR/json-ld11/[JSON-LD] is a W3C Recommendation for serialising Linked Data, combining the simplicity, power, and Web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. This guide describes how to create new JSON-LD contexts for existing Core Vocabularies.
 
 The three key phases are: 
 
