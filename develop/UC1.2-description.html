@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: SEMIC</title>
+    <title>Create a new JSON-LD context definition :: SEMIC</title>
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -217,8 +217,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect2">
-<h3 id="_create_a_new_json_ld_context_definition"><a class="anchor" href="#_create_a_new_json_ld_context_definition"></a>Create a new JSON-LD context definition</h3>
+<h1 class="page">Create a new JSON-LD context definition</h1>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use case 1.2 to create a new JSON-LD context definition is specified as follows.</p>
+</div>
 <table id="sec:uc12-d" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -245,13 +250,18 @@
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="sec:create-a-new-json-ld-context-definition"><a class="anchor" href="#sec:create-a-new-json-ld-context-definition"></a>Methodology to create a new JSON-LD context definition</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:create-a-new-json-ld-context-definition"><a class="anchor" href="#sec:create-a-new-json-ld-context-definition"></a>Guideline to create a new JSON-LD context definition</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>This section provides detailed instructions for addressing use case <a href="use-cases.html#sec:uc12" class="xref page">UC1.2</a>.</p>
+<p>This section provides guidelines for addressing use case <a href="use-cases.html#sec:uc12" class="xref page">UC1.2</a>.</p>
 </div>
 <div class="paragraph">
-<p>JSON-LD combines the simplicity, power, and web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. Here’s a guide on how to create new JSON-LD contexts for existing CVs, using the Core Person Vocabulary as an example.</p>
+<p><a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a> is a W3C Recommendation for serialising Linked Data, combining the simplicity, power, and Web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. This guide describes how to create new JSON-LD contexts for existing Core Vocabularies.</p>
+</div>
+<div class="paragraph">
+<p>The three key phases are:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -261,63 +271,63 @@
 <li>
 <p>Shape structure</p>
 </li>
+<li>
+<p>Review and validate</p>
+</li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="_import_or_define_elements"><a class="anchor" href="#_import_or_define_elements"></a>Import or define elements</h3>
+<div class="paragraph">
+<p>When a Core Vocabulary has defined an associated JSON-LD context already, it is not only easy, but also advisable to <strong>directly import this context</strong> using the <code>@import</code> keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.</p>
+</div>
+<div class="paragraph">
+<p>In cases where the Core Vocabulary does not provide an JSON-LD context, it is necessary to <strong>create the corresponding field element definitions</strong> for the reused URIs. To start, gather all the terms from the selected Core Vocabulary that need to be included in the JSON-LD context.</p>
+</div>
+<div class="paragraph">
+<p>Then, decide the desired structure of the JSON-LD file, by <strong>defining the corresponding keys</strong>, such as <code>Person.givenName</code>. These new fields must adhere to the naming defined by the selected Core Vocabulary to maintain consistency.</p>
+</div>
+<div class="paragraph">
+<p>Finally, <strong>assign URIs to keys</strong>. Each term in the  JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in Core Vocabularies to JSON keys using the same CV terms.</p>
+</div>
+<div class="paragraph">
+<p>The ones that are imported by the Core Vocabularies, shall be used as originally defined.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shape_structure"><a class="anchor" href="#_shape_structure"></a>Shape structure</h3>
 <div class="sect3">
-<h4 id="_import_or_define_elements"><a class="anchor" href="#_import_or_define_elements"></a>Import or define elements</h4>
+<h4 id="_main_shaping_of_the_structure"><a class="anchor" href="#_main_shaping_of_the_structure"></a>Main shaping of the structure</h4>
 <div class="paragraph">
-<p>When a CV has defined an associated JSON-LD context, it is not only easy, but also advisable to directly import this context using the <code>@import</code> keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>"@context": {"@import": "https://json-ld.org/contexts/remote-context.jsonld", }</pre>
-</div>
+<p>Start with defining the structure of the context by <strong>relating class terms with property terms</strong> and then, if necessary, property terms with other classes.</p>
 </div>
 <div class="paragraph">
-<p>In cases where the CV does not provide an JSON-LD context, it is necessary to create for the reused URIs the corresponding field element definitions. To start, gather all the terms from the Core Person Vocabulary that you want to include in your JSON-LD context. Terms can include properties like <code><a href="references.html#ref:49" class="xref page">given name</a></code>, <code><a href="references.html#ref:50" class="xref page">family name</a></code>, <code><a href="references.html#ref:51" class="xref page">date of birth</a></code>, and relationships like <code><a href="references.html#ref:52" class="xref page">residency</a></code> or <code><a href="references.html#ref:53" class="xref page">contact point</a></code>.</p>
+<p>Commence by creating a JSON structure that starts with a <code>@context</code> field. This field will contain mappings from one’s own vocabulary terms to other’s respective URIs. Continue by defining fields for Classes and subfields for their properties.</p>
 </div>
 <div class="paragraph">
-<p>Then, decide the desired structure of the JSON-LD file, by defining the corresponding keys, for example <code>Person.givenName</code>, <code>Person.familyName</code>, <code>Person.dateOfBirth</code>, <code>Person.residency</code>, <code>Person.contactPoint</code>. These new fields must adhere to the naming defined by the CV to maintain consistency.</p>
+<p>If the JSON-LD context is developed with the aim of being used directly in exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise <code>@type</code> references linking to the specific Class.</p>
 </div>
 <div class="paragraph">
-<p>Finally, assign URIs to keys. Each term in your JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in CVs to JSON keys using the same CV terms. For example:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>"Person.contactPoint": {"@id": "http://data.europa.eu/m8g/contactPoint"}.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The ones that are imported by the CVs, shall be used as originally defined, for example from FOAF:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>"Person.givenName": {"@id": "http://xmlns.com/foaf/0.1/givenName"}.</pre>
-</div>
+<p>If the aim of the developed JSON-LD context is rather ensuring semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_shape_structure"><a class="anchor" href="#_shape_structure"></a>Shape structure</h4>
+<h4 id="_improvements_to_the_structure"><a class="anchor" href="#_improvements_to_the_structure"></a>Improvements to the structure</h4>
 <div class="paragraph">
-<p>Start defining the structure of the context by relating class terms with property terms and then, if necessary, property terms with other classes.</p>
-</div>
-<div class="paragraph">
-<p>Commence by creating a JSON structure that starts with a <code>@context</code> field. This field will contain mappings from your vocabulary terms to their respective URIs. Continue by defining fields for Classes and subfields for their properties.</p>
+<p>To meet wishes from API consumers, one may use <strong>aliasing</strong> of keywords, where a JSON-LD context element is given a more easily recognisable string.</p>
 </div>
 <div class="paragraph">
-<p>If the JSON-LD context is developed with the aim of being used directly in exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise <code>@type</code> references linking to the specific Class. For example:</p>
+<p>One can also <strong>extend the context</strong> by reusing terms from Core Vocabularies, which also uses the <code>@import</code> keyword if included as a whole. Alternatively, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>"Person.contactPoint" : {"@id": "http://data.europa.eu/m8g/contactPoint", "@type": "ContactPoint"}.</pre>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_review_and_validate"><a class="anchor" href="#_review_and_validate"></a>Review and validate</h3>
+<div class="paragraph">
+<p>First, one should review the created context against any prior requirements that may have been described: is all prospected content indeed included in the context?</p>
 </div>
 <div class="paragraph">
-<p>If the aim of the developed JSON-LD context is rather ensuring semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects. For example:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>"Person.contactPoint": {"@id": "http://data.europa.eu/m8g/contactPoint", "@type": "@id"}</pre>
+<p>Second, the syntax should be verified with a JSON-LD validator, such as <a href="https://json-ld.org/playground/">JSON-LD Playground</a> to ensure that the context is free of errors and all URLs used are operational.</p>
 </div>
 </div>
 </div>
