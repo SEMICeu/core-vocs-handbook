@@ -19,7 +19,7 @@
 *** xref:map-existing-ontology-to-vocabulary.adoc[Tutorial]
 ** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
 *** Description
-*** Guideline
+*** xref:guideline-map-xsd-schema.adoc[Guideline]
 *** Tutorial
 
 * Appendix
