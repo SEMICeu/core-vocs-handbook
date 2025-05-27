@@ -17,9 +17,7 @@ Figure 1 depicts a workflow to create an XSD schema mapping, which is segmented 
 . *Validate the mapping rules* to ensure consistency and accuracy;
 . *Disseminate the documentation* including, mainly, the used and generated files, mapping rules, and validation reports, to be applied in the foreseen use cases of the transformation pipelines.
 
-image::data:image/png;base64,=[]
-[.text-center]
-Figure 3
+image::CMTMVaDi.png[Workflow to create an XSD schema mapping]
 
 === Phase 1: Understand XSD schema and prepare test data
 
