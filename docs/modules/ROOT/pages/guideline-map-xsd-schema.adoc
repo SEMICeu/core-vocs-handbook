@@ -1,7 +1,7 @@
 
 
 [[sec:map-an-existing-xsd-schema]]
-== Guidelines for Mapping an existing XSD schema
+== Guidelines for Mapping an Existing XSD schema
 
 This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc22[UC2.2]
 
