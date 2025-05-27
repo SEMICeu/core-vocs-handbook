@@ -88,7 +88,7 @@ image::image-2025-02-27-14-08-05-543.png[]
 
 |*Example:* OOTS XML schema mappings [xref:references.adoc#ref:31[oots]]
 
-|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD schema]
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:create-new-XSD.adoc#sec:guideline-create-new-xsd[Create a new XSD schema]
 |===
 
 [[sec:uc12]]
