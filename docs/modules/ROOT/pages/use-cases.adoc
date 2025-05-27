@@ -2,8 +2,8 @@
 
 This handbook serves as a practical guide for using Core Vocabularies in various common situations. To provide clear and actionable insights, we have categorized potential use cases into two groups:
 
-- Primary Use Cases: These are the most common, interesting, and/or challenging scenarios, all thoroughly covered within this handbook.
-- Additional Use Cases: These briefly introduce other relevant scenarios but are not elaborated on in detail in this handbook.
+- *Primary Use Cases*: These are the most common, interesting, and/or challenging scenarios, all thoroughly covered within this handbook.
+- *Additional Use Cases*: These briefly introduce other relevant scenarios but are not elaborated on in detail in this handbook.
 
 Within both groups, we differentiate between use cases focused on the creation of NEW artefacts and those involving the mapping of EXISTING artefacts to Core Vocabularies.
 
