@@ -56,7 +56,7 @@ We will use the following template to describe the relevant use cases:
 |*Note:* (Optional) notes about this use case, especially related to its coverage in this handbook
 |===
 
-[[sec:uc1]] [[sec:addressed-use-cases]]
+[[sec:uc1]] 
 === Primary use cases
 
 image::image-2025-02-27-14-08-05-543.png[]
@@ -105,7 +105,8 @@ image::image-2025-02-27-14-08-05-543.png[]
 
 |*Example:* Core Person Vocabulary [xref:references.adoc#ref:32[cpv-json-ld]], Core Business Vocabulary [xref:references.adoc#ref:33[cbv-json-ld]]
 
-|*Note:* A detailed methodology to be applied for use cases will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-json-ld-context-definition[Create a new JSON-LD context definition] section.
+|*Note:* A detailed methodology to be applied for use cases will be provided in the xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[Create a new JSON-LD context definition] section.
+
 |===
 
 [[sec:uc2]]
@@ -122,7 +123,7 @@ image::image-2025-02-27-14-08-05-543.png[]
 
 |*Description:* The goal is to design and create a mapping of an ontology, vocabulary, or some kind of data schema or information exchange data model that is not part of a more comprehensive semantic data specification, to terms from CVs. Such a mapping can be done at a conceptual level, or formally, e.g. in the form of transformation rules, and most often will include both. +
 
-|*Note:* Since this is a more generic use case it will be broken down into concrete use cases that focus on specific data models and/or data formats. Some of those use cases will be described in detail below, while others will be included in the xref:use-cases.adoc#sec:unaddressed-use-cases[next section], which is dedicated to the unaddressed use cases.
+|*Note:* Since this is a more generic use case it will be broken down into concrete use cases that focus on specific data models and/or data formats. Some of those use cases will be described in detail below, while others will be included in the xref:additional-use-cases.adoc[Appendix], which is dedicated to the additional use cases.
 |===
 
 [[sec:uc21]]
@@ -141,7 +142,7 @@ image::image-2025-02-27-14-08-05-543.png[]
 
 *Example:* Mapping Core Person to Schema.org [xref:references.adoc#ref:34[map-cp2org]], Core Business to Schema.org [xref:references.adoc#ref:35[map-cb2org]], etc.
 
-|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology[Map an existing Ontology] section.
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:description-map-model.adoc[Map an existing Model] section.
 |===
 
 [[sec:uc22]]
@@ -160,7 +161,7 @@ image::image-2025-02-27-14-08-05-543.png[]
 Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 
 |*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref:36[isa2-map]]
-|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-an-existing-xsd-schema[Map an existing XSD schema] section.
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:guideline-map-xsd-schema.adoc[Map an existing XSD schema] section.
 |===
 
 The additional use cases are described in the xref:additional-use-cases.adoc[Appendix].
