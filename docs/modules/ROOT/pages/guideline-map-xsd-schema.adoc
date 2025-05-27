@@ -3,7 +3,7 @@
 [[sec:map-an-existing-xsd-schema]]
 == Guidelines for Mapping an Existing XSD Schema
 
-This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc22[UC2.2]
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc22[UC2.2].
 
 In order to create an XSD mapping one needs to decide on the purpose and level of specificity of the XSD schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a fully fledged executable set of rules for data transformation.
 
@@ -17,7 +17,8 @@ Figure 1 depicts a workflow to create an XSD schema mapping, which is segmented 
 . *Validate the mapping rules* to ensure consistency and accuracy;
 . *Disseminate the documentation* including, mainly, the used and generated files, mapping rules, and validation reports, to be applied in the foreseen use cases of the transformation pipelines.
 
-image::CMTMVaDi.png[Workflow to create an XSD schema mapping]
+image::CMTMVaDi.png[Workflow to create an XSD schema mapping] 
+Figure 1. Workflow to create an XSD schema mapping
 
 === Phase 1: Understand XSD schema and prepare test data
 
