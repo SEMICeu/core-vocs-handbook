@@ -22,6 +22,9 @@
 *** xref:use-cases.adoc#sec:uc22[Description]
 *** xref:guideline-map-xsd-schema.adoc[Guideline]
 *** Tutorial
+*** Description
+*** xref:guideline-map-xsd-schema.adoc[Guideline]
+*** xref:map-xsd-to-cv.adoc[Tutorial]
 
 * Appendix
 ** xref:additional-use-cases.adoc[Additional use cases]
