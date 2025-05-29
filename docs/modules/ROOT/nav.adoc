@@ -20,7 +20,7 @@
 ** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
 *** Description
 *** xref:guideline-map-xsd-schema.adoc[Guideline]
-*** Tutorial
+*** xref:map-xsd-to-cv.adoc[Tutorial]
 
 * Appendix
 ** xref:use-cases.adoc#sec:unaddressed-use-cases[Other use cases]
