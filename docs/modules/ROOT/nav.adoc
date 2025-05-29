@@ -6,7 +6,7 @@
 ** xref:use-cases.adoc#sec:uc11[Create a new XSD schema (UC1.1)]
 *** Description
 *** Guideline
-*** Tutorial
+*** xref:create xsd for cv.adoc[Tutorial]
 ** xref:use-cases.adoc#sec:uc12[Create a new JSON-LD context definition (UC1.2)]
 *** xref:UC1.2-description.adoc#sec:uc12-d[Description]
 *** xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[Guideline]
