@@ -1,0 +1,161 @@
+= Tutorial: Mapping the Core Business Vocabulary from XSD to RDF
+
+== Introduction
+
+Use Case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=existing%20Ontology%20section.-,Use,-Case%20UC2.2%3A%20Map[UC2.2] focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary] (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:
+
+. Understanding the XSD Schema and the mapping process;
+. Creating a conceptual mapping between the XSD schema and vocabulary in RDF;
+. Creating the technical mapping;
+. Validating the RDF output;
+. Disseminating the outcome.
+
+== Phase1: Understand the XSD schema and Preparing the test data
+
+=== Understanding the XML schema
+
+The Core Business Vocabulary (CBV) XSD file defines several key entities for the domain, including:
+
+* *AccountingDocument*: Financial and non-financial information resulting from an activity of an organization.
+* *BusinessAgent*: An entity capable of performing actions, potentially associated with a person or an organization.
+* *FormalOrganization* and *LegalEntity*: Legal and formal entities with rights and obligations.
+* *ContactPoint*: Contact details for an entity, such as email, phone, etc.
+* *RegisteredAddress*: The address at which the Legal Entity is legally registered.
+
+=== Preparing the Test Data
+
+Before initiating the mapping development process,it's essential to prepare representative test data.
+This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data.
+For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[ SampleData_Business.xml] file available on the https://github.com/SEMICeu/XML-schema/tree/main[ SEMIC GitHub repository]. +
+Ensure that the XML data contains relevant elements, such as +<LegalEntity>+, +<LegalName>+, +<ContactPoint>+, and +<RegisteredAddress>+, which you will later map to the Core Business Vocabulary terms.
+
+== Phase 2: Create a Conceptual Mapping
+
+We will create a conceptual mapping between the XSD elements and RDF terms from the Core Business Vocabulary. This will guide the transformation of the XML data to RDF. There are two levels of conceptual mapping:
+
+* *Vocabulary Level Mapping*: This is a basic alignment, where each XML element is directly mapped to an ontology class or property.
+** Example: +<RegisteredAddress>+ is mapped to +cv:RegisteredAddress+ and +<LegalEntity>+ is mapped to +legal:LegalEntity+.
+* *Application Profile Level Mapping*: At this level, you use *XPath* expressions to extract specific data from the XML structure, ensuring a more precise mapping to the Core Vocabulary.
+** Example: Mapping the address fields from the XML to a specific property, such as +locn:postCode+ or +locn:postName+.
+In both cases, the target is declared in two components: the target property path and the target class path, to ensure it is mapped in the right context. For instance, a +locn:postName+ of a legal entity may well have different components compared to a +locn:postName+ of the address of a physical building.  +
+Example of the Conceptual Mapping for the five selected elements of the XSD schema :
+|===
+|Source XPath|Target Property Path|Target Class Path
+
+|*/AccountingDocument|?this  a cv:AccountingDocument .|cv:AccountingDocument
+|*/LegalEntity|?this  a legal:LegalEntity .|legal:LegalEntity
+|*/LegalEntity/LegalName |?this  legal:legalName ?value|legal:LegalEntity
+|*/ContactPoint|?this  a cv:ContactPoint  .|cv:ContactPoint
+|===
+== Phase 3: Create the Technical Mapping
+
+The https://rml.io/docs/rml/introduction/[RDF Mapping Language (RML)] is ideal for the task of implementing the conceptual mappings as technical mappings, because it allows for seamless mapping from XML to RDF. We will use RML to create machine-executable mapping rules as follows. +
+First, the rml:logicalSource is declared, with the root of the tree in the XML file, which is */LegalEntity in our use case that assumes there to be an rml:source called SampleData_Business.xml with instance data. +
+Next, a rr:subjectMap is added to say how each <LegalEntity> node becomes the RDF subject—here we build an IRI from generate-id(.) and type it as legal:LegalEntity. +
+Finally, one or more rr:predicateObjectMap blocks capture the properties we need; in the simplest case we map the child element <LegalName> to the vocabulary property legal:legalName. +
+The complete example RML mapping code looks as follows,  in Turtle syntax:
+
+[source,turtle]
+----
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix rml:   <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:    <http://semweb.mmlab.be/ns/ql#> .
+@prefix ex: <http://example.cv/mapping#> .
+@prefix : <http://example.cv/resource#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix legal: <http://www.w3.org/ns/legal#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Organization a rr:TriplesMap ;
+    rdfs:label "Organisation" ;
+    rml:logicalSource [
+            rml:source “SampleData_Business.xml” ;
+            rml:iterator "*/LegalEntity" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap [
+        rdfs:label "LegalEntity" ;
+        rr:template "http://example.cv/resource#Organisation_{generate-id(.)}" ;
+        rr:class legal:LegalEntity ;
+    ] ;
+    rr:predicateObjectMap [
+        rdfs:label "LegalName" ;
+        rr:predicate legal:legalName ;
+        rr:objectMap [
+            rml:reference "LegalEntity/LegalName" ;
+               ]
+    ] ;
+.
+----
+
+This needs to be carried out for all elements from the XSD that were selected for mapping in Phase 1.
+
+== Phase 4: Validate the RDF Output
+
+Now that we have created the mappings, we can apply them to https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[sample data ]using RMLMapper or a similar tool selected from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-tooling-assistant[SEMIC Tooling Assistant].  For this tutorial, we will use RMLMapper, which will read the RML mapping file and the input XML data, and then generate the corresponding RDF output. +
+The snippet below is a *single triple set* produced when the mapping is run over the sample file _SampleData_Business.xml_ (see Phase 1). +
+It shows that one of the XML +<LegalEntity>+ records—the Belgian committee for UNICEF—has been turned into an RDF resource of type +legal:LegalEntity+ with its +legal:legalName+ correctly populated.
+
+[source,turtle]
+----
+@prefix legal: <http://www.w3.org/ns/legal#> .
+@prefix cv:    <http://data.europa.eu/m8g/> .
+@prefix ex:    <http://example.cv/resource#> .
+
+ex:Organization_1  a legal:LegalEntity ;
+        legal:legalName "Comité belge pour l'UNICEF" .
+----
+
+We will validate the output in two ways: to check that it exists and the graph and to check that it exists as intended also regarding any constraints on the shape of the graph.  +
+You can validate the generated RDF using SPARQL queries to ensure that the transformation adheres to the defined conceptual mapping. Since we want to validate rather than retrieve information, we use SPARQL ASK queries, which will return either a ‘yes’ or a ‘no’. For our running example, the  SPARQL query for validating the LegalEntity is:
+[source,turtle]
+----
+ASK {
+  ?e a <http://www.w3.org/ns/legal#LegalEntity> ;
+     <http://www.w3.org/ns/legal#legalName> ?name .
+}
+----
+
+SHACL validation can be applied to ensure that the RDF data conforms to the required shapes and structures regarding any constraints that must hold.  +
+An example SHACL shape for validating LegalEntity is:  +
+To create a SHACL shape for the given RDF output, where the +LegalEntity+ (+legal:LegalEntity+) has a +legalName+ property, we need to define a SHACL shape that validates the type of the +LegalEntity+, the presence of the +legalName+ property, and its datatype.
+
+[source,turtle]
+----
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix ex: <http://example.cv/resource#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix legal: <http://www.w3.org/ns/legal#>.
+
+# Define a shape for LegalEntity
+ex:LegalEntityShape a sh:NodeShape ;
+    sh:targetClass legal:LegalEntity ;  # This shape applies to all instances of LegalEntity
+    sh:property [
+        sh:path  legal:legalName ;           # Ensure the presence of the legalName property
+        sh:datatype xsd:string ;         # legalName must be a string
+        sh:minCount 1 ;                  # At least one legalName must be provided
+    ] .
+
+
+----
+
+==== Explanation:
+
+. *Target Class*: The shape is applied to all resources of type +legal:LegalEntity+. This means it validates any +LegalEntity+ instance in your RDF data.
+. *Property Constraints*:
+** *legal:legalName*: The property +legalName+ is required to be of type +xsd:string+, and the minimum count is set to 1 (+sh:minCount 1+), meaning that the +legalName+ property must appear at least once.
+
+
+Note: The SHACL shapes of the CBV  can be found https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0/shacl[here].
+
+== Phase 5: Dissemination
+
+
+Once the mappings are validated, the next step is to disseminate the mapping as a package of documentation together with the artefacts. The package includes:
+
+* Conceptual Mapping Files: This documents the mapping rules between XSD elements and RDF terms, being the table included above in Phase 2.
+* Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
+* Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
+* Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
