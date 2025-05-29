@@ -29,7 +29,7 @@
 - *[[ref:27]][dtx]* Diataxis. Available at: https://diataxis.fr
 - *[[ref:28]][cpv]* Barthelemy, F. et al. Core Person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
 - *[[ref:29]][cbv]* Barthelemy, F. et al. Core Business Vocabulary. Available at: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0
-- *[[ref:30]][weuc]* According to the classification of A. Cockburn in “Writing Effective Use Cases” Cockburn99, pg 14-15
+- *[[ref:30]][Cockburn99]* Cockburn, A. (1999). Writing effective use cases. Addison-Wesley Longman Publishing Co., Inc., United States. pp 14-15
 - *[[ref:31]][oots]* OOTS XML schema mappings. Available at: https://ec.europa.eu/digital-building-blocks/sites/pages/viewpage.action?pageId=706382149
 - *[[ref:32]][cpv-json-ld]* Core Person Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.1/context/core-person-ap.jsonld
 - *[[ref:33]][cbv-json-ld]* Core Business Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.2.0/context/core-business-ap.jsonld
