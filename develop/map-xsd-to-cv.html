@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tutorial: Mapping the Core Business Vocabulary from XSD to RDF :: SEMIC</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="..">SEMIC</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="develop">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">SEMIC Core Vocabularies Handbook</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Introduction%20to%20interoperability.html">Interoperability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="semic-core-vocabularies.html">Core Vocabularies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Creating a new data model</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc1">Use cases Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Description</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Guideline</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Tutorial</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc12">Create a new JSON-LD context definition (UC1.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:uc12-d">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-new-json-ld-context-definition">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-json-ld-definition">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Re-using core vocabularies</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc2">Use cases Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="description-map-model.html">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-an-existing-model-guideline.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-existing-ontology-to-vocabulary.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc22">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Description</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guideline-map-xsd-schema.html">Guideline</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="map-xsd-to-cv.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:unaddressed-use-cases">Other use cases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc23">Map an existing JSON Schema to a Core Vocabulary (UC2.3)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc3">Create a new Semantic data specification (UC3)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new Core Vocabulary (UC3.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc32">Create a new Application Profile (UC3.2)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc4">Create a new data model (UC4)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new ontology (UC4.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="use-cases.html#sec:uc31">Create a new data shape (UC4.2)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="references.html">References</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handbook-as-a-whole.html">Handbook as a whole</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">SEMIC Core Vocabularies Handbook</span>
+    <span class="version">develop</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../public-review/index.html">SEMIC Core Vocabularies Handbook</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../public-review/index.html">public-review</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">develop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../public-review/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
+    <li>Re-using core vocabularies</li>
+    <li><a href="use-cases.html#sec:uc22">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a></li>
+    <li><a href="map-xsd-to-cv.html">Tutorial</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">develop</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../public-review/index.html">public-review</a>
+    <a class="version is-current" href="map-xsd-to-cv.html">develop</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/map-xsd-to-cv.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tutorial: Mapping the Core Business Vocabulary from XSD to RDF</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use Case <a href="https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=existing%20Ontology%20section.-,Use,-Case%20UC2.2%3A%20Map">UC2.2</a> focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the <a href="https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd">Core Business Vocabulary</a> (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Understanding the XSD Schema and the mapping process;</p>
+</li>
+<li>
+<p>Creating a conceptual mapping between the XSD schema and vocabulary in RDF;</p>
+</li>
+<li>
+<p>Creating the technical mapping;</p>
+</li>
+<li>
+<p>Validating the RDF output;</p>
+</li>
+<li>
+<p>Disseminating the outcome.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase1_understand_the_xsd_schema_and_preparing_the_test_data"><a class="anchor" href="#_phase1_understand_the_xsd_schema_and_preparing_the_test_data"></a>Phase1: Understand the XSD schema and Preparing the test data</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_understanding_the_xml_schema"><a class="anchor" href="#_understanding_the_xml_schema"></a>Understanding the XML schema</h3>
+<div class="paragraph">
+<p>The Core Business Vocabulary (CBV) XSD file defines several key entities for the domain, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>AccountingDocument</strong>: Financial and non-financial information resulting from an activity of an organization.</p>
+</li>
+<li>
+<p><strong>BusinessAgent</strong>: An entity capable of performing actions, potentially associated with a person or an organization.</p>
+</li>
+<li>
+<p><strong>FormalOrganization</strong> and <strong>LegalEntity</strong>: Legal and formal entities with rights and obligations.</p>
+</li>
+<li>
+<p><strong>ContactPoint</strong>: Contact details for an entity, such as email, phone, etc.</p>
+</li>
+<li>
+<p><strong>RegisteredAddress</strong>: The address at which the Legal Entity is legally registered.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_preparing_the_test_data"><a class="anchor" href="#_preparing_the_test_data"></a>Preparing the Test Data</h3>
+<div class="paragraph">
+<p>Before initiating the mapping development process,it&#8217;s essential to prepare representative test data.
+This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data.
+For this tutorial, we will use the <a href="https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml"> SampleData_Business.xml</a> file available on the <a href="https://github.com/SEMICeu/XML-schema/tree/main"> SEMIC GitHub repository</a>.<br>
+Ensure that the XML data contains relevant elements, such as &lt;LegalEntity&gt;, &lt;LegalName&gt;, &lt;ContactPoint&gt;, and &lt;RegisteredAddress&gt;, which you will later map to the Core Business Vocabulary terms.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_2_create_a_conceptual_mapping"><a class="anchor" href="#_phase_2_create_a_conceptual_mapping"></a>Phase 2: Create a Conceptual Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We will create a conceptual mapping between the XSD elements and RDF terms from the Core Business Vocabulary. This will guide the transformation of the XML data to RDF. There are two levels of conceptual mapping:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Vocabulary Level Mapping</strong>: This is a basic alignment, where each XML element is directly mapped to an ontology class or property.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: &lt;RegisteredAddress&gt; is mapped to cv:RegisteredAddress and &lt;LegalEntity&gt; is mapped to legal:LegalEntity.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Application Profile Level Mapping</strong>: At this level, you use <strong>XPath</strong> expressions to extract specific data from the XML structure, ensuring a more precise mapping to the Core Vocabulary.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: Mapping the address fields from the XML to a specific property, such as locn:postCode or locn:postName.
+In both cases, the target is declared in two components: the target property path and the target class path, to ensure it is mapped in the right context. For instance, a locn:postName of a legal entity may well have different components compared to a locn:postName of the address of a physical building. <br>
+Example of the Conceptual Mapping for the five selected elements of the XSD schema :</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Source XPath</th>
+<th class="tableblock halign-left valign-top">Target Property Path</th>
+<th class="tableblock halign-left valign-top">Target Class Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*/AccountingDocument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?this  a cv:AccountingDocument .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cv:AccountingDocument</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*/LegalEntity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?this  a legal:LegalEntity .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">legal:LegalEntity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*/LegalEntity/LegalName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?this  legal:legalName ?value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">legal:LegalEntity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*/ContactPoint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?this  a cv:ContactPoint  .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cv:ContactPoint</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_create_the_technical_mapping"><a class="anchor" href="#_phase_3_create_the_technical_mapping"></a>Phase 3: Create the Technical Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://rml.io/docs/rml/introduction/">RDF Mapping Language (RML)</a> is ideal for the task of implementing the conceptual mappings as technical mappings, because it allows for seamless mapping from XML to RDF. We will use RML to create machine-executable mapping rules as follows.<br>
+First, the rml:logicalSource is declared, with the root of the tree in the XML file, which is */LegalEntity in our use case that assumes there to be an rml:source called SampleData_Business.xml with instance data.<br>
+Next, a rr:subjectMap is added to say how each &lt;LegalEntity&gt; node becomes the RDF subject—here we build an IRI from generate-id(.) and type it as legal:LegalEntity.<br>
+Finally, one or more rr:predicateObjectMap blocks capture the properties we need; in the simplest case we map the child element &lt;LegalName&gt; to the vocabulary property legal:legalName.<br>
+The complete example RML mapping code looks as follows,  in Turtle syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">@prefix rr:    &lt;http://www.w3.org/ns/r2rml#&gt; .
+@prefix rml:   &lt;http://semweb.mmlab.be/ns/rml#&gt; .
+@prefix ql:    &lt;http://semweb.mmlab.be/ns/ql#&gt; .
+@prefix ex: &lt;http://example.cv/mapping#&gt; .
+@prefix : &lt;http://example.cv/resource#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix legal: &lt;http://www.w3.org/ns/legal#&gt;
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+ex:Organization a rr:TriplesMap ;
+    rdfs:label "Organisation" ;
+    rml:logicalSource [
+            rml:source “SampleData_Business.xml” ;
+            rml:iterator "*/LegalEntity" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap [
+        rdfs:label "LegalEntity" ;
+        rr:template "http://example.cv/resource#Organisation_{generate-id(.)}" ;
+        rr:class legal:LegalEntity ;
+    ] ;
+    rr:predicateObjectMap [
+        rdfs:label "LegalName" ;
+        rr:predicate legal:legalName ;
+        rr:objectMap [
+            rml:reference "LegalEntity/LegalName" ;
+               ]
+    ] ;
+.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This needs to be carried out for all elements from the XSD that were selected for mapping in Phase 1.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_4_validate_the_rdf_output"><a class="anchor" href="#_phase_4_validate_the_rdf_output"></a>Phase 4: Validate the RDF Output</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that we have created the mappings, we can apply them to <a href="https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml">sample data </a>using RMLMapper or a similar tool selected from the <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-tooling-assistant">SEMIC Tooling Assistant</a>.  For this tutorial, we will use RMLMapper, which will read the RML mapping file and the input XML data, and then generate the corresponding RDF output.<br>
+The snippet below is a <strong>single triple set</strong> produced when the mapping is run over the sample file <em>SampleData_Business.xml</em> (see Phase 1).<br>
+It shows that one of the XML &lt;LegalEntity&gt; records—the Belgian committee for UNICEF—has been turned into an RDF resource of type legal:LegalEntity with its legal:legalName correctly populated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">@prefix legal: &lt;http://www.w3.org/ns/legal#&gt; .
+@prefix cv:    &lt;http://data.europa.eu/m8g/&gt; .
+@prefix ex:    &lt;http://example.cv/resource#&gt; .
+
+ex:Organization_1  a legal:LegalEntity ;
+        legal:legalName "Comité belge pour l'UNICEF" .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We will validate the output in two ways: to check that it exists and the graph and to check that it exists as intended also regarding any constraints on the shape of the graph. <br>
+You can validate the generated RDF using SPARQL queries to ensure that the transformation adheres to the defined conceptual mapping. Since we want to validate rather than retrieve information, we use SPARQL ASK queries, which will return either a ‘yes’ or a ‘no’. For our running example, the  SPARQL query for validating the LegalEntity is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">ASK {
+  ?e a &lt;http://www.w3.org/ns/legal#LegalEntity&gt; ;
+     &lt;http://www.w3.org/ns/legal#legalName&gt; ?name .
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>SHACL validation can be applied to ensure that the RDF data conforms to the required shapes and structures regarding any constraints that must hold. <br>
+An example SHACL shape for validating LegalEntity is: <br>
+To create a SHACL shape for the given RDF output, where the LegalEntity (legal:LegalEntity) has a legalName property, we need to define a SHACL shape that validates the type of the LegalEntity, the presence of the legalName property, and its datatype.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">@prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+@prefix cv: &lt;http://data.europa.eu/m8g/&gt; .
+@prefix ex: &lt;http://example.cv/resource#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix legal: &lt;http://www.w3.org/ns/legal#&gt;.
+
+# Define a shape for LegalEntity
+ex:LegalEntityShape a sh:NodeShape ;
+    sh:targetClass legal:LegalEntity ;  # This shape applies to all instances of LegalEntity
+    sh:property [
+        sh:path  legal:legalName ;           # Ensure the presence of the legalName property
+        sh:datatype xsd:string ;         # legalName must be a string
+        sh:minCount 1 ;                  # At least one legalName must be provided
+    ] .</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_explanation"><a class="anchor" href="#_explanation"></a>Explanation:</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Target Class</strong>: The shape is applied to all resources of type legal:LegalEntity. This means it validates any LegalEntity instance in your RDF data.</p>
+</li>
+<li>
+<p><strong>Property Constraints</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>legal:legalName</strong>: The property legalName is required to be of type xsd:string, and the minimum count is set to 1 (sh:minCount 1), meaning that the legalName property must appear at least once.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note: The SHACL shapes of the CBV  can be found <a href="https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0/shacl">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_5_dissemination"><a class="anchor" href="#_phase_5_dissemination"></a>Phase 5: Dissemination</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the mappings are validated, the next step is to disseminate the mapping as a package of documentation together with the artefacts. The package includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Conceptual Mapping Files: This documents the mapping rules between XSD elements and RDF terms, being the table included above in Phase 2.</p>
+</li>
+<li>
+<p>Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.</p>
+</li>
+<li>
+<p>Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.</p>
+</li>
+<li>
+<p>Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Comission and is licensed under the terms of EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
