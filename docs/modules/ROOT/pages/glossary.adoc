@@ -5,7 +5,7 @@
 
 *_Alternative names:_* AP, context-specific semantic data specification +
 *_Definition:_* Semantic data specification aimed to facilitate the data exchange in a well-defined application context. +
-*_Additional info:_* It re-uses concepts from one or more semantic data specifications, while adding more specificity, by identifying mandatory, recommended, and optional elements, addressing particular application needs, and providing recommendations for controlled vocabularies to be used. +
+*_Additional information:_* It re-uses concepts from one or more semantic data specifications, while adding more specificity, by identifying mandatory, recommended, and optional elements, addressing particular application needs, and providing recommendations for controlled vocabularies to be used. +
 *_Source/Reference:_*  https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-an-ap-specification[SEMIC Style Guide]
 
 
@@ -13,27 +13,34 @@
 
 *_Alternative names:_* conceptual model specification +
 *_Definition:_* An abstract representation of a system that comprises well-defined concepts, their qualities or attributes, and their relationships to other concepts. +
-*_Additional info:_* A system is a group of interacting or interrelated elements that act according to a set of rules to form a unified whole. +
+*_Additional information:_* A system is a group of interacting or interrelated elements that act according to a set of rules to form a unified whole. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-conceptual-model[SEMIC Style Guide]
+
+=== *Constraint*
+
+*_Alternative names:_* restriction, axiom, shape +
+*_Definition:_* Restriction to which an entity or relation must adhere. +
+*_Additional information:_* Models normally consist not only of the entity types and relationships between them, but also contain constraints that hold over them. The types of constraints that can be declared depend on the type of model. For instance, a SQL schema for a relational database has, among others, a data type constraint for each column specification and referential integrity constraints, a UML Class diagram has multiplicity constraints declared on an association to specify the amount of relations each instance is permitted to have, and an ontology may contain an axiom that declares an object property to be, e.g., symmetric or transitive. The list of permissible constraints typically is part of the modelling language, but it also may be an associated additional constraint language, such as SHACL for RDF and OCL for UML. +
+
 
 === *Core Vocabulary*
 
 *_Alternative names:_* CV +
 *_Definition:_* A basic, reusable and extensible semantic data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. +
-*_Additional info:_* Its main objective is to provide terms to be reused in the broadest possible context. +
+*_Additional information:_* Its main objective is to provide terms to be reused in the broadest possible context. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-cv-specification[SEMIC Style Guide]
 
 === *Data model*
 
 *_Definition:_* A structured representation of data elements and relationships used to facilitate semantic interoperability within and across domains. +
-*_Additional info:_* Data models represent common languages to facilitate semantic interoperability in a data space, including ontologies, data models, schema specifications, mappings and API specifications that can be used to annotate and describe data sets and data services. They are often domain-specific. +
+*_Additional information:_* Data models are represented in common languages to facilitate semantic interoperability in a data space, including ontologies, data models, schema specifications, mappings and API specifications that can be used to annotate and describe data sets and data services. They are often domain-specific. +
 *_Source/Reference:_* https://dssc.eu/space/BVE/357075098/Data+Models[Data Spaces Blueprint]
 
 === *Information exchange data model*
 
 *_Alternative names:_* data schema +
 *_Definition:_* Information exchange data model is a technology-specific framework for data exchange, detailing the syntax, structure, data types, and constraints necessary for effective data communication between systems. It serves as a practical blueprint for implementing an application profile in specific data exchange contexts. +
-*_Additional info:_* An ontology and an exchange data model serve distinct yet complementary roles across different abstraction levels within data management systems. While a Data Schema specifies the technical structure for storing and exchanging data, primarily concerned with the syntactical and structural aspects of data, it is typically articulated using metamodel standards such as JSON Schema and XML Schema. +
+*_Additional information:_* An ontology and an exchange data model serve distinct yet complementary roles across different abstraction levels within data management systems. While a Data Schema specifies the technical structure for storing and exchanging data, primarily concerned with the syntactical and structural aspects of data, it is typically articulated using metamodel standards such as JSON Schema and XML Schema. +
 In contrast, ontologies and data shapes operate at a higher conceptual level, outlining the knowledge and relational dynamics within a particular domain without delving into the specifics of data storage or structural implementations. Although a Data Schema can embody certain elements of an ontology or application profile—particularly attributes related to data structure and cardinalities necessary for data exchange—it does not encapsulate the complete semantics of the domain as expressed in an ontology. +
 Thus, while exchange data models are essential for the technical realisation of data storage and exchange, they do not replace the broader, semantic understanding provided by ontologies. The interplay between these layers ensures that data schemas contribute to a holistic data management strategy by providing the necessary structure and constraints for data exchange, while ontologies offer the overarching semantic framework that guides the meaningful interpretation and utilisation of data across systems. Together, they facilitate a structured yet semantically rich data ecosystem conducive to advanced data interoperability and effective communication. +
 *_Source/Reference:_* https://dssc.eu/space/BVE/357075098/Data+Models#Conceptual-model[Data Spaces Blueprint]
@@ -48,28 +55,32 @@ _Source/Reference:_ https://semiceu.github.io/style-guide/1.0.0/style-guide-whol
 
 *_Alternative names:_* specification document +
 *_Definition:_* The human-readable representation of an ontology, a data shape, or a combination of both. +
-*_Additional info:_* A semantic data specification document is created with the objective of making it simple for the end-user to understand (a) how a model encodes knowledge of a particular domain, and (b) how this model can be technically adopted and used for a purpose. It is to serve as technical documentation for anyone interested in using (e.g. adopting or extending) a semantic data specification. +
+*_Additional information:_* A semantic data specification document is created with the objective of making it simple for the end-user to understand (a) how a model encodes knowledge of a particular domain, and (b) how this model can be technically adopted and used for a purpose. It is to serve as technical documentation for anyone interested in using (e.g. adopting or extending) a semantic data specification. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-specification-document[SEMIC Style Guide]
 
 === *Data shape specification*
 
 *_Alternative names:_* data shape constraint specification, data shape constraint, data shape +
 *_Definition:_* A set of conditions on top of an ontology, limiting how the ontology can be instantiated. +
-*_Additional info:_* The conditions and constraints that apply to a given ontology are provided as shapes and other constructs expressed in the form of an RDF graph. We assume that the data shapes are expressed in SHACL language. +
+*_Additional information:_* The conditions and constraints that apply to a given ontology are provided as shapes and other constructs expressed in the form of an RDF graph. We assume that the data shapes are expressed in SHACL language. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-data-shape-contraint[SEMIC Style Guide]
+
+=== *Model*
+
+*_Additional information:_* Generic term for any of the entries in this glossary, without the need for the existence of data and they may also serve purposes other than facilitating interoperability. SEMIC’s usage of models refers to structured information or knowledge that is represented in a suitable representation language, rather than to individual objects or the notion of ‘model’ in model-theoretic semantics of a logic. +
 
 === *Ontology*
 
-*_Alternative names:_* ontology specification +
+
 *_Definition:_* A formal specification describing the concepts and relationships that can formally exist for an agent or a community of agents (e.g. domain experts) +
-*_Additional info:_* It encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains of discourse. +
+*_Additional information:_* It encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains of discourse. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-an-ontology[SEMIC Style Guide]
 
 === *Semantic data specification*
 
 *_Alternative names:_* data specification +
 *_Definition:_* An union of machine- and human-readable artefacts addressing clearly defined concerns, interoperability scope and use-cases. +
-*_Additional info:_* A semantic data specification comprises at least an ontology and a data shape (or either of them individually) accompanied by a human-readable data specification document. +
+*_Additional information:_* A semantic data specification comprises at least an ontology and a data shape (or either of them individually) accompanied by a human-readable data specification document. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-semantic-data-specification[SEMIC Style Guide]
 
 === *Vocabulary*
@@ -78,4 +89,6 @@ _Source/Reference:_ https://semiceu.github.io/style-guide/1.0.0/style-guide-whol
 
 === *Upper Ontology*
 
-*_Definition:_* An upper ontology is a highly generalised ontology that includes very abstract concepts applicable across all domains, such as "object," "property," and "relation." Its primary role is to facilitate broad semantic interoperability among numerous domain-specific ontologies by offering a standardised foundational framework. This framework assists in harmonising diverse domain ontologies, allowing for consistent data interpretation and efficient information exchange.
+*_Alternative names:_* top-level ontology, foundational ontology +
+*_Definition:_* An upper ontology is a highly generalised ontology that includes entities considered useful across all subject domains, such as “endurant”, “independent continuant”, “process”, and “participates in”. 
+*_Additional information:_* Its primary role is to facilitate broad semantic interoperability among numerous domain ontologies by offering a standardised foundational/top level hierarchy and relations together with its underlying philosophical commitments. This framework assists in harmonising diverse domain ontologies, allowing for consistent data interpretation and efficient information exchange.
