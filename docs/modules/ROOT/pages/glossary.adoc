@@ -16,6 +16,13 @@
 *_Additional information:_* A system is a group of interacting or interrelated elements that act according to a set of rules to form a unified whole. +
 *_Source/Reference:_* https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:what-is-a-conceptual-model[SEMIC Style Guide]
 
+=== *Constraint*
+
+*_Alternative names:_* restriction, axiom, shape +
+*_Definition:_* Restriction to which an entity or relation must adhere. +
+*_Additional information:_* Models normally consist not only of the entity types and relationships between them, but also contain constraints that hold over them. The types of constraints that can be declared depend on the type of model. For instance, a SQL schema for a relational database has, among others, a data type constraint for each column specification and referential integrity constraints, a UML Class diagram has multiplicity constraints declared on an association to specify the amount of relations each instance is permitted to have, and an ontology may contain an axiom that declares an object property to be, e.g., symmetric or transitive. The list of permissible constraints typically is part of the modelling language, but it also may be an associated additional constraint language, such as SHACL for RDF and OCL for UML. +
+
+
 === *Core Vocabulary*
 
 *_Alternative names:_* CV +
