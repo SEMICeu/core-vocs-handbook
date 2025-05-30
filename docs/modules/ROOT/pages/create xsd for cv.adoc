@@ -4,12 +4,11 @@ Creating an *XSD schema* for the *Core Vocabulary* involves defining the structu
 This step-by-step guide focuses on the essential stages of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped, and all constraints are applied. +
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
-=== Import or Define Elements
+=== Phase 1:Import or Define Elements
 
 ==== Managing Imports and Namespaces
 
 In XML schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains *semantics*, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
-When a Core Vocabulary, such as CBV, has defined an associated XSD schema, it is essential to import it into your schema using the XML Schema import Element statement. This way, the schema reuses all the complex types, elements, and definitions from the Core Vocabulary. +
 For example, CBV comes with https://github.com/SEMICeu/XML-schema/tree/main/models/CoreVoc_Business[its own XSD schema], the following import statement  imports all definitions related to CBV elements. The following example shows how to import the *CBV* into your XSD schema, which is explained afterward:
 
 [source,xml]
@@ -44,7 +43,7 @@ For example, the *LegalEntity* element could be defined as follows if no XSD is 
 
 Make sure you declare the correct namespace (e.g., +http://example.com/+) for all these custom elements.
 
-=== Shape XML Document Structure with Patterns
+=== Phase 2: Shape XML Document Structure with Patterns
 
 At this stage, we focus on structuring the XML document using appropriate https://www.semantic-treehouse.nl/docs/wizard/xml-schema-design/[XML Schema Design Patterns]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
@@ -90,11 +89,11 @@ For instance, both LegalEntity and Organization can serve as root elements in th
 
 
 
-=== Define Complex Types
+==== Define Complex Types
 
 After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like +LegalEntity+ or +Organization+, which have both simple and complex elements. For example:
 
-====  LegalEntityType Complex Type
+=====  LegalEntityType Complex Type
 
 A *LegalEntity* might contain multiple child elements, such as *LegalName* modelled as a simple string, *RegisteredAddress* (also a complex type), and other related elements. Here's how LegalEntityType is defined:
 [source,xml]
@@ -109,7 +108,7 @@ A *LegalEntity* might contain multiple child elements, such as *LegalName* model
 
 *Note*: The https://www.w3.org/TR/sawsdl/#:~:text=of%20the%20interface.-,3.1%20Annotating%20Interfaces%20with%20Model%20Reference,-This%20section%20defines[+sawsdl:modelReference+] annotation is used to link the element to an external concept, providing semantic context by associating the element with a specific vocabulary or ontology.
 
-==== OrganizationType Complex Type
+===== OrganizationType Complex Type
 
 Similar to the +LegalEntityType+ complex type, the +OrganizationType+ defines a business entity with multiple properties and relationships. However, for +Organization+, we define it as a complex type that contains hierarchical relationships, such as +HeadOf+ and +MemberOf+.
 
@@ -137,7 +136,7 @@ It’s important to note that in this context, +LegalEntityType+ is defined as a
 
 
 
-=== Finalising the XSD Schema
+==== Finalising the XSD Schema
 
 
 Adding *annotations* and *documentation* to each complex type and element helps to clarify their purpose and improve the readability of the schema. For instance:
@@ -151,7 +150,7 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 
 
 
-=== Validation and Best Practices
+=== Phase 3: Validation and Best Practices
 
 Finally, test your new schema by validating *sample XML documents* using XML validation tools (e.g.,: https://www.xmlvalidation.com/[XMLValidation] tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules ]to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
