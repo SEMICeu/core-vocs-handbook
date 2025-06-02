@@ -48,7 +48,7 @@ Overall, the choice between these patterns should be informed by the intended us
 
 *Recommendation:* We consider the Garden of Eden pattern suitable for designing XSD schemas at the level of core or domain semantic data specifications, and the Venetian Blind pattern suitable for XSD schemas at the level of specific Application Profiles.+
 
-*Recommendation* for Choosing the Right Pattern:
+*Recommendation* for choosing the appropriate pattern:
 
 . The *Venetian Blind Pattern* suits Application Profiles where a central entity is the main entry point, offering a structured schema for defined use cases.
 . *The Garden of Eden Pattern* is better for Core or Domain Data Specifications, where multiple entry points provide flexibility for general-purpose data models.
