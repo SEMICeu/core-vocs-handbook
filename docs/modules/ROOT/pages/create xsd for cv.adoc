@@ -152,15 +152,16 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 
 === Phase 3: Validation and Best Practices
 
-Finally, test your new schema by validating *sample XML documents* using XML validation tools (e.g.,: https://www.xmlvalidation.com/[XMLValidation] tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules ]to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
+Finally, test your new schema by validating *sample XML documents* using XML validation tools (e.g.,: https://www.xmlvalidation.com/[XMLValidation] tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
 ==== Schematron Validation Rules
 
-To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be foundhttps://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[ ]]https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
+To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be found 
+https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
 
 ==== Running the Validation
 
-You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml]+ file, which leverageshttps://ant.apache.org/[https://ant.apache.org/[ ]]https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
+You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml]+ file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
 
 
 
