@@ -161,7 +161,7 @@ https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here]
 
 ==== Running the Validation
 
-You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml]+ file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
+You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml+] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
 
 
 
