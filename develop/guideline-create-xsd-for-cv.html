@@ -55,7 +55,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="use-cases.html#sec:uc11">Description</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="guideline-create-xsd-for-cv.html">Guideline</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -91,7 +91,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="description-map-model.html">Description</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -201,19 +201,19 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
-    <li>Re-using core vocabularies</li>
-    <li><a href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a></li>
-    <li><a href="description-map-model.html">Description</a></li>
+    <li>Creating a new data model</li>
+    <li><a href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a></li>
+    <li><a href="guideline-create-xsd-for-cv.html">Guideline</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">develop</button>
   <div class="version-menu">
     <a class="version is-missing" href="../public-review/index.html">public-review</a>
-    <a class="version is-current" href="description-map-model.html">develop</a>
+    <a class="version is-current" href="guideline-create-xsd-for-cv.html">develop</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/description-map-model.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/guideline-create-xsd-for-cv.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -221,22 +221,99 @@
 </aside>
 <article class="doc">
 <div class="sect1">
-<h2 id="_how_to_map_existing_data_models"><a class="anchor" href="#_how_to_map_existing_data_models"></a>How to map existing data models</h2>
+<h2 id="sec:create-a-new-xsd-schema"><a class="anchor" href="#sec:create-a-new-xsd-schema"></a>Guideline to Create a new XSD Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the vast and diverse landscape of knowledge representation and data modelling, sources of knowledge are articulated through various means, each adopting its distinct methodology for expression. This diversity manifests not only in the choice of technology and representation languages, but also in the vocabularies used and the specific models created. Such heterogeneity, while enriching, introduces significant challenges for semantic interoperability—the ability of different systems to understand and use the information seamlessly across various contexts.</p>
+<p>This section provides detailed instructions for addressing use case <a href="use-cases.html#sec:uc11" class="xref page">UC1.1</a>.</p>
 </div>
 <div class="paragraph">
-<p>The idea of unifying this rich spectrum of knowledge under a single model and a single representation language, though conceptually appealing, is pragmatically unfeasible and, arguably, undesirable. The diversity of knowledge sources is not merely a by-product of historical development, but a reflection of the varied domains, perspectives, and requirements these sources serve.</p>
+<p>To create a new XSD schema, the following main steps need to be carried out:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import or define elements</p>
+</li>
+<li>
+<p>Shape structure with patterns</p>
+</li>
+<li>
+<p>Validation</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_phase_1_import_or_define_elements"><a class="anchor" href="#_phase_1_import_or_define_elements"></a>Phase 1: Import or define elements</h3>
+<div class="paragraph">
+<p>When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models.<br></p>
 </div>
 <div class="paragraph">
-<p>To navigate this complexity, a more nuanced approach is required—one that seeks to establish connections across models without imposing uniformity. This is where the concepts of ontology matching and the broader spectrum of model alignment methodologies come into play. Moreover, the matching endeavour encompasses not only ontological artefacts,  vocabularies and application profiles, but also various technical artefacts—ranging from data shapes defined in SHACL or ShEx, XSD schemas for XML, to JSON Schemas for JSON data. Each of these artefacts represents a different facet of information modelling and knowledge representation. Thus, mapping in this broader sense involves creating links between these semantic and technical artefacts and Core Vocabularies.</p>
+<p>When a core vocabulary has defined an associated XSD schema, it is not only easy but also advisable to directly import this schema using the xsd:import statement. This enables seamless reuse and guarantees that any complex types or elements defined within the core vocabulary are integrated correctly and transparently within new schemas.<br></p>
 </div>
 <div class="paragraph">
-<p>The past couple decades have witnessed extensive efforts in ontology and attendant model matching, resulting in a plethora of tools, methods, and technologies aimed at enhancing semantic interoperability. These endeavours underscore the vast landscape of potential strategies available for matching. These strategies range from conceptual methodologies that explore the semantic congruence and contextual relevance of entities and relationships, to formal methodologies that operationalise these conceptual mappings as technical data transformation rules. It is important to acknowledge that there is no one-size-fits-all method; instead, the field offers a spectrum of approaches suited to various needs and contexts.</p>
+<p>The imported elements are then employed in the definition of a specific document structure. For example, Core Vocabularies are based on <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">DCTERMS</a>, that provides an XML schema, so Core Person could import the DCTERMS XML schema for the usage of AgentType:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/AgentTypeScheenshot.png" alt="AgentTypeScheenshot">
+</div>
 </div>
 <div class="paragraph">
-<p>The subsequent sections will describe the specific methodologies of matching—both conceptual and formal—and thereby providing a blueprint for navigating and bridging the world of semantic and technical artefacts, empowering stakeholders to make informed decisions that best suit their interoperability needs.</p>
+<p>In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create the XML element definitions in the new XSD schema corresponding to the reused URIs. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency. For example “AgentType” must be defined within the “http://data.europa.eu/m8g/” namespace of the Core Vocabularies.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the core vocabulary&#8217;s data shape—specifically, which properties are optional and which are mandatory–within the XSD schema element definitions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_2_shape_xml_document_structure"><a class="anchor" href="#_phase_2_shape_xml_document_structure"></a>Phase 2: Shape XML document structure</h3>
+<div class="paragraph">
+<p>In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The <em>Venetian Blind</em> and <em>Garden of Eden</em> <a href="references.html#ref:44" class="xref page">patterns</a> stand out as preferable for their ability to allow complex types to be reused by different elements [<a href="references.html#ref:44" class="xref page">sem-map</a>].</p>
+</div>
+<div class="paragraph">
+<p>The Venetian Blind pattern is characterised by having a single global element that serves as the entry point for the XML document, from which all the elements can be reached. This pattern implies a certain directionality and starting point, analogous to choosing a primary class in an ontology that has direct relationships to other classes, and from which one can navigate to the rest of the classes.</p>
+</div>
+<div class="paragraph">
+<p>Adopting Venetian Blind pattern reduces the variability in its application and deems the schema usable in specific scenarios by providing not only well-defined elements, but also a rigid and predictable structure.<br></p>
+</div>
+<div class="paragraph">
+<p>On the other hand, the Garden of Eden pattern allows for multiple global elements, providing various entry points into the XML document. This pattern accommodates ontologies where no single class is inherently central, mirroring the flexibility of graph representations in ontologies that do not have a strict hierarchical starting point.</p>
+</div>
+<div class="paragraph">
+<p>Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as <a href="references.html#ref:46" class="xref page">NIEM</a> and <a href="references.html#ref:47" class="xref page">UBL</a>, which recommend such flexibility for broader applicability and ease of information representation.</p>
+</div>
+<div class="paragraph">
+<p>However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a <a href="references.html#ref:48" class="xref page">SOAP API</a>, the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.</p>
+</div>
+<div class="paragraph">
+<p>Overall, the choice between these patterns should be informed by the intended use of the schema, the level of abstraction of the ontology it represents, and the needs of the end-users, aiming to strike a balance between structure and flexibility.</p>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation:</strong> We consider the Garden of Eden pattern suitable for designing XSD schemas at the level of core or domain semantic data specifications, and the Venetian Blind pattern suitable for XSD schemas at the level of specific Application Profiles.+</p>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation</strong> for choosing the appropriate pattern:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <strong>Venetian Blind Pattern</strong> suits Application Profiles where a central entity is the main entry point, offering a structured schema for defined use cases.</p>
+</li>
+<li>
+<p><strong>The Garden of Eden Pattern</strong> is better for Core or Domain Data Specifications, where multiple entry points provide flexibility for general-purpose data models.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Complex types should be defined, if deemed necessary, only after importing or defining the basic elements and application of patterns. Complex types are deemed complex when they have multiple properties, be they attributes or relationships.
+Finally, complete the XSD schema by adding annotations and documentation using the `xs:annotation’ and `xs:documentation’ tags. This improves understanding of the schema’s content both for external users and oneself at a later date, as well as communicating the purpose so that the schema will be deployed as intended.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_3_validation"><a class="anchor" href="#_phase_3_validation"></a>Phase 3: Validation</h3>
+<div class="paragraph">
+<p>The schema should be validated with at least one sample XML document, both to verify that it is syntactically correct and semantically as intended and has adequate coverage. SEMIC XSD schemas need to adhere to best practices and validation <a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md">rules</a> to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.</p>
+</div>
 </div>
 </div>
 </div>

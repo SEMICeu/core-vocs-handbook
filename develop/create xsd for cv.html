@@ -53,10 +53,10 @@
     <a class="nav-link" href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <span class="nav-text">Description</span>
+    <a class="nav-link" href="use-cases.html#sec:uc11">Description</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <span class="nav-text">Guideline</span>
+    <a class="nav-link" href="guideline-create-xsd-for-cv.html">Guideline</a>
   </li>
   <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="create%20xsd%20for%20cv.html">Tutorial</a>
@@ -108,15 +108,6 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="use-cases.html#sec:uc22">Description</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="guideline-map-xsd-schema.html">Guideline</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <span class="nav-text">Tutorial</span>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <span class="nav-text">Description</span>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="guideline-map-xsd-schema.html">Guideline</a>
@@ -233,7 +224,8 @@
 <h2 id="_uc1_1_tutorial_on_creating_an_xsd_schema_for_core_business_vocabulary_cbv"><a class="anchor" href="#_uc1_1_tutorial_on_creating_an_xsd_schema_for_core_business_vocabulary_cbv"></a>UC1.1: Tutorial on creating an XSD schema for Core Business Vocabulary (CBV)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Creating an <strong>XSD schema</strong> for the <strong>Core Vocabulary</strong> involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the <a href="https://semiceu.github.io/core-vocs-handbook/public-review/how-to-create-new-data-models.html#sec:create-a-new-xsd-schema:~:text=specific%20Application%20Profiles.-,Create%20a%20new%20JSON%2DLD%20context%20definition,-This%20section%20provides">methodology </a>outlined for <strong>Use Case</strong> <a href="https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#sec:uc11:~:text=Use%20Case%20UC1.1%3A%20Create%20a%20new%20XSD%20schema"><strong>UC1.1</a></strong>: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary#:~:text=What%20is%20the%20Core%20Business,the%20activity%2C%20address%2C%20etc" class="bare">https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary#:~:text=What%20is%20the%20Core%20Business,the%20activity%2C%20address%2C%20etc</a>.[<strong>Core Business Vocabulary</strong>] (CBV).
+<p>Creating an <strong>XSD schema</strong> for the <strong>Core Vocabulary</strong> involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the <a href="guideline-create-xsd-for-cv.html" class="xref page">methodology</a> outlined for <strong>Use Case</strong> <a href="https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#sec:uc11:~:text=Use%20Case%20UC1.1%3A%20Create%20a%20new%20XSD%20schema"><strong>UC1.1</a></strong>: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the
+<a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary"><strong>Core Business Vocabulary</strong></a> (CBV).
 This step-by-step guide focuses on the essential stages of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped, and all constraints are applied.<br>
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.</p>
 </div>
@@ -347,10 +339,8 @@ For instance, both LegalEntity and Organization can serve as root elements in th
 <div class="sect3">
 <h4 id="_define_complex_types"><a class="anchor" href="#_define_complex_types"></a>Define Complex Types</h4>
 <div class="paragraph">
-<p>After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define <strong>complex types</strong>. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like LegalEntity or Organization, which have both simple and complex elements. For example:</p>
+<p>After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define <strong>complex types</strong>. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like LegalEntity or Organization, which have both simple and complex elements. For example, the LegalEntityType and OrganizationType, as follows.</p>
 </div>
-<div class="sect4">
-<h5 id="_legalentitytype_complex_type"><a class="anchor" href="#_legalentitytype_complex_type"></a>LegalEntityType Complex Type</h5>
 <div class="paragraph">
 <p>A <strong>LegalEntity</strong> might contain multiple child elements, such as <strong>LegalName</strong> modelled as a simple string, <strong>RegisteredAddress</strong> (also a complex type), and other related elements. Here&#8217;s how LegalEntityType is defined:</p>
 </div>
@@ -368,9 +358,6 @@ For instance, both LegalEntity and Organization can serve as root elements in th
 <div class="paragraph">
 <p><strong>Note</strong>: The <a href="https://www.w3.org/TR/sawsdl/#:~:text=of%20the%20interface.-,3.1%20Annotating%20Interfaces%20with%20Model%20Reference,-This%20section%20defines">sawsdl:modelReference</a> annotation is used to link the element to an external concept, providing semantic context by associating the element with a specific vocabulary or ontology.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_organizationtype_complex_type"><a class="anchor" href="#_organizationtype_complex_type"></a>OrganizationType Complex Type</h5>
 <div class="paragraph">
 <p>Similar to the LegalEntityType complex type, the OrganizationType defines a business entity with multiple properties and relationships. However, for Organization, we define it as a complex type that contains hierarchical relationships, such as HeadOf and MemberOf.</p>
 </div>
@@ -401,7 +388,6 @@ It’s important to note that in this context, LegalEntityType is defined as an 
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
 <h4 id="_finalising_the_xsd_schema"><a class="anchor" href="#_finalising_the_xsd_schema"></a>Finalising the XSD Schema</h4>
 <div class="paragraph">
@@ -421,18 +407,19 @@ It’s important to note that in this context, LegalEntityType is defined as an 
 <div class="sect2">
 <h3 id="_phase_3_validation_and_best_practices"><a class="anchor" href="#_phase_3_validation_and_best_practices"></a>Phase 3: Validation and Best Practices</h3>
 <div class="paragraph">
-<p>Finally, test your new schema by validating <strong>sample XML documents</strong> using XML validation tools (e.g.,: <a href="https://www.xmlvalidation.com/">XMLValidation</a> tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation <a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md">rules </a>to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.</p>
+<p>Finally, test your new schema by validating <strong>sample XML documents</strong> using XML validation tools (e.g.: <a href="https://www.xmlvalidation.com/">XMLValidation</a> tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation <a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md">rules</a> to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.</p>
 </div>
 <div class="sect3">
 <h4 id="_schematron_validation_rules"><a class="anchor" href="#_schematron_validation_rules"></a>Schematron Validation Rules</h4>
 <div class="paragraph">
-<p>To ensure schema compliance, the <strong>Schematron rules</strong> provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be foundhttps://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[<a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch"> </a>]<a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch">here</a>.</p>
+<p>To ensure schema compliance, the <strong>Schematron rules</strong> provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be found
+<a href="https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch">here</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_running_the_validation"><a class="anchor" href="#_running_the_validation"></a>Running the Validation</h4>
 <div class="paragraph">
-<p>You can execute the rules using the provided <a href="https://github.com/SEMICeu/XML-schema/blob/main/build.xml">build.xml] file, which leverageshttps://ant.apache.org/[https://ant.apache.org/[ </a>]<a href="https://ant.apache.org/">Apache Ant</a>. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.</p>
+<p>You can execute the rules using the provided <a href="https://github.com/SEMICeu/XML-schema/blob/main/build.xml">build.xml</a> file, which leverages <a href="https://ant.apache.org/">Apache Ant</a>. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.</p>
 </div>
 </div>
 </div>
