@@ -1,6 +1,6 @@
 == Guidelines for how to map existing data models
 
-This section provides general guidelines to address use case xref:use-cases.adoc#sec:uc21[UC2.1], matching an ontology to a core vocabulary The term ‘ontology’ is used loosely, and may also be similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies.  
+This section provides general guidelines to address use case xref:UC2.1-Description.adoc#sec:uc21[UC2.1], matching an ontology to a core vocabulary The term ‘ontology’ is used loosely, and may also be similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies.
 
 In this section we adopt the definitions from the ontology matching handbook xref:references.adoc#ref:54[EuzenatShvaiko13] for the following concepts:
 
@@ -20,7 +20,7 @@ To create an ontology mapping, the following steps need to be observed:
 . *Application:* publish the mappings and establish governance of the mappings
 
 
-This section provides an overview of the guideline, which will be demonstrated in the xref:map-an-exiting-model-tutorialUC21.adoc[tutorial] section where we map the Core Business Vocabulary to Schema.org. 
+This section provides an overview of the guideline, which will be demonstrated in the xref:map-existing-ontology-to-vocabulary.adoc#sec:map-an-ontology-to-CV[tutorial] section where we map the Core Business Vocabulary to Schema.org.
 
 === Phase 1: Staging
 
