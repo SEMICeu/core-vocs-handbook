@@ -5,7 +5,7 @@
 * Creating a new data model
 ** xref:use-cases.adoc#sec:uc1[Use cases UC1: Overview]
 ** xref:use-cases.adoc#sec:uc11[Create a new XSD schema (UC1.1)]
-*** xref:use-cases.adoc#sec:uc11[Description]
+*** xref:UC1.1-description.adoc#sec:uc11[Description]
 *** xref:guideline-create-xsd-for-cv.adoc[Guideline]
 *** xref:create xsd for cv.adoc[Tutorial]
 ** xref:use-cases.adoc#sec:uc12[Create a new JSON-LD context definition (UC1.2)]

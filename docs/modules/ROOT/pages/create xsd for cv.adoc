@@ -1,6 +1,9 @@
 == UC1.1: Tutorial on creating an XSD schema for Core Business Vocabulary (CBV)
 
-Creating an *XSD schema* for the *Core Vocabulary* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the xref:guideline-create-xsd-for-cv.adoc[methodology] outlined for *Use Case* https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#sec:uc11:~:text=Use%20Case%20UC1.1%3A%20Create%20a%20new%20XSD%20schema[*UC1.1]*: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the 
+Creating an *XSD schema* for the *Core Vocabulary* involves defining the structure,
+data types, and relationships for the elements of the CBV, ensuring interoperability between systems.
+This tutorial follows the xref:guideline-create-xsd-for-cv.adoc[methodology]
+outlined for *Use Case* xref:UC1.1-description.adoc#sec:uc11[*UC1.1]*: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the
 https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[*Core Business Vocabulary*] (CBV).
 This step-by-step guide focuses on the essential stages of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped, and all constraints are applied. +
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.

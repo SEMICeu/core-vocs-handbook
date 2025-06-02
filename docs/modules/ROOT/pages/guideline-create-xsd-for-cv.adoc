@@ -5,7 +5,7 @@
 [[sec:create-a-new-xsd-schema]]
 == Guideline to Create a new XSD Schema
 
-This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc11[UC1.1].
+This section provides detailed instructions for addressing use case xref:UC1.1-description.adoc#sec:uc11[UC1.1].
 
 To create a new XSD schema, the following main steps need to be carried out:
 

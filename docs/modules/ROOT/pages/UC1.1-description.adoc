@@ -1,0 +1,30 @@
+= Create a new XSD schema
+
+== Description
+
+[[sec:uc11]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC1.1: Create a new XSD schema*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone XSD schema that uses terms from Core Vocabularies.
+
+|*Primary Actors:* Semantic Engineer, Software Engineer
+
+|*Description:* The goal is to design and create a new XSD schema that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, an XSD Schema can be used to create and validate XML data to be exchanged between information systems.
+
+|*Example:* OOTS XML schema mappings [xref:references.adoc#ref:31[oots]]
+
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:guideline-create-xsd-for-cv.adoc[Create a new XSD schema]
+|===
+
+
+
+[[sec:guidline-create-XSD-schema]]
+include::guideline-create-xsd-for-cv.adoc[Guideline to Create a new XSD Schema]
+
+
+[[sec:create-XSD-to-vocabulary]]
+include::create xsd for cv.adoc[Create a new XSD Schema]
+
