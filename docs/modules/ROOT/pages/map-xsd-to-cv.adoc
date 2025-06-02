@@ -1,8 +1,10 @@
-= Tutorial: Mapping the Core Business Vocabulary from XSD to RDF
+[[sec:map-existing-xsd-schema]]
 
-== Introduction
+== Tutorial: Mapping the Core Business Vocabulary from XSD to RDF
 
-Use Case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=existing%20Ontology%20section.-,Use,-Case%20UC2.2%3A%20Map[UC2.2] focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary] (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:
+=== Introduction
+
+Use Case xref:UC2.2-description.adoc#sec:uc22[UC2.2] focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary] (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:
 
 . Understanding the XSD Schema and the mapping process;
 . Creating a conceptual mapping between the XSD schema and vocabulary in RDF;
@@ -10,9 +12,9 @@ Use Case https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.ht
 . Validating the RDF output;
 . Disseminating the outcome.
 
-== Phase1: Understand the XSD schema and Preparing the test data
+=== Phase1: Understand the XSD schema and Preparing the test data
 
-=== Understanding the XML schema
+==== Understanding the XML schema
 
 The Core Business Vocabulary (CBV) XSD file defines several key entities for the domain, including:
 
@@ -22,14 +24,14 @@ The Core Business Vocabulary (CBV) XSD file defines several key entities for the
 * *ContactPoint*: Contact details for an entity, such as email, phone, etc.
 * *RegisteredAddress*: The address at which the Legal Entity is legally registered.
 
-=== Preparing the Test Data
+==== Preparing the Test Data
 
 Before initiating the mapping development process,it's essential to prepare representative test data.
 This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data.
 For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[ SampleData_Business.xml] file available on the https://github.com/SEMICeu/XML-schema/tree/main[ SEMIC GitHub repository]. +
 Ensure that the XML data contains relevant elements, such as +<LegalEntity>+, +<LegalName>+, +<ContactPoint>+, and +<RegisteredAddress>+, which you will later map to the Core Business Vocabulary terms.
 
-== Phase 2: Create a Conceptual Mapping
+=== Phase 2: Create a Conceptual Mapping
 
 We will create a conceptual mapping between the XSD elements and RDF terms from the Core Business Vocabulary. This will guide the transformation of the XML data to RDF. There are two levels of conceptual mapping:
 
@@ -47,7 +49,7 @@ Example of the Conceptual Mapping for the five selected elements of the XSD sche
 |*/LegalEntity/LegalName |?this  legal:legalName ?value|legal:LegalEntity
 |*/ContactPoint|?this  a cv:ContactPoint  .|cv:ContactPoint
 |===
-== Phase 3: Create the Technical Mapping
+=== Phase 3: Create the Technical Mapping
 
 The https://rml.io/docs/rml/introduction/[RDF Mapping Language (RML)] is ideal for the task of implementing the conceptual mappings as technical mappings, because it allows for seamless mapping from XML to RDF. We will use RML to create machine-executable mapping rules as follows. +
 First, the rml:logicalSource is declared, with the root of the tree in the XML file, which is */LegalEntity in our use case that assumes there to be an rml:source called SampleData_Business.xml with instance data. +
@@ -90,7 +92,7 @@ ex:Organization a rr:TriplesMap ;
 
 This needs to be carried out for all elements from the XSD that were selected for mapping in Phase 1.
 
-== Phase 4: Validate the RDF Output
+=== Phase 4: Validate the RDF Output
 
 Now that we have created the mappings, we can apply them to https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[sample data ]using RMLMapper or a similar tool selected from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-tooling-assistant[SEMIC Tooling Assistant].  For this tutorial, we will use RMLMapper, which will read the RML mapping file and the input XML data, and then generate the corresponding RDF output. +
 The snippet below is a *single triple set* produced when the mapping is run over the sample file _SampleData_Business.xml_ (see Phase 1). +
@@ -149,7 +151,7 @@ ex:LegalEntityShape a sh:NodeShape ;
 
 Note: The SHACL shapes of the CBV  can be found https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0/shacl[here].
 
-== Phase 5: Dissemination
+=== Phase 5: Dissemination
 
 
 Once the mappings are validated, the next step is to disseminate the mapping as a package of documentation together with the artefacts. The package includes:

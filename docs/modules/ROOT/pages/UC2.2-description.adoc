@@ -1,0 +1,29 @@
+[[sec:uc22]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Define the data transformation rules for the mapping of an XSD schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+
+|*Primary Actors:* Semantic Engineer
+
+|*Actors:* Domain Expert, Business Analyst, Software Engineer
+
+|*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
+Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+
+|*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref:36[isa2-map]]
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:guideline-map-xsd-schema.adoc[Map an existing XSD schema] section.
+|===
+
+
+
+[[sec:guidline-map-XSD-to-vocabulary]]
+include::guideline-map-xsd-schema.adoc[Guidelines for Mapping an Existing XSD Schema]
+
+
+[[sec:mapping-existing-XSD-to-vocabulary]]
+include::map-xsd-to-cv.adoc[Creating JSON-LD Mapping an existing Ontology to a Core Vocabulary (UC 2.1)]
+
+
