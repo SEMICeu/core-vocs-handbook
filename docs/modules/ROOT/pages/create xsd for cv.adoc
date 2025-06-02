@@ -1,6 +1,7 @@
 == UC1.1: Tutorial on creating an XSD schema for Core Business Vocabulary (CBV)
 
-Creating an *XSD schema* for the *Core Vocabulary* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the https://semiceu.github.io/core-vocs-handbook/public-review/how-to-create-new-data-models.html#sec:create-a-new-xsd-schema:~:text=specific%20Application%20Profiles.-,Create%20a%20new%20JSON%2DLD%20context%20definition,-This%20section%20provides[methodology ]outlined for *Use Case* https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#sec:uc11:~:text=Use%20Case%20UC1.1%3A%20Create%20a%20new%20XSD%20schema[*UC1.1]*: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary#:~:text=What%20is%20the%20Core%20Business,the%20activity%2C%20address%2C%20etc.[*Core Business Vocabulary*] (CBV).
+Creating an *XSD schema* for the *Core Vocabulary* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the xref:guideline-create-xsd-for-cv.adoc[methodology] outlined for *Use Case* https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#sec:uc11:~:text=Use%20Case%20UC1.1%3A%20Create%20a%20new%20XSD%20schema[*UC1.1]*: "Create a New XSD Schema," showing how to design and create an XSD schema that integrates terms from the 
+https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[*Core Business Vocabulary*] (CBV).
 This step-by-step guide focuses on the essential stages of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped, and all constraints are applied. +
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
@@ -91,9 +92,7 @@ For instance, both LegalEntity and Organization can serve as root elements in th
 
 ==== Define Complex Types
 
-After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like +LegalEntity+ or +Organization+, which have both simple and complex elements. For example:
-
-=====  LegalEntityType Complex Type
+After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like +LegalEntity+ or +Organization+, which have both simple and complex elements. For example, the LegalEntityType and OrganizationType, as follows.
 
 A *LegalEntity* might contain multiple child elements, such as *LegalName* modelled as a simple string, *RegisteredAddress* (also a complex type), and other related elements. Here's how LegalEntityType is defined:
 [source,xml]
@@ -107,8 +106,6 @@ A *LegalEntity* might contain multiple child elements, such as *LegalName* model
 
 
 *Note*: The https://www.w3.org/TR/sawsdl/#:~:text=of%20the%20interface.-,3.1%20Annotating%20Interfaces%20with%20Model%20Reference,-This%20section%20defines[+sawsdl:modelReference+] annotation is used to link the element to an external concept, providing semantic context by associating the element with a specific vocabulary or ontology.
-
-===== OrganizationType Complex Type
 
 Similar to the +LegalEntityType+ complex type, the +OrganizationType+ defines a business entity with multiple properties and relationships. However, for +Organization+, we define it as a complex type that contains hierarchical relationships, such as +HeadOf+ and +MemberOf+.
 
@@ -152,15 +149,16 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 
 === Phase 3: Validation and Best Practices
 
-Finally, test your new schema by validating *sample XML documents* using XML validation tools (e.g.,: https://www.xmlvalidation.com/[XMLValidation] tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules ]to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
+Finally, test your new schema by validating *sample XML documents* using XML validation tools (e.g.: https://www.xmlvalidation.com/[XMLValidation] tool) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabularies (CBV) follow several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
 ==== Schematron Validation Rules
 
-To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be foundhttps://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[ ]]https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
+To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be found 
+https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
 
 ==== Running the Validation
 
-You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml]+ file, which leverageshttps://ant.apache.org/[https://ant.apache.org/[ ]]https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
+You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[+build.xml+] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
 
 
 

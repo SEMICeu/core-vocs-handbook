@@ -1,0 +1,61 @@
+
+
+
+
+[[sec:create-a-new-xsd-schema]]
+== Guideline to Create a new XSD Schema
+
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc11[UC1.1].
+
+To create a new XSD schema, the following main steps need to be carried out:
+
+. Import or define elements
+. Shape structure with patterns
+. Validation
+
+=== Phase 1: Import or define elements
+
+When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models. +
+
+When a core vocabulary has defined an associated XSD schema, it is not only easy but also advisable to directly import this schema using the +xsd:import+ statement. This enables seamless reuse and guarantees that any complex types or elements defined within the core vocabulary are integrated correctly and transparently within new schemas. +
+
+The imported elements are then employed in the definition of a specific document structure. For example, Core Vocabularies are based on https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCTERMS], that provides an XML schema, so Core Person could import the DCTERMS XML schema for the usage of AgentType:
+
+image::AgentTypeScheenshot.png[]
+
+In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create the XML element definitions in the new XSD schema corresponding to the reused URIs. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency. For example “AgentType” must be defined within the “http://data.europa.eu/m8g/” namespace of the Core Vocabularies.
+
+Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the core vocabulary's data shape—specifically, which properties are optional and which are mandatory–within the XSD schema element definitions.
+
+=== Phase 2: Shape XML document structure
+
+In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The _Venetian Blind_ and _Garden of Eden_ xref:references.adoc#ref:44[patterns] stand out as preferable for their ability to allow complex types to be reused by different elements [xref:references.adoc#ref:44[sem-map]].
+
+The Venetian Blind pattern is characterised by having a single global element that serves as the entry point for the XML document, from which all the elements can be reached. This pattern implies a certain directionality and starting point, analogous to choosing a primary class in an ontology that has direct relationships to other classes, and from which one can navigate to the rest of the classes.
+
+
+Adopting Venetian Blind pattern reduces the variability in its application and deems the schema usable in specific scenarios by providing not only well-defined elements, but also a rigid and predictable structure. +
+
+On the other hand, the Garden of Eden pattern allows for multiple global elements, providing various entry points into the XML document. This pattern accommodates ontologies where no single class is inherently central, mirroring the flexibility of graph representations in ontologies that do not have a strict hierarchical starting point.
+
+
+
+Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as xref:references.adoc#ref:46[NIEM] and xref:references.adoc#ref:47[UBL], which recommend such flexibility for broader applicability and ease of information representation.
+
+However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a xref:references.adoc#ref:48[SOAP API], the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.
+
+Overall, the choice between these patterns should be informed by the intended use of the schema, the level of abstraction of the ontology it represents, and the needs of the end-users, aiming to strike a balance between structure and flexibility.
+
+*Recommendation:* We consider the Garden of Eden pattern suitable for designing XSD schemas at the level of core or domain semantic data specifications, and the Venetian Blind pattern suitable for XSD schemas at the level of specific Application Profiles.+
+
+*Recommendation* for choosing the appropriate pattern:
+
+. The *Venetian Blind Pattern* suits Application Profiles where a central entity is the main entry point, offering a structured schema for defined use cases.
+. *The Garden of Eden Pattern* is better for Core or Domain Data Specifications, where multiple entry points provide flexibility for general-purpose data models.
+
+Complex types should be defined, if deemed necessary, only after importing or defining the basic elements and application of patterns. Complex types are deemed complex when they have multiple properties, be they attributes or relationships.
+Finally, complete the XSD schema by adding annotations and documentation using the `xs:annotation’ and `xs:documentation’ tags. This improves understanding of the schema’s content both for external users and oneself at a later date, as well as communicating the purpose so that the schema will be deployed as intended.
+
+=== Phase 3: Validation
+
+The schema should be validated with at least one sample XML document, both to verify that it is syntactically correct and semantically as intended and has adequate coverage. SEMIC XSD schemas need to adhere to best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules. 
