@@ -3,7 +3,7 @@
 [[sec:map-an-existing-xsd-schema]]
 == Guidelines for Mapping an Existing XSD Schema
 
-This section provides detailed instructions for addressing use case xref:UC2.2-description.adoc#sec:uc22[UC2.2].
+This section provides detailed instructions for addressing use case xref:use-cases.adoc#sec:uc22[UC2.2].
 
 In order to create an XSD mapping one needs to decide on the purpose and level of specificity of the XSD schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a fully fledged executable set of rules for data transformation.
 

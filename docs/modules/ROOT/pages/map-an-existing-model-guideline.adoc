@@ -1,6 +1,6 @@
 == Guidelines for how to map existing data models
 
-This section provides general guidelines to address use case xref:UC2.1-Description.adoc#sec:uc21[UC2.1], matching an ontology to a core vocabulary The term ‘ontology’ is used loosely, and may also be similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies.
+This section provides general guidelines to address use case xref:use-cases.adoc#sec:uc21[UC2.1], matching an ontology to a core vocabulary The term ‘ontology’ is used loosely, and may also be similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies.
 
 In this section we adopt the definitions from the ontology matching handbook xref:references.adoc#ref:54[EuzenatShvaiko13] for the following concepts:
 

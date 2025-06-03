@@ -4,7 +4,7 @@
 
 === Introduction
 
-Use Case xref:UC2.2-description.adoc#sec:uc22[UC2.2] focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary] (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:
+Use Case xref:use-cases.adoc#sec:uc22[UC2.2] focuses on enabling data interoperability by converting XML data into RDF format, ensuring that it adheres to the semantic standards defined by the chosen Core Vocabulary. Specifically, it zooms in on the process of mapping an existing XML Schema Definition (XSD) to a Core Vocabulary. For this tutorial, we will use  the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary] (CBV). The procedure involves defining the transformation rules that align data from the existing XSD to the concepts and terms of the Core Vocabulary. . This tutorial guides you through the key steps in creating the mappings to Core Vocabularies (CV) involving:
 
 . Understanding the XSD Schema and the mapping process;
 . Creating a conceptual mapping between the XSD schema and vocabulary in RDF;
