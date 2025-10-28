@@ -1,0 +1,157 @@
+== Appendix
+[[sec:additional-use-cases]]
+=== Additional Use Cases
+
+
+The additional business and use cases are depicted in the diagram below and briefly described afterwards.
+
+image::images/AdditionalUCs1.png[]
+
+==== UC2.3: Map an existing JSON Schema to a Core Vocabulary
+
+
+A concrete user story can be formulated as follows: +
+*User Story: As a* semantic engineer at the Department of Justice, *I want* *to* map my JSON schema to the SEMIC Core Criterion and Core Evidence Vocabulary (CCCEV) *so that* we can transform our legal registry data into RDF that aligns with European interoperability standards, enabling cross-border reuse, and semantic integration. +
+To generalise from that to include other possible scenarios, we obtain the following use case description.
+
+[[sec:uc23]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC2.3: Map an existing JSON Schema to a Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Define data transformation rules from an JSON schema to terms from Core Vocabularies. Create a mapping of JSON data that was created according to an existing JSON schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+
+*Primary Actors:* Semantic Engineer
+
+*Actors:* Domain Expert, Business Analyst, Software Engineer
+
+*Description:* The goal is to create a formal mapping using Semantic Web technology (e.g. RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in an JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+|===
+
+==== UC3: Create a new Semantic data specification
+
+
+The general case for creating a new semantic data specification is shown in the table below.
+[[sec:uc3]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3: Create a new Semantic data specification*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new semantic data specification that reuses terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.
+
+*Example:* The eProcurement Ontology [xref:references.adoc#ref:37[epo]] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
+
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+
+===== Use Case UC3.1: Create a new Core Vocabulary
+
+
+A concrete user story can be formulated as follows: +
+*User Story:* *As a* semantic engineer at the Department of Justice, *I want* to develop a new Core Vocabulary for the Transnational Incidents that will reuse terms from existing Core Vocabularies (e.g., CBV, CPOV), *so that* the new vocabulary is aligned with established standards and is interoperable with other domains.
+[[sec:uc31]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3.1: Create a new Core Vocabulary*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new Core Vocabulary that reuses terms from other Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.
+
+*Example:* The Core Business Vocabulary (CBV) [xref:references.adoc#ref:29[cbv]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organization Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
+
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+
+===== Use Case UC3.2: Create a new Application Profile
+
+
+A concrete user story can be formulated as follows. +
+*User Story*: *As a* semantic engineer at the Department of Sanitation’s outreach team, *I want* *to* create a new application profile from the Core Public Event Vocabulary, *so that* not only the data about the events we organise align with EU terminology, but that other Departments’ outreach teams a can use the same CPEV-AP as well, thereby saving them design time, and we could then link up the event listings and present it in one portal.
+[[sec:uc32]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC3.2: Create a new Application Profile*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new Application Profile that reuses terms from other Core Vocabularies and specifies how they should be used.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.
+
+*Example:* The Core Public Service Vocabulary Application Profile (CPSV-AP) [xref:references.adoc#ref:40[cpsv-ap]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
+
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+|===
+
+==== UC4: Create a new data model
+
+
+The main use case is as follows, which is refined into two specific ones afterwards.
+
+[[sec:uc4]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4: Create a new data model*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone data model artefact that reuses terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new data model artefact that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. Such an artefact can be of different nature both according to their interoperability layer (ranging from vocabulary and ontology, to data shape and data schema) and also according to their abstraction level (ranging from upper layer, through domain layer to application layer).
+
+*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the xref:use-cases.adoc#sec:addressed-use-cases[Addressed use cases] section.
+|===
+
+===== Use Case UC4.1: Create a new ontology
+
+A concrete user story can be formulated as follows. +
+*User Story*: *As a* semantic engineer at the National Library of Parliament, *I want* to create a new ontology about sittings and subcommittees of parliaments, reusing terms from the Core Public Event Vocabulary, and ensuring logical consistency with expressive constraints, *so that* I can reliably integrate parliament data across the different databases, classify meetings by type of meeting, annotate the parliamentary proceedings texts so that I can search by concept rather than string, and enhance the citizen chatbot about parliamentary proceedings.
+[[sec:uc41]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4.1: Create a new ontology*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone ontology that reuses terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible.
+
+*Example:* The eProcurement Ontology (ePO) [xref:references.adoc#ref:37[epo]] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]], Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]] and Core Criterion and Core Evidence Vocabulary (CCCEV) [xref:references.adoc#ref:41[cccev]].
+
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] section and the various xref:references.adoc#ref:42[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
+|===
+
+===== Use Case UC4.2: Create a new data shape
+
+A concrete user story can be formulated as follows. +
+*User Story: As a* semantic engineer at SMECor GmbH, *I want to *adapt the Core Evidence Vocabulary Application Profile (CCCEV-AP) to add more precise constraints, such as that each piece of evidence must be created by exactly one Agent, and create corresponding data shapes *so that* I can check the constraints in our company’s knowledge graph and ensure that it adheres to our business rules regarding filing and tracing evidence.
+
+[[sec:uc42]]
+|===
+|{set:cellbgcolor: #a8c6f7}
+*Use Case UC4.2: Create a new data shape*
+
+|{set:cellbgcolor: #f5f8fc}
+*Goal:* Create a new standalone data shape that specifies restrictions on the use of terms from Core Vocabularies.
+
+*Primary Actor:* Semantic Engineer
+
+*Description:* The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs.
+
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
+|===
+
