@@ -1,4 +1,4 @@
-= The SEMIC Style Guide for Semantic Engineers
+= The SEMIC Handbook for Semantic Engineers
 :doctype: book
 ifndef::ebook-format[:leveloffset: 1]
 :description: SEMIC Core Vocabularies Handbook
@@ -11,14 +11,20 @@ ifndef::ebook-format[:leveloffset: 1]
 
 include::introduction.adoc[]
 
-include::semic-core-vocabularies.adoc[]
-
-include::conceptual-framework.adoc[]
-
-include::use-cases.adoc[]
-
 include::how-to-create-new-data-models.adoc[]
+
 
 include::how-to-map-existing-data-models.adoc[]
 
+include::Concluding-remarks.adoc[]
+
+include::Appendix.adoc[]
+
+
 include::glossary.adoc[]
+
+
+
+include::references.adoc[]
+
+

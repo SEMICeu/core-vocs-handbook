@@ -1,79 +1,221 @@
-== References
+=== References
 
-- *[[ref:1]][eif]* New European Interoperability Framework. Available at: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
-- *[[ref:2]][eif2]* European Interoperability Framework – Implementation Strategy. Available at: https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_1&format=PDF
-- *[[ref:3]][reg24-903]* REGULATION (EU) 2024/903. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400903
-- *[[ref:4]][sem-sg]* The SEMIC Style Guide for Semantic Engineers. Available at: https://semiceu.github.io/style-guide
-- *[[ref:5]][cv-hb]* e-Government Core Vocabularies handbook. Available at: https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf
-- *[[ref:6]][sem-sg-cvs]* The SEMIC Style Guide for Semantic Engineers: What is a Core Vocabulary (CV) specification?. Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification
-- *[[ref:7]][dcmi]* DCMI Metadata Terms. Available at: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-1
-- *[[ref:8]][org]* The Organization Ontology. Available at: https://www.w3.org/TR/vocab-org
-- *[[ref:9]][semic]* SEMIC Support Center. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/specifications
-- *[[ref:10]][semic-gh]* Semantic Interoperability Community GitHub repository. Available at: https://github.com/SEMICeu
-- *[[ref:11]][sem-sg-wio]* The SEMIC Style Guide for Semantic Engineers: What is an ontology? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-an-ontology
-- *[[ref:12]][owl2]* Motik, B., Patel-Schneider, P. F., Parsia, B., Bock, C., Fokoue, A., Haase, P., …​ & Smith, M. (2009). OWL 2 web ontology language: Structural specification and functional-style syntax. W3C recommendation, 27(65), 159. Available at: http://www.w3.org/TR/2012/REC-owl2-syntax-20121211
-- *[[ref:13]][sem-sg-wds]* The SEMIC Style Guide for Semantic Engineers: What is a data shape specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-data-shape-contraint
-- *[[ref:14]][shacl]* Knublauch, H., & Kontokostas, D. (2017). Shapes Constraint Language (SHACL), W3C Recommendation. World Wide Web Consortium. Available at: https://www.w3.org/TR/shacl
-- *[[ref:15]][sem-sg-wdsd]* The SEMIC Style Guide for Semantic Engineers: What is a data specification document? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
-- *[[ref:16]][respec]* ReSpec Documentation. Available at: https://respec.org/docs
-- *[[ref:17]][w3c]* Sporny, M., Longley, D., Kellogg, G., Lanthaler, M., & Lindström, N. (2020). JSON-LD 1.1. W3C Recommendation, Jul.
-- *[[ref:18]][json-ld]* The SEMIC Style Guide for Semantic Engineers: Technical artefacts and concerns. Available at: https://semiceu.github.io/style-guide/1.0.0/arhitectural-clarifications.html#sec:technical-concerns-and-artefacts
-- *[[ref:19]][sem-sg-wcm]* The SEMIC Style Guide for Semantic Engineers: What is a conceptual model? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model
-- *[[ref:20]][uml]* Unified Modeling Language. Available at: https://www.omg.org/spec/UML
-- *[[ref:21]][cc-by]* CC-BY 4.0 licence. Available at: https://creativecommons.org/licenses/by/4.0
-- *[[ref:22]][ec11a]* EC11a
-- *[[ref:23]][cv-met]* D3.1 – PROCESS AND METHODOLOGY FOR CORE VOCABULARIES. Available at: https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf
-- *[[ref:24]][sem-sg-reuse]* The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html
-- *[[ref:25]][swagger]* Swagger OpenAPI Guide: Components Section. Available at: https://swagger.io/docs/specification/components
-- *[[ref:26]][sem-sg-wsds]* The SEMIC Style Guide for Semantic Engineers: What is a semantic data specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
-- *[[ref:27]][dtx]* Diataxis. Available at: https://diataxis.fr
-- *[[ref:28]][cpv]* Barthelemy, F. et al. Core Person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
-- *[[ref:29]][cbv]* Barthelemy, F. et al. Core Business Vocabulary. Available at: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0
-- *[[ref:30]][Cockburn99]* Cockburn, A. (1999). Writing effective use cases. Addison-Wesley Longman Publishing Co., Inc., United States. pp 14-15
-- *[[ref:31]][oots]* OOTS XML schema mappings. Available at: https://ec.europa.eu/digital-building-blocks/sites/pages/viewpage.action?pageId=706382149
-- *[[ref:32]][cpv-json-ld]* Core Person Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.1/context/core-person-ap.jsonld
-- *[[ref:33]][cbv-json-ld]* Core Business Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.2.0/context/core-business-ap.jsonld
-- *[[ref:34]][map-cp2org]* Mapping Core Person to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Person/Schema.org
-- *[[ref:35]][map-cb2org]* Mapping Core Business to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business/Schema.org
-- *[[ref:36]][isa2-map]* ISA2core SAWSDL mapping. Available at: https://tietomallit.suomi.fi/model/isa2core
-- *[[ref:37]][epo]* eProcurement Ontology. Available at: https://github.com/OP-TED/ePO
-- *[[ref:38]][clv]* Barthelemy, F. et al. Core Location vocabulary. Available at: https://github.com/SEMICeu/Core-Location-Vocabulary
-- *[[ref:39]][cpov]* Barthelemy, F. et al. Core Public Organisation vocabulary. Available at: https://github.com/SEMICeu/CPOV
-- *[[ref:40]][cpsv-ap]* Barthelemy, F. et al. Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://github.com/SEMICeu/CPSV-AP
-- *[[ref:41]][cccev]* Barthelemy, F. et al. Core Criterion and Core Evidence Vocabulary (CCCEV). Available at: https://github.com/SEMICeu/CCCEV
-- *[[ref:42]][sem-sg-gc]* The SEMIC Style Guide for Semantic Engineers: Guidelines and conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html
-- *[[ref:43]][sem-sg-dsc]* The SEMIC Style Guide for Semantic Engineers: Data shape conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html
-- *[[ref:44]][dsg-ptr]* Ayub Khan and Marina Sum. Introducing Design Patterns in XML Schemas. Available at: https://www.oracle.com/technical-resources/articles/java/design-patterns.html
-- *[[ref:45]][sem-graph-map]* Mapping a graph to a tree data structure: a case study using the Core Vocabularies. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/mapping-graph-tree-data-structure-case-study-using-core-vocabularies
-- *[[ref:46]][niem]* The National Information Exchange Model (NIEM). Avaialble at: https://www.niem.gov/niem-standard
-- *[[ref:47]][ubl]* OASIS Universal Business Language (UBL) TC. Avaialble at: https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=556949c8-dac8-40e6-bb16-018dc7ce54d6
-- *[[ref:48]][soap-api]* SOAP API. Available at: https://www.w3.org/TR/2007/REC-soap12-part0-20070427
-- *[[ref:49]][given-name]* givenName term. Available at: http://xmlns.com/foaf/0.1/givenName
-- *[[ref:50]][family-name]* familyName term. Available at: http://xmlns.com/foaf/0.1/familyName
-- *[[ref:51]][birth-date]* birthDate term. Available at: http://data.europa.eu/m8g/birthDate
-- *[[ref:52]][residency]* residency term. Available at: http://www.w3.org/ns/person#residency
-- *[[ref:53]][contact-point]* contactPoint term. Available at: http://data.europa.eu/m8g/contactPoint
-- *[[ref:54]][paper]* Euzenat, Jérôme and Shvaiko, Pavel. Ontology Matching. Springer, 2013. 511p. doi.org/10.1007/978-3-642-38721-0
-- *[[ref:55]][sem-map]* SEMIC Semantic Mappings. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main
-- *[[ref:56]][sem-map-met]* Alignment of Core Vocabularies with Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf
-- *[[ref:57]][paper2]* J. Euzenat. An API for ontology alignment. Available at: https://doi.org/10.1007/978-3-540-30475-3_48
-- *[[ref:58]][paper3]* J. David, J. Euzenat, F. Scharﬀe, and C. T. dos Santos. The alignment API 4.0. Available at: https://www.semantic-web-journal.net/content/alignment-api-40
-- *[[ref:59]][map-cb2org-ttl]* Mapping Core Business to Schema.org - Turtle file. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl
-- *[[ref:60]][OteroEtAl15]* Otero-Cerdeira, Lorena, Francisco J. Rodríguez-Martínez, and Alma Gómez-Rodríguez. "Ontology matching: A literature review." Expert Systems with Applications, 2015, 42.2: 949-971.
-- *[[ref:61]][edoal]* EDOAL: Expressive and Declarative Ontology Alignment Language. Available at: https://moex.gitlabpages.inria.fr/alignapi/edoal.html
-- *[[ref:62]][silk]* System for Internet-Level Knowledge (SiLK). Available at: https://tools.netsa.cert.org/silk/
-- *[[ref:63]][vocbench]* VocBench. Available at: https://vocbench.op.europa.eu/
-- *[[ref:64]][sawsdl]* SAWSDL. Available at: https://www.w3.org/TR/sawsdl/#annotateXSD
-- *[[ref:65]][paper5]* Ben De Meester, Pieter Heyvaert, Ruben Verborgh and Anastasia Dimou. Mapping Language Analysis of Comparative Characteristics. Available at: https://ceur-ws.org/Vol-2489/paper4.pdf
-- *[[ref:66]][xslt]* XSL Transformations (XSLT) Version 3.0. Available at: https://www.w3.org/TR/xslt-30/
-- *[[ref:67]][rml]* RDF Mapping Language (RML). Available at: https://rml.io/specs/rml/
-- *[[ref:68]][sparql-anything]* SPARQL-Anything. Available at: https://github.com/SPARQL-Anything/sparql.anything
-- *[[ref:69]][yarrrml]* YARRRML. Available at: https://rml.io/yarrrml/spec/
-- *[[ref:70]][rml-mapper]* RML Mapper. Available at: https://github.com/RMLio/rmlmapper-java
-- *[[ref:71]][rml-streamer]* RML Sreamer. Available at: https://github.com/RMLio/RMLStreamer
-- *[[ref:72]][rml-gen]* Generate RDF from an XML file. Available at: https://rml.io/docs/rml/tutorials/xml/
-- *[[ref:73]][iso2dcat-ap]* Reference XSLT-based implementation of GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap
-- *[[ref:74]][geo-dcat-ap]* GeoDCAT Application Profile for data portals in Europe. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
-- *[[ref:75]][iso2dacat-ap-mappings]* Mappings defined in GeoDCAT-AP. Available at: https://github.com/SEMICeu/iso-19139-to-dcat-ap/blob/master/documentation/Mappings.md
-- *[[ref:76]][LIMES]* Ngomo, Axel-Cyrille Ngonga and Auer, Sören. Limes-a time-efficient approach for large-scale link discovery on the web of data. Integration,2011,  15.3.
-- *[[ref:77]][LogMap]* Jiménez-Ruiz, Ernesto and Cuenca Grau, Bernardo. Logmap: Logic-based and scalable ontology matching. In: International Semantic Web Conference (ISWC'11)). Berlin, Heidelberg: Springer Berlin Heidelberg, 2011. pp. 273-288.
+[[ref-1]]
+- *[eif]* New European Interoperability Framework. Available at: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
+
+[[ref-2]]
+- *[eif2]* European Interoperability Framework – Implementation Strategy. Available at: https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_1&format=PDF
+
+[[ref-3]]
+- *[iea24]* Interoperable Europe Act. REGULATION (EU) 2024/903. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400903
+
+[[ref-4]]
+- *[sem-sg]* The SEMIC Style Guide for Semantic Engineers. Available at: https://semiceu.github.io/style-guide
+
+[[ref-5]]
+- *[cv-hb]* e-Government Core Vocabularies handbook. Available at: https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf
+
+[[ref-6]]
+- *[sem-sg-cvs]* The SEMIC Style Guide for Semantic Engineers: What is a Core Vocabulary (CV) specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification
+
+[[ref-9]]
+- *[semic]* SEMIC Support Center. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/specifications
+
+[[ref-10]]
+- *[semic-gh]* Semantic Interoperability Community GitHub repository. Available at: https://github.com/SEMICeu
+
+[[ref-11]]
+- *[sem-sg-wio]* The SEMIC Style Guide for Semantic Engineers: What is an ontology? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-an-ontology
+
+[[ref-12]]
+- *[owl2]* Motik, B., Patel-Schneider, P. F., Parsia, B., Bock, C., Fokoue, A., Haase, P., & Smith, M. (2009). OWL 2 web ontology language: Structural specification and functional-style syntax. W3C recommendation, 27(65), 159. Available at: http://www.w3.org/TR/2012/REC-owl2-syntax-20121211
+
+[[ref-13]]
+- *[sem-sg-wds]* The SEMIC Style Guide for Semantic Engineers: What is a data shape specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-data-shape-contraint
+
+[[ref-14]]
+- *[shacl]* Knublauch, H., & Kontokostas, D. (2017). Shapes Constraint Language (SHACL), W3C Recommendation. Available at: https://www.w3.org/TR/shacl
+
+[[ref-15]]
+- *[sem-sg-wdsd]* The SEMIC Style Guide for Semantic Engineers: What is a data specification document? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
+
+[[ref-16]]
+- *[respec]* ReSpec Documentation. Available at: https://respec.org/docs
+
+[[ref-17]]
+- *[json-ld]* Sporny, M., Longley, D., Kellogg, G., Lanthaler, M., & Lindström, N. (2020). JSON-LD 1.1. W3C Recommendation, 16 Jul 2020. Available at: https://www.w3.org/TR/json-ld11/
+
+[[ref-18]]
+- *[sem-sg-ta]* The SEMIC Style Guide for Semantic Engineers: Technical artefacts and concerns. Available at: https://semiceu.github.io/style-guide/1.0.0/arhitectural-clarifications.html#sec:technical-concerns-and-artefacts
+
+[[ref-19]]
+- *[sem-sg-wcm]* The SEMIC Style Guide for Semantic Engineers: What is a conceptual model? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model
+
+[[ref-20]]
+- *[uml]* Unified Modeling Language. Available at: https://www.omg.org/spec/UML
+
+[[ref-21]]
+- *[cc-by]* Creative Commons CC-BY 4.0 licence. Available at: https://creativecommons.org/licenses/by/4.0
+
+[[ref-23]]
+- *[cv-met]* D3.1 – Process and Methodology for Core Vocabularies. ISA Project. Available at: https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf
+
+[[ref-24]]
+- *[sem-sg-reuse]* The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html
+
+[[ref-26]]
+- *[sem-sg-wsds]* The SEMIC Style Guide for Semantic Engineers: What is a semantic data specification? Available at: https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-specification-document
+
+[[ref-28]]
+- *[cpv]* Barthelemy, F. et al. Core Person vocabulary. Available at: https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00
+
+[[ref-29]]
+- *[cbv]* Barthelemy, F. et al. Core Business Vocabulary. Available at: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0
+
+[[ref-30]]
+- *[uc-book]* Cockburn, A. (1999). Writing effective use cases. Addison-Wesley Longman Publishing Co., Inc., United States. pp 14–15
+
+[[ref-31]]
+- *[oots]* OOTS XML schema mappings. Available at: https://ec.europa.eu/digital-building-blocks/sites/pages/viewpage.action?pageId=706382149
+
+[[ref-32]]
+- *[cpv-json-ld]* Core Person Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.1/context/core-person-ap.jsonld
+
+[[ref-33]]
+- *[cbv-json-ld]* Core Business Vocabulary - JSON-LD. Available at: https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.2.0/context/core-business-ap.jsonld
+
+[[ref-34]]
+- *[map-cp2org]* Mapping Core Person to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Person/Schema.org
+
+[[ref-35]]
+- *[map-cb2org]* Mapping Core Business to Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business/Schema.org
+
+[[ref-36]]
+- *[isa2-map]* ISA2core SAWSDL mapping. Available at: https://tietomallit.suomi.fi/model/isa2core
+
+[[ref-37]]
+- *[epo]* eProcurement Ontology. Available at: https://docs.ted.europa.eu/epo-home/index.html
+
+[[ref-38]]
+- *[clv]* Barthelemy, F. et al. Core Location vocabulary. Available at: https://github.com/SEMICeu/Core-Location-Vocabulary
+
+[[ref-39]]
+- *[cpov]* Barthelemy, F. et al. Core Public Organisation vocabulary. Available at: https://github.com/SEMICeu/CPOV
+
+[[ref-40]]
+- *[cpsv-ap]* Barthelemy, F. et al. Core Public Service Vocabulary Application Profile (CPSV-AP). Available at: https://github.com/SEMICeu/CPSV-AP
+
+[[ref-41]]
+- *[cccev]* Barthelemy, F. et al. Core Criterion and Core Evidence Vocabulary (CCCEV). Available at: https://github.com/SEMICeu/CCCEV
+
+[[ref-44]]
+- *[dsg-ptr]* Ayub Khan and Marina Sum. Introducing Design Patterns in XML Schemas. Available at: https://www.oracle.com/technical-resources/articles/java/design-patterns.html
+
+[[ref-46]]
+- *[niem]* The National Information Exchange Model (NIEM). Available at: https://www.niem.gov/niem-standard
+
+[[ref-47]]
+- *[ubl]* OASIS Universal Business Language (UBL) TC. Available at: https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=556949c8-dac8-40e6-bb16-018dc7ce54d6
+
+[[ref-48]]
+- *[soap-api]* SOAP API. Available at: https://www.w3.org/TR/2007/REC-soap12-part0-20070427
+
+[[ref-54]]
+- *[om]* Euzenat, Jérôme and Shvaiko, Pavel. Ontology Matching. Springer, 2013. 511p. doi:10.1007/978-3-642-38721-0
+
+[[ref-55]]
+- *[sem-map]* SEMIC Semantic Mappings. Available at: https://github.com/SEMICeu/Semantic-Mappings/tree/main
+
+[[ref-56]]
+- *[sem-map-met]* Alignment of Core Vocabularies with Schema.org. Available at: https://github.com/SEMICeu/Semantic-Mappings/blob/main/Methodology/Alignment_with_Schema.org_v2.1.pdf
+
+[[ref-58]]
+- *[al-api]* J. David, J. Euzenat, F. Scharffe, and C. T. dos Santos. The Alignment API 4.0. Semantic Web Journal, 2011, 2(1): 3–10.
+
+[[ref-60]]
+- *[om-lr]* Otero-Cerdeira, Lorena, Rodríguez-Martínez, F. J., & Gómez-Rodríguez, A. Ontology matching: A literature review. Expert Systems with Applications, 2015, 42(2): 949–971.
+
+[[ref-61]]
+- *[edoal]* EDOAL: Expressive and Declarative Ontology Alignment Language. Available at: https://moex.gitlabpages.inria.fr/alignapi/edoal.html
+
+[[ref-62]]
+- *[silk]* Silk — The Linked Data Integration Framework. Available at: http://silkframework.org/
+
+[[ref-63]]
+- *[vocbench]* VocBench. Available at: https://vocbench.op.europa.eu/
+
+[[ref-64]]
+- *[sawsdl]* SAWSDL. Available at: https://www.w3.org/TR/sawsdl/#annotateXSD
+
+[[ref-65]]
+- *[ml-lr]* Ben De Meester, Pieter Heyvaert, Ruben Verborgh and Anastasia Dimou. Mapping Languages: Analysis of Comparative Characteristics. KGB@ESWC 2019: 37–45. Available at: https://ceur-ws.org/Vol-2489/paper4.pdf
+
+[[ref-66]]
+- *[xslt]* XSL Transformations (XSLT) Version 3.0. Available at: https://www.w3.org/TR/xslt-30/
+
+[[ref-67]]
+- *[rml]* RDF Mapping Language (RML). Available at: https://rml.io/specs/rml/
+
+[[ref-68]]
+- *[sparql-anything]* SPARQL-Anything. Available at: https://github.com/SPARQL-Anything/sparql.anything
+
+[[ref-69]]
+- *[yarrrml]* YARRRML. Available at: https://rml.io/yarrrml/spec/
+
+[[ref-70]]
+- *[rml-map]* RML Mapper. Available at: https://github.com/RMLio/rmlmapper-java
+
+[[ref-71]]
+- *[rml-stream]* RML Streamer. Available at: https://github.com/RMLio/RMLStreamer
+
+[[ref-72]]
+- *[rml-gen]* Generate RDF from an XML file. Available at: https://rml.io/docs/rml/tutorials/xml/
+
+[[ref-74]]
+- *[geo-dcat-ap]* GeoDCAT Application Profile for data portals in Europe. Available at: https://joinup.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe
+
+[[ref-76]]
+- *[limes]* Ngomo, A.-C. N., & Auer, S. LIMES — A time-efficient approach for large-scale link discovery on the Web of Data. IJCAI 2011. Available at: https://www.ijcai.org/Proceedings/11/Papers/385.pdf
+
+[[ref-77]]
+- *[logmap]* Jiménez-Ruiz, E., & Cuenca Grau, B. LogMap: Logic-based and scalable ontology matching. In ISWC 2011. doi:10.1007/978-3-642-25073-6_18
+
+[[ref-78]]
+- *[af]* Alignment Format. Available at: https://moex.gitlabpages.inria.fr/alignapi/format.html
+
+[[ref-79]]
+- *[sssom]* Simple Standard for Sharing Ontological Mapping. Available at: https://w3id.org/sssom/
+
+[[ref-80]]
+- *[semapv]* Semantic Mapping Vocabulary. Available at: https://mapping-commons.github.io/semantic-mapping-vocabulary/
+
+[[ref-81]]
+- *[dga]* Data Governance Act. REGULATION (EU) 2022/868. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R0868
+
+[[ref-82]]
+- *[ols]* Ontology Lookup Service. Available at: https://www.ebi.ac.uk/ols4/
+
+[[ref-83-bp]]
+- *[bp]* BioPortal. Available at: https://bioportal.bioontology.org/
+
+[[ref-83]]
+- *[int-eu]* Linking public services, supporting public policies and delivering public benefits Towards an ‘Interoperable Europe’. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022DC0710
+
+[[ref-84]]
+- *[data-act]* Data Act. Available at: https://digital-strategy.ec.europa.eu/en/policies/data-act
+
+[[ref-85]]
+- *[eif4scc]* Proposal for a European Interoperability Framework for Smart Cities and Communities (EIF4SCC). Available at: https://living-in.eu/sites/default/files/files/proposal-for-a-european-interoperability-framework-no0821160enn.pdf
+
+[[ref-86]]
+- *[insp]* INSPIRE Infrastructure for Spatial Information in Europe. Available at: https://knowledge-base.inspire.ec.europa.eu/index_en
+
+[[ref-87]]
+- *[sdgr]* Single Digital Gateway Regulation. Available at: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018R1724&from=EN
+
+[[ref-88]]
+- *[fair]* Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). Available at: https://doi.org/10.1038/sdata.2016.18
+
+[[ref-89]]
+- *[xsd-owl]* Garcia R, Celma O. Semantic Integration and Retrieval of Multimedia Metadata. SemAnnot@ ISWC 2005 Nov 7. Available at: https://mtg.upf.edu/files/publications/d450b9-ISWC2005-GarciaCelma-SemAnnot2005.pdf
+

@@ -1,37 +1,15 @@
-* xref:introduction.adoc[Introduction]
-** xref:Introduction to interoperability.adoc[Interoperability]
-** xref:semic-core-vocabularies.adoc[Core Vocabularies]
-** xref:use-cases.adoc[Overview of the Use Cases]
-* Creating a new data model
-** xref:use-cases.adoc#sec:uc1[Use cases UC1: Overview]
-** xref:use-cases.adoc#sec:uc11[Create a new XSD schema (UC1.1)]
-*** xref:use-cases.adoc#sec:uc11[Description]
-*** xref:guideline-create-xsd-for-cv.adoc[Guideline]
-*** xref:create xsd for cv.adoc[Tutorial]
-** xref:use-cases.adoc#sec:uc12[Create a new JSON-LD context definition (UC1.2)]
-*** xref:UC1.2-description.adoc#sec:uc12-d[Description]
-*** xref:UC1.2-description.adoc#sec:create-a-new-json-ld-context-definition[Guideline]
-*** xref:UC1.2-description.adoc#sec:create-a-json-ld-definition[Tutorial]
-* Re-using core vocabularies
-** xref:use-cases.adoc#sec:uc2[Use cases UC2: Overview]
-** xref:use-cases.adoc#sec:uc21[Map an existing Ontology to a Core Vocabulary (UC2.1)]
-*** xref:description-map-model.adoc[Description]
-*** xref:map-an-existing-model-guideline.adoc[Guideline]
-*** xref:map-existing-ontology-to-vocabulary.adoc[Tutorial]
-** xref:use-cases.adoc#sec:uc22[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
-*** xref:use-cases.adoc#sec:uc22[Description]
-*** xref:guideline-map-xsd-schema.adoc[Guideline]
-*** xref:map-xsd-to-cv.adoc[Tutorial]
+* xref:introduction.adoc[Introduction to interoperability]
 
-* Appendix
-** xref:additional-use-cases.adoc[Additional use cases]
-*** xref:additional-use-cases.adoc#sec:uc23[Map an existing JSON Schema to a Core Vocabulary (UC2.3)]
-*** xref:additional-use-cases.adoc#sec:uc3[Create a new Semantic data specification (UC3)]
-**** xref:additional-use-cases.adoc#sec:uc31[Create a new Core Vocabulary (UC3.1)]
-**** xref:additional-use-cases.adoc#sec:uc32[Create a new Application Profile (UC3.2)]
-*** xref:additional-use-cases.adoc#sec:uc4[Create a new data model (UC4)]
-**** xref:additional-use-cases.adoc#sec:uc41[Create a new ontology (UC4.1)]
-**** xref:additional-use-cases.adoc#sec:uc42[Create a new data shape (UC4.2)]
+* Core Vocabularies
+** xref:semic-core-vocabularies.adoc[SEMIC Core Vocabularies]
+** xref:use-cases.adoc[Use cases]
+** xref:conceptual-framework.adoc[Conceptual framework]
+
+* Guidelines
+** xref:how-to-create-new-data-models.adoc[How to create new data models]
+** xref:how-to-map-existing-data-models.adoc[How to map existing data models]
+
+* Back matter
 ** xref:references.adoc[References]
 ** xref:glossary.adoc[Glossary]
 ** xref:handbook-as-a-whole.adoc[Handbook as a whole]
