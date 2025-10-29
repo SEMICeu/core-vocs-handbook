@@ -3,7 +3,7 @@
 
 This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
-For first-time readers of this Handbook, we recommend starting with the remainder of this section, where link:./introduction.adoc#sec:interoperability[interoperability] is introduced, the role of link:./introduction.adoc#sec:Core_Vocabulary[Core Vocabularies] is explained, and the important link:./introduction.adoc#sec:use-cases[use cases] are summarised.
+For first-time readers of this Handbook, we recommend starting with the remainder of this section, where <<sec:interoperability, interoperability>> is introduced, the role of  <<sec:Core_Vocabulary,Core Vocabularies>> is explained, and the important <<sec:use-cases, use cases>> are summarised.
 
 Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance are advised to go directly to the main part of the Handbook, which describes use cases, methodology recommendations, and tutorials for:
 
