@@ -29,7 +29,7 @@
 ** xref:how-to-map-existing-data-models.adoc#sec:map-existing-model-to-cv[Map an existing conceptual model to a Core Vocabulary (UC2.1)]
 *** xref:how-to-map-existing-data-models.adoc#sec:uc2.1-description[Use case description]
 *** xref:how-to-map-existing-data-models.adoc#sec:uc2.1-guidline[Guidelines on how to map an existing conceptual model to a Core Vocabulary]
-*** xref:how-to-map-existing-data-models.adoc#sec:uc2.1-tutorial:map-schema.org
+*** xref:how-to-map-existing-data-models.adoc#sec:tutorial:map-schema.org[Tutorial: Map Schema.org to the Core Business Vocabulary]
 
 ** xref:how-to-map-existing-data-models.adoc#sec:map-existing-shema[Map an existing XSD Schema to a Core Vocabulary (UC2.2)]
 *** xref:how-to-map-existing-data-models.adoc#sec:uc2.2-description[Use case description]
