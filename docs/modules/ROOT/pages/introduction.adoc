@@ -52,7 +52,7 @@ The *structure of the main part of the Handbook* is as follows. First, the notio
 Finally, the appendix contains a *glossary of terms*, additional use cases not covered in this handbook, and the references.
 
 [[sec:Introduction_to_interoperability]]
-== Introduction to interoperability
+== Interoperability and Cover Vocabularies
 
 This section introduces what interoperability is, what makes it semantic, and how *_Core Vocabularies_*–which is where key concepts are specified in human-readable and machine-processable formats–contribute to it.
 
@@ -100,6 +100,7 @@ There are two key reasons to seek interoperability in public administrations:
 ** streamline administrative tasks and data accuracy, preventing misinterpretation of data through standardised data exchange;
 ** improve service delivery.
 ****
+
 [[sec:achieve-interoperability]]
 ==== What is semantic interoperability and how to achieve it?
 
@@ -432,6 +433,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
