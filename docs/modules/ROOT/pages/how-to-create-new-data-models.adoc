@@ -68,7 +68,7 @@ This section provides detailed instructions for addressing use case link:./intro
 
 This is visualised in the following figure, together with key tasks and suggestions.
 
-image::images/UC1.1.png[]
+image::UC1.1.png[]
 
 
 ===== Phase 1: Import or define elements
@@ -155,7 +155,7 @@ To recap the process, we first will import or define elements, shape the structu
 ===== Phase 1:Import or Define Elements
 
 
-====== Managing Imports and Namespaces
+_Managing Imports and Namespaces_
 
 
 In XML schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
@@ -188,7 +188,7 @@ The key components are:
 *  *`schemaLocation="https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd[https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd]"`: Points to the location of the CBV schema file on the Web.
 
 
-====== Define elements
+_Define elements_
 
 If the XSD schema of the CV does not suffice, in that you need additional elements beyond the XSD schema, then you have to define those yourself in the XSD schema you are developing. This might be an element from the CV associated with the XSD, or possibly elements from another CV or semantic artefact. +
 These new elements need to *adhere to the Core Vocabulary's namespace* to maintain consistency.  +
@@ -206,7 +206,7 @@ Make sure you declare the correct namespace (e.g., http://example.com/) for all 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
 
-====== Venetian Blind Pattern
+_Venetian Blind Pattern_
 
 In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as +LegalEntity+, serves as the entry point, as seen in CBV. This pattern fits well with API design, where you typically request information about a central concept (such as +LegalEntity+), and the response includes nested elements, including +LegalName+ and +RegisteredAddress+, which are all organised under the main entity. +
 Here’s an example, where +LegalEntity+ serves as the main entry point:
@@ -234,7 +234,7 @@ In this example:
 * It uses +LegalEntityType+, which contains various properties such as +LegalName+ and +RegisteredAddress+.
 
 
-====== Garden of Eden Pattern
+_Garden of Eden Pattern_
 
 In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ +<xs:schema>+ qualify as such entry points. In CBV these include +LegalEntity+, +Organization+ etc., whereas nested elements, such as +RegisteredAddress+ or +ContactPoint+, are defined _inside_ those complex types and _cannot_ start a document on their own.
 
@@ -246,7 +246,7 @@ In the Garden of Eden pattern, there are multiple entry points in the XML docume
 </xs:schema>
 ----
 
-====== Define Complex Types
+_Define Complex Types_
 
 
 After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like +LegalEntity+ or +Organization+, which have both simple and complex elements. For example, the +LegalEntityType+ and +OrganizationType+, as follows.
@@ -317,8 +317,8 @@ It’s important to observe that in this context, LegalEntityType is defined as 
   </xs:complexContent>
 </xs:complexType>
 ----
-====== Finalise the XSD Schema
 
+_Finalise the XSD Schema_
 
 Adding *annotations* and *documentation* to each complex type and element helps to clarify their purpose and improve the readability of the schema. For instance:
 
@@ -339,12 +339,12 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
-====== Schematron Validation Rules
+_Schematron Validation Rules_
 
 
 To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be found https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
 
-====== Running the Validation
+_Running the Validation_
 
 
 You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[build.xml] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
@@ -400,7 +400,7 @@ The three key phases are:
 
 This is visualised in the following figure, together with key tasks and suggestions.
 
-image::images/UC1.2.png[]
+image::UC1.2.png[]
 
 ===== Phase 1: Import or define elements
 
@@ -427,7 +427,7 @@ _Example: importing an existing context._
 
 ===== Phase 2: Shape structure
 
-====== Main shaping of the structure
+_Main shaping of the structure_
 
 Start with defining the structure of the context by *relating class terms with property terms* and then, if necessary, property terms with other classes.
 
@@ -452,7 +452,7 @@ _Example: defining a class with properties._
 ----
 
 
-====== Design note: Flat vs scoped context disambiguation
+_Design note: Flat vs scoped context disambiguation_
 
 When defining properties in a JSON-LD context, one has to consider how attribute names are disambiguated across different classes. Two main approaches can be adopted:
 
@@ -464,7 +464,7 @@ A context can be defined per class, allowing property names such as +name+ or +d
 The choice between flat or scoped contexts should be motivated by the expected use of the data. When contexts are generated automatically or used for large-scale data exchange, the flat approach offers simplicity and reliability. When contexts are manually authored or designed for human-facing APIs, scoped contexts may be preferable for improved readability, provided that their additional complexity is manageable.
 
 
-====== Improvements to the structure
+_Improvements to the structure_
 
 To meet wishes from API consumers, one may use *aliasing* of keywords, where a JSON-LD context element is given a more easily recognisable string.
 
@@ -567,7 +567,7 @@ Explanation of JSON-LD keywords used:
 * *@import*: Imports another JSON-LD context, allowing reuse of its terms.
 
 
-====== Example of a simple service instance
+_Example of a simple service instance_
 
 After defining the context and structure, you can now describe an actual +Service+ instance by referencing the terms you defined earlier.
 
@@ -600,8 +600,8 @@ Try this in the JSON-LD Playground https://tinyurl.com/4vtmjdxy[here] and then c
   }
 }
 ----
-====== Aliasing keywords for API compatibility (REST API example)
 
+_Aliasing keywords for API compatibility (REST API example)_
 
 When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's +@id+ to +url+ and +@type+ to +type+ to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
@@ -627,7 +627,7 @@ In this example, +url+ is an alias for +@id+ and +type+ is an alias for +@type+.
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
 
-====== Extend the context by reusing terms from Core Vocabularies
+_Extend the context by reusing terms from Core Vocabularies_
 
 To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as +LegalEntity+, +Organisation+, and +ContactPoint+, to enrich your +Service+** **descriptions.
 
@@ -646,7 +646,7 @@ To highlight the reuse of terms from existing CVs, we can import the *Core Busin
 ----
 
 
-====== Define additional properties from the Core Business Vocabulary
+_Define additional properties from the Core Business Vocabulary_
 
 Add CBV terms to enhance the description of the +Service+ entity by reusing existing concepts such as +LegalEntity+, which helps to specify who provided the service.
 
@@ -664,7 +664,7 @@ Add CBV terms to enhance the description of the +Service+ entity by reusing exis
 ----
 
 
-====== Map extended properties in a service instance:
+_Map extended properties in a service instance_
 
 Use the extended properties to describe more aspects of +Service+ instances. For https://tinyurl.com/chtayj3h[example]:
 
@@ -700,8 +700,8 @@ Use the extended properties to describe more aspects of +Service+ instances. For
 
 Use a JSON-LD  validator (there are  online tools available, such as the https://json-ld.org/playground/[JSON-LD Playground]) to validate JSON-LD context and make sure there are no errors. They also offer visualisation features, noting that it can only be visualised if the syntax is correct. There is no standard for how RDF graphs are to be rendered, and therefore  different visualisation tools will result in different  JSON-LD  diagram-based visualisations. Below  are two examples generated from the same JSON-LD snippet, rendered by, https://json-ld.org/playground/[JSON-LD Playground] and https://issemantic.net/rdf-visualizer[:isSemantic], respectively.
 
-image::images/playgroundEx.png[]
-image::images/isSemanticEx.png[]
+image::playgroundEx.png[]
+image::isSemanticEx.png[]
 
 _Error example_
 
@@ -722,11 +722,12 @@ If the +@import+ URLs for external contexts are incorrect or unavailable, the va
 
 These errors typically occur when the referenced context URL is malformed or unreachable, as shown in the following figure:
 
-image::images/errorEX.png[]
+image::errorEX.png[]
 
 _How to resolve the error_
 
 
 Ensure that the +@import+ URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
