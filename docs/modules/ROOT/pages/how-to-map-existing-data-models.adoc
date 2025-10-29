@@ -76,7 +76,7 @@ image::UC21guidelineOverview.png[]
 This section provides an overview of the guideline, which will be demonstrated in the <<sec:tutorial:map-schema.org,tutorial>> section where we map the Core Business Vocabulary to Schema.org. The reader familiar with ontology matching could skim or skip it and proceed swiftly to the tutorial section.
 
 
-===== Phase 1: Staging
+*_Phase 1: Staging_*
 
 This initial phase involves a comprehensive understanding of the project’s scope, identifying the specific goals of the mapping exercise, and the key requirements it must fulfil. Stakeholders collaborate to articulate the purpose of the alignment between the models, setting clear objectives that will guide the process. Defining these requirements upfront ensures that subsequent steps are aligned with the model matching process’ overarching goals, stakeholder expectations, and fitting the use cases.
 
@@ -84,7 +84,7 @@ This initial phase involves a comprehensive understanding of the project’s sco
 *Outputs*: Mapping project specification document comprising a well-defined scope and comprehensive list of requirements.
 
 
-===== Phase 2: Characterisation
+*_Phase 2: Characterisation_*
 
 In this phase, a thorough analysis of both source and target ontologies is conducted to ascertain their structures, vocabularies, and the semantics they encapsulate. This involves an in-depth examination of the conceptual frameworks, representation languages, and the models. Understanding the models’ respective nuances is critical for identifying potential challenges and opportunities in the matching process to determine whether the process will be feasible and meaningful.
 
@@ -100,7 +100,7 @@ Depending on the feature, one will have to inspect either the computer-processab
 *Outputs*: Analysis reports comprising a comparative characterisation table, identified difficulties, risks and amenability assessments, selected source and target for mapping.
 
 
-===== Phase 3: Reuse
+*_Phase 3: Reuse_*
 
 In the ontology matching lifecycle, the reuse phase is important in that it can facilitate the integration of already existing mappings into the project's workflow, thereby saving work and positioning one’s ontology better within the existing ecosystem. Following the initial characterisation, this phase entails the discovery and evaluation of available mappings against the project's defined requirements. These requirements are instrumental in appraising whether an existing alignment can be directly adopted, requires modifications for reuse, or if a new alignment should be declared.
 
@@ -118,7 +118,7 @@ This structured approach to reuse optimises resource utilisation, promotes effic
 *Outputs*: Assessment report on existing alignments, decisions on reuse, adaptation, or creation of a new alignment.
 
 
-===== Phase 4: Execute the Matching
+*_Phase 4: Execute the Matching_*
 
 This section summarises automatic and semi-automatic approaches to finding the alignment candidates. In case of small vocabularies and ontologies, a fully manual effort is likely more efficient.
 
@@ -142,7 +142,7 @@ Finally, in the *evaluation* activity, the alignments found are rigorously asses
 *Outputs*: Generated alignments, evaluation reports.
 
 
-===== Phase 5: Validate Alignments
+*_Phase 5: Validate Alignments_*
 
 Following the identification of alignments, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase involves preparing, creating, and rendering activities that establish coherent actionable mappings between ontology entities. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.
 
@@ -151,7 +151,7 @@ The alignment process may include engaging communication with third parties to v
 *Preparation* involves stakeholder involvement to collectively go systematically through the list of alignments (candidate mappings), considering not only the relevance of the alignments, but also the type of relationship between the elements, being typically either equivalence or subsumption.  +
 The type of asset—an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The types of alignment are visually represented and illustrated in the figure below and summarised and structured in the table afterwards. They include alignment elements for OWL elements concerning semantic artefacts and for SKOS, which can be used for annotations and weakly semantic knowledge organisation systems.
 
-image::alignmentDiagram.png[]
+image::alignmentDiagram.png[]  
 
 |===
 |*Relation / Element type*|*Property*|*Concept*|*Class*|*Individual*
@@ -175,7 +175,7 @@ The *Creation* step is the execution of the mapping, entailing the selection of 
 *Outputs*: Created mapping, stored versions in an alignment repository (e.g., [xref:references.adoc#ref-55[sem-map]]).
 
 
-===== Phase 6: Application
+*_Phase 6: Application_*
 
 The final phase focuses on operationalising the created mappings, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves carrying out the following tasks:
 
@@ -195,7 +195,7 @@ This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https
 you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 
-===== Phase 1: Staging (Defining the Requirements)
+*_Phase 1: Staging (Defining the Requirements)_*
 
 In this phase, the aim is to understand what needs to be mapped and why. +
 For this tutorial, we aim to map http://Schema.org[Schema.org] to the Core Business Vocabulary (CBV), enabling data interoperability.
@@ -224,7 +224,7 @@ _Procedure for CBV and Schema.org_
 The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: +legal:LegalEntity+ versus +schema:Organization+. It may also need to take into account ‘externalities’, such as regulatory compliance that may dictate the use of one version of a schema over another for some business reason. For the current exercise, there are no regulatory compliance requirements in place. Therefore, the latest official releases of both vocabularies will be used (Schema.org version 29.1 and CBV version 2.2.0). Next, clear mapping goals should be established. For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation between the CBV and Schema.org.
 
 [[sec:Characterisation]]
-===== Phase 2: Characterisation (Defining Source and Target models)
+*_Phase 2: Characterisation (Defining Source and Target models)_*
 
 The aim of this phase is to analyse the structure, vocabulary, and semantics of the Core Business Vocabulary that we shall take as *Target ontology* and Schema.org that will be set as *Source ontology*. The key steps and outputs are as follows.
 
@@ -267,7 +267,7 @@ The selected features are presented  in a table below, where for each feature th
 |===
 
 
-===== Phase 3: Reuse of Existing Mappings
+*_Phase 3: Reuse of Existing Mappings_*
 
 The aim of this phase is to avoid doing duplicate work by checking if any existing mappings between CBV and Schema.org are available for reuse, or if there are any alignments that can be adapted for this project.
 
@@ -303,7 +303,7 @@ We then look at the intersection of CBV concepts and relationships and those in 
 * Example: Add alignment to answer the question: What is the relation between https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[+legal:LegalEntity+] and https://schema.org/Organization[+schema:Organization+]?
 
 
-===== Phase 4: Matching (Execute and Filter Matching Candidates)
+*_Phase 4: Matching (Execute and Filter Matching Candidates)_*
 
 At this step, we will perform the actual mapping, which we shall bootstrap by producing candidate mappings between classes and between properties, typically automatically, semi-automatically, or manually, and then assess the results.
 
@@ -350,7 +350,7 @@ _Manual Alignment Process_
 Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, CBV’s +LegalEntity+ (that is an +org:Organization+) maps to Schema.org’s +Organization+ based on their similar roles in representing business-related concepts, and likewise for CBV’s +Address+ (imported from Core Location Vocabulary) with Schema.org +PostalAddress+. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.
 
 
-===== Phase 5: Validate Alignments
+*_Phase 5: Validate Alignments_*
 
 After the alignments (i.e., candidate mappings) have been generated—either by automated tools or through manual assessment—each proposed mapping must be *validated* to assess if  the candidate links represent semantically meaningful relationships between classes or properties from the two ontologies.
 
@@ -408,7 +408,7 @@ where it can be seen that the “<” relation corresponds to rdfs:subClassOf an
 Other alignment examples and a complete file including prefixes can be viewed https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl[here].
 
 
-===== Phase 6: Application (Operationalise the Mappings)
+*_Phase 6: Application (Operationalise the Mappings)_*
 
 After alignments have been validated, the final step is to *apply* them in practice. This involves both *technical integration* and the establishment of a *governance framework* to ensure the mappings remain up to date and useful over time.
 
@@ -477,8 +477,10 @@ It checks for instances of +legal:LegalEntity+ in the data file, and if the alig
 <http://example.org/entities/Company123> a <https://schema.org/Organization> .
 ----
 
+
 [[sec:map-existing-shema]]
 === Map an existing XSD Schema to a Core Vocabulary (UC2.2)
+
 
 [[sec:uc2.2-description]]
 ==== Use case description
@@ -978,6 +980,5 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
-
 
 
