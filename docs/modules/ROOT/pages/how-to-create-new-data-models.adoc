@@ -8,7 +8,7 @@ For instance, to represent the fact “+govtDep#1 subcontracts comp#2+”, we mi
 * a table with companies and their identifying data including +comp#2+; and
 * a table with subcontracting relationships between instances, including +(GovtDep#1,Comp#2)+.
 
-A mechanism to capture the sort of structured and semi-structured data which may be stored and managed in the system is called a *data model* at the level of the technical implementation and _conceptual data model_ or _vocabulary_ as part of a *semantic data specification* when it is implementation-independent. Such models represent the entity types, such as `GovernmentDepartment`, +Company+, and its more generic type +Organisation+ from our example, along with relationships between entity types, such as +Subcontracting+. Data models typically also implement business rules or constraints that apply to the particular organisation. For instance, one rule might state that each government department _is permitted to subcontract at most 15_ companies in +country#3+ whereas there may be no upper bound to subcontracting in +country#4+ and a prohibition on subcontracting (i.e., _is permitted to subcontract at most 0_) in +country#5+. These variations require different data models or application profiles, although they may use the same vocabulary.
+A mechanism to capture the sort of structured and semi-structured data which may be stored and managed in the system is called a *data model* at the level of the technical implementation and _conceptual data model_ or _vocabulary_ as part of a *semantic data specification* when it is implementation-independent. Such models represent the entity types, such as +GovernmentDepartment+, +Company+, and its more generic type +Organisation+ from our example, along with relationships between entity types, such as +Subcontracting+. Data models typically also implement business rules or constraints that apply to the particular organisation. For instance, one rule might state that each government department _is permitted to subcontract at most 15_ companies in +country#3+ whereas there may be no upper bound to subcontracting in +country#4+ and a prohibition on subcontracting (i.e., _is permitted to subcontract at most 0_) in +country#5+. These variations require different data models or application profiles, although they may use the same vocabulary.
 
 This raises a number of questions:
 
@@ -46,7 +46,7 @@ Given that such availability would be useful also at the EU level, he looks for 
 ____
 *User story:* *As a* semantic engineer working in public sector IT, *I want to* create an XML schema (XSD) by reusing elements from the existing Core Business Vocabulary (CBV), *so that* I can reduce design time and ensure consistent, interoperable, and standards-compliant e-form validation across government systems.
 
-The business case translates into the following *use case specification*, which is instantiated from the link:./introduction.adoc#sec:uc11[general UC1.1 description] in the previous section:
+The business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc11[general UC1.1 description] in the previous section:
 
 |===
 |{set:cellbgcolor: #a8c6f7}
@@ -81,7 +81,7 @@ image::UC1.1.png[]
 
 When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models. 
 
-When a Core Vocabulary has defined an associated XSD schema, it is not only easy but also advisable to directly import this schema using the +xsd:import+ statement. This enables seamless reuse and guarantees that any complex types or elements defined within the Core Vocabulary are integrated correctly and transparently within new schemas. 
+When a Core Vocabulary has defined an associated XSD schema, it is not only easy but also advisable to directly import this schema using the `xsd:import` statement. This enables seamless reuse and guarantees that any complex types or elements defined within the Core Vocabulary are integrated correctly and transparently within new schemas.
 
 The imported elements are then employed in the definition of a specific document structure. For example, Core Vocabularies are based on https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCTERMS] that provides an XML schema, so Core Person could import the DCTERMS XML schema for the usage of a concept. 
 
@@ -242,7 +242,7 @@ In this example:
 
 _Garden of Eden Pattern_
 
-In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ +<xs:schema>+ qualify as such entry points. In CBV these include +LegalEntity+, +Organization+ etc., whereas nested elements, such as +RegisteredAddress+ or +ContactPoint+, are defined _inside_ those complex types and _cannot_ start a document on their own.
+In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ `<xs:schema>` qualify as such entry points. In CBV these include +LegalEntity+, +Organization+ etc., whereas nested elements, such as +RegisteredAddress+ or +ContactPoint+, are defined _inside_ those complex types and _cannot_ start a document on their own.
 
 [source,xml]
 ----
@@ -398,7 +398,7 @@ Having established the who, what, and why, the next step is _how_ to accomplish 
 ==== Guidelines to create a new JSON-LD context definition
 
 
-This section provides guidelines for addressing use case xref:indroduction.adoc#sec:uc12[UC1.2]. 
+This section provides guidelines for addressing use case  xref:introduction.adoc#sec:uc12[UC1.2].
 
 https://www.w3.org/TR/json-ld11/[JSON-LD] is a W3C Recommendation for serialising Linked Data, combining the simplicity, power, and Web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. This guide describes how to create new JSON-LD contexts for existing Core Vocabularies. +
 The three key phases are:
@@ -414,12 +414,12 @@ image::UC1.2.png[]
 ===== Phase 1: Import or define elements
 
 
-When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the +@import+ keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
+When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the '@import' keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
 
 In cases where the Core Vocabulary does not provide an JSON-LD context, it is necessary to *create the corresponding field element definitions* for the reused URIs, in three steps:
 
 . *Gather all the terms* from the selected Core Vocabulary that need to be included in the JSON-LD context.
-. *Decide the desired structure* of the JSON-LD file, by *defining the corresponding keys*, such as +Person.givenName+. These new fields must adhere to the naming defined by the selected Core Vocabulary to maintain consistency.
+. *Decide the desired structure* of the JSON-LD file, by *defining the corresponding keys*, such as `Person.givenName`. These new fields must adhere to the naming defined by the selected Core Vocabulary to maintain consistency.
 . *Assign URIs to keys*. Each term in the JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in Core Vocabularies to JSON keys using the same CV terms.
 
 The ones that are imported by the Core Vocabularies, shall be used as originally defined.
@@ -466,9 +466,9 @@ _Design note: Flat vs scoped context disambiguation_
 When defining properties in a JSON-LD context, one has to consider how attribute names are disambiguated across different classes. Two main approaches can be adopted:
 
 * *Flat context disambiguation*. 
-In this approach, and demonstrated in the previous example, each property is declared globally and identified by a fully qualified key (for example, +Service.name+). This guarantees that each attribute is uniquely associated with its URI, even when the same property name appears in different classes. The flat approach is straightforward to generate automatically and ensures full disambiguation, which is why it is adopted by the https://github.com/SEMICeu[SEMIC toolchain]. However, it can result in less readable JSON structures, because the prefixed property names may appear verbose or repetitive.
+In this approach, and demonstrated in the previous example, each property is declared globally and identified by a fully qualified key (for example, `Service.name`). This guarantees that each attribute is uniquely associated with its URI, even when the same property name appears in different classes. The flat approach is straightforward to generate automatically and ensures full disambiguation, which is why it is adopted by the https://github.com/SEMICeu[SEMIC toolchain]. However, it can result in less readable JSON structures, because the prefixed property names may appear verbose or repetitive.
 * *Scoped context disambiguation*.
-A context can be defined per class, allowing property names such as +name+ or +description+ to be reused within each class-specific scope. This produces cleaner and more human-readable JSON but can be more complex to design and maintain. Scoped contexts often require explicit +@type+ declarations or additional range indicators to ensure that the correct mappings are applied during JSON-LD expansion.
+A context can be defined per class, allowing property names such as +name+ or +description+ to be reused within each class-specific scope. This produces cleaner and more human-readable JSON but can be more complex to design and maintain. Scoped contexts often require explicit `@type` declarations or additional range indicators to ensure that the correct mappings are applied during JSON-LD expansion.
 
 The choice between flat or scoped contexts should be motivated by the expected use of the data. When contexts are generated automatically or used for large-scale data exchange, the flat approach offers simplicity and reliability. When contexts are manually authored or designed for human-facing APIs, scoped contexts may be preferable for improved readability, provided that their additional complexity is manageable.
 
@@ -477,7 +477,7 @@ _Improvements to the structure_
 
 To meet wishes from API consumers, one may use *aliasing* of keywords, where a JSON-LD context element is given a more easily recognisable string.
 
-One can also *extend the context* by reusing terms from Core Vocabularies, which can be achieved using the +@import+ keyword if included as a whole. Also, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.
+One can also *extend the context* by reusing terms from Core Vocabularies, which can be achieved using the `@import` keyword if included as a whole. Also, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.
 
 
 ===== Phase 3: Review and validate
@@ -504,7 +504,7 @@ This tutorial addresses the use case xref:introduction.adoc#sec:uc21[UC1.2], and
 
 ===== Phase 1: Import or define elements
 
-Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the +@import+ statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
+Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the `@import` statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
 
 [source,json]
 ----
@@ -612,7 +612,7 @@ Try this in the JSON-LD Playground https://tinyurl.com/4vtmjdxy[here] and then c
 
 _Aliasing keywords for API compatibility (REST API example)_
 
-When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's +@id+ to +url+ and +@type+ to +type+ to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
+When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to +url+ and `@type` to +type+ to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
 _Example of aliasing keywords_
 [source,json]
@@ -631,7 +631,7 @@ _Example of aliasing keywords_
   "Service.description": "A service for registering for health insurance."
 }
 ----
-In this example, +url+ is an alias for +@id+ and +type+ is an alias for +@type+.
+In this example, +url+ is an alias for `@id` and +type+ is an alias for `@type`.
 
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
@@ -715,7 +715,7 @@ image::isSemanticEx.png[]
 _Error example_
 
 
-If the +@import+ URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:
+If the `@import` URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:
 
 *  "Error loading remote context" or
 *  "Context could not be retrieved."
@@ -736,7 +736,7 @@ image::errorEX.png[]
 _How to resolve the error_
 
 
-Ensure that the +@import+ URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
 
 
 
