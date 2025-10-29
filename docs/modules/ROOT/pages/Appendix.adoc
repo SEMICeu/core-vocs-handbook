@@ -1,3 +1,4 @@
+[appendix]
 == Appendix: Additional Use Cases
 [[sec:additional-use-cases]]
 
@@ -162,5 +163,6 @@ A concrete user story can be formulated as follows. +
 
 *Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
+
 
 
