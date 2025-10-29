@@ -428,7 +428,8 @@ Such activity can be done by semantic engineers based on input from domain exper
 |*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-existing-shema[Map an existing XSD schema] section.
 |===
 
-The additional use cases are described in the xref:Appendix.adoc[Appendix].
+The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
