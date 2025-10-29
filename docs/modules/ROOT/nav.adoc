@@ -51,5 +51,5 @@
 
 * xref:glossary.adoc#sec:glossary[Glossary]
 * xref:references.adoc#sec:references[References]
-** xref:handbook-as-a-whole.adoc#sec:handbook[Handbook as a whole]
+* xref:handbook-as-a-whole.adoc#sec:handbook[Handbook as a whole]
 
