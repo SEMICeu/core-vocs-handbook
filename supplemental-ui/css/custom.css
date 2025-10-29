@@ -1,12 +1,12 @@
-.custom-highlight {
+.custom-highlight1 {
     color: #555;
     border: 1px solid #ccc;
     border-radius: 0.2em;
     padding: 0.05em 0.3em;
 }
 
-.concept {
-  font-family: "Consolas";
-  font-style: italic;
-  color: gray;
+.custom-highlight {
+ font-family: "Segoe UI", sans-serif;
+  color: black;
+  font-weight: 600;
 }
