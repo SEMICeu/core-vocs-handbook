@@ -1,5 +1,5 @@
 [[sec:Introduction]]
-== 1. Introduction
+== Introduction
 
 This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
@@ -426,3 +426,4 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc[Appendix].
+
