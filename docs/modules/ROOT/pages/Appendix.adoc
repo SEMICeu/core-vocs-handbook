@@ -1,6 +1,6 @@
 :sectnums!:
 
-=== Appendix: Additional Use Cases
+== Appendix: Additional Use Cases
 [[sec:additional-use-cases]]
 
 The additional business and use cases are depicted in the diagram below and briefly described afterwards.
@@ -8,7 +8,7 @@ The additional business and use cases are depicted in the diagram below and brie
 image::AdditionalUCs1.png[]
 
 
-==== UC2.3: Map an existing JSON Schema to a Core Vocabulary
+=== UC2.3: Map an existing JSON Schema to a Core Vocabulary
 
 
 A concrete user story can be formulated as follows: +
@@ -32,7 +32,7 @@ To generalise from that to include other possible scenarios, we obtain the follo
 *Description:* The goal is to create a formal mapping using Semantic Web technology (e.g., RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in an JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 |===
 
-==== UC3: Create a new Semantic data specification
+=== UC3: Create a new Semantic data specification
 
 
 The general case for creating a new semantic data specification is shown in the table below.
@@ -53,7 +53,7 @@ The general case for creating a new semantic data specification is shown in the 
 *Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
-===== Use Case UC3.1: Create a new Core Vocabulary
+==== Use Case UC3.1: Create a new Core Vocabulary
 
 
 A concrete user story can be formulated as follows: +
@@ -77,7 +77,7 @@ A concrete user story can be formulated as follows: +
 *Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
-===== Use Case UC3.2: Create a new Application Profile
+==== Use Case UC3.2: Create a new Application Profile
 
 
 A concrete user story can be formulated as follows. +
@@ -101,7 +101,7 @@ A concrete user story can be formulated as follows. +
 *Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
-==== UC4: Create a new data model
+=== UC4: Create a new data model
 
 
 The main use case is as follows, which is refined into two specific ones afterwards.
@@ -121,7 +121,7 @@ The main use case is as follows, which is refined into two specific ones afterwa
 *Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the xref:introduction.adoc#sec:use-cases[main use cases] section.
 |===
 
-===== Use Case UC4.1: Create a new ontology
+==== Use Case UC4.1: Create a new ontology
 
 A concrete user story can be formulated as follows. +
 
@@ -144,7 +144,7 @@ A concrete user story can be formulated as follows. +
 *Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] section and the various xref:references.adoc#ref:42[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
 |===
 
-===== Use Case UC4.2: Create a new data shape
+==== Use Case UC4.2: Create a new data shape
 
 A concrete user story can be formulated as follows. +
 
@@ -164,6 +164,7 @@ A concrete user story can be formulated as follows. +
 
 *Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
+
 
 
 
