@@ -484,8 +484,11 @@ It checks for instances of +legal:LegalEntity+ in the data file, and if the alig
 
 
 Let’s introduce the *motivation for the use case* for Use Case 2.2 with a scenario and structured user story. +
+[quote]
+____
 Ella works as a *data integration specialist* at the National Registry of Certified Legal Practitioners. For over a decade, her team has maintained a robust system for managing, among others, all law firms’ data in *XML format*, supported by an *XSD schema*. This schema defines the structure of all XML documents generated and processed by the registry, capturing details such as legal entities, addresses, and contact points. It’s stable, reliable, and embedded into the internal tool and data exchange interface the organisation uses.**__ __**But governments across Europe are requested to align their digital data infrastructures with *Semantic Web standards* with the goal to make public sector data *interoperable, discoverable, and reusable* across borders. Ella's National Registry has received a directive to publish its business data in *RDF*, using the SEMIC *Core Business Vocabulary (CBV)*, which is already used in EU-level platforms.  +
 To meet this requirement, Ella must map the Registry’s *existing XSD schema to the CBV* and transform their XML data into RDF. +
+____
 *User Story: As a* data integration specialist at a public sector organisation, *I want to* map our existing XML Schema Definition (XSD) to the Core Business Vocabulary (CBV), *so that* I can transform our XML data into semantically enriched RDF that complies with European interoperability standards, supports linked data publication, and enables cross-system data exchange. +
 This business case translates into the following *use case specification*, which is instantiated from the link:./introduction.adoc#sec:uc22[general UC2.2 description]:
 
