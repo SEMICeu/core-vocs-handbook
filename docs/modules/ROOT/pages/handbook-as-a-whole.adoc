@@ -2,13 +2,16 @@
 :doctype: book
 ifndef::ebook-format[:leveloffset: 1]
 :description: SEMIC Core Vocabularies Handbook
+:keywords: Core Vocabularies, SEMIC 
 :sectanchors:
 :url-repo: https://github.com/SEMICeu/core-vocs-handbook
 :toc:
-:toclevels: 2
+:toclevels: 4
 :sectnums: 
 :sectnumlevels: 4
 :icons: font
+:revnumber: v1.5
+:revdate: 27.10.2025
 
 include::introduction.adoc[]
 
@@ -23,4 +26,3 @@ include::Appendix.adoc[]
 include::glossary.adoc[]
 
 include::references.adoc[]
-
