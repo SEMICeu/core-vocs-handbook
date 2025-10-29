@@ -125,7 +125,7 @@ Utilising both automated tools and manual expertise, this phase focuses on ident
 
 In the *planning* activity, the approach to ontology matching is strategised, which encompasses selecting appropriate methods with their algorithms and tools, fine-tuning parameters, determining thresholds for similarity and identity functions, and setting evaluative criteria. These preparations are informed by a thorough understanding of the project's requirements and the outcomes of previous reuse evaluations.
 
-Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for a review and in-depth analysis, see [https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#:~:text=%5B-,OteroEtAl15,-%5D%20Otero%2DCerdeira[om-lr], https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#ref:54[om]]). The main categories of ontology matching techniques are listed below in the order of their relevance to this handbook:
+Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for a review and in-depth analysis, see [xref:references.adoc#ref-60[om-lr], xref:references.adoc#ref-54[om]]). The main categories of ontology matching techniques are listed below in the order of their relevance to this handbook:
 
 * *Terminological* techniques draw on the textual content within ontologies, such as entity labels and comments, employing methods from natural language processing and information retrieval, including string distances and statistical text analysis.
 * *Structural* techniques analyse the relationships and constraints between ontology entities, using methods like graph matching to explore the topology of ontology structures.
@@ -136,7 +136,7 @@ Next, the *execution* activity implements the chosen matchers. Automated or semi
 
 Finally, in the *evaluation* activity, the alignments found are rigorously assessed on their suitability. The evaluation measures the alignments against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements, so that  only the most suitable alignments are carried forward for the creation of a mapping, thereby upholding the integrity and logical soundness of the matching process.
 
-*Tools*: Tools such as https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#:~:text=%5B-,silk,-%5D%20System%20for[Silk] [silk], https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#:~:text=%5B-,LIMES,-%5D%20Ngomo%2C%20Axel[LIMES] [limes], and https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#:~:text=%5B-,LogMap,-%5D%20Jim%C3%A9nez%2DRuiz[LogMap] [logmap] may be used in this phase.  +
+*Tools*: Tools such as SILK [xref:references.adoc#ref-62[silk]], LIMES [xref:references.adoc#ref-67[limes]], and LogMap [xref:references.adoc#ref-83[logmap]] may be used in this phase.
 *Inputs*: Matcher configurations, additional resources (if any), correspondences from previous matching iterations (if any). +
 *Outputs*: Generated alignments, evaluation reports.
 
@@ -167,11 +167,11 @@ The table is indicative of the variety of semantic connections that can be reali
 
 The *Creation* step is the execution of the mapping, entailing the selection of the relation, and assertion of the mapping. This activity involves human intervention and the selection is conducted manually according to the project’s objectives and semantic appropriateness of the candidate mapping.
 
-*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format [af], EDOAL [edoal], Simple Standard for Sharing Ontological Mapping (SSSOM) [sssom], and the Semantic Mapping Vocabulary (SEMAPV) [semapv] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.
+*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format [xref:references.adoc#ref-78[af]], EDOAL [xref:references.adoc#ref-61[edoal], Simple Standard for Sharing Ontological Mapping (SSSOM) [xref:references.adoc#ref-79[sssom]], and the Semantic Mapping Vocabulary (SEMAPV) [semapv] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.
 
-*Tools*: Tools such as https://semiceu.github.io/core-vocs-handbook/public-review/references.html#ref:18:~:text=%5B-,vocbench,-%5D%20VocBench.%20Available[VocBench3] [vocbench] can be used in this phase, or generic office tools, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.  +
+*Tools*: Tools such as https://semiceu.github.io/core-vocs-handbook/public-review/references.html#ref:18:~:text=%5B-,vocbench,-%5D%20VocBench.%20Available[VocBench3] [xref:references.adoc#ref-63[vocbench]] can be used in this phase, or generic office tools, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.  +
 *Inputs*: Evaluated correspondences (the alignments), stakeholders' amendment plans, requirements for the formalism of the mapping so that the mapping assertions integrate with the modelling language used. +
-*Outputs*: Created mapping, stored versions in an alignment repository (e.g., [sem-map]).
+*Outputs*: Created mapping, stored versions in an alignment repository (e.g., [xref:references.adoc#ref-55[sem-map]]).
 
 
 ===== Phase 6: Application
@@ -190,13 +190,14 @@ Regarding the second task, governance involves the creation of *maintenance prot
 [[sec:tutorial:map-schema.org]]
 ==== Tutorial: Map Schema.org to the Core Business Vocabulary
 
-This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* https://github.com/SEMICeu/core-vocs-handbook/blob/develop/docs/modules/ROOT/pages/use-cases.adoc#:~:text=Use%20Case%20UC2.1%3A%20Map%20an%20existing%20Ontology%20to%20a%20Core%20Vocabulary[*UC2.1]*. By following the https://github.com/SEMICeu/core-vocs-handbook/blob/develop/docs/modules/ROOT/pages/map-an-existing-model-guideline.adoc#:~:text=Guidelines%20for%20how%20to%20map%20existing%20data%20models[map an existing model]** ***methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
+This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* link:./introduction.adoc#sec:uc21[UC2.1]. By following the link:./how-to-map-existing-data-models.adoc#_guidelines_on_how_to_map_an_existing_conceptual_model_to_a_core_vocabulary[map an existing model] *methodology*, +
+you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 
 ===== Phase 1: Staging (Defining the Requirements)
 
 In this phase, the aim is to understand what needs to be mapped and why. +
-For this tutorial, we aim to map Schema.org[Schema.org] to the Core Business Vocabulary (CBV), enabling data interoperability.
+For this tutorial, we aim to map http://Schema.org[Schema.org] to the Core Business Vocabulary (CBV), enabling data interoperability.
 
 
 _Steps_
@@ -209,7 +210,7 @@ _Output_
 
 A short project specification that defines the purpose of the mapping, its scope, and expected outcomes. For this tutorial, the output is:
 
-* *Purpose*: Enable semantic interoperability between business-related data models using CBV and Schema.org[Schema.org].
+* *Purpose*: Enable semantic interoperability between business-related data models using CBV and http://Schema.org[Schema.org].
 * *Scope*: Map the CBV (source) concepts to http://Schema.org[Schema.org] (target):
 ** legal:LegalEntity → schema:Organization
 ** m8g:Address → schema:PostalAddress
@@ -221,7 +222,7 @@ _Procedure for CBV and Schema.org_
 
 The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: +legal:LegalEntity+ versus +schema:Organization+. It may also need to take into account ‘externalities’, such as regulatory compliance that may dictate the use of one version of a schema over another for some business reason. For the current exercise, there are no regulatory compliance requirements in place. Therefore, the latest official releases of both vocabularies will be used (Schema.org version 29.1 and CBV version 2.2.0). Next, clear mapping goals should be established. For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation between the CBV and Schema.org.
 
-
+[[sec:Characterisation]]
 ===== Phase 2: Characterisation (Defining Source and Target models)
 
 The aim of this phase is to analyse the structure, vocabulary, and semantics of the Core Business Vocabulary that we shall take as *Target ontology* and Schema.org that will be set as *Source ontology*. The key steps and outputs are as follows.
@@ -286,7 +287,7 @@ _Procedure_
 
 There are three distinct pathways, namely: direct use, adaptive reuse, and creating a new alignment. Let’s look at each in turn. For the CBV and Schema.org, we first look for pre-existing alignments of related vocabularies. They may be declared in the files themselves, but we also can search the https://github.com/SEMICeu[SEMIC GitHub repository] for other files that may have relevant mappings already.
 
-In the SEMIC repository, there are several vocabularies that have alignments to Schema.org already, which may be reusable. They are listed in the following table, along with the location and the latest version  available at the the day of the exercise  (recall the ?tab=t.0#heading=h.m6rvw7td9hwt[Source and Target Characterisation] above).
+In the SEMIC repository, there are several vocabularies that have alignments to Schema.org already, which may be reusable. They are listed in the following table, along with the location and the latest version  available at the the day of the exercise  (recall the link:./how-to-map-existing-data-models.adoc#sec:Characterisation[Source and Target Characterisation] above).
 
 |===
 |*Mapping From*|*Mapping To*|*Location*|*Version*
@@ -319,7 +320,7 @@ _Output_
 
 _Procedure for CBV and Schema.org_
 
-In this tutorial, we use http://limes.sf.net[LIMES] [limes] to automate link discovery in the mapping process between the *CBV* and *Schema.org*. While other tools could also be used, LIMES was selected for its simplicity and efficiency in performing lexical similarity-based alignments.
+In this tutorial, we use http://limes.sf.net[LIMES] [xref:references.adoc#ref-76[limes]] to automate link discovery in the mapping process between the *CBV* and *Schema.org*. While other tools could also be used, LIMES was selected for its simplicity and efficiency in performing lexical similarity-based alignments.
 
 
 _Set Up Data Sources_
@@ -336,7 +337,7 @@ _Analyse Results_
 
 Tools such as LIMES and Silk do not determine the semantic nature of the match (e.g., equivalence vs. subclass). They only suggest candidate pairs based on similarity metrics. It is up to the human expert to choose the appropriate relation, using knowledge of the domain and the ontology documentation. Once the matching process is complete, we inspect the results. In the case of the CBV and Schema.org alignment, *no matches were found with LIMES*, which  means that no significant similarities were identified  between entities based on the chosen similarity metric. Consequently, we need to either try with another alignment tool or manually review and align the entities. While we opt for the latter, let us first illustrate how the output would look if there had been potential matches. The LIMES output includes three key columns:
 
-* Source entity: a URI from the target ontology (e.g., Schema.org[Schema.org]).
+* Source entity: a URI from the target ontology (e.g., http://Schema.org[Schema.org]).
 * Target entity: a URI from the source ontology (e.g., CBV).
 * Similarity score: a numerical value (typically from 0 to 1) indicating the strength of the lexical similarity between the two entities.
 
@@ -538,7 +539,7 @@ _Option 2a. Map XSD to a CV’s main format_
 
 Mapping may be with the intent to transform, or simply align for interoperability. More tools have been proposed for the former, and more so explicitly to an OWL flavour (RDFS/OWL full or an OWL 2 in one of its serialisations).
 
-A quick overview of translations for the XML Schema constructs and OWL constructs [xsd-owl]  is included in the following table.
+A quick overview of translations for the XML Schema constructs and OWL constructs [xref:references.adoc#ref-89[xsd-owl]] is included in the following table.
 
 [cols="25,25,50", options="header"]
 |===
