@@ -51,15 +51,14 @@ The Handbook has two types of content:
 The *structure of the main part of the Handbook* is as follows. First, the notion of *interoperability* and the principal *use cases* will be introduced, which feature the most common, challenging, and interesting scenarios. This is followed by two key chapters, on creating new models and on mapping existing models, which describe and illustrate the principal use cases. For each use case, there is a *description* intended for administrative professionals and legal experts, *guidelines* for implementation that describe procedures how to accomplish the goal of the use case, which are then demonstrated in the *tutorial* for the use case. The guidelines and tutorials are aimed at the technical experts.  +
 Finally, the appendix contains a *glossary of terms*, additional use cases not covered in this handbook, and the references.
 
-[[sec:Introduction_to_interoperability]]
-== Interoperability and Cove Vocabularies
+[[sec:interoperability]]
+=== Interoperability and Core Vocabularies
 
 This section introduces what interoperability is, what makes it semantic, and how *_Core Vocabularies_*–which is where key concepts are specified in human-readable and machine-processable formats–contribute to it.
 
 Sharing data easily is indispensable for effective and efficient public services. Sharing may be done through offering one point of access, and often involves reusing the data in multiple applications across multiple departments and organisations. To make this work, the information systems need to be interoperable.
 
-[[sec:interoperability]]
-=== What is interoperability?
+==== What is interoperability?
 
 Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], interoperability is defined as “the ability of organisations to interact towards mutually beneficial goals, involving the sharing of information and knowledge between these organisations, through the business processes they support, by means of the exchange of data between their ICT systems”, where, for the purpose of EIF, ‘organisations’ refers to “public administration units or any entity acting on their behalf, or EU institutions or bodies”. It is what “enables administrations to cooperate and make public services function across borders, across sectors and across organisational boundaries”, including enabling “public sector actors to connect, cooperate and exchange data while safeguarding sovereignty and subsidiarity”, as described in the EC communication accompanying the Interoperable Europe Act [xref:references.adoc#ref-83[int-eu]].
 
@@ -433,6 +432,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
