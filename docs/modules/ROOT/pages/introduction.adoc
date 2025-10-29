@@ -299,7 +299,7 @@ The use cases are written in white-box point of style oriented towards user goal
 |*Note:* (Optional) notes about this use case, especially related to its coverage in this handbook
 |===
 
-.Figure 1. Primary use cases covered in this handbook
+.Primary use cases covered in this handbook
 image::primary_Use_Case.png[] 
 
 
