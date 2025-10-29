@@ -23,17 +23,15 @@ Imagine different organisations using different words of the same language. One 
 
 Let’s consider a scenario as *motivation for the use case* and the corresponding structured user story. 
 
-// [.indent
 [quote]
 ____
 Sofía, a knowledge engineer working in the Department of Agriculture and Natural Resources, faces the problem of terminological overloading and mismatches. Her Fruits division uses a conceptual model that was developed to represent companies, directors, and contact details of fruit orchards and industrial forest agribusinesses, while a different one is used by the Vegetables division that needs to be aligned at a later date. To solve this, Sofía leads a project that *maps her Fruits division’s model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV)*, a semantic standard developed by SEMIC. 
 
-// [.indent]
+
 Meanwhile, external platforms—such as international business directories, government data portals, and the Schema.org vocabulary used by major web platforms—represent similar concepts differently. So do the Chamber of Commerce and the Department of the Economy, from which she wants to use data.  
 
-// [.indent]
-Sofía recognises the widespread use of http://Schema.org[Schema.org], and so she also wants to ensure that the *CBV concepts she uses can be mapped to http://Schema.org[Schema.org]’s content*. She can do this by creating semantic bridges between the models used in her division of the Department, CBV, and global vocabularies. 
 
+Sofía recognises the widespread use of http://Schema.org[Schema.org], and so she also wants to ensure that the *CBV concepts she uses can be mapped to http://Schema.org[Schema.org]’s content*. She can do this by creating semantic bridges between the models used in her division of the Department, CBV, and global vocabularies. 
 ____
 
 *User Story: As a* knowledge engineer at the Department of Agriculture, *I want* *to* map my division’s existing conceptual model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV) and align CBV concepts with http://Schema.org[Schema.org], *so that* our data can be interoperable with both EU semantic standards and global web vocabularies, enabling accurate data exchange.  
@@ -485,15 +483,18 @@ It checks for instances of +legal:LegalEntity+ in the data file, and if the alig
 [[sec:uc2.2-description]]
 ==== Use case description
 
-
 Let’s introduce the *motivation for the use case* for Use Case 2.2 with a scenario and structured user story. +
+
 [quote]
 ____
-Ella works as a *data integration specialist* at the National Registry of Certified Legal Practitioners. For over a decade, her team has maintained a robust system for managing, among others, all law firms’ data in *XML format*, supported by an *XSD schema*. This schema defines the structure of all XML documents generated and processed by the registry, capturing details such as legal entities, addresses, and contact points. It’s stable, reliable, and embedded into the internal tool and data exchange interface the organisation uses.**__ __**But governments across Europe are requested to align their digital data infrastructures with *Semantic Web standards* with the goal to make public sector data *interoperable, discoverable, and reusable* across borders. Ella's National Registry has received a directive to publish its business data in *RDF*, using the SEMIC *Core Business Vocabulary (CBV)*, which is already used in EU-level platforms.  +
+Ella works as a *data integration specialist* at the National Registry of Certified Legal Practitioners. For over a decade, her team has maintained a robust system for managing, among others, all law firms’ data in *XML format*, supported by an *XSD schema*. This schema defines the structure of all XML documents generated and processed by the registry, capturing details such as legal entities, addresses, and contact points. It’s stable, reliable, and embedded into the internal tool and data exchange interface the organisation uses. But governments across Europe are requested to align their digital data infrastructures with *Semantic Web standards* with the goal to make public sector data *interoperable, discoverable, and reusable* across borders. Ella's National Registry has received a directive to publish its business data in *RDF*, using the SEMIC *Core Business Vocabulary (CBV)*, which is already used in EU-level platforms.  
+
 To meet this requirement, Ella must map the Registry’s *existing XSD schema to the CBV* and transform their XML data into RDF. +
 ____
+
 *User Story: As a* data integration specialist at a public sector organisation, *I want to* map our existing XML Schema Definition (XSD) to the Core Business Vocabulary (CBV), *so that* I can transform our XML data into semantically enriched RDF that complies with European interoperability standards, supports linked data publication, and enables cross-system data exchange. +
-This business case translates into the following *use case specification*, which is instantiated from the link:./introduction.adoc#sec:uc22[general UC2.2 description]:
+
+This business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc22[general UC2.2 description]:
 
 |===
 |*Use Case UC 2.2: Map an existing XSD Schema to a Core Vocabulary*
@@ -506,11 +507,11 @@ This business case translates into the following *use case specification*, which
  +
 |===
 
+
 [[sec:uc2.2-guidline]]
 ==== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
 
-
-This section provides detailed instructions for addressing use case link:./introduction.adoc#sec:uc22[UC2.2].
+This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc22[UC2.2].
 
 To create an XSD mapping, one needs to decide on the purpose and level of specificity of the XSD schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a full-fledged executable set of rules for data transformation. In most cases, the reason why this mapping is done, is to also transform the corresponding XML files adhering to the XSD schema into RDF. Therefore, we include this step in the guideline.
 
@@ -527,21 +528,22 @@ The main procedure consists of four phases:
 . *Transform XML data to the Core Vocabulary through mappings*, if applicable;
 . *Disseminate the documentation* according to the procedure followed including, mainly, the used and generated files, mapping declarations or rules, and validation reports, to be applied in the foreseen use cases of the transformation pipelines.
 
-===== Phase 1: Understand XSD schema and prepare test data
+*_Phase 1: Understand XSD schema and prepare test data_*
 
 
-The first task is to examine the XSD schema to understand what elements it contains and how the hierarchical structuring of content may affect the meaning of the elements. This is important both for mapping and for selecting appropriate test data. +
+The first task is to examine the XSD schema to understand what elements it contains and how the hierarchical structuring of content may affect the meaning of the elements. This is important both for mapping and for selecting appropriate test data. 
+
 It may be that the XSD is outdated or partial with respect to the XML files that contain the data. Therefore, if during this staging process, it appears that Phase 3 will have to be included, then it is important to also construct a representative test dataset. This dataset should consist of a carefully selected set of XML files that cover the important scenarios and use cases encountered in the production data. It should be sufficiently comprehensive to facilitate rapid transformation cycles, enabling effective testing iterations in the validation. Also, it must align with the source schema for which it is used as test data.
 
 
-===== Phase 2: Map the XSD schema
+*_Phase 2: Map the XSD schema_*
 
 Conceptual Mapping in semantic data integration–determining what elements from the source should correspond to those in the target–can be established at two distinct levels: the vocabulary level and the application profile level. These levels differ primarily in their complexity and specificity regarding the data context they address. A *Vocabulary mapping* is established  as the principal task: the XSD schema elements need to align to CV elements, focussing on terminological alignments.
 
-For the XSD file, they are the elements within the tags <xs:element ref=”_elementLabel_”> where the “+elementLabel+” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a +<xs:element ref=”address”>+ nested within the concept +<xs:element ref=”Person”>+ has a different meaning from “+address+” nested within the concept +<xs:element ref=”Website”>+. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
+For the XSD file, they are the elements within the tags `<xs:element ref=”_elementLabel_”>` where the “+elementLabel+” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a `<xs:element ref=”address”>` nested within the concept `<xs:element ref=”Person”>` has a different meaning from “+address+” nested within the concept `<xs:element ref=”Website”>`. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
 
 
-_Option 2a. Map XSD to a CV’s main format_
+_Option 2-i. Map XSD to a CV’s main format_
 
 Mapping may be with the intent to transform, or simply align for interoperability. More tools have been proposed for the former, and more so explicitly to an OWL flavour (RDFS/OWL full or an OWL 2 in one of its serialisations).
 
@@ -604,21 +606,22 @@ An example of each XSD element/type to a class or property would, as a minimum, 
 |Property
 |===
 
-This approach results in a basic 1:1 direct alignment, which lacks contextual depth and specificity. Another approach would be to embed semantic annotations into XSD schemas using standards such as Semantic Annotations for WSDL and XML Schema (SAWSDL) [xref:references.adoc#ref-64[sawsdl]] using the *+sawsdl:modelReference+* attribute to capture this mapping. Such an approach is appropriate in the context of WSDL services.
+This approach results in a basic 1:1 direct alignment, which lacks contextual depth and specificity. Another approach would be to embed semantic annotations into XSD schemas using standards such as Semantic Annotations for WSDL and XML Schema (SAWSDL) [xref:references.adoc#ref-64[sawsdl]] using the *`sawsdl:modelReference`* attribute to capture this mapping. Such an approach is appropriate in the context of WSDL services.
 
-_Option 2b. Map a XSD to the XSD of a CV_
+_Option 2-ii. Map a XSD to the XSD of a CV_
 
 
 In a small number of cases, a CV also has an XSD schema derived from the CV’s main representation format. Then one could create an XSD-to-XSD mapping, i.e., from one’s own source XSD to the CV’s XSD target. Subsequently, it should be possible to use the CV’s existing alignment to obtain a source-XSD to target-CV alignment, by transitivity of the alignments, under the assumption that the alignment between the XSD of the CV and the CV is a 1:1 mapping. While this option is possible for the CBV already, it is currently not a main route for alignment to a CV and therefore not elaborated on further here.
 
-After completing either Phase 2a or 2b, one may proceed to Phase 3, if applicable, else jump to Phase 4.
+After completing either Phase 2-i or 2-ii, one may proceed to Phase 3, if applicable, else jump to Phase 4.
 
 
-===== Phase 3: Transform XML into CV elements
+*_Phase 3: Transform XML into CV elements_*
 
 Drilling down into Phase 3 of the overall procedure, we identify three steps, as shown in the figure below.
 
 image::xmlTOcv.png[]
+
 *Transforming the XML data to the Core Vocabulary by means of mappings* consists of:
 
 . *Create a Conceptual Mapping*, which involves defining the correspondence between the elements from the XSD schema, the terms in the vocabulary, and the elements in the corresponding XML files;
@@ -630,11 +633,11 @@ The *conceptual mapping* helps business and domain experts to validate the corre
 
 _Phase 3.1 Conceptual Mapping development_
 
-Besides the XSD to CV mappings, the XML elements can also be mapped in a *Vocabulary mapping*. For the XML files, an XML element or attribute is then directly mapped to an ontology class or property. For example, an XML element +<PostalAddress>+ could be mapped to the +locn:Address+ class in a CV, or an element +<surname>+ could be mapped to a property +foaf:familyName+ in the FOAF ontology. Such mappings can be established and written in a spreadsheet or mapping-specific software.
+Besides the XSD to CV mappings, the XML elements can also be mapped in a *Vocabulary mapping*. For the XML files, an XML element or attribute is then directly mapped to an ontology class or property. For example, an XML element `<PostalAddress>` could be mapped to the +locn:Address+ class in a CV, or an element `<surname>` could be mapped to a property +foaf:familyName+ in the FOAF ontology. Such mappings can be established and written in a spreadsheet or mapping-specific software.
 
 Alternatively, one can create an *Application Profile mapping*, which utilises XPath to guide access to data in XML tree structures, enabling extraction and contextualization of data before mapping it to an ontology fragment that is usually expressed as a SPARQL Property Path (or simply: a Property Path). This Property Path facilitates the description of instantiation patterns specific to the Application Profile.
 
-The tables below show two examples of mapping the organisation's address, city and postal code: where the data is extracted from in the source, and how it can be mapped to targeted ontology, such as +locn:postName+, and +locn:postCode+ in the vocabulary. To ensure that this address is linked to an organisation instance, and not, say, a person, the mapping is anchored in an instance represented by the variable +?this+ of an +owl:Organisation+. Optionally, a class path can also be provided to explicitly state the class sequence, which otherwise can be deduced from the Application Profile definition.
+The tables below show two examples of mapping the organisation's address, city and postal code: where the data is extracted from in the source, and how it can be mapped to targeted ontology, such as +locn:postName+, and +locn:postCode+ in the vocabulary. To ensure that this address is linked to an organisation instance, and not, say, a person, the mapping is anchored in an instance represented by the variable `?this` of an +owl:Organisation+. Optionally, a class path can also be provided to explicitly state the class sequence, which otherwise can be deduced from the Application Profile definition.
 
 |===
 |*Source XPath*|*/efac:Company/cac:PostalAddress/cbc:PostalZone
@@ -659,7 +662,7 @@ _Phase 3.2: Technical Mapping development_
 
 The technical mapping serves as the bridge between conceptual design and practical, machine-executable implementation. This step takes as input the conceptual mapping and establishes correspondences between XPath expressions and ontology fragments.
 
-Several technology options are available [xref:references.adoc#ref-65[ml-lr]] to represent these mappings technically, such as XSLT [xref:references.adoc#ref-66[xslt]], RML [xref:references.adoc#ref-67[rml]] (extending R2RML), and [xref:references.adoc#ref-86[SPARQLAnything]]. RML allows for the representation of mappings from heterogeneous data formats, such as XML, JSON, relational databases, and CSV into RDF. The mapping rules can be expressed in Turtle RML or the YARRRML [xref:references.adoc#ref-69[yarrrml]] dialect, a user-friendly text-based format based on YAML, making the mappings accessible to both machines and humans. RML is well-supported by robust implementations such as RMLMapper [xref:references.adoc#ref-70[rml-map]] and RMLStreamer [xref:references.adoc#ref-71[rml-stream]], which provide robust platforms for executing these mappings. RMLMapper is adept at handling batch processing of data and RMLStreamer suits streaming data scenarios, where data needs to be processed in real-time.
+Several technology options are available [xref:references.adoc#ref-65[ml-lr]] to represent these mappings technically, such as XSLT [xref:references.adoc#ref-66[xslt]], RML [xref:references.adoc#ref-67[rml]] (extending R2RML), and [xref:references.adoc#ref-68[SPARQLAnything]]. RML allows for the representation of mappings from heterogeneous data formats, such as XML, JSON, relational databases, and CSV into RDF. The mapping rules can be expressed in Turtle RML or the YARRRML [xref:references.adoc#ref-69[yarrrml]] dialect, a user-friendly text-based format based on YAML, making the mappings accessible to both machines and humans. RML is well-supported by robust implementations such as RMLMapper [xref:references.adoc#ref-70[rml-map]] and RMLStreamer [xref:references.adoc#ref-71[rml-stream]], which provide robust platforms for executing these mappings. RMLMapper is adept at handling batch processing of data and RMLStreamer suits streaming data scenarios, where data needs to be processed in real-time.
 
 Provided one has mastered RML along with XML technologies such as XSD, XPath, and XQuery to implement the mappings effectively [xref:references.adoc#ref-72[rml-gen]], the development of the technical mapping rules is straightforward thanks to the conceptual mapping output from Phase 3.1. RML mapping statements are created for each class of the target ontology coupled with the property-object mapping statements specific to that class.
 
@@ -667,7 +670,7 @@ An additional step involves deciding on a URI creation policy and designing a un
 
 A viable alternative to RML is XSLT technology, which offers a powerful, but low-level method for defining technical mappings. While this approach allows for high expressiveness and complex transformations, it also increases the potential for errors due to its intricate syntax and operational complexity. This technology excels in scenarios requiring detailed manipulation and parameterisation of XML documents, surpassing the capabilities of RML in terms of flexibility and depth of transformation rules that can be implemented. However, the detailed control it affords means that developers must have a high level of expertise in semantic technologies and exercise caution and precision to avoid common pitfalls associated with its use.
 
-A pertinent example of XSLT's application is the [tool] for transforming ISO-19139 metadata to the DCAT-AP geospatial profile GeoDCAT-AP [xref:references.adoc#ref-74[geo-dcat-ap]] in the INSPIRE framework and the EU ISA Programme. This XSLT script is configurable to accommodate transformation with various operational parameters such as the selection between core or extended GeoDCAT-AP profiles and specific spatial reference systems for geometry encoding, showcasing its utility in precise and tailored data manipulation tasks.
+A pertinent example of XSLT's application is the tool for transforming ISO-19139 metadata to the DCAT-AP geospatial profile GeoDCAT-AP [xref:references.adoc#ref-74[geo-dcat-ap]] in the INSPIRE framework and the EU ISA Programme. This XSLT script is configurable to accommodate transformation with various operational parameters such as the selection between core or extended GeoDCAT-AP profiles and specific spatial reference systems for geometry encoding, showcasing its utility in precise and tailored data manipulation tasks.
 
 *Inputs*: Conceptual Mapping spreadsheet. +
 *Outputs*: Technical Mapping source code.
@@ -704,7 +707,7 @@ SPARQL-based validation is tightly linked to the mapping process itself, offerin
 *Inputs*: Sample data transformed into RDF, Conceptual Mapping, Technical Mapping, SHACL data shapes.  +
 *Outputs*: Validation reports.
 
-===== Phase 4: Dissemination
+*_Phase 4: Dissemination_*
 
 
 Once the XSD-to-XSD (to CV), XSD-to-CV, and, optionally, the XML to CV have been completed and validated, they can be packaged for dissemination and deployment. In particular if Phase 3 is needed, disseminating a mapping package facilitates their controlled use for data transformation, ensures the ability to trace the evolution of mapping rules, and standardises the exchange of such rules. This structured approach allows for efficient and reliable data transformation processes across different systems.
@@ -726,10 +729,11 @@ Such a package is designed to be self-contained, ensuring that it can be immedia
 *Inputs*: Conceptual Mapping spreadsheet, Ontologies or Vocabularies, SHACL Data Shapes, Sample XML data, Sample data transformed into RDF, Conceptual Mapping, Technical Mapping, SHACL data shapes, Validation reports. +
 *Outputs*: Comprehensive Mapping Package.
 
+
 [[sec:uc2.2-tutorial]]
 ==== Tutorial: Map the Core Business Vocabulary from XSD to RDF
 
-This tutorial addresses *Use Case* link:./introduction.adoc#sec:uc22[UC2.2], focusing on enabling *semantic interoperability* by mapping an existing *XSD schema*—specifically, the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary (CBV) XSD schema]—to its corresponding *RDF representation*. This tutorial guides you through the key steps, involving:
+This tutorial addresses *Use Case* xref:introduction.adoc#sec:uc22[UC2.2], focussing on enabling *semantic interoperability* by mapping an existing *XSD schema*—specifically, the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary (CBV) XSD schema]—to its corresponding *RDF representation*. This tutorial guides you through the key steps, involving:
 
 . Staging, to understand the XSD schema;
 . Map the schema to the CV in its native format;
@@ -740,7 +744,7 @@ This tutorial addresses *Use Case* link:./introduction.adoc#sec:uc22[UC2.2], foc
 . Disseminating the outcome.
 
 
-===== Phase 1: Staging
+*_Phase 1: Staging_*
 
 First, you will familiarise yourself with the selected XSD schema and then prepare the test data.
 
@@ -773,19 +777,21 @@ Here’s how the snippet of the XSD schema looks like for the AccountingDocument
 
 _Preparing the Test Data_
 
-Since we will also map data and proceed through Steps 3.1-3.3 further below, it is essential to prepare representative test data in this Phase 1. This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data. For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[+SampleData_Business.xml+] file available on the https://github.com/SEMICeu/XML-schema/tree/main[[SEMIC GitHub repository].  +
-We ensure that the XML data contains relevant elements, such as +<LegalEntity>+, +<LegalName>+, +<ContactPoint>+, and +<RegisteredAddress>+, which you will later map to the CBV terms. Among other content, it has the following data for +<LegalName>+:
+Since we will also map data and proceed through Steps 3.1-3.3 further below, it is essential to prepare representative test data in this Phase 1. This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data. For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[+SampleData_Business.xml+] file available on the https://github.com/SEMICeu/XML-schema/tree/main[SEMIC GitHub repository].  +
+We ensure that the XML data contains relevant elements, such as `<LegalEntity>`, `<LegalName>`, `<ContactPoint>`, and `<RegisteredAddress>`, which you will later map to the CBV terms. Among other content, it has the following data for `<LegalName>`:
+
 [source,xml]
 ----
 <LegalName xml:lang="fr">Comité belge pour l'UNICEF</LegalName>
 <LegalName xml:lang="nl">Belgisch Comite voor UNICEF</LegalName>
 ----
 
-===== Phase 2: Map XSD schema elements to XSD of the CV
+*_Phase 2: Map XSD schema elements to XSD of the CV_*
 
 _Mapping XSD to CV Terms_
 
 In this step, we map each XSD element/type to  Class or Property. These mappings often follow patterns like:
+
 [cols="25,45,30", options="header"]
 |===
 |*XSD Element* |*RDF Class/Property URI* |*Type*
@@ -815,7 +821,7 @@ Here’s how to describe *mapping rules* from XSD to TTL in XSD. For example:
   sawsdl:modelReference="http://www.w3.org/ns/legal#legalName"/>
 ----
 
-This maps the XML element *+<LegalName>+* to the RDF property** ***+legal:legalName+***.**
+This maps the XML element *`<LegalName>`* to the property **+legal:legalName+**.
 
 _Mapping Table (Partial)_
 
@@ -823,31 +829,32 @@ _Mapping Table (Partial)_
 |===
 |*XSD Element* |*RDF Mapping (TTL)*
 
-|LegalEntity
+|`LegalEntity`
 |a legal:LegalEntity
 
-|LegalName
+|`LegalName`
 |legal:legalName "Example ORG."
 
-|RegisteredAddress
+|`RegisteredAddress`
 |m8g:registeredAddress <http://example.org/addr/123>
 |===
 
 
-===== Phase 3: Map XML data to the Core Vocabulary
+*_Phase 3: Map XML data to the Core Vocabulary_*
 
 _Create a Conceptual Mapping_
 
 We will create a conceptual mapping between the XSD elements and RDF terms from the CBV. This will guide the transformation of the XML data to RDF. There are two levels of conceptual mapping:
 
-* *Vocabulary Level Mapping*: This is a basic alignment, where each XSD and XML element is directly mapped to an ontology class or property. For XSD, this task should already have been completed in Phase 2. Taken together, one then obtains an orchestration where, for instance, +<xs:element name="LegalEntity" type="LegalEntityType"/>+ from the XSD schema and the use of +<LegalEntity>+ in the XML file are mapped to +legal:LegalEntity+.
+* *Vocabulary Level Mapping*: This is a basic alignment, where each XSD and XML element is directly mapped to an ontology class or property. For XSD, this task should already have been completed in Phase 2. Taken together, one then obtains an orchestration where, for instance, `<xs:element name="LegalEntity" type="LegalEntityType"/>` from the XSD schema and the use of `<LegalEntity>` in the XML file are mapped to +legal:LegalEntity+.
 * *Application Profile Level Mapping*: At this level, you use *XPath* expressions to extract specific data from the XML structure, ensuring a more precise mapping to the Core Vocabulary.
 ** Example: Mapping the address fields from the XML to a specific property, such as +locn:postCode+ or +locn:postName+. In both cases, the target is declared in two components: the target property path and the target class path, to ensure it is mapped in the right context. For instance, a +locn:postName+ of a legal entity may well have different components compared to a +locn:postName+ of the address of a physical building.
-Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element +ContactPoint+ (highlighted with a green oval) to the +cv:ContactPoint+ that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
+
+Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the +cv:ContactPoint+ that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
 
 image::snippetCBV.png[]
 
-More precisely, you have to write down the source XPath, i.e., +*/ContactPoint+ in the figure, and how it is represented in the target specification, defining a target property path and a target class path. Examples of the Conceptual Mapping for five selected elements of the XSD schema are presented below, where the full URIs have been abbreviated:
+More precisely, you have to write down the source XPath, i.e., `*/ContactPoint` in the figure, and how it is represented in the target specification, defining a target property path and a target class path. Examples of the Conceptual Mapping for five selected elements of the XSD schema are presented below, where the full URIs have been abbreviated:
 
 |===
 |Source XPath|Target Property Path|Target Class Path
@@ -861,7 +868,7 @@ More precisely, you have to write down the source XPath, i.e., +*/ContactPoint+ 
 
 _Create the Technical Mapping_
 
-The https://rml.io/docs/rml/introduction/[RDF Mapping Language (RML)] is suitable for the task of implementing the XML-to-RDF conceptual mappings as technical mappings. We will use RML to create machine-executable mapping rules as follows. First, the +rml:logicalSource+ is declared, with the root of the tree in the XML file, which is +*/LegalEntity+ in our use case that assumes there to be an +rml:source+ called +SampleData_Business.xml+ with instance data. Next, a +rr:subjectMap+ is added to state how each +<LegalEntity>+ node becomes the RDF subject—here we build an IRI from +generate-id(.)+ and type it as +legal:LegalEntity+. Finally, one or more +rr:predicateObjectMap+ blocks capture the properties we need; in the simplest case we map the child element +<LegalName>+ to the vocabulary property +legal:legalName+. The complete example RML mapping code looks as follows, in Turtle syntax:
+The https://rml.io/docs/rml/introduction/[RDF Mapping Language (RML)] is suitable for the task of implementing the XML-to-RDF conceptual mappings as technical mappings. We will use RML to create machine-executable mapping rules as follows. First, the `rml:logicalSource` is declared, with the root of the tree in the XML file, which is `*/LegalEntity` in our use case that assumes there to be an `rml:source` called `SampleData_Business.xml` with instance data. Next, a `rr:subjectMap` is added to state how each `<LegalEntity>` node becomes the RDF subject—here we build an IRI from `generate-id(.)` and type it as +legal:LegalEntity+. Finally, one or more `rr:predicateObjectMap` blocks capture the properties we need; in the simplest case we map the child element `<LegalName>` to the vocabulary property +legal:legalName+. The complete example RML mapping code looks as follows, in Turtle syntax:
 
 [source,turtle]
 ----
@@ -902,8 +909,8 @@ _Validate the RDF Output_
 
 Now that we have created the mappings, we can apply them to https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[sample data] using RMLMapper or a similar tool selected from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-tooling-assistant[SEMIC Tooling Assistant]. For this tutorial, we will use RMLMapper, which will read the RML mapping file and the input XML data, and then generate the corresponding RDF output. 
 
-The snippet below is a *single triple set* produced when the mapping is run over the sample file +SampleData_Business.xml+ (see Phase 1). +
-It shows that one of the XML +<LegalEntity>+ records—the Belgian committee for UNICEF—has been converted into an RDF resource of type +legal:LegalEntity+ with its +legal:legalName+ correctly populated.
+The snippet below is a *single triple set* produced when the mapping is run over the sample file `SampleData_Business.xml` (see Phase 1). 
+It shows that one of the XML `<LegalEntity>` records—the Belgian committee for UNICEF—has been converted into an RDF resource of type +legal:LegalEntity+ with its +legal:legalName+ correctly populated.
 
 [source,turtle]
 ----
@@ -917,7 +924,8 @@ ex:Organization_1
     legal:legalName "Belgisch Comite voor UNICEF"@nl .
 ----
 
-We will validate the output in two ways: to check that the content transformed from XML into RDF exists in the graph and to check that it exists as intended also regarding any constraints on the shape of the graph.  +
+We will validate the output in two ways: to check that the content transformed from XML into RDF exists in the graph and to check that it exists as intended also regarding any constraints on the shape of the graph.  
+
 First, we validate the generated RDF using SPARQL queries to ensure that the transformation adheres to the defined conceptual mapping. Since we want to validate rather than retrieve information, we use SPARQL ASK queries, which will return either a ‘yes’ or a ‘no’. For our running example, the SPARQL query for validating the +LegalEntity+ is:
 
 [source,sparql]
@@ -928,8 +936,10 @@ ASK {
 }
 ----
 
-SHACL validation can be applied to ensure that the RDF data conforms to the required shapes and structures regarding any constraints that must hold.  +
-To create a SHACL shape for the given RDF output, where the +LegalEntity+ (+legal:LegalEntity+) has a +legalName+ property, we need to define a SHACL shape that validates the type of the +LegalEntity+, the presence of the +legalName+ property, and its datatype. +
+SHACL validation can be applied to ensure that the RDF data conforms to the required shapes and structures regarding any constraints that must hold.  
+
+To create a SHACL shape for the given RDF output, where the +LegalEntity+ (+legal:LegalEntity+) has a +legalName+ property, we need to define a SHACL shape that validates the type of the +LegalEntity+, the presence of the +legalName+ property, and its datatype. 
+
 An example SHACL shape for validating +LegalEntity+ is:
 
 [source,turtle]
@@ -955,11 +965,11 @@ In this code snippet, observe:
 
 . *Target Class*: The shape is applied to all resources of type +legal:LegalEntity+. This means it validates any +LegalEntity+ instance in the selected RDF data.
 . *Property Constraints*:
-** *legal:legalName*: The property +legalName+ is required to be of type +xsd:string+, and the minimum count is set to 1 (+sh:minCount 1+), meaning that the +legalName+ property must appear at least once.
+** *legal:legalName*: The property +legalName+ is required to be of type `xsd:string`, and the minimum count is set to 1 (`sh:minCount 1`), meaning that the +legalName+ property must appear at least once.
 Note: The SHACL shapes of the CBV can be found https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0/shacl[here].
 
 
-===== Phase 4: Dissemination
+*_Phase 4: Dissemination_*
 
 Once the mappings are validated, the next step is to disseminate the project with the mappings as a package of documentation together with the artefacts. The package includes:
 
@@ -968,10 +978,6 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
-
-
-
-
 
 
 
