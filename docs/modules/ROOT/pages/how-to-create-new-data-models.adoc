@@ -36,7 +36,8 @@ Imagine Jean-Luc, a semantic/software engineer assigned to develop a software ap
 
 
 // [.indent]
-He is aware that XML files should have a schema declared first, which contains the specifications of the sort of elements and fields that are permitted to be used in the forms, such as the company’s registration number, name, and address. However, analysing the data requirements from scratch is not the preferred option. Moreover, there are Chambers of Commerce in other EU countries, which   use forms to collect and update data. Perhaps he could reuse and adapt those schemas?  +
+He is aware that XML files should have a schema declared first, which contains the specifications of the sort of elements and fields that are permitted to be used in the forms, such as the company’s registration number, name, and address. However, analysing the data requirements from scratch is not the preferred option. Moreover, there are Chambers of Commerce in other EU countries, which   use forms to collect and update data. Perhaps he could reuse and adapt those schemas? 
+
 As Jean-Luc starts to search for existing models, called XML schemas in XSD format, he realises there are other places where businesses need to submit forms with company information, such as online registries and the tax office, that also may have XSD files available for reuse.  +
 Unfortunately, not one of them made their schema available.
 
@@ -77,7 +78,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 image::UC1.1.png[]
 
 
-===== Phase 1: Import or define elements
+*_Phase 1: Import or define elements_*
 
 When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models. 
 
@@ -99,7 +100,7 @@ These trade-offs between semantic interoperability and technical consistency are
 ====
 
 
-===== Phase 2: Shape XML document structure
+*_Phase 2: Shape XML document structure_*
 
 In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The _Venetian Blind_ and _Garden of Eden_ patterns stand out as preferable for their ability to allow complex types to be reused by different elements [xref:references.adoc#ref-44[dsg-ptr]].
 
@@ -145,7 +146,7 @@ Add annotations and documentation using the `xs:annotation` and `xs:documentatio
 such as an informal description of the intended meaning of a concept.
 ====
 
-===== Phase 3: Validation
+*_Phase 3: Validation_*
 
 The schema should be validated with at least one sample XML document, to verify that it is syntactically correct, semantically as intended, and that it has adequate coverage. SEMIC XSD schemas adhere to best practices and the resulting XSD schemas should also adhere to best practices, the SEMIC Style Guide, validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
@@ -158,7 +159,7 @@ Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves d
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
-===== Phase 1:Import or Define Elements
+*_Phase 1: Import or Define Elements_*
 
 
 _Managing Imports and Namespaces_
@@ -207,7 +208,7 @@ For example, the +LegalEntity+ element could be defined as follows if no XSD is 
 
 Make sure you declare the correct namespace (e.g., http://example.com/) for all these custom elements.
 
-===== Phase 2: Shape XML Document Structure with Patterns
+*_Phase 2: Shape XML Document Structure with Patterns_*
 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
@@ -308,7 +309,7 @@ Similar to the +LegalEntityType+ complex type, the +BusinessAgentType+ defines a
 ----
 
 
-It’s important to observe that in this context, LegalEntityType is defined as an extension of FormalOrganizationType (which, in turn, extends OrganizationType), declared using an <xs:extension base="..."> element, as shown in the following snippet.
+It’s important to observe that in this context, LegalEntityType is defined as an extension of FormalOrganizationType (which, in turn, extends OrganizationType), declared using an `<xs:extension base="...">` element, as shown in the following snippet.
 
 
 [source,xml]
@@ -340,7 +341,7 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 </xs:complexType>
 ----
 
-===== Phase 3: Validation and Best Practices
+*_Phase 3: Validation and Best Practices_*
 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
@@ -353,7 +354,7 @@ To ensure schema compliance, the *Schematron rules* provide automated checks. Th
 _Running the Validation_
 
 
-You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[build.xml] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
+You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[`build.xml`] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
 
 [[sec:create-a-new-json-ld-context-definition]]
 === Create a new JSON-LD context definition from a Core Vocabulary (UC1.2)
@@ -366,7 +367,8 @@ Public administrations often need to share information about their services with
 // [.indent]
 [quote]
 ____
-Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced +RequiredEvidence+, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].  +
+Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced +RequiredEvidence+, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].  
+
 Happy with the outcome, Nora emailed the municipalities so that each city and town would be able to upgrade their system in the same way with CPSV-AP-NO, and so that DiTFor could still collect and integrate the data at the national level.
 
 // [.indent]
@@ -411,7 +413,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 
 image::UC1.2.png[]
 
-===== Phase 1: Import or define elements
+*_Phase 1: Import or define elements_*
 
 
 When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the `@import` keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
@@ -434,7 +436,7 @@ _Example: importing an existing context._
 }
 ----
 
-===== Phase 2: Shape structure
+*_Phase 2: Shape structure_*
 
 _Main shaping of the structure_
 
@@ -480,7 +482,7 @@ To meet wishes from API consumers, one may use *aliasing* of keywords, where a J
 One can also *extend the context* by reusing terms from Core Vocabularies, which can be achieved using the `@import` keyword if included as a whole. Also, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.
 
 
-===== Phase 3: Review and validate
+*_Phase 3: Review and validate_*
 
 First, one should review the created context against any prior requirements that may have been described: is all prospected content indeed included in the context?
 
@@ -502,7 +504,7 @@ _Example: an error in the URL._
 
 This tutorial addresses the use case xref:introduction.adoc#sec:uc12[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts that are defined by reusing concepts from the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)], following ideas from https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].
 
-===== Phase 1: Import or define elements
+*_Phase 1: Import or define elements_*
 
 Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the `@import` statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
 
@@ -568,12 +570,12 @@ Let’s look at an https://tinyurl.com/2794ygga[example] where we define a +Serv
 
 Explanation of JSON-LD keywords used:
 
-* *@context*: Defines the mapping between terms (e.g., +PublicService+) and their corresponding IRIs.
-* *@container***:** Specifies how values are structured. For instance,
-** @set: Explicitly defines a property as an array of values. It ensures that even if the data includes just one value, it will still be treated as an array by JSON-LD processors. This makes post-processing of JSON-LD documents easier as the data is always in array form, even if the array only contains a single value
-* *@id*: Provides the unique identifier (IRI) for a term or property.
-* *@type*: Specifies the type of a value. Commonly used for linking to classes or data types.
-* *@import*: Imports another JSON-LD context, allowing reuse of its terms.
+* *`@context`*: Defines the mapping between terms (e.g., +PublicService+) and their corresponding IRIs.
+* *`@container`***:** Specifies how values are structured. For instance,
+** `@set`: Explicitly defines a property as an array of values. It ensures that even if the data includes just one value, it will still be treated as an array by JSON-LD processors. This makes post-processing of JSON-LD documents easier as the data is always in array form, even if the array only contains a single value
+* *`@id`*: Provides the unique identifier (IRI) for a term or property.
+* *`@type`*: Specifies the type of a value. Commonly used for linking to classes or data types.
+* *`@import`*: Imports another JSON-LD context, allowing reuse of its terms.
 
 
 _Example of a simple service instance_
@@ -737,6 +739,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
