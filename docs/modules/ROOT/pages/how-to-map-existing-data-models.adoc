@@ -535,7 +535,7 @@ It may be that the XSD is outdated or partial with respect to the XML files that
 
 Conceptual Mapping in semantic data integration–determining what elements from the source should correspond to those in the target–can be established at two distinct levels: the vocabulary level and the application profile level. These levels differ primarily in their complexity and specificity regarding the data context they address. A *Vocabulary mapping* is established  as the principal task: the XSD schema elements need to align to CV elements, focussing on terminological alignments.
 
-For the XSD file, they are the elements within the tags +<xs:element ref=”+_+elementLabel+_+”>+ where the “+elementLabel+” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a +<xs:element ref=”address”>+ nested within the concept +<xs:element ref=”Person”>+ has a different meaning from “+address+” nested within the concept +<xs:element ref=”Website”>+. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
+For the XSD file, they are the elements within the tags <xs:element ref=”_elementLabel_”> where the “+elementLabel+” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a +<xs:element ref=”address”>+ nested within the concept +<xs:element ref=”Person”>+ has a different meaning from “+address+” nested within the concept +<xs:element ref=”Website”>+. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
 
 
 _Option 2a. Map XSD to a CV’s main format_
@@ -965,6 +965,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
