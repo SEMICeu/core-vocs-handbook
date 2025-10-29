@@ -58,6 +58,7 @@ This section introduces what interoperability is, what makes it semantic, and ho
 
 Sharing data easily is indispensable for effective and efficient public services. Sharing may be done through offering one point of access, and often involves reusing the data in multiple applications across multiple departments and organisations. To make this work, the information systems need to be interoperable.
 
+[[sec:what-is-interoperability]]
 ==== What is interoperability?
 
 Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], interoperability is defined as “the ability of organisations to interact towards mutually beneficial goals, involving the sharing of information and knowledge between these organisations, through the business processes they support, by means of the exchange of data between their ICT systems”, where, for the purpose of EIF, ‘organisations’ refers to “public administration units or any entity acting on their behalf, or EU institutions or bodies”. It is what “enables administrations to cooperate and make public services function across borders, across sectors and across organisational boundaries”, including enabling “public sector actors to connect, cooperate and exchange data while safeguarding sovereignty and subsidiarity”, as described in the EC communication accompanying the Interoperable Europe Act [xref:references.adoc#ref-83[int-eu]].

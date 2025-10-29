@@ -2,6 +2,7 @@
 ** xref:introduction.adoc#sec:Intended_audience[Intended audience]
 ** xref:introduction.adoc#sec:Structure_of_the_Handbook[Structure of the handbook]
 ** xref:introduction.adoc#sec:interoperability[Interoperability and Core Vocabularies]
+*** xref:introduction.adoc#sec:what-is-interoperability[What is interoperability?]
 *** xref:introduction.adoc#sec:achieve-interoperability[What is semantic interoperability and how to achieve it?]
 *** xref:introduction.adoc#sec:Core_Vocabulary[What is a Core Vocabulary?]
 *** xref:introduction.adoc#sec:SEMIC-Core-Vocabularies[SEMIC Core Vocabularies]
