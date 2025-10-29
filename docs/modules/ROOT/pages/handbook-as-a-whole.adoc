@@ -21,12 +21,12 @@ include::how-to-map-existing-data-models.adoc[]
 
 include::Concluding-remarks.adoc[]
 
-[appendix]
 include::Appendix.adoc[]
 
 include::glossary.adoc[]
 
 include::references.adoc[]
+
 
 
 
