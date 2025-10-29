@@ -63,7 +63,7 @@ In this section we adopt the definitions from the ontology matching handbook [xr
 
 To create an ontology mapping, the following steps need to be observed, as shown in the following diagram and described afterwards.
 
-image::UC21guidelineOverview.png[width=400, height=600]
+image::UC21guidelineOverview.png[width=450, height=600]
 
 . *Staging*: defining the requirements;
 . *Characterisation*: defining source and target data and performing data analysis;
@@ -151,7 +151,7 @@ The alignment process may include engaging communication with third parties to v
 *Preparation* involves stakeholder involvement to collectively go systematically through the list of alignments (candidate mappings), considering not only the relevance of the alignments, but also the type of relationship between the elements, being typically either equivalence or subsumption.  +
 The type of asset—an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The types of alignment are visually represented and illustrated in the figure below and summarised and structured in the table afterwards. They include alignment elements for OWL elements concerning semantic artefacts and for SKOS, which can be used for annotations and weakly semantic knowledge organisation systems.
 
-image::alignmentDiagram.png[width=400, height=600]
+image::alignmentDiagram.png[width=500, height=600]
 
 |===
 |*Relation / Element type*|*Property*|*Concept*|*Class*|*Individual*
