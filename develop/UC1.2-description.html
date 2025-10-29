@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Create a new JSON-LD context definition :: SEMIC</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<link rel="stylesheet" href="../_/css/custom.css">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="..">SEMIC</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="develop">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">SEMIC Core Vocabularies Handbook</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Introduction%20to%20interoperability.html">Interoperability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="semic-core-vocabularies.html">Core Vocabularies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html">Overview of the Use Cases</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Creating a new data model</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc1">Use cases UC1: Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc11">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guideline-create-xsd-for-cv.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create%20xsd%20for%20cv.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc12">Create a new JSON-LD context definition (UC1.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:uc12-d">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:create-a-new-json-ld-context-definition">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:create-a-json-ld-definition">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Re-using core vocabularies</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc2">Use cases UC2: Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="description-map-model.html">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-an-existing-model-guideline.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-existing-ontology-to-vocabulary.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc22">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc22">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guideline-map-xsd-schema.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-xsd-to-cv.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html">Additional use cases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc23">Map an existing JSON Schema to a Core Vocabulary (UC2.3)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html#sec:uc3">Create a new Semantic data specification (UC3)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc31">Create a new Core Vocabulary (UC3.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc32">Create a new Application Profile (UC3.2)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html#sec:uc4">Create a new data model (UC4)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc41">Create a new ontology (UC4.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc42">Create a new data shape (UC4.2)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="references.html">References</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handbook-as-a-whole.html">Handbook as a whole</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">SEMIC Core Vocabularies Handbook</span>
+    <span class="version">develop</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../public-review/index.html">SEMIC Core Vocabularies Handbook</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../public-review/index.html">public-review</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">develop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../public-review/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
+    <li>Creating a new data model</li>
+    <li><a href="use-cases.html#sec:uc12">Create a new JSON-LD context definition (UC1.2)</a></li>
+    <li><a href="#sec:uc12-d">Description</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">develop</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../public-review/index.html">public-review</a>
+    <a class="version is-current" href="UC1.2-description.html">develop</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/UC1.2-description.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Create a new JSON-LD context definition</h1>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use case 1.2 to create a new JSON-LD context definition is specified as follows.</p>
+</div>
+<table id="sec:uc12-d" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC1.2: Create a new JSON-LD context definition</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone JSON-LD context definition that uses terms from Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to design and create a new JSON-LD context definition that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, a JSON-LD context definition can be integrated in describing data, building APIs, and other operations involved in information exchange.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> Core Person Vocabulary [<a href="references.html#ref:32" class="xref page">cpv-json-ld</a>], Core Business Vocabulary [<a href="references.html#ref:33" class="xref page">cbv-json-ld</a>]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> A detailed methodology to be applied for use cases will be provided in the <a href="how-to-create-new-data-models.html#sec:create-a-new-json-ld-context-definition" class="xref page">Create a new JSON-LD context definition</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:create-a-new-json-ld-context-definition"><a class="anchor" href="#sec:create-a-new-json-ld-context-definition"></a>Guideline to create a new JSON-LD context definition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides guidelines for addressing use case <a href="use-cases.html#sec:uc12" class="xref page">UC1.2</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a> is a W3C Recommendation for serialising Linked Data, combining the simplicity, power, and Web ubiquity of JSON with the concepts of Linked Data. Creating JSON-LD context definitions facilitates this synergy. This ensures that when data is shared or integrated across systems, it maintains its meaning and can be understood in the same way across different contexts. This guide describes how to create new JSON-LD contexts for existing Core Vocabularies.</p>
+</div>
+<div class="paragraph">
+<p>The three key phases are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import or define elements</p>
+</li>
+<li>
+<p>Shape structure</p>
+</li>
+<li>
+<p>Review and validate</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_import_or_define_elements"><a class="anchor" href="#_import_or_define_elements"></a>Import or define elements</h3>
+<div class="paragraph">
+<p>When a Core Vocabulary has defined an associated JSON-LD context already, it is not only easy, but also advisable to <strong>directly import this context</strong> using the <code>@import</code> keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.</p>
+</div>
+<div class="paragraph">
+<p>In cases where the Core Vocabulary does not provide an JSON-LD context, it is necessary to <strong>create the corresponding field element definitions</strong> for the reused URIs. To start, gather all the terms from the selected Core Vocabulary that need to be included in the JSON-LD context.</p>
+</div>
+<div class="paragraph">
+<p>Then, decide the desired structure of the JSON-LD file, by <strong>defining the corresponding keys</strong>, such as <code>Person.givenName</code>. These new fields must adhere to the naming defined by the selected Core Vocabulary to maintain consistency.</p>
+</div>
+<div class="paragraph">
+<p>Finally, <strong>assign URIs to keys</strong>. Each term in the  JSON-LD context must be associated with a URI from an ontology that defines its meaning in a globally unambiguous way. Associate the URIs established in Core Vocabularies to JSON keys using the same CV terms.</p>
+</div>
+<div class="paragraph">
+<p>The ones that are imported by the Core Vocabularies, shall be used as originally defined.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shape_structure"><a class="anchor" href="#_shape_structure"></a>Shape structure</h3>
+<div class="sect3">
+<h4 id="_main_shaping_of_the_structure"><a class="anchor" href="#_main_shaping_of_the_structure"></a>Main shaping of the structure</h4>
+<div class="paragraph">
+<p>Start with defining the structure of the context by <strong>relating class terms with property terms</strong> and then, if necessary, property terms with other classes.</p>
+</div>
+<div class="paragraph">
+<p>Commence by creating a JSON structure that starts with a <code>@context</code> field. This field will contain mappings from one’s own vocabulary terms to other’s respective URIs. Continue by defining fields for Classes and subfields for their properties.</p>
+</div>
+<div class="paragraph">
+<p>If the JSON-LD context is developed with the aim of being used directly in exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise <code>@type</code> references linking to the specific Class.</p>
+</div>
+<div class="paragraph">
+<p>If the aim of the developed JSON-LD context is rather ensuring semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_improvements_to_the_structure"><a class="anchor" href="#_improvements_to_the_structure"></a>Improvements to the structure</h4>
+<div class="paragraph">
+<p>To meet wishes from API consumers, one may use <strong>aliasing</strong> of keywords, where a JSON-LD context element is given a more easily recognisable string.</p>
+</div>
+<div class="paragraph">
+<p>One can also <strong>extend the context</strong> by reusing terms from Core Vocabularies, which also uses the <code>@import</code> keyword if included as a whole. Alternatively, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_review_and_validate"><a class="anchor" href="#_review_and_validate"></a>Review and validate</h3>
+<div class="paragraph">
+<p>First, one should review the created context against any prior requirements that may have been described: is all prospected content indeed included in the context?</p>
+</div>
+<div class="paragraph">
+<p>Second, the syntax should be verified with a JSON-LD validator, such as <a href="https://json-ld.org/playground/">JSON-LD Playground</a> to ensure that the context is free of errors and all URLs used are operational.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:create-a-json-ld-definition"><a class="anchor" href="#sec:create-a-json-ld-definition"></a>UC 1.2 tutorial on creating JSON-LD context</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h3>
+<div class="paragraph">
+<p>Public administrations often need to share information about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases.<br>
+The Core Public Service Vocabulary Application Profile (<a href="https://github.com/SEMICeu/CPSV-AP/tree/master"><strong>CPSV-AP</a></strong>) provides a generic framework to describe public services in a machine-readable way. It helps public administrations share and organise information about services. However, sometimes CPSV-AP needs to be extended with new concepts or restrictions to address more general or specific use cases.<br>
+For example, the terms Service and RequiredEvidence were introduced in <a href="https://github.com/Informasjonsforvaltning/cpsv-ap-no">CPSV-AP-NO</a> to extend the CPSV-AP model such that it can fulfil the specific needs identified in Norway, where:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Service allows for describing not only public services but also general ones, enabling the representation of services provided through partnerships or private organisations.</p>
+</li>
+<li>
+<p>RequiredEvidence provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for health insurance registration.
+To make CPSV-AP more flexible and useful, creating a JSON-LD context is essential. JSON-LD helps structure the data so it can be easily shared and understood by different systems. This tutorial addresses the use case <a href="https://semiceu.github.io/core-vocs-handbook/public-review/use-cases.html#:~:text=Use%20Case%20UC1.2%3A%20Create%20a%20new%20JSON%2DLD%20context%20definition">UC1.2</a>, and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts like <strong>Service</strong> and <strong>RequiredEvidence</strong>, which are defined by reusing concepts from the <a href="https://github.com/SEMICeu/Core-Business-Vocabulary">Core Business Vocabulary (CBV)</a>, following ideas from CPSV-AP-NO.<br>
+By extending CPSV-AP and using JSON-LD, public administrations can better organise their data, making it easier to share and integrate across systems while supporting a wider range of use cases.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_steps_to_create_a_json_ld_context"><a class="anchor" href="#_steps_to_create_a_json_ld_context"></a>Steps to create a JSON-LD context</h3>
+<div class="sect3">
+<h4 id="_import_or_define_elements_2"><a class="anchor" href="#_import_or_define_elements_2"></a>Import or define elements:</h4>
+<div class="paragraph">
+<p>Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the @import statement. For example, in case of <a href="https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld">CPSV-AP version 3.2.0</a>, the context can be directly reused like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  {
+  "@context": {
+    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a context that we can reuse does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms such as PublicService and ContactPoint. These terms must be mapped to URIs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  {
+  "@context": {
+    "PublicService": "http://purl.org/vocab/cpsv#PublicService",
+    "ContactPoint": "http://data.europa.eu/m8g/ContactPoint"
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a context needs to be extended, define the new elements explicitly. For example, if we need new terms (classes), such as Service and RequiredEvidence, which are not in CPSV-AP these terms must be mapped to URIs (the examples are inspired from <a href="https://github.com/Informasjonsforvaltning/cpsv-ap-no">CPSV-AP-NO</a>) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"> {
+  "@context": {
+    "Service": "http://example.com/cpsvap#Service",
+    "RequiredEvidence": "http://example.com/cpsvap#RequiredEvidence"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_shape_the_structure"><a class="anchor" href="#_shape_the_structure"></a>Shape the structure</h4>
+<div class="paragraph">
+<p>Once you&#8217;ve imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardised and machine-readable format.<br>
+Let’s look at an <a href="https://tinyurl.com/2794ygga">example</a> where we define a Service and some of its key properties, such as contactPoint, description, name and hasRequiredEvidence.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  {
+  "@context": {
+    "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
+    "Service": "http://example.com/cpsvap#Service",
+    "Service.hasRequiredEvidence": {
+      "@id": "http://example.com/cpsvap#RequiredEvidence",
+      "@container": "@set"
+    },
+    "Service.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      "@container": "@set"
+    },
+    "Service.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      "@container": "@set"
+    },
+    "Service.contactPoint": {
+      "@id": "http://data.europa.eu/m8g/contactPoint",
+      "@type": "@id",
+      "@container": "@set"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_explanation_of_json_ld_keywords_used"><a class="anchor" href="#_explanation_of_json_ld_keywords_used"></a>Explanation of JSON-LD keywords used</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>@context</strong>: Defines the mapping between terms (e.g., PublicService) and their corresponding IRIs.</p>
+</li>
+<li>
+<p><strong>@container</strong>: Specifies how values are structured. For instance,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>@set: Explicitly defines a property as an <strong>array of values</strong>. It ensures that even if the data includes just one value, it will still be treated as an array by JSON-LD processors. This makes post-processing of JSON-LD documents easier as the data is always in array form, even if the array only contains a single value</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>@id</strong>: Provides the unique identifier (IRI) for a term or property.</p>
+</li>
+<li>
+<p><strong>@type</strong>: Specifies the type of a value. Commonly used for linking to classes or data types.</p>
+</li>
+<li>
+<p><strong>@import</strong>:  Imports another JSON-LD context, allowing reuse of its terms.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_of_a_simple_service_instance"><a class="anchor" href="#_example_of_a_simple_service_instance"></a>Example of a simple service instance</h4>
+<div class="paragraph">
+<p>After defining the context and structure, you can now describe an actual Service instance by referencing the terms you defined earlier.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_scenario"><a class="anchor" href="#_example_scenario"></a>Example scenario</h4>
+<div class="paragraph">
+<p>Let’s assume a public administration offers a service called <strong>"Health Insurance Registration"</strong>. This service allows citizens to register for health insurance, which requires certain documents (evidence) to complete the process. Citizens might need to contact the administration for guidance, and the service details should be structured in a way that makes it easy to share and integrate across systems.<br>
+To illustrate this, we’ve created a JSON-LD context representation  of this service, highlighting</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The required evidence for registration (e.g., Proof of Address).</p>
+</li>
+<li>
+<p>The service&#8217;s name and description for clarity.</p>
+</li>
+<li>
+<p>Contact information for users who may need assistance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Try this in JSON-LD Playground <a href="https://tinyurl.com/4vtmjdxy">here</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+     ],
+  "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
+  },
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aliasing_keywords_for_api_compatibility_rest_api_example"><a class="anchor" href="#_aliasing_keywords_for_api_compatibility_rest_api_example"></a>Aliasing keywords for API compatibility (REST API example)</h4>
+<div class="paragraph">
+<p>When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD&#8217;s <code>@id</code> to <code>url</code> and <code>@type</code> to <code>type</code> to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_of_aliasing_keywords"><a class="anchor" href="#_example_of_aliasing_keywords"></a>Example of aliasing keywords</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": {
+    "url": "@id",
+    "type": "@type",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
+    "Service.name": "http://purl.org/dc/terms/title",
+    "Service": "http://purl.org/vocab/cpsv#PublicService",
+    "Service.description": "http://purl.org/dc/terms/description"
+  },
+  "url": "http://example.com/service/healthInsuranceRegistration",
+  "type": "Service",
+  "Service.name": "Health Insurance Registration",
+  "Service.description": "A service for registering for health insurance."
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>url</code> is an alias for <code>@id</code></p>
+</li>
+<li>
+<p><code>type</code> is an alias for <code>@type</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_extend_the_context_by_reusing_terms_from_core_vocabularies"><a class="anchor" href="#_extend_the_context_by_reusing_terms_from_core_vocabularies"></a>Extend the context by reusing terms from Core Vocabularies</h4>
+<div class="paragraph">
+<p>To highlight the reuse of terms from existing CVs, we can import the <strong>Core Business Vocabulary (CBV)</strong> context alongside the <strong>CPSV-AP context</strong> to gain access to business-related terms. This step ensures that you can use the additional terms from <strong>CBV</strong>, such as LegalEntity, Organisation, and ContactPoint, to enrich your <strong>Service</strong> descriptions.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  {
+  "@context": [
+    {
+      "@import": "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld"
+    },
+    {
+      "@import": "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_define_additional_properties_from_the_core_business_vocabulary"><a class="anchor" href="#_define_additional_properties_from_the_core_business_vocabulary"></a>Define additional properties from the Core Business Vocabulary</h4>
+<div class="paragraph">
+<p>Add CBV terms to enhance the description of the Service entity.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  {
+  "@context": {
+    "Service.providedBy": {
+      "@id": "http://example.com/legal#providedBy",
+      "@type": "http://example.com/legal#LegalEntity"
+    },
+    "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_map_extended_properties_in_a_service_instance"><a class="anchor" href="#_map_extended_properties_in_a_service_instance"></a>Map extended properties in a service instance:</h4>
+<div class="paragraph">
+<p>Use the extended properties to describe more aspects of <strong>Service</strong> instances. For <a href="https://tinyurl.com/chtayj3h">example</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": [
+    "https://raw.githubusercontent.com/SEMICeu/CPSV-AP/master/releases/3.2.0/context/cpsv-ap.jsonld",
+    "https://raw.githubusercontent.com/SEMICeu/Core-Business-Vocabulary/master/releases/2.2.0/context/core-business-ap.jsonld",
+    {
+      "ex": "http://example.org/"
+    }
+  ],
+  "@id": "http://example.org/service/healthInsuranceRegistration",
+  "@type": "PublicService",
+  "PublicService.name": {
+    "@value": "Health Insurance Registration",
+    "@language": "en"
+  },
+  "PublicService.description": {
+    "@value": "A service for registering for health insurance.",
+    "@language": "en"
+  },
+  "ex:providedBy": {
+    "@id": "http://example.org/legalEntity/healthDepartment",
+    "@type": "LegalEntity"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_final_review_and_validation"><a class="anchor" href="#_final_review_and_validation"></a>Final review and validation</h4>
+<div class="paragraph">
+<p>Use an online tool such as the <a href="https://json-ld.org/playground/">JSON-LD Playground </a>to validate JSON-LD context and make sure there are no errors.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image-2025-04-30-11-23-00-959.png" alt="image 2025 04 30 11 23 00 959">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_error_example"><a class="anchor" href="#_error_example"></a>Error example:</h4>
+<div class="paragraph">
+<p>If the <code>@import</code> URLs for external contexts are incorrect or unavailable, the validation tool may display an error such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Error loading remote context" or</p>
+</li>
+<li>
+<p>"Context could not be retrieved."</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": [
+    { "@import": "https://invalid-url/cpsv-ap.jsonld" }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These errors typically occur when the referenced context URL is malformed or unreachable, as shown in the following figure:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image-2025-04-22-22-04-11-289.png" alt="Example error shown in the validator interface">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_fix"><a class="anchor" href="#_how_to_fix"></a>How to fix:</h4>
+<div class="paragraph">
+<p>Ensure that the @import URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a cURL command to ensure they return the correct JSON-LD data. Update the URLs to the correct ones.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Comission and is licensed under the terms of EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

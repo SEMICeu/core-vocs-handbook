@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: SEMIC</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<link rel="stylesheet" href="../_/css/custom.css">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="..">SEMIC</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="develop">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">SEMIC Core Vocabularies Handbook</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Introduction%20to%20interoperability.html">Interoperability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="semic-core-vocabularies.html">Core Vocabularies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html">Overview of the Use Cases</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Creating a new data model</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc1">Use cases UC1: Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc11">Create a new XSD schema (UC1.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc11">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guideline-create-xsd-for-cv.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create%20xsd%20for%20cv.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc12">Create a new JSON-LD context definition (UC1.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:uc12-d">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-new-json-ld-context-definition">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="UC1.2-description.html#sec:create-a-json-ld-definition">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Re-using core vocabularies</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-cases.html#sec:uc2">Use cases UC2: Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc21">Map an existing Ontology to a Core Vocabulary (UC2.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="description-map-model.html">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-an-existing-model-guideline.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-existing-ontology-to-vocabulary.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="use-cases.html#sec:uc22">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-cases.html#sec:uc22">Description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guideline-map-xsd-schema.html">Guideline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="map-xsd-to-cv.html">Tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html">Additional use cases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc23">Map an existing JSON Schema to a Core Vocabulary (UC2.3)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html#sec:uc3">Create a new Semantic data specification (UC3)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc31">Create a new Core Vocabulary (UC3.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc32">Create a new Application Profile (UC3.2)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="additional-use-cases.html#sec:uc4">Create a new data model (UC4)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc41">Create a new ontology (UC4.1)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="additional-use-cases.html#sec:uc42">Create a new data shape (UC4.2)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="references.html">References</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handbook-as-a-whole.html">Handbook as a whole</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">SEMIC Core Vocabularies Handbook</span>
+    <span class="version">develop</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../public-review/index.html">SEMIC Core Vocabularies Handbook</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../public-review/index.html">public-review</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">develop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../public-review/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">develop</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../public-review/index.html">public-review</a>
+    <a class="version is-current" href="UC2.1-Description.html">develop</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/UC2.1-Description.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_mapping_an_existing_ontology_to_a_core_vocabulary"><a class="anchor" href="#_mapping_an_existing_ontology_to_a_core_vocabulary"></a>Mapping an existing Ontology to a Core Vocabulary</h2>
+<div class="sectionbody">
+<table id="sec:uc21" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC2.1: Map an existing Ontology to a Core Vocabulary</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a mapping between the terms of an existing ontology and the terms of Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Actors:</strong> Domain Expert, Business Analyst, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to create a formal mapping expressed in Semantic Web terminology (for example using rdfs:subClassOf, rdfs:subPropertyOf, owl:equivalentClass, owl:equivalentProperty, owl:sameAs properties), associating the terms in an existing ontology that defines relevant concepts in a given domain, to terms defined in one or more CVs. This activity is usually performed by a semantic engineer based on input received from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping associates the terms in an existing ontology, which defines relevant concepts within a specific  domain, to terms defined in one or more SEMIC Core Vocabularies. The result of the formal mapping can be used later by software engineers to build information exchange systems.</p>
+<p class="tableblock"><strong>Example:</strong> Mapping Core Person to Schema.org [<a href="references.html#ref:34" class="xref page">map-cp2org</a>], Core Business to Schema.org [<a href="references.html#ref:35" class="xref page">map-cb2org</a>], etc.
+<strong>Note:</strong> A detailed methodology to be applied for this use case will be provided in the <a href="#how-to-map-existing-data-models.adoc#sec:map-an-existing-ontology" class="xref unresolved">Map an existing Ontology</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="sec:map-an-existing-ontology"><a class="anchor" href="#sec:map-an-existing-ontology"></a>Map an existing Ontology</h3>
+<div class="paragraph">
+<p>This section provides detailed instructions for addressing use case <a href="#sec:uc21">UC2.1</a>.</p>
+</div>
+<div class="paragraph">
+<p>In this section we adopt the definition from this <a href="references.html#ref:54" class="xref page">paper</a> of the following concepts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ontology matching</strong>: the process of finding relationships or correspondences between entities of different ontologies.</p>
+</li>
+<li>
+<p><strong>Ontology alignment</strong>: a set of correspondences between 2 or more ontologies, as outcome of ontology matching process.</p>
+</li>
+<li>
+<p><strong>Ontology mapping</strong>: the oriented, or directed, version of an alignment, i.e., it maps the entities of one ontology to at most one entity of another ontology.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To create an ontology alignment, the following steps need to be observed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Staging:</strong> defining the requirements</p>
+</li>
+<li>
+<p><strong>Characterisation:</strong> defining source and target data and performing data analysis</p>
+</li>
+<li>
+<p><strong>Reuse:</strong> discover, evaluate, and reuse existing alignments</p>
+</li>
+<li>
+<p><strong>Matching:</strong> execute and evaluate matching</p>
+</li>
+<li>
+<p><strong>Align and map:</strong> prepare, create the alignment, and render mappings</p>
+</li>
+<li>
+<p><strong>Application:</strong> make the alignment available for use in applications</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This methodology has been used in mapping the Core Vocabularies to Schema.org. This work is available on the SEMIC GitHub repository dedicated to <a href="references.html#ref:55" class="xref page">Semantic Mappings</a>, and documented <a href="references.html#ref:56" class="xref page">here</a>. Next sections describe this methodology in more detail.</p>
+</div>
+<div class="sect3">
+<h4 id="_staging"><a class="anchor" href="#_staging"></a>Staging</h4>
+<div class="paragraph">
+<p>This initial phase involves a comprehensive understanding of the project’s scope, identifying the specific goals of the mapping exercise, and the key requirements it must fulfil. Stakeholders collaborate to articulate the purpose of the ontology or data model alignment, setting clear objectives that will guide the entire process. Defining these requirements upfront ensures that subsequent steps are aligned with the mapping exercise overarching goals, stakeholder expectations and fitting the use cases.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inputs:</strong> Stakeholder knowledge, project goals, available resources, domain expertise.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs:</strong> Mapping project specification document comprising a defined mapping project scope and comprehensive list of requirements.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_characterisation"><a class="anchor" href="#_characterisation"></a>Characterisation</h4>
+<div class="paragraph">
+<p>In this stage, a thorough analysis of both source and target ontologies is conducted to ascertain their structures, vocabularies, and the semantics they encapsulate. This involves an in-depth examination of the conceptual frameworks, data representation languages, and any existing constraints within both models. Understanding the nuances of both the source and target is critical for identifying potential challenges and opportunities in the mapping process, ensuring that the alignment is both feasible and meaningful.</p>
+</div>
+<div class="paragraph">
+<p>The following is an indicative, but not exhaustive, list of aspects to consider in this analysis: specifications documentation, representation language and representation formats, deprecation mechanism, inheritance policy (single inheritance only or multiple inheritance are also allowed), natural language(s) used, label specification, label conventions, definition specification, definition conventions, version management and release cycles, etc.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inputs:</strong> Source and target ontologies, initial requirements, domain constraints.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs:</strong> Analysis reports comprising a comparative characterisation table, identified difficulties, risks and amenability assessments, selected source and target for mapping.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_reuse"><a class="anchor" href="#_reuse"></a>Reuse</h4>
+<div class="paragraph">
+<p>In the ontology mapping lifecycle, the reuse stage is pivotal, facilitating the integration of pre-existing alignments into the project&#8217;s workflow. Following the initial characterisation, this stage entails discovery and a rigorous evaluation of available alignments against the project&#8217;s defined requirements. These requirements are instrumental in appraising whether an existing alignment can be directly adopted, necessitates modifications for reuse, or if a new alignment should be constructed from the ground up.</p>
+</div>
+<div class="paragraph">
+<p>Ontology alignments are often expressed in <a href="references.html#ref:57" class="xref page">Alignment Format (AF)</a> or <a href="references.html#ref:58" class="xref page">EDOAL</a>. An example statement in a Turtle file representing an ontology alignment (taken from the <a href="references.html#ref:59" class="xref page">Core Business Vocabulary to Schema.org alignment</a>), could look something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;http://mapping.semic.eu/business/sdo/cell/1&gt; a align:Cell;
+  align:entity1 &lt;http://www.w3.org/ns/locn#Address&gt;;
+  align:entity2 &lt;https://schema.org/PostalAddress&gt;;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The outcome of this stage splits into three distinct pathways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>direct reuse</strong> of alignments that are immediately applicable,</p>
+</li>
+<li>
+<p><strong>adaptive reuse</strong> where existing alignments provide a partial fit and serve as a basis for refinement (i.e. we can improve certain alignment statements, or add new statements in the alignment map), and</p>
+</li>
+<li>
+<p>the initiation of a <strong>new alignment</strong> when existing resources are not suitable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This structured approach to reuse optimises resource utilisation, promotes efficiency, and tailors the mapping process to the project&#8217;s unique objectives.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inputs:</strong> repository of existing alignments (for the source and target ontologies), evaluation criteria based on requirements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs:</strong> Assessment report on existing alignments, decisions on reuse, adaptation, or creation of a new alignment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_matching"><a class="anchor" href="#_matching"></a>Matching</h4>
+<div class="paragraph">
+<p>This section delves into automatic and semi-automatic approaches to finding the alignment candidates. However, in cases of small vocabularies and ontologies fully manual efforts are likely more efficient.</p>
+</div>
+<div class="paragraph">
+<p>Utilising both automated tools and manual expertise, this phase focuses on identifying potential correspondences between entities in the source and target models. The matching process may employ various methodologies, including semantic similarity measures, pattern recognition, or lexical analysis, to propose candidate alignments. These candidates are then critically evaluated for their accuracy, relevance, and completeness, ensuring they meet the predefined requirements and are logically sound. This stage is delineated into three main activities: planning, execution, and evaluation.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>planning</strong> activity, the approach to ontology matching is meticulously strategised. The planning encompasses selecting appropriate algorithms and methods, fine-tuning parameters, determining thresholds for similarity and identity functions, and setting evaluative criteria. These preparations are informed by a thorough understanding of the project&#8217;s requirements and the outcomes of previous reuse evaluations.</p>
+</div>
+<div class="paragraph">
+<p>Numerous well-established ontology matching algorithms have been extensively reviewed in the literature (for in-depth discussions, see <a href="references.html#ref:60" class="xref page">paper</a>). The main classes of ontology matching techniques are listed below in the order of their relevance to this handbook:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Terminological</strong> techniques draw on the textual content within ontologies, such as entity labels and comments, employing methods from natural language processing and information retrieval, including string distances and statistical text analysis.</p>
+</li>
+<li>
+<p><strong>Structural</strong> techniques analyse the relationships and constraints between ontology entities, using methods like graph matching to explore the topology of ontology structures.</p>
+</li>
+<li>
+<p><strong>Semantic</strong> techniques apply formal logic and inference to deduce the implications of proposed alignments, aiding in the expansion of alignments or detection of conflicts.</p>
+</li>
+<li>
+<p><strong>Extensional</strong> techniques compare entity sets, or instances, potentially involving analysis of shared resources across ontologies to establish similarity measures.
+Following planning, the <strong>execution</strong> activity implements the chosen matchers. Automated or semi-automated tools are deployed to carry out the matching process, resulting in a list of candidate correspondences. This list typically includes suggested links between elements of the source and target ontologies, each with an associated confidence level computed by the algorithms. <a href="references.html#ref:61" class="xref page">EDOAL</a>, a representation framework for expressing such correspondences, is commonly utilised to encapsulate these potential alignments.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, in the <strong>evaluation</strong> activity, the candidate correspondences are rigorously assessed for their suitability. The evaluation measures the candidates against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements. This assessment ensures that only the most suitable correspondences are carried forward for the creation of an alignment, thereby upholding the integrity and logical soundness of the mapping process.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tools:</strong> Tools such as <a href="references.html#ref:62" class="xref page">Silk</a> can be used in this stage.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inputs:</strong> Matcher configurations, additional resources (if any), candidate correspondences from previous matching iterations.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs:</strong> Generated candidate correspondences, evaluation reports, finalised list of potential alignments.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_align_and_map"><a class="anchor" href="#_align_and_map"></a>Align and Map</h4>
+<div class="paragraph">
+<p>Following the identification of suitable matches, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase encompasses preparation, creation, and rendering activities that solidify the relationships between ontology entities into a coherent alignment and actionable mappings. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.</p>
+</div>
+<div class="paragraph">
+<p>The alignment process should be considered as part of the governance of a vocabulary or ontology that would include engaging communication with third parties to validate the alignment. Furthermore, the process has technical implications that should be evaluated upfront such as the machine interpretation and execution of the mapping.</p>
+</div>
+<div class="paragraph">
+<p><strong>Preparation</strong> involves stakeholder consensus on the Alignment Plan. This plan guides stakeholders through the systematic refinement of candidate correspondences, considering not only the relevance of the matches, but also the type of relationship between the elements. This plan might include the removal of irrelevant correspondences or strategic amendments to existing relationships. The chosen candidate correspondences are those that have been determined to be an adequate starting point for the alignment. The type of asset—be it an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The table [below] elucidates potential relationship types that can be established:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><strong>Relation / Element type</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><strong>Property</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><strong>Concept</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><strong>Class</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><strong>Individual</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>=</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:equivalentProperty; owl:sameAs</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">skos:exactMatch; skos:closeMatch</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:equivalentClass; owl:sameAs</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:sameAs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>&gt;</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">skos:narrowMatch</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>&lt;</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">rdfs:subPropertyOf</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">skos:broadMatch</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">rdfs:subClassOf</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>%</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:propertyDisjointWith</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:disjointWith</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">owl:differentFrom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>instanceOf</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">rdf:type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">skos:broadMatch; rdf:type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">rdf:type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">rdf:type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>hasInstance</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock">skos:narrowMatch</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This table is indicative of the variety of semantic connections that can be realised, ranging from equivalence and subclass relations to disjointness and type instantiation. This nuanced approach to the preparation stage is essential in ensuring that the eventual alignment and rendered mapping accurately represent the semantic intricacies of the relationships defined in the project scope, thereby fulfilling the project&#8217;s defined requirements.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Creation</strong> step is the execution of the Alignment Plan, entailing the selection and refinement of correspondences. This activity involves human intervention to select and refine those correspondences for transitioning into a deliberate alignment. The selection is conducted manually according to the project’s objectives.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rendering</strong> translates the refined alignment into a mapping—a directed version that can be interpreted and executed by software agents. This process is straightforward, producing a machine-executable artefact. Most often this is a simple export of the alignment statements from the editing tool or the materialisation of the alignment in a triple store. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.<br>
+<strong>Tools:</strong> Tools such as <a href="references.html#ref:63" class="xref page">VocBench3</a> can be used in this stage, but more generic ones, such as MS Excel or Google Sheets spreadsheets, can be used as well. <br>
+<strong>Inputs:</strong> Evaluated candidate correspondences, stakeholders' amendment plans, requirements for the formalism of the mapping.<br>
+<strong>Outputs:</strong> Created alignment and mapping, alignment amendment strategy, stored versions in an <a href="references.html#ref:55" class="xref page">alignment repository</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_application"><a class="anchor" href="#_application"></a>Application</h4>
+<div class="paragraph">
+<p>The final stage focuses on operationalising the created alignment, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves publishing the alignment in a standardised, machine-readable format and integrating it within ontology management or data integration tools.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, mechanisms for maintaining, updating, and governing the alignment are established, facilitating its long-term utility and relevance.</p>
+</div>
+<div class="paragraph">
+<p>Moreover, this stage involves the creation of <strong>maintenance protocols</strong> to preserve the alignment&#8217;s relevance over time. This includes procedures for regular updates in response to changes in ontology structures or evolving requirements, as well as governance mechanisms to oversee these adaptations. As the mapping is applied, new insights may emerge, prompting discussions within the stakeholder community about potential refinements or the development of a new iteration of the mapping. The dynamic nature of data sources means that the application stage is both an endpoint, as well as a starting point for continuous improvement. Some processes may be automated to enhance efficiency, such as the monitoring of ontologies for changes that would necessitate updates to the mapping.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inputs:</strong> Finalised mappings, application context, feedback mechanisms.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs:</strong> Applied mappings in use, insights from application, triggers for potential updates, governance actions for lifecycle management.</p>
+</div>
+<div id="sec:mapping-existing-ontology-to-vocabulary" class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/UC2.1-Description.adoc - include::UC 2.1 Tutorial on Mapping an Existing Ontology to a Core Vocabulary.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Comission and is licensed under the terms of EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
