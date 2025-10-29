@@ -14,8 +14,7 @@ Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance
 
 === Intended audience
 
-This handbook is intended for two main audiences: 1) administrative professionals, including policy officers and possibly also legal experts, and 2) technical experts and IT professionals.  +
-Public administrations involve both legal/administrative experts and technical professionals. While they may not always “speak the same language”, they must *work together* to ensure smooth digital transformation. *Semantic interoperability* provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. Each intended audience will gain new insights relevant for their respective roles.
+This handbook is intended for two main audiences: 1) administrative professionals, including policy officers and possibly also legal experts, and 2) technical experts and IT professionals. Public administrations involve both legal/administrative experts and technical professionals. While they may not always “speak the same language”, they must *work together* to ensure smooth digital transformation. *Semantic interoperability* provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. Each intended audience will gain new insights relevant for their respective roles.
 
 [discrete] 
 ==== Administrative Professionals & Legal Experts
@@ -37,7 +36,7 @@ By engaging with this handbook as both a reference manual and a practical guide,
 * Understand methodologies for creating, mapping, and integrating semantic data models in their systems.
 * Be able to apply best practices for  data exchange, ensuring consistency and accuracy across different systems.
 * Use standardised approaches to enhance data accessibility, transparency, and reuse in line with FAIR principles [xref:references.adoc#ref-88[fair]].
-* Ensure compliance with the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] rules & principles [xref:references.adoc#ref-83[sem-sg]].
+* Ensure compliance with the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] rules & principles [xref:references.adoc#ref-4[sem-sg]].
 
 It is expected that this will not only facilitate communication with the domain experts, but also further streamline software development conformant to the user specification and, ultimately, the citizens who benefit from more smoothly functioning digital services.
 
@@ -179,7 +178,7 @@ It addresses specific needs of businesses, public administrations and citizens a
 
 a| image::CPEV.png[alt="Core Public Event Vocabulary", width=130]
 a|
-The **Core Public Event Vocabulary (CPEV)** is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a public event, e.g., the title, the date, the location, the organiser etc.
+The **Core Public Event Vocabulary (CPEV)**  [xref:references.adoc#ref-90[cpov]] is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a public event, e.g., the title, the date, the location, the organiser etc.
 
 It aspires to become a common model for describing public events (conferences, summits, etc.) in the European Union. This specification enables interoperability among registers and any other ICT based solutions exchanging and processing information related to public events.
 
@@ -234,7 +233,7 @@ Finally, an added benefit is that while multilingual XSD is possible through man
 [discrete]
 ==== Core Vocabularies lifecycle
 
-The SEMIC Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [xref:references.adoc#ref:23[cv-met]] of which the most relevant section is depicted in the figure below. Assuming stakeholders and Working Group members with relevant roles are in place, requirements are defined, which are thoroughly assessed on existing standardisation efforts, evidence, and other data models. When a change is deemed necessary, it enters a drafting phase that focuses on the technical details whilst adhering to the SEMIC Style Guide, followed by public consultations. Thereafter, if deemed necessary based on the feedback, it will undergo another modelling iteration, else the changes are refined and the model finalised. The final model is formally approved, implemented, and documented, ensuring they are well-understood and agreed upon by all relevant parties.
+The SEMIC Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [xref:references.adoc#ref-23[cv-met]] of which the most relevant section is depicted in the figure below. Assuming stakeholders and Working Group members with relevant roles are in place, requirements are defined, which are thoroughly assessed on existing standardisation efforts, evidence, and other data models. When a change is deemed necessary, it enters a drafting phase that focuses on the technical details whilst adhering to the SEMIC Style Guide, followed by public consultations. Thereafter, if deemed necessary based on the feedback, it will undergo another modelling iteration, else the changes are refined and the model finalised. The final model is formally approved, implemented, and documented, ensuring they are well-understood and agreed upon by all relevant parties.
 
 image::Semic_process.png[]
 
@@ -276,9 +275,9 @@ This handbook serves as a practical guide for using Core Vocabularies in various
 
 A *business case* in the current context is to be understood as a narrative user story (in terms of the technical expert terminology), which functions as *motivation for the use case*. They capture the who, what, and why in a broader context, including who the beneficiary of an action is, what they need, and what the benefit of it is. Such a narrative is then structured into a *user story* as a structured sentence that captures the essence of the business case yet also communicates genericity. For the technical reader, a *use case specification* is listed afterwards, which provides a schematic view as a step towards the precise technical specifications.
 
-We differentiate between use cases focused on the creation of _new_ artefacts and those involving the mapping of _existing_ artefacts to Core Vocabularies. For better clarity, we numbered the use cases and organised them into two diagrams, one for the primary scenarios (see Figure 1, below) and the other for depicting the additional ones. The former are addressed in the main part of this handbook, whereas the latter are listed in the https://github.com/SEMICeu/core-vocs-handbook/blob/develop/docs/modules/ROOT/pages/additional-use-cases.adoc[Appendix] and may be elaborated on at a later date if there is a demand from the community.
+We differentiate between use cases focused on the creation of _new_ artefacts and those involving the mapping of _existing_ artefacts to Core Vocabularies. For better clarity, we numbered the use cases and organised them into two diagrams, one for the primary scenarios (see Figure 1, below) and the other for depicting the additional ones. The former are addressed in the main part of this handbook, whereas the latter are listed in the  xref:Appendix.adoc[Appendix] and may be elaborated on at a later date if there is a demand from the community.
 
-The use cases are written in white-box point of style oriented towards user goals following Cockburn’s classification [https://meaningfy-ws.github.io/semic-docs-staging/core-vocs-handbook/develop/references.html#ref:30[uc-book]]. We will use the following template to describe the relevant use cases:
+The use cases are written in white-box point of style oriented towards user goals following Cockburn’s classification [xref:references.adoc#ref-30[uc-book]]. We will use the following template to describe the relevant use cases:
 
 |===
 |{set:cellbgcolor: #a8c6f7}
@@ -424,12 +423,13 @@ The main use case UC2 is summarised as follows, which is subsequently refined in
 |*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
 Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 
-|*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref-36[sa2-map]]
+|*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref-36[isa2-map]]
 
 |*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-existing-shema[Map an existing XSD schema] section.
 |===
 
 The additional use cases are described in the xref:Appendix.adoc[Appendix].
+
 
 
 
