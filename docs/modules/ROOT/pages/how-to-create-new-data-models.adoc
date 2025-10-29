@@ -29,17 +29,21 @@ Each model type has its business case providing a rationale why one would want t
 
 We will introduce the *motivation for the use case* with a user story.
 
-[.indent]
+
+[quote]
+____
 Imagine Jean-Luc, a semantic/software engineer assigned to develop a software application for  processing online forms for the Maltese Chamber of Commerce. Among the format options of online forms are Office365, CSV, and XML that each have their pros and cons. Jean-Luc chooses XML, since many other forms are already being stored in XML format.
 
-[.indent]
+
+// [.indent]
 He is aware that XML files should have a schema declared first, which contains the specifications of the sort of elements and fields that are permitted to be used in the forms, such as the company’s registration number, name, and address. However, analysing the data requirements from scratch is not the preferred option. Moreover, there are Chambers of Commerce in other EU countries, which   use forms to collect and update data. Perhaps he could reuse and adapt those schemas?  +
 As Jean-Luc starts to search for existing models, called XML schemas in XSD format, he realises there are other places where businesses need to submit forms with company information, such as online registries and the tax office, that also may have XSD files available for reuse.  +
 Unfortunately, not one of them made their schema available.
 
-[.indent]
-Given that such availability would be useful also at the EU level, he looks for guidance at the EU level. He finds The SEMIC Core Business Vocabulary, which has terminology he can reuse, not only saving time developing his own XSD schema but then also making it interoperable with all other XSD schemas that reuse the vocabulary.
 
+// [.indent]
+Given that such availability would be useful also at the EU level, he looks for guidance at the EU level. He finds The SEMIC Core Business Vocabulary, which has terminology he can reuse, not only saving time developing his own XSD schema but then also making it interoperable with all other XSD schemas that reuse the vocabulary.
+____
 *User story:* *As a* semantic engineer working in public sector IT, *I want to* create an XML schema (XSD) by reusing elements from the existing Core Business Vocabulary (CBV), *so that* I can reduce design time and ensure consistent, interoperable, and standards-compliant e-form validation across government systems.
 
 The business case translates into the following *use case specification*, which is instantiated from the link:./introduction.adoc#sec:uc11[general UC1.1 description] in the previous section:
@@ -359,16 +363,19 @@ You can execute the rules using the provided https://github.com/SEMICeu/XML-sche
 
 Public administrations often need to share information about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. This was also the case in Norway, which came to a fruitful solution. Let us imagine how that might have happened in the following scenario as *motivation for the use case*, which is followed by a user story that summarises it.
 
-[.indent]
+// [.indent]
+[quote]
+____
 Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced +RequiredEvidence+, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].  +
 Happy with the outcome, Nora emailed the municipalities so that each city and town would be able to upgrade their system in the same way with CPSV-AP-NO, and so that DiTFor could still collect and integrate the data at the national level.
 
-[.indent]
+// [.indent]
 Meanwhile, the City of Oslo’s transportation services department had just learned of _smart data models_ to manage the data about public road network maintenance, such as https://github.com/smart-data-models/dataModel.Transportation/tree/ed857c5d9c2e8dbb1c85208e22bbbc7c563017a7[dataModel.Transportation], and their helpdesk for reporting road maintenance issues. That data, stored according to the smart data model, could then also be used for the public transport network management organisation to work towards the aim to make Oslo a Smart City. A popular language to specify smart data models is a JSON-LD context, because it helps structure the data so it can be easily shared and understood by different systems.
 
-[.indent]
+// [.indent]
 The City of Oslo received DiTFor’s notification about the CPSV-AP-NO: their data models needed to comply with the CPSV-AP-NO for the purposes of effective use and interoperability. Looking into the details, they realised that it should be possible to utilise CPSV-AP-NO for their smart data model in JSON-LD and, in fact, would save them time looking for other vocabularies and adapting those. The question became one of _how_ to do it, and so they replied to Nora’s email inquiring whether she could also provide instructions for using the Application Profile. +
 
+____
 *User Story: As a* software engineer at a public sector department, *I want to* create a new JSON-LD context based on the Core Public Services Vocabulary Application profile (CPSV-AP), *so that* I can create interoperable smart data models that comply with national and European interoperability standards and support linked data publication to facilitate cross-system data exchange. +
 
 This business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc12[general UC1.2 description] in the previous section.

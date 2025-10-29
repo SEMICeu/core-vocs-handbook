@@ -23,15 +23,18 @@ Imagine different organisations using different words of the same language. One 
 
 Let’s consider a scenario as *motivation for the use case* and the corresponding structured user story. 
 
-[.indent]
+// [.indent
+[quote]
+____
 Sofía, a knowledge engineer working in the Department of Agriculture and Natural Resources, faces the problem of terminological overloading and mismatches. Her Fruits division uses a conceptual model that was developed to represent companies, directors, and contact details of fruit orchards and industrial forest agribusinesses, while a different one is used by the Vegetables division that needs to be aligned at a later date. To solve this, Sofía leads a project that *maps her Fruits division’s model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV)*, a semantic standard developed by SEMIC. 
 
-[.indent]
+// [.indent]
 Meanwhile, external platforms—such as international business directories, government data portals, and the Schema.org vocabulary used by major web platforms—represent similar concepts differently. So do the Chamber of Commerce and the Department of the Economy, from which she wants to use data.  
 
-[.indent]
+// [.indent]
 Sofía recognises the widespread use of http://Schema.org[Schema.org], and so she also wants to ensure that the *CBV concepts she uses can be mapped to http://Schema.org[Schema.org]’s content*. She can do this by creating semantic bridges between the models used in her division of the Department, CBV, and global vocabularies. 
 
+____
 
 *User Story: As a* knowledge engineer at the Department of Agriculture, *I want* *to* map my division’s existing conceptual model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV) and align CBV concepts with http://Schema.org[Schema.org], *so that* our data can be interoperable with both EU semantic standards and global web vocabularies, enabling accurate data exchange.  
 
