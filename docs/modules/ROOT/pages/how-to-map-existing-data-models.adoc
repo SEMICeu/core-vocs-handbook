@@ -168,8 +168,7 @@ The *Creation* step is the execution of the mapping, entailing the selection of 
 
 *Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format [af], EDOAL [edoal], Simple Standard for Sharing Ontological Mapping (SSSOM) [sssom], and the Semantic Mapping Vocabulary (SEMAPV) [semapv] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.
 
-*Tools*: Tools such as https://semiceu.github.io/core-vocs-handbook/public-review/references.html#ref:18:~:text=%5B-,vocbench,-%5D%20VocBench.%20Available[VocBench3] [vocbench] can be used in this phase, or generic office tools, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.
-
+*Tools*: Tools such as https://semiceu.github.io/core-vocs-handbook/public-review/references.html#ref:18:~:text=%5B-,vocbench,-%5D%20VocBench.%20Available[VocBench3] [vocbench] can be used in this phase, or generic office tools, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.  +
 *Inputs*: Evaluated correspondences (the alignments), stakeholders' amendment plans, requirements for the formalism of the mapping so that the mapping assertions integrate with the modelling language used. +
 *Outputs*: Created mapping, stored versions in an alignment repository (e.g., [sem-map]).
 
@@ -960,6 +959,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
