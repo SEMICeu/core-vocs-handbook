@@ -299,7 +299,7 @@ We then look at the intersection of CBV concepts and relationships and those in 
 
 * Example: An existing alignment for LegalEntity to Organization was evaluated. However, it was missing relationships for properties like [.custom-highlight]#schema:legalName# and [.custom-highlight]#schema:taxID#. So, the original alignment was extended to include new mappings for these properties. There may also be new alignments when existing resources are not suitable, which is the case for this tutorial.
 
-* Example: Add alignment to answer the question: What is the relation between https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[[.custom-highlight]#legal:LegalEntity#] and https://schema.org/Organization[[.custom-highlight]#schema:Organization#]?
+* Example: Add alignment to answer the question: What is the relation between https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity] and https://schema.org/Organization[schema:Organization]?
 
 
 *_Phase 4: Matching (Execute and Filter Matching Candidates)_*
