@@ -118,7 +118,7 @@ The main use case is as follows, which is refined into two specific ones afterwa
 
 *Description:* The goal is to design and create a new data model artefact that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible. Such an artefact can be of different nature both according to their interoperability layer (ranging from vocabulary and ontology, to data shape and data schema) and also according to their abstraction level (ranging from upper layer, through domain layer to application layer).
 
-*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the xref:use-cases.adoc#sec:addressed-use-cases[Addressed use cases] section.
+*Note:* Since this is a more generic use case it will be broken down into more concrete use cases that focus on specific data models. See also some related use cases (UC1, UC1.1 and UC1.2) discussed in the xref:introduction.adoc#sec:use-cases[main use cases] section.
 |===
 
 ===== Use Case UC4.1: Create a new ontology
@@ -164,6 +164,7 @@ A concrete user story can be formulated as follows. +
 
 *Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
+
 
 
 
