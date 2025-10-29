@@ -2,13 +2,13 @@
 == Creating a new data model from an existing Core Vocabulary
 
 Technologies rise and decline in popularity, yet one of the red threads through the computational techniques over the decades is the *management of structured data*. Data needs to be stored, processed, acted upon, shared, integrated, presented, and more, all mediated by software. This also means that the structure of the data needs to be machine-readable far beyond the simple scanned hard-copy administrative forms or legal documents. Structured data mediates between entities in the real world and their representation in the software.  +
-For instance, to represent the fact “+govtDep#1 subcontracts comp#2+”, we might have
+For instance, to represent the fact “[.custom-highlight]#govtDep#1 subcontracts comp#2#”, we might have
 
-* a table with government departments that also contains a row with +govtDep#1+;
-* a table with companies and their identifying data including +comp#2+; and
-* a table with subcontracting relationships between instances, including +(GovtDep#1,Comp#2)+.
+* a table with government departments that also contains a row with [.custom-highlight]#govtDep#1#;
+* a table with companies and their identifying data including [.custom-highlight]#comp#2#; and
+* a table with subcontracting relationships between instances, including [.custom-highlight]#(GovtDep#1,Comp#2)#.
 
-A mechanism to capture the sort of structured and semi-structured data which may be stored and managed in the system is called a *data model* at the level of the technical implementation and _conceptual data model_ or _vocabulary_ as part of a *semantic data specification* when it is implementation-independent. Such models represent the entity types, such as +GovernmentDepartment+, +Company+, and its more generic type +Organisation+ from our example, along with relationships between entity types, such as +Subcontracting+. Data models typically also implement business rules or constraints that apply to the particular organisation. For instance, one rule might state that each government department _is permitted to subcontract at most 15_ companies in +country#3+ whereas there may be no upper bound to subcontracting in +country#4+ and a prohibition on subcontracting (i.e., _is permitted to subcontract at most 0_) in +country#5+. These variations require different data models or application profiles, although they may use the same vocabulary.
+A mechanism to capture the sort of structured and semi-structured data which may be stored and managed in the system is called a *data model* at the level of the technical implementation and _conceptual data model_ or _vocabulary_ as part of a *semantic data specification* when it is implementation-independent. Such models represent the entity types, such as [.custom-highlight]#GovernmentDepartment#, [.custom-highlight]#Company#, and its more generic type [.custom-highlight]#Organisation# from our example, along with relationships between entity types, such as [.custom-highlight]#Subcontracting#. Data models typically also implement business rules or constraints that apply to the particular organisation. For instance, one rule might state that each government department _is permitted to subcontract at most 15_ companies in [.custom-highlight]#country#3# whereas there may be no upper bound to subcontracting in [.custom-highlight]#country#4# and a prohibition on subcontracting (i.e., _is permitted to subcontract at most 0_) in [.custom-highlight]#country#5#. These variations require different data models or application profiles, although they may use the same vocabulary.
 
 This raises a number of questions:
 
@@ -94,7 +94,7 @@ Furthermore, when integrating these elements into a new schema, it is essential 
 ====
 Reusing elements and types from the Core Vocabulary improves interoperability and alignment with EU data standards, yet also imposes some limitations.
 
-Since reuse occurs at the syntactic level, element names and structures, including complex types, from the Core Vocabulary can be *extended*, but not easily _restricted_ (for instance, limiting +Organization+ to a single sub-organization would require creating a new complex type).
+Since reuse occurs at the syntactic level, element names and structures, including complex types, from the Core Vocabulary can be *extended*, but not easily _restricted_ (for instance, limiting [.custom-highlight]#Organization# to a single sub-organization would require creating a new complex type).
 
 These trade-offs between semantic interoperability and technical consistency are discussed in the xref:introduction.adoc#sec:Why_Core_Vocabulary[Why Core Vocabularies] section.
 ====
@@ -199,7 +199,7 @@ _Define elements_
 
 If the XSD schema of the CV does not suffice, in that you need additional elements beyond the XSD schema, then you have to define those yourself in the XSD schema you are developing. This might be an element from the CV associated with the XSD, or possibly elements from another CV or semantic artefact. +
 These new elements need to *adhere to the Core Vocabulary's namespace* to maintain consistency.  +
-For example, the +LegalEntity+ element could be defined as follows if no XSD is provided for it:
+For example, the [.custom-highlight]#LegalEntity# element could be defined as follows if no XSD is provided for it:
 
 [source,xml]
 ----
@@ -215,8 +215,8 @@ At this phase, we focus on structuring the XML document using appropriate XML Sc
 
 _Venetian Blind Pattern_
 
-In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as +LegalEntity+, serves as the entry point, as seen in CBV. This pattern fits well with API design, where you typically request information about a central concept (such as +LegalEntity+), and the response includes nested elements, including +LegalName+ and +RegisteredAddress+, which are all organised under the main entity. +
-Here’s an example, where +LegalEntity+ serves as the main entry point:
+In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as [.custom-highlight]#LegalEntity#, serves as the entry point, as seen in CBV. This pattern fits well with API design, where you typically request information about a central concept (such as [.custom-highlight]#LegalEntity#), and the response includes nested elements, including [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#, which are all organised under the main entity. +
+Here’s an example, where [.custom-highlight]#LegalEntity# serves as the main entry point:
 
 [source,xml]
 ----
@@ -238,12 +238,12 @@ Here’s an example, where +LegalEntity+ serves as the main entry point:
 In this example:
 
 * LegalEntity is the global entry point.
-* It uses +LegalEntityType+, which contains various properties such as +LegalName+ and +RegisteredAddress+.
+* It uses [.custom-highlight]#LegalEntityType#, which contains various properties such as [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#.
 
 
 _Garden of Eden Pattern_
 
-In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ `<xs:schema>` qualify as such entry points. In CBV these include +LegalEntity+, +Organization+ etc., whereas nested elements, such as +RegisteredAddress+ or +ContactPoint+, are defined _inside_ those complex types and _cannot_ start a document on their own.
+In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ `<xs:schema>` qualify as such entry points. In CBV these include [.custom-highlight]#LegalEntity#, [.custom-highlight]#Organization# etc., whereas nested elements, such as [.custom-highlight]#RegisteredAddress# or [.custom-highlight]#ContactPoint#, are defined _inside_ those complex types and _cannot_ start a document on their own.
 
 [source,xml]
 ----
@@ -256,9 +256,9 @@ In the Garden of Eden pattern, there are multiple entry points in the XML docume
 _Define Complex Types_
 
 
-After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like +LegalEntity+ or +Organization+, which have both simple and complex elements. For example, the +LegalEntityType+ and +OrganizationType+, as follows.
+After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like [.custom-highlight]#LegalEntity# or [.custom-highlight]#Organization#, which have both simple and complex elements. For example, the [.custom-highlight]#LegalEntityType# and [.custom-highlight]#OrganizationType#, as follows.
 
-A +LegalEntity+ might contain multiple child elements, such as +LegalName+ modelled as a simple string, +RegisteredAddress+ (also a complex type), and other related elements. Here's how +LegalEntityType+ is defined:
+A [.custom-highlight]#LegalEntity# might contain multiple child elements, such as [.custom-highlight]#LegalName# modelled as a simple string, [.custom-highlight]#RegisteredAddress# (also a complex type), and other related elements. Here's how [.custom-highlight]#LegalEntityType# is defined:
 
 [source,xml]
 ----
@@ -284,7 +284,7 @@ A +LegalEntity+ might contain multiple child elements, such as +LegalName+ model
 The https://www.w3.org/TR/sawsdl/#:~:text=of%20the%20interface.-,3.1%20Annotating%20Interfaces%20with%20Model%20Reference,-This%20section%20defines[sawsdl:modelReference] annotation is used to link the element to an external concept, providing semantic context by associating the element with a specific vocabulary or ontology.
 ====
 
-Similar to the +LegalEntityType+ complex type, the +BusinessAgentType+ defines a concept with multiple properties and relationships. However, for +BusinessAgentType+, we define it as a complex type that contains hierarchical relationships, such as +HeadOf+ and +MemberOf+.
+Similar to the [.custom-highlight]#LegalEntityType# complex type, the [.custom-highlight]#BusinessAgentType# defines a concept with multiple properties and relationships. However, for [.custom-highlight]#BusinessAgentType#, we define it as a complex type that contains hierarchical relationships, such as [.custom-highlight]#HeadOf# and [.custom-highlight]#MemberOf#.
 
 
 [source,xml]
@@ -367,7 +367,7 @@ Public administrations often need to share information about their services with
 // [.indent]
 [quote]
 ____
-Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced +RequiredEvidence+, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].  
+Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced [.custom-highlight]#RequiredEvidence#, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].
 
 Happy with the outcome, Nora emailed the municipalities so that each city and town would be able to upgrade their system in the same way with CPSV-AP-NO, and so that DiTFor could still collect and integrate the data at the national level.
 
@@ -526,7 +526,7 @@ If a context does not exist, define the elements explicitly. For example, CPSV-A
   }
 }
 ----
-If a context needs to be extended, define the new elements explicitly. For example, if we need new terms (classes), such as +Service+ and +RequiredEvidence+, which are not in CPSV-AP these terms must be mapped to URIs (the examples are inspired by https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO]):
+If a context needs to be extended, define the new elements explicitly. For example, if we need new terms (classes), such as [.custom-highlight]#Service# and [.custom-highlight]#RequiredEvidence#, which are not in CPSV-AP these terms must be mapped to URIs (the examples are inspired by https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO]):
 [source,json]
 ----
 {
@@ -538,7 +538,7 @@ If a context needs to be extended, define the new elements explicitly. For examp
 ----
 Once you’ve imported or defined the relevant terms, you need to structure your JSON-LD context to reflect the relationships between the classes and their properties. This allows you to describe public services and their details in a standardised and machine-readable format.
 
-Let’s look at an https://tinyurl.com/2794ygga[example] where we define a +Service+ and some of its key properties, such as +contactPoint+, +description+, name and +hasRequiredEvidence+:
+Let’s look at an https://tinyurl.com/2794ygga[example] where we define a [.custom-highlight]#Service# and some of its key properties, such as [.custom-highlight]#contactPoint#, [.custom-highlight]#description#, [.custom-highlight]#name# and [.custom-highlight]#hasRequiredEvidence#:
 [source,json]
 ----
 {
@@ -570,7 +570,7 @@ Let’s look at an https://tinyurl.com/2794ygga[example] where we define a +Serv
 
 Explanation of JSON-LD keywords used:
 
-* *`@context`*: Defines the mapping between terms (e.g., +PublicService+) and their corresponding IRIs.
+* *`@context`*: Defines the mapping between terms (e.g., [.custom-highlight]#PublicService#) and their corresponding IRIs.
 * *`@container`***:** Specifies how values are structured. For instance,
 ** `@set`: Explicitly defines a property as an array of values. It ensures that even if the data includes just one value, it will still be treated as an array by JSON-LD processors. This makes post-processing of JSON-LD documents easier as the data is always in array form, even if the array only contains a single value
 * *`@id`*: Provides the unique identifier (IRI) for a term or property.
@@ -580,7 +580,7 @@ Explanation of JSON-LD keywords used:
 
 _Example of a simple service instance_
 
-After defining the context and structure, you can now describe an actual +Service+ instance by referencing the terms you defined earlier.
+After defining the context and structure, you can now describe an actual [.custom-highlight]#Service# instance by referencing the terms you defined earlier.
 
 _Example scenario_
 
@@ -614,7 +614,7 @@ Try this in the JSON-LD Playground https://tinyurl.com/4vtmjdxy[here] and then c
 
 _Aliasing keywords for API compatibility (REST API example)_
 
-When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to +url+ and `@type` to +type+ to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
+When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to [.custom-highlight]#url# and `@type` to [.custom-highlight]#type# to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
 _Example of aliasing keywords_
 [source,json]
@@ -633,14 +633,14 @@ _Example of aliasing keywords_
   "Service.description": "A service for registering for health insurance."
 }
 ----
-In this example, +url+ is an alias for `@id` and +type+ is an alias for `@type`.
+In this example, [.custom-highlight]#url# is an alias for `@id` and [.custom-highlight]#type# is an alias for `@type`.
 
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
 
 _Extend the context by reusing terms from Core Vocabularies_
 
-To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as +LegalEntity+, +Organisation+, and +ContactPoint+, to enrich your +Service+** **descriptions.
+To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as [.custom-highlight]#LegalEntity#, [.custom-highlight]#Organisation#, and [.custom-highlight]#ContactPoint#, to enrich your [.custom-highlight]#Service#** **descriptions.
 
 [source,json]
 ----
@@ -659,7 +659,7 @@ To highlight the reuse of terms from existing CVs, we can import the *Core Busin
 
 _Define additional properties from the Core Business Vocabulary_
 
-Add CBV terms to enhance the description of the +Service+ entity by reusing existing concepts such as +LegalEntity+, which helps to specify who provided the service.
+Add CBV terms to enhance the description of the [.custom-highlight]#Service# entity by reusing existing concepts such as [.custom-highlight]#LegalEntity#, which helps to specify who provided the service.
 
 [source,json]
 ----
@@ -677,7 +677,7 @@ Add CBV terms to enhance the description of the +Service+ entity by reusing exis
 
 _Map extended properties in a service instance_
 
-Use the extended properties to describe more aspects of +Service+ instances. For https://tinyurl.com/chtayj3h[example]:
+Use the extended properties to describe more aspects of [.custom-highlight]#Service# instances. For https://tinyurl.com/chtayj3h[example]:
 
 [source,json]
 ----
