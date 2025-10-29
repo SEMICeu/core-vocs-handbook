@@ -34,17 +34,12 @@
 
 * xref:Concluding-remarks.adoc#sec:concluding-remarks[Concluding remarks]
 
-// * xref:Appendix.adoc#sec:Appendix[Appendix]
-* xref:Appendix.adoc#sec:additional-use-cases[Additional Use Cases]
-** xref:Appendix.adoc#sec:uc2.3[UC2.3: Map an existing JSON Schema to a Core Vocabulary]
-** xref:Appendix.adoc#sec:uc3[UC3: Create a new Semantic data specification]
-*** xref:Appendix.adoc#sec:uc3.1-des[Use Case UC3.1: Create a new Core Vocabulary]
-*** xref:Appendix.adoc#sec:uc3.2-des[Use Case UC3.2: Create a new Application Profile]
-** xref:Appendix.adoc#sec:uc4-des[UC4: Create a new data model]
-*** xref:Appendix.adoc#sec:uc4.1[Use Case UC4.1: Create a new ontology]
-*** xref:Appendix.adoc#sec:uc4.2[Use Case UC4.2: Create a new data shape]
+* xref:appmenu.adoc#sec:app-menu[Appendix]
+** xref:Appendix.adoc#sec:additional-use-cases[Additional Use Cases]
+*** xref:Appendix.adoc#sec:uc2.3[UC2.3: Map an existing JSON Schema to a Core Vocabulary]
+*** xref:Appendix.adoc#sec:uc3[UC3: Create a new Semantic data specification]
+*** xref:Appendix.adoc#sec:uc4-des[UC4: Create a new data model]
+** xref:glossary.adoc#sec:glossary[Glossary]
+** xref:references.adoc#sec:references[References]
 
-
-* xref:glossary.adoc#sec:glossary[Glossary]
-* xref:references.adoc#sec:references[References]
 * xref:handbook-as-a-whole.adoc#sec:handbook[Handbook as a whole]
