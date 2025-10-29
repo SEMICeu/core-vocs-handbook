@@ -63,7 +63,7 @@ In this section we adopt the definitions from the ontology matching handbook [xr
 
 To create an ontology mapping, the following steps need to be observed, as shown in the following diagram and described afterwards.
 
-image::UC21guidelineOverview.png[]
+image::UC21guidelineOverview.png[500]
 
 . *Staging*: defining the requirements;
 . *Characterisation*: defining source and target data and performing data analysis;
@@ -386,10 +386,10 @@ For our running example, CBV’s +LegalEntity+ is almost the same as Schema.org�
 _Formalise the Alignment_
 
 Once the relation is chosen, each alignment is encoded as a *machine-readable RDF triple*, typically in RDF/XML or Turtle format, suitable for integration and reuse.  +
-The *result* is a validated alignment file, where each mapping is represented based on the https://moex.gitlabpages.inria.fr/alignapi/format.html[Alignment Format] or an extension thereof, such as https://moex.gitlabpages.inria.fr/alignapi/edoal.html[EDOAL], as an +align:Cell+ with:
+The *result* is a validated alignment file, where each mapping is represented based on the https://moex.gitlabpages.inria.fr/alignapi/format.html[Alignment Format] or an extension thereof, such as https://moex.gitlabpages.inria.fr/alignapi/edoal.html[EDOAL], as an `align:Cell` with:
 
-* The aligned entities (+align:entity1+ and +align:entity2+)
-* The chosen relation (align:relation), being either subsumption “<” or equivalence “=”
+* The aligned entities (`align:entity1` and `align:entity2`)
+* The chosen relation (`align:relation`), being either subsumption “<” or equivalence “=”
 * An optional confidence measure
 * Its corresponding meaning in the ontology (owl:annotatedProperty)
 * Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM ]that, in turn, reuses the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values. Example output of adding an alignment between https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[ legal:LegalEntity] and https://schema.org/Organization[schema:Organization]:
@@ -439,8 +439,8 @@ To demonstrate the practical value of the mapping between CBV and Schema.org, we
 *Scenario* +
 We assume:
 
-* A data file (+core-business-ap.ttl+) contains an instance of +legal:LegalEntity+
-* An alignment file (+Alignment-CoreBusiness-2.2.0-schemaorg.ttl+) defines a mapping from +legal:LegalEntity+ to +schema:Organization+.
+* A data file (`core-business-ap.ttl`) contains an instance of +legal:LegalEntity+
+* An alignment file (`Alignment-CoreBusiness-2.2.0-schemaorg.ttl`) defines a mapping from +legal:LegalEntity+ to +schema:Organization+.
 
 *SPARQL Query*
 [source,sparql]
@@ -719,7 +719,7 @@ A comprehensive mapping package typically includes:
 * *XML-to-CV mappings* (optional):
 ** *Conceptual Mapping Files*: Serves as the core documentation, outlining the rationale and structure behind the mappings to ensure transparency and ease of understanding for both domain experts and engineers.
 ** *Technical Mapping Files*: This contains all the mapping code files ([xref:references.adoc#ref-66[xslt]], [xref:references.adoc#ref-67[rml]], [xref:references.adoc#ref-68[SPARQLAnything]], depending on the chosen mapping technology) for data transformation.
-** *Additional Mapping Resources *(if applicable): Such as controlled lists, value mappings, or correspondence tables, which are crucial for the correct interpretation and application of the RML code.
+** *Additional Mapping Resources* (if applicable): Such as controlled lists, value mappings, or correspondence tables, which are crucial for the correct interpretation and application of the RML code.
 ** *Test Data*: Carefully selected and representative XML files that cover various scenarios and cases. These test data are crucial for ensuring that the mappings perform as expected across a range of real-world data.
 ** *Factory Acceptance Testing (FAT) Reports*: They document the testing outcomes to guarantee that the mappings meet the expected standards before deployment. They are based on the SPARQL and SHACL validations conducted.
 ** *Tests Used for FAT Reports*: The package also incorporates the actual SPARQL assertions and SHACL shapes used in generating the FAT reports, providing a complete view of the validation process.
@@ -778,7 +778,7 @@ Here’s how the snippet of the XSD schema looks like for the AccountingDocument
 
 _Preparing the Test Data_
 
-Since we will also map data and proceed through Steps 3.1-3.3 further below, it is essential to prepare representative test data in this Phase 1. This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data. For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[+SampleData_Business.xml+] file available on the https://github.com/SEMICeu/XML-schema/tree/main[SEMIC GitHub repository].  +
+Since we will also map data and proceed through Steps 3.1-3.3 further below, it is essential to prepare representative test data in this Phase 1. This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data. For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[`SampleData_Business.xml`] file available on the https://github.com/SEMICeu/XML-schema/tree/main[SEMIC GitHub repository].  +
 We ensure that the XML data contains relevant elements, such as `<LegalEntity>`, `<LegalName>`, `<ContactPoint>`, and `<RegisteredAddress>`, which you will later map to the CBV terms. Among other content, it has the following data for `<LegalName>`:
 
 [source,xml]
@@ -810,7 +810,7 @@ In this step, we map each XSD element/type to  Class or Property. These mappings
 |Property
 |===
 
-Use the https://www.w3.org/TR/sawsdl/[*+sawsdl:modelReference+*] attribute to capture this mapping.
+Use the https://www.w3.org/TR/sawsdl/[*`sawsdl:modelReference`*] attribute to capture this mapping.
 
 _Example Mapping Rules_
 
@@ -979,3 +979,6 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
+
+
