@@ -17,6 +17,7 @@ Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance
 This handbook is intended for two main audiences: 1) administrative professionals, including policy officers and possibly also legal experts, and 2) technical experts and IT professionals.  +
 Public administrations involve both legal/administrative experts and technical professionals. While they may not always “speak the same language”, they must *work together* to ensure smooth digital transformation. *Semantic interoperability* provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. Each intended audience will gain new insights relevant for their respective roles.
 
+[discrete] 
 ==== Administrative Professionals & Legal Experts
 
 By reading this handbook, domain experts will:
@@ -27,6 +28,7 @@ By reading this handbook, domain experts will:
 
 It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions prioritising IT projects that align with interoperability goals.
 
+[discrete] 
 ==== Technical Experts & IT Professionals
 
 By engaging with this handbook as both a reference manual and a practical guide, the technical experts and IT professionals who design, implement, and maintain the software ecosystem will:
@@ -302,6 +304,7 @@ image::primary_Use_Case.png[]
 
 The use cases described below serve as a quick-access overview; complete concrete scenarios are introduced in the respective dedicated section’s “Description” section.
 
+[discrete]
 ==== UC1: Create a new model from a Core Vocabulary
 
 For creating new models, there are two business cases for illustration. In short:
@@ -360,7 +363,7 @@ The main use case UC1 is summarised as follows, which is subsequently refined in
 
 |===
 
-
+[discrete]
 ==== UC2: Map an existing model to a Core Vocabulary
 
 For mapping vocabularies, there are two business cases for illustration. In short:
@@ -427,6 +430,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc[Appendix].
+
 
 
 
