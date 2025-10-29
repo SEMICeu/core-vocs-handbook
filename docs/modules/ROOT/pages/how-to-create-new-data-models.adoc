@@ -414,7 +414,7 @@ image::UC1.2.png[]
 ===== Phase 1: Import or define elements
 
 
-When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the '@import' keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
+When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the `@import` keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
 
 In cases where the Core Vocabulary does not provide an JSON-LD context, it is necessary to *create the corresponding field element definitions* for the reused URIs, in three steps:
 
@@ -442,7 +442,7 @@ Start with defining the structure of the context by *relating class terms with p
 
 Commence by creating a JSON structure that starts with a @context field. This field will contain mappings from one’s own vocabulary terms to other’s respective URIs. Continue by defining fields for classes and subfields for their properties.
 
-If the JSON-LD context is developed with the aim of being used directly in an exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise @type references linking to the specific class.
+If the JSON-LD context is developed with the aim of being used directly in an exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise `@type` references linking to the specific class.
 
 If the aim of the developed JSON-LD context is rather to ensure semantic correspondences, without any structural constraints, which is the case for core or domain semantic data specification, then definitions of structures specific to each entity type and its properties suffice, using only loose references to other objects.
 
