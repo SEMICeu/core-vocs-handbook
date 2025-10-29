@@ -297,7 +297,8 @@ The use cases are written in white-box point of style oriented towards user goal
 |===
 
 .Figure 1. Primary use cases covered in this handbook
-image::primary_Use_Case.png[]
+image::primary_Use_Case.png[] +
+
 
 The use cases described below serve as a quick-access overview; complete concrete scenarios are introduced in the respective dedicated section’s “Description” section.
 
@@ -426,4 +427,5 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc[Appendix].
+
 
