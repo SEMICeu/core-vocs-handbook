@@ -1,3 +1,4 @@
+[[sec:map-model-to-cv]]
 == Mapping an existing model to Core Vocabularies
 
 In the fields of knowledge representation and data modelling, distinct modelling languages exist and their corresponding methods and tools to create them. While such heterogeneity can be  useful, it also raises challenges for semantic interoperability.
@@ -15,7 +16,7 @@ The use cases focus on mapping two types of models specifically: conceptual mode
 [[sec:map-existing-model-to-cv]]
 === Map an existing conceptual model to a Core Vocabulary (UC2.1)
 
-
+[[sec:uc2.1-description]]
 ==== Use case description
 
 Imagine different organisations using different words of the same language. One system refers to an “Organisation,” while another calls it a “LegalEntity.” Both are describing the same concept—but their data structures, labels, and assumptions differ slightly. Without a shared understanding, exchanging data between these organisations becomes error-prone, inconsistent, or simply impossible. 
@@ -47,7 +48,7 @@ The business case translates into the following *use case specification*, which 
 |*Description:* Create formal mappings between relevant terms in the CBV and Schema.org, availing of standard Semantic Web technologies and alignment tools, and implement the mappings.  +
 |===
 
-
+[[sec:uc2.1-guidline]]
 ==== Guidelines on how to map an existing conceptual model to a Core Vocabulary
 
 This section provides general guidelines to address use case link:./introduction.adoc#sec:uc21[UC2.1], mapping an ontology to a Core Vocabulary.
@@ -477,7 +478,7 @@ It checks for instances of +legal:LegalEntity+ in the data file, and if the alig
 [[sec:map-existing-shema]]
 === Map an existing XSD Schema to a Core Vocabulary (UC2.2)
 
-
+[[sec:uc2.2-description]]
 ==== Use case description
 
 
@@ -498,6 +499,7 @@ This business case translates into the following *use case specification*, which
  +
 |===
 
+[[sec:uc2.2-guidline]]
 ==== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
 
 
@@ -717,7 +719,7 @@ Such a package is designed to be self-contained, ensuring that it can be immedia
 *Inputs*: Conceptual Mapping spreadsheet, Ontologies or Vocabularies, SHACL Data Shapes, Sample XML data, Sample data transformed into RDF, Conceptual Mapping, Technical Mapping, SHACL data shapes, Validation reports. +
 *Outputs*: Comprehensive Mapping Package.
 
-
+[[sec:uc2.2-tutorial]]
 ==== Tutorial: Map the Core Business Vocabulary from XSD to RDF
 
 This tutorial addresses *Use Case* https://github.com/SEMICeu/core-vocs-handbook/blob/develop/docs/modules/ROOT/pages/use-cases.adoc#:~:text=Use%20Case%20UC2.2%3A%20Map%20an%20existing%20XSD%20Schema%20to%20a%20Core%20Vocabulary[UC2.2], focusing on enabling *semantic interoperability* by mapping an existing *XSD schema*—specifically, the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary (CBV) XSD schema]—to its corresponding *RDF representation*. This tutorial guides you through the key steps, involving:

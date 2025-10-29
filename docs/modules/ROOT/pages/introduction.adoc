@@ -100,7 +100,7 @@ There are two key reasons to seek interoperability in public administrations:
 ** streamline administrative tasks and data accuracy, preventing misinterpretation of data through standardised data exchange;
 ** improve service delivery.
 ****
-
+[[sec:achieve-interoperability]]
 ==== What is semantic interoperability and how to achieve it?
 
 While data exchange is an obvious requirement for interoperability, there are fine but crucial distinctions between data format, syntactic, and semantic interoperability. A standardised syntax and data format to store data lets one exchange data, such as creating an SQL database dump in one tool and seamlessly reopening it in another relational database management system, or lets one send and receive emails that arrive properly in each other’s inbox.
@@ -231,6 +231,7 @@ In addition, with Core Vocabularies represented in RDFS or OWL, one can mix voca
 Finally, an added benefit is that while multilingual XSD is possible through manually created tags to store the multilingual information, such features are already part of standardised vocabulary languages used by the Core Vocabularies, such as SKOS, RDF, RDFS, and OWL, thereby offering a standardised approach to multilingual labels, which facilitates software development, reuse, and interoperability.
 
 [discrete]
+[[sec:CV-lifecycle]]
 ==== Core Vocabularies lifecycle
 
 The SEMIC Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [xref:references.adoc#ref-23[cv-met]] of which the most relevant section is depicted in the figure below. Assuming stakeholders and Working Group members with relevant roles are in place, requirements are defined, which are thoroughly assessed on existing standardisation efforts, evidence, and other data models. When a change is deemed necessary, it enters a drafting phase that focuses on the technical details whilst adhering to the SEMIC Style Guide, followed by public consultations. Thereafter, if deemed necessary based on the feedback, it will undergo another modelling iteration, else the changes are refined and the model finalised. The final model is formally approved, implemented, and documented, ensuring they are well-understood and agreed upon by all relevant parties.
@@ -239,12 +240,12 @@ image::Semic_process.png[]
 
 The release management of Core Vocabularies follows a structured timeline for all tasks and each release includes detailed documentation to support implementation, so that users can integrate new versions with minimal disruption. This process maintains the quality and relevance of the Core Vocabularies, and supports a dynamic and responsive framework for semantic interoperability within digital public services.
 
-
+[[sec:use-case-overview]]
 === Overview of use cases for using Core Vocabularies
 
 Let us commence with a practical example that contributes to setting the stage for defining the use cases afterward.
 
-
+[[sec:example]]
 ==== A practical example
 
 Imagine you are starting a business in another EU country. To complete the registration, you need to submit a criminal record certificate and a diploma certificate to multiple public organisations. In many countries, this process is still manual—people must physically visit different ministries, request documents, and submit them in person or via email.  Each organisation may use different formats and terminology, making it difficult for institutions to interpret and process the information correctly. This can generate mistakes during data entry due to terminological confusion that subsequently have to be corrected. Without a common reference vocabulary, these organisations interpret the data differently, making seamless exchange impossible.
@@ -253,7 +254,7 @@ Now, imagine an alternative scenario, such as indicated by the https://ec.europa
 
 Defining the _what_ is one step; the _how to achieve it_ is another.
 
-
+[[sec:scenario]]
 ==== How to solve the scenario with semantic data specifications
 
 How can different systems and institutions "talk" to each other effectively at the level of software applications and the various types of databases? That technical level uses *data models* to structure the stored data. This first raises the questions of who is developing those data models, and how, and then how those different data models across the database and applications agree on the terminology used in them. Therefore, the challenge is not only technical but also semantic. It is not enough for systems to simply exchange data—they must also be able to interpret the meaning behind the data in a consistent way such that it will not result in errors or so-called 'dirty' (incorrect or incomplete) data. This requires a common language and a (multilingual) structured vocabulary at both the business process level and the IT systems level.
@@ -304,6 +305,7 @@ image::primary_Use_Case.png[]
 The use cases described below serve as a quick-access overview; complete concrete scenarios are introduced in the respective dedicated section’s “Description” section.
 
 [discrete]
+[[sec:uc1-create-cv]]
 ==== UC1: Create a new model from a Core Vocabulary
 
 For creating new models, there are two business cases for illustration. In short:
@@ -363,6 +365,7 @@ The main use case UC1 is summarised as follows, which is subsequently refined in
 |===
 
 [discrete]
+[[sec:uc2-map-cv]]
 ==== UC2: Map an existing model to a Core Vocabulary
 
 For mapping vocabularies, there are two business cases for illustration. In short:

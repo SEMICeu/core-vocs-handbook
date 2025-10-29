@@ -1,3 +1,4 @@
+[[sec:create-data-model-from-cv]]
 == Creating a new data model from an existing Core Vocabulary
 
 Technologies rise and decline in popularity, yet one of the red threads through the computational techniques over the decades is the *management of structured data*. Data needs to be stored, processed, acted upon, shared, integrated, presented, and more, all mediated by software. This also means that the structure of the data needs to be machine-readable far beyond the simple scanned hard-copy administrative forms or legal documents. Structured data mediates between entities in the real world and their representation in the software.  +
@@ -23,6 +24,7 @@ Each model type has its business case providing a rationale why one would want t
 [[sec:create-a-new-xsd-schema]]
 === Create a new XSD schema from a Core Vocabulary (UC1.1)
 
+[[sec:uc1.1-description]]
 ==== Use case description
 
 We will introduce the *motivation for the use case* with a user story.
@@ -57,7 +59,7 @@ The business case translates into the following *use case specification*, which 
 
 Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
 
-
+[[sec:uc1.1-guideline]]
 ==== Guidelines to create a new XSD schema
 
 This section provides detailed instructions for addressing use case link:./introduction.adoc#sec:uc11[UC1.1]. To create a new XSD schema, the following main steps need to be carried out:
@@ -145,7 +147,7 @@ The schema should be validated with at least one sample XML document, to verify 
 
 Having created the XML representation from the Core Vocabulary, we thus created a binding between the technical and semantic layer for the interoperability of the data. Either may possibly evolve over time and changes initiated from either direction should be consulted with the other, and may require re-validation of the binding. Strategies to avoid problematic divergence are to be put in place.
 
-
+[[sec:uc1.1-tutorial]]
 ==== Tutorial: Create an XSD schema using the Core Business Vocabulary
 
 Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the xref:how-to-create-new-data-models.adoc#_guidelines_to_create_a_new_xsd_schema[guidelines] outlined for *Use Case*  xref:introduction.adoc#sec:uc11[*UC1.1*] "Create a New XSD Schema", showing how to design and create an XSD schema that integrates terms from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[Core Business Vocabulary] (CBV). This step-by-step guide focuses on the essential phases of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped properly, and all constraints are applied. +
@@ -351,7 +353,7 @@ You can execute the rules using the provided https://github.com/SEMICeu/XML-sche
 
 [[sec:create-a-new-json-ld-context-definition]]
 === Create a new JSON-LD context definition from a Core Vocabulary (UC1.2)
-
+[[sec:uc1.2-description]]
 ==== Use case description
 
 
@@ -385,7 +387,7 @@ This business case translates into the following *use case specification*, which
 |===
 
 Having established the who, what, and why, the next step is _how_ to accomplish this. The _semantic engineer_ specifies the guidelines for JSON-LD context development from a vocabulary, which makes it easier for the _software engineer_ to implement it. The guideline is described in the next section.
-
+[[sec:uc1.2-guideline]]
 ==== Guidelines to create a new JSON-LD context definition
 
 
@@ -488,7 +490,7 @@ _Example: an error in the URL._
 }
 ----
 
-
+[[sec:uc1.2-tutorial]]
 ==== Tutorial: Create a JSON-LD context from the CPSV-AP Core Vocabulary
 
 This tutorial addresses the use case xref:introduction.adoc#sec:uc21[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts that are defined by reusing concepts from the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)], following ideas from https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].

@@ -1,3 +1,4 @@
+[[sec:handbook]]
 = The SEMIC Core Vocabularies Handbook
 :doctype: book
 ifndef::ebook-format[:leveloffset: 1]
