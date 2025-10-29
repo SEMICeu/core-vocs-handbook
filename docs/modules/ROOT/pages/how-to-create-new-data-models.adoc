@@ -442,7 +442,7 @@ _Main shaping of the structure_
 
 Start with defining the structure of the context by *relating class terms with property terms* and then, if necessary, property terms with other classes.
 
-Commence by creating a JSON structure that starts with a @context field. This field will contain mappings from one’s own vocabulary terms to other’s respective URIs. Continue by defining fields for classes and subfields for their properties.
+Commence by creating a JSON structure that starts with a `@context` field. This field will contain mappings from one’s own vocabulary terms to other’s respective URIs. Continue by defining fields for classes and subfields for their properties.
 
 If the JSON-LD context is developed with the aim of being used directly in an exchange specific to an application scenario, then aim to establish a complete tree structure that starts with a single root class. To do so, specify precise `@type` references linking to the specific class.
 
