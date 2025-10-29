@@ -1,4 +1,4 @@
-=== References
+== References
 
 [[ref-1]]
 - *[eif]* New European Interoperability Framework. Available at: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
@@ -218,4 +218,5 @@
 
 [[ref-89]]
 - *[xsd-owl]* Garcia R, Celma O. Semantic Integration and Retrieval of Multimedia Metadata. SemAnnot@ ISWC 2005 Nov 7. Available at: https://mtg.upf.edu/files/publications/d450b9-ISWC2005-GarciaCelma-SemAnnot2005.pdf
+
 
