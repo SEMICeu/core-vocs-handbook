@@ -36,7 +36,7 @@ ____
 
 *User Story: As a* knowledge engineer at the Department of Agriculture, *I want* *to* map my division’s existing conceptual model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV) and align CBV concepts with http://Schema.org[Schema.org], *so that* our data can be interoperable with both EU semantic standards and global web vocabularies, enabling accurate data exchange.  
 
-The business case translates into the following *use case specification*, which is instantiated from the link:./introduction.adoc#sec:uc21[general UC2.1 description]:
+The business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc21[general UC2.1 description]:
 
 |===
 |{set:cellbgcolor: #a8c6f7}
@@ -52,7 +52,7 @@ The business case translates into the following *use case specification*, which 
 [[sec:uc2.1-guidline]]
 ==== Guidelines on how to map an existing conceptual model to a Core Vocabulary
 
-This section provides general guidelines to address use case link:./introduction.adoc#sec:uc21[UC2.1], mapping an ontology to a Core Vocabulary.
+This section provides general guidelines to address use case xref:introduction.adoc#sec:uc21[UC2.1], mapping an ontology to a Core Vocabulary.
 
 In this section we adopt the definitions from the ontology matching handbook [xref:references.adoc#ref-54[om]] for the following concepts:
 
@@ -130,14 +130,14 @@ Numerous well-established ontology matching algorithms have been extensively rev
 
 * *Terminological* techniques draw on the textual content within ontologies, such as entity labels and comments, employing methods from natural language processing and information retrieval, including string distances and statistical text analysis.
 * *Structural* techniques analyse the relationships and constraints between ontology entities, using methods like graph matching to explore the topology of ontology structures.
-* *Semantic *techniques apply formal logic and inference to deduce the implications of proposed alignments, aiding in the expansion of alignments or detection of conflicts.
+* *Semantic* techniques apply formal logic and inference to deduce the implications of proposed alignments, aiding in the expansion of alignments or detection of conflicts.
 * *Extensional* techniques compare entity sets, or instances, potentially involving analysis of shared resources across ontologies to establish similarity measures.
 
 Next, the *execution* activity implements the chosen matchers. Automated or semi-automated tools are deployed to carry out the matching process, resulting in a list of candidate correspondences. This list typically includes suggested links between elements of the source and target ontologies, each with an associated confidence level computed by the algorithms [xref:references.adoc#ref-61[edoal]]. A language for expressing such correspondences is commonly used to declare these potential alignments.
 
 Finally, in the *evaluation* activity, the alignments found are rigorously assessed on their suitability. The evaluation measures the alignments against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements, so that  only the most suitable alignments are carried forward for the creation of a mapping, thereby upholding the integrity and logical soundness of the matching process.
 
-*Tools*: Tools such as SILK [xref:references.adoc#ref-62[silk]], LIMES [xref:references.adoc#ref-67[limes]], and LogMap [xref:references.adoc#ref-83[logmap]] may be used in this phase.
+*Tools*: Tools such as SILK [xref:references.adoc#ref-62[silk]], LIMES [xref:references.adoc#ref-76[limes]], and LogMap [xref:references.adoc#ref-77[logmap]] may be used in this phase.
 *Inputs*: Matcher configurations, additional resources (if any), correspondences from previous matching iterations (if any). +
 *Outputs*: Generated alignments, evaluation reports.
 
@@ -168,7 +168,7 @@ The table is indicative of the variety of semantic connections that can be reali
 
 The *Creation* step is the execution of the mapping, entailing the selection of the relation, and assertion of the mapping. This activity involves human intervention and the selection is conducted manually according to the project’s objectives and semantic appropriateness of the candidate mapping.
 
-*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format [xref:references.adoc#ref-78[af]], EDOAL [xref:references.adoc#ref-61[edoal], Simple Standard for Sharing Ontological Mapping (SSSOM) [xref:references.adoc#ref-79[sssom]], and the Semantic Mapping Vocabulary (SEMAPV) [semapv] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.
+*Rendering* translates the mapping in a machine-readable format so that it can be interpreted and executed by software agents. Typically, this is a straight-forward export of the alignment statements from the editing tool or the materialisation of the mapping in a triple store, using a common format, such as Alignment Format [xref:references.adoc#ref-78[af]], EDOAL [xref:references.adoc#ref-61[edoal]], Simple Standard for Sharing Ontological Mapping (SSSOM) [xref:references.adoc#ref-79[sssom]], and the Semantic Mapping Vocabulary (SEMAPV) [xref:references.adoc#ref-80[semapv]] for the mapping justification values. Multiple renderings may be created from the same alignment, accommodating the need for various formalisms.
 
 *Tools*: Tools such as VocBench3 [xref:references.adoc#ref-63[vocbench]] can be used in this phase, or generic office tools, such as MS Excel, Google Sheets spreadsheets, or a LibreOffice spreadsheet.  +
 *Inputs*: Evaluated correspondences (the alignments), stakeholders' amendment plans, requirements for the formalism of the mapping so that the mapping assertions integrate with the modelling language used. +
@@ -191,8 +191,7 @@ Regarding the second task, governance involves the creation of *maintenance prot
 [[sec:tutorial:map-schema.org]]
 ==== Tutorial: Map Schema.org to the Core Business Vocabulary
 
-This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* link:./introduction.adoc#sec:uc21[UC2.1]. By following the link:./how-to-map-existing-data-models.adoc#_guidelines_on_how_to_map_an_existing_conceptual_model_to_a_core_vocabulary[map an existing model] *methodology*, +
-you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
+This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* xref:introduction.adoc#sec:uc21[UC2.1]. By following <<sec:uc2.1-guidline>>[map an existing model] *methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 
 *_Phase 1: Staging (Defining the Requirements)_*
@@ -980,5 +979,3 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
-
-
