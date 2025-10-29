@@ -192,7 +192,7 @@ The key components are:
 
 * `<xs:import>`: The element that imports the CBV schema to make its terms available in your schema.
 * `namespace="http://data.europa.eu/m8g/[http://data.europa.eu/m8g/]"`: Defines the namespace of the CBV.
-*  *`schemaLocation="https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd[https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd]"`: Points to the location of the CBV schema file on the Web.
+* `schemaLocation="https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd[https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd]"`: Points to the location of the CBV schema file on the Web.
 
 
 _Define elements_

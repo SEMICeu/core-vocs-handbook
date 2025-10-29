@@ -191,7 +191,7 @@ Regarding the second task, governance involves the creation of *maintenance prot
 [[sec:tutorial:map-schema.org]]
 ==== Tutorial: Map Schema.org to the Core Business Vocabulary
 
-This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* xref:introduction.adoc#sec:uc21[UC2.1]. By following <<sec:uc2.1-guidline>>[map an existing model] *methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
+This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* xref:introduction.adoc#sec:uc21[UC2.1]. By following <<sec:uc2.1-guidline, map an existing model>> *methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 
 *_Phase 1: Staging (Defining the Requirements)_*
