@@ -3,7 +3,7 @@
 
 The additional business and use cases are depicted in the diagram below and briefly described afterwards.
 
-image::images/AdditionalUCs1.png[]
+image::AdditionalUCs1.png[]
 
 
 === UC2.3: Map an existing JSON Schema to a Core Vocabulary
@@ -162,4 +162,5 @@ A concrete user story can be formulated as follows. +
 
 *Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
+
 
