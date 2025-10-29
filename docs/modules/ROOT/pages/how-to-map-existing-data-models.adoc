@@ -555,7 +555,7 @@ A quick overview of translations for the XML Schema constructs and OWL construct
 |rdfs:range
 |The Class in the range position in the property
 
-a| complexType&#124;group&#124;attributeGroup
+| complexType&#124;group&#124;attributeGroup
 |owl:Class
 |Relationships and contextual restrictions packageR
 
@@ -563,11 +563,11 @@ a| complexType&#124;group&#124;attributeGroup
 |owl:Restriction
 |Filler of a relationship in that axiom/context
 
-a |extension@base &#124; restriction@base
+|extension@base &#124; restriction@base
 |rdfs:subClassOf
 |Indicates that the package concretises or specializes the base package.
 
-a |@maxOccurs
+|@maxOccurs
 
 @minOccurs
 |owl:maxCardinality, owl:minCardinality
@@ -960,6 +960,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
