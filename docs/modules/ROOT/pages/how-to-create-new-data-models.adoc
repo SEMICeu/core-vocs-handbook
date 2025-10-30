@@ -75,6 +75,7 @@ This section provides detailed instructions for addressing use case xref:introdu
 
 This is visualised in the following figure, together with key tasks and suggestions.
 
+.Overview of the guidelines to create a new XSD schema
 image::UC1.1.png[]
 
 
@@ -412,6 +413,7 @@ The three key phases are:
 
 This is visualised in the following figure, together with key tasks and suggestions.
 
+.Overview of the guidelines to create a new JSON-LD context definition
 image::UC1.2.png[]
 
 *_Phase 1: Import or define elements_*
@@ -712,7 +714,10 @@ _Final review and validation_
 
 Use a JSON-LD  validator (there are  online tools available, such as the https://json-ld.org/playground/[JSON-LD Playground]) to validate JSON-LD context and make sure there are no errors. They also offer visualisation features, noting that it can only be visualised if the syntax is correct. There is no standard for how RDF graphs are to be rendered, and therefore  different visualisation tools will result in different  JSON-LD  diagram-based visualisations. Below  are two examples generated from the same JSON-LD snippet, rendered by, https://json-ld.org/playground/[JSON-LD Playground] and https://issemantic.net/rdf-visualizer[:isSemantic], respectively.
 
+.Example rendered with JSON-LD Playground
 image::playgroundEx.png[]
+
+.Example rendered with :isSemantic 
 image::isSemanticEx.png[]
 
 _Error example_
@@ -734,12 +739,14 @@ If the `@import` URLs for external contexts are incorrect or unavailable, the va
 
 These errors typically occur when the referenced context URL is malformed or unreachable, as shown in the following figure:
 
+.Processing error illustration
 image::errorEX.png[]
 
 _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
