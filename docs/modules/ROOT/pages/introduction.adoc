@@ -277,7 +277,7 @@ This handbook serves as a practical guide for using Core Vocabularies in various
 
 A *business case* in the current context is to be understood as a narrative user story (in terms of the technical expert terminology), which functions as *motivation for the use case*. They capture the who, what, and why in a broader context, including who the beneficiary of an action is, what they need, and what the benefit of it is. Such a narrative is then structured into a *user story* as a structured sentence that captures the essence of the business case yet also communicates genericity. For the technical reader, a *use case specification* is listed afterwards, which provides a schematic view as a step towards the precise technical specifications.
 
-We differentiate between use cases focused on the creation of _new_ artefacts and those involving the mapping of _existing_ artefacts to Core Vocabularies. For better clarity, we numbered the use cases and organised them into two diagrams, one for the primary scenarios (see Figure 1, below) and the other for depicting the additional ones. The former are addressed in the main part of this handbook, whereas the latter are listed in the  xref:Appendix.adoc[Appendix] and may be elaborated on at a later date if there is a demand from the community.
+We differentiate between use cases focussed on the creation of _new_ artefacts and those involving the mapping of _existing_ artefacts to Core Vocabularies. For better clarity, we numbered the use cases and organised them into two diagrams, one for the primary scenarios (see Figure 1, below) and the other for depicting the additional ones. The former are addressed in the main part of this handbook, whereas the latter are listed in the  xref:Appendix.adoc[Appendix] and may be elaborated on at a later date if there is a demand from the community.
 
 The use cases are written in white-box point of style oriented towards user goals following Cockburn’s classification [xref:references.adoc#ref-30[uc-book]]. We will use the following template to describe the relevant use cases:
 
@@ -433,6 +433,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
