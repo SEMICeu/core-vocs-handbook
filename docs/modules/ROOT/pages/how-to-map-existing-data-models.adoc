@@ -137,7 +137,7 @@ Next, the *execution* activity implements the chosen matchers. Automated or semi
 
 Finally, in the *evaluation* activity, the alignments found are rigorously assessed on their suitability. The evaluation measures the alignments against the project’s specific needs, scrutinising their accuracy, relevance, and alignment with the predefined requirements, so that  only the most suitable alignments are carried forward for the creation of a mapping, thereby upholding the integrity and logical soundness of the matching process.
 
-*Tools*: Tools such as SILK [xref:references.adoc#ref-62[silk]], LIMES [xref:references.adoc#ref-76[limes]], and LogMap [xref:references.adoc#ref-77[logmap]] may be used in this phase.
+*Tools*: Tools such as SILK [xref:references.adoc#ref-62[silk]], LIMES [xref:references.adoc#ref-76[limes]], and LogMap [xref:references.adoc#ref-77[logmap]] may be used in this phase. +
 *Inputs*: Matcher configurations, additional resources (if any), correspondences from previous matching iterations (if any). +
 *Outputs*: Generated alignments, evaluation reports.
 
@@ -979,6 +979,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
