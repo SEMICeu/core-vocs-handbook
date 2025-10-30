@@ -18,3 +18,8 @@ As a general guide for such a statement, we recommend it should note the level o
 
 The Core Vocabularies intend to remain ‘syntax neutral’; that is, they define concepts, properties, and constraints _only at the semantic level_ and avoid prescribing any concrete/complete exchange format such as XML, JSON-LD, or RDF serialisation. Consequently, no tooling development to create the models is foreseen, or: modellers are free to use the tools they prefer to work with, also because such choices are dependent on the domain and the task at hand. With broader uptake, goalposts may shift, and a searchable data model library, such as those used for ontologies (e.g., [xref:references.adoc#ref-82[ols]] [xref:references.adoc#ref-83-bp[bp]]), may become useful to further facilitate the uptake of Core Vocabularies by making them more easily findable.
 
+'''
+
+'''
+
+
