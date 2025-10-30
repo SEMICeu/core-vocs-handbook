@@ -63,6 +63,7 @@ In this section we adopt the definitions from the ontology matching handbook [xr
 
 To create an ontology mapping, the following steps need to be observed, as shown in the following diagram and described afterwards.
 
+.Overview of the guidelines on how to map an existing conceptual model
 image::UC21guidelineOverview.png[width=450, height=600]
 
 . *Staging*: defining the requirements;
@@ -151,6 +152,7 @@ The alignment process may include engaging communication with third parties to v
 *Preparation* involves stakeholder involvement to collectively go systematically through the list of alignments (candidate mappings), considering not only the relevance of the alignments, but also the type of relationship between the elements, being typically either equivalence or subsumption.  +
 The type of asset—an ontology, controlled list, or data shape—dictates the nature of the relationship that can be rendered from the alignment. The types of alignment are visually represented and illustrated in the figure below and summarised and structured in the table afterwards. They include alignment elements for OWL elements concerning semantic artefacts and for SKOS, which can be used for annotations and weakly semantic knowledge organisation systems.
 
+.Visualisation of various types of alignments
 image::alignmentDiagram.png[width=500, height=600]
 
 |===
@@ -341,6 +343,7 @@ Tools such as LIMES and Silk do not determine the semantic nature of the match (
 * Target entity: a URI from the source ontology (e.g., CBV).
 * Similarity score: a numerical value (typically from 0 to 1) indicating the strength of the lexical similarity between the two entities.
 
+.Screenshot of computed similarity scores
 image::limes.png[]
 
 
@@ -518,6 +521,7 @@ To create an XSD mapping, one needs to decide on the purpose and level of specif
 
 In this section we describe the procedures to follow, which vary by selected material and ultimate goal in the broader context. The diagram below depicts the general process to create an XSD schema mapping and corresponding XML mappings, which is described afterwards.
 
+.Overview of the guidelines for Mapping an Existing XSD Schema
 image::UC2.2.png[]
 
 The main procedure consists of four phases:
@@ -621,6 +625,7 @@ After completing either Phase 2-i or 2-ii, one may proceed to Phase 3, if applic
 
 Drilling down into Phase 3 of the overall procedure, we identify three steps, as shown in the figure below.
 
+.Overivew of the subprocess of transforming XML into CV elements
 image::xmlTOcv.png[]
 
 *Transforming the XML data to the Core Vocabulary by means of mappings* consists of:
@@ -852,6 +857,7 @@ We will create a conceptual mapping between the XSD elements and RDF terms from 
 
 Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
 
+.Visualisation of an orchstration of mappigns between the XSD schema, its XML file compliant with it, and the CV
 image::snippetCBV.png[]
 
 More precisely, you have to write down the source XPath, i.e., `*/ContactPoint` in the figure, and how it is represented in the target specification, defining a target property path and a target class path. Examples of the Conceptual Mapping for five selected elements of the XSD schema are presented below, where the full URIs have been abbreviated:
@@ -978,6 +984,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
