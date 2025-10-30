@@ -107,3 +107,5 @@ Thus, while exchange data models are essential for the technical realisation of 
 
 *_Definition:_* An established list of preferred terms that signify concepts or relationships within a domain of discourse. All terms must have an unambiguous and non-redundant definition. Optionally it may include synonyms, notes and their translation to multiple languages.
 
+
+'''
