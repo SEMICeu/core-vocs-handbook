@@ -1,6 +1,17 @@
-.custom-highlight {
+.custom-highlight1 {
     color: #555;
     border: 1px solid #ccc;
     border-radius: 0.2em;
     padding: 0.05em 0.3em;
+}
+
+.custom-highlight2 {
+ font-family: "Segoe UI", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.custom-highlight {
+  font-family: "Helvetica";
+  color: black;  
 }

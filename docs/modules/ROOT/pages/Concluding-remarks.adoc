@@ -1,0 +1,25 @@
+[[sec:concluding-remarks]]
+== Concluding remarks
+
+
+This Handbook demonstrated how Core Vocabularies can be used both to create new models and to map to existing ones, and that this can be achieved using various types of models, regardless of the syntaxes. This is exemplified by the guidelines for use, which were illustrated in four tutorials with concrete examples for a selection of popular syntaxes, including XML, JSON-LD, and RDF. Through implementation in concrete use cases, the Core Vocabularies function as a shared central reference, fostering interoperability as well as reducing design time for data stores and software applications.
+
+The key task ahead is to promote broader adoption of Core Vocabularies initiating a  process of continuous improvement - where early gains in interoperability inform SEMIC’s enhancements, leading to progressively greater alignment and efficiency.
+
+This Core Vocabularies Handbook did not cover the following topics:
+
+* a complete methodology for syntax binding, as every step needed to turn a vocabulary into a validated, ready-to-use technical artefact (e.g., XSD, JSON-LD context, SHACL shapes);
+* data model library software infrastructure or tools to develop models and keep linked models in sync;
+* procedures for claiming conformance to a Core Vocabulary.
+
+Claiming conformance to Core Vocabularies is an integral part of validating (a) how well a new or a mapped data model or semantic data specification aligns with the principles and practices established in the SEMIC Style Guide [xref:references.adoc#ref-4[sem-sg]] and (b) to what degree the Core Vocabularies are reused (fully or partially) [xref:references.adoc#ref-24[sem-sg-reuse]]. The *conformance assessment is voluntary*, and shall be published as a self-conformance statement. This statement must assert which requirements are met by the data model or semantic specification. 
+
+As a general guide for such a statement, we recommend it should note the level of adherence, ranging from basic implementation to more complex semantic representations. At the *basic level*, conformance might simply involve ensuring that data usage is consistent with the terms (and structure, but no formal semantics) defined by the Core Vocabularies. Moving to a more *advanced level* of conformance, data may be easily transformed into formats like RDF or JSON-LD, which are conducive to richer semantic processing and integration. This level of conformance signifies a deeper integration of the Core Vocabularies, facilitating a more robust semantic interoperability across systems. Ultimately, the *highest level* of conformance is achieved when the data is represented in RDF and fully leverages the semantic capabilities of the Core Vocabularies. This includes using a range of semantic technologies, adhering to the SEMIC Style Guide, fully reusing the Core Vocabularies, and respecting the associated data shapes. 
+
+The Core Vocabularies intend to remain ‘syntax neutral’; that is, they define concepts, properties, and constraints _only at the semantic level_ and avoid prescribing any concrete/complete exchange format such as XML, JSON-LD, or RDF serialisation. Consequently, no tooling development to create the models is foreseen, or: modellers are free to use the tools they prefer to work with, also because such choices are dependent on the domain and the task at hand. With broader uptake, goalposts may shift, and a searchable data model library, such as those used for ontologies (e.g., [xref:references.adoc#ref-82[ols]] [xref:references.adoc#ref-83-bp[bp]]), may become useful to further facilitate the uptake of Core Vocabularies by making them more easily findable.
+
+'''
+
+'''
+
+

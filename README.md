@@ -1,5 +1,5 @@
 # Core Vocabularies Handbook
-[Core Vocabularies Handbook](https://semiceu.github.io/core-vocs-handbook/public-review/index.html)
+[Core Vocabularies Handbook](https://semiceu.github.io/core-vocs-handbook/index.html)
 
 This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
@@ -75,3 +75,4 @@ The glossary defines key terms related to semantic data specifications—includi
 
 ### Handbook as a whole
 The handbook can also be read as one contiguous file, accessed from this link.
+
