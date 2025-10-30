@@ -654,8 +654,7 @@ The tables below show two examples of mapping the organisation's address, city a
 |*Target Class Path*|org:Organization / locn:Address / rdf:PlainLiteral
 |===
 
-*Inputs*: XSD Schemas, Ontologies, SHACL Data Shapes, Source and Target Documentation, Sample XML data +
-Both vocabulary and profile mappings are typically crafted and validated by domain experts, data-savvy business stakeholders, and in collaboration with semantic engineers and CV experts. +
+*Inputs*: XSD Schemas, Ontologies, SHACL Data Shapes, Source and Target Documentation, Sample XML data. Both vocabulary and profile mappings are typically crafted and validated by domain experts, data-savvy business stakeholders, and in collaboration with semantic engineers and CV experts. +
 *Outputs*: Conceptual Mapping documented in, e.g., a spreadsheet.
 
 
@@ -701,7 +700,7 @@ ASK {
 ----
 The SHACL-based validation method provides a comprehensive approach for validating RDF data, where data shapes are defined according to the constraints and structures expected in the RDF output, as specified by the mapped Application Profile. These shapes act as templates that the RDF graph must conform to, covering aspects such as data types, relationships, and cardinality. A SHACL validation engine processes the RDF data against these shapes, identifying any violations that indicate non-conformity with the expected data model.
 
-SHACL is a suitable choice to ensure adherence to data standards and interoperability requirements. This form of validation is independent of the way in which data mappings are constructed, focusing instead on whether the generated data conforms to established semantic models. It provides a high-level assurance that data structures and content meet the specifications.
+SHACL is a suitable choice to ensure adherence to data standards and interoperability requirements. This form of validation is independent of the way in which data mappings are constructed, focussing instead on whether the generated data conforms to established semantic models. It provides a high-level assurance that data structures and content meet the specifications.
 
 SPARQL-based validation is tightly linked to the mapping process itself, offering a granular, rule-by-rule validation that ensures each data transformation aligns with the expert-validated mappings. It is particularly effective in confirming the accuracy of complex mappings and ensuring that the implemented data transformations precisely reflect the intended semantic interpretations, thus providing a comprehensive check on the fidelity of the mapping process.
 
@@ -979,6 +978,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
