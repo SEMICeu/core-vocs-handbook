@@ -155,7 +155,8 @@ Having created the XML representation from the Core Vocabulary, we thus created 
 [[sec:uc1.1-tutorial]]
 ==== Tutorial: Create an XSD schema using the Core Business Vocabulary
 
-Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the <<sec:uc1.1-guideline, guidelines>> outlined for *Use Case*  xref:introduction.adoc#sec:uc11[*UC1.1*] "Create a New XSD Schema", showing how to design and create an XSD schema that integrates terms from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[Core Business Vocabulary] (CBV). This step-by-step guide focuses on the essential phases of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped properly, and all constraints are applied. +
+Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the <<sec:uc1.1-guideline, guidelines>> outlined for *Use Case*  xref:introduction.adoc#sec:uc11[*UC1.1*] "Create a New XSD Schema", showing how to design and create an XSD schema that integrates terms from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[Core Business Vocabulary] (CBV). This step-by-step guide focuses on the essential phases of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped properly, and all constraints are applied. 
+
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
@@ -215,8 +216,8 @@ At this phase, we focus on structuring the XML document using appropriate XML Sc
 
 _Venetian Blind Pattern_
 
-In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as [.custom-highlight]#LegalEntity#, serves as the entry point, as seen in CBV. This pattern fits well with API design, where you typically request information about a central concept (such as [.custom-highlight]#LegalEntity#), and the response includes nested elements, including [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#, which are all organised under the main entity. +
-Here’s an example, where [.custom-highlight]#LegalEntity# serves as the main entry point:
+In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as `LegalEntity`, serves as the entry point, as seen in CBV's XSD. This pattern fits well with API design, where you typically request information about a central concept (such as [.custom-highlight]#LegalEntity#), and the response includes nested properties, including [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#, which are all organised under the main entity. +
+Here’s an example, where `LegalEntity` serves as the main entry point:
 
 [source,xml]
 ----
@@ -237,8 +238,8 @@ Here’s an example, where [.custom-highlight]#LegalEntity# serves as the main e
 ----
 In this example:
 
-* LegalEntity is the global entry point.
-* It uses [.custom-highlight]#LegalEntityType#, which contains various properties such as [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#.
+* `LegalEntity` is the global entry point.
+* It uses `LegalEntityType`, which contains various properties such as `LegalName` and `RegisteredAddress`.
 
 
 _Garden of Eden Pattern_
@@ -258,7 +259,7 @@ _Define Complex Types_
 
 After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like [.custom-highlight]#LegalEntity# or [.custom-highlight]#Organization#, which have both simple and complex elements. For example, the [.custom-highlight]#LegalEntityType# and [.custom-highlight]#OrganizationType#, as follows.
 
-A [.custom-highlight]#LegalEntity# might contain multiple child elements, such as [.custom-highlight]#LegalName# modelled as a simple string, [.custom-highlight]#RegisteredAddress# (also a complex type), and other related elements. Here's how [.custom-highlight]#LegalEntityType# is defined:
+An implemented [.custom-highlight]#LegalEntity# might contain multiple child elements, such as `LegalName` modelled as a simple string, `RegisteredAddress` (also a complex type), and other related elements. Here's how `LegalEntityType` is defined in the XSD schema:
 
 [source,xml]
 ----
@@ -284,7 +285,7 @@ A [.custom-highlight]#LegalEntity# might contain multiple child elements, such a
 The https://www.w3.org/TR/sawsdl/#:~:text=of%20the%20interface.-,3.1%20Annotating%20Interfaces%20with%20Model%20Reference,-This%20section%20defines[sawsdl:modelReference] annotation is used to link the element to an external concept, providing semantic context by associating the element with a specific vocabulary or ontology.
 ====
 
-Similar to the [.custom-highlight]#LegalEntityType# complex type, the [.custom-highlight]#BusinessAgentType# defines a concept with multiple properties and relationships. However, for [.custom-highlight]#BusinessAgentType#, we define it as a complex type that contains hierarchical relationships, such as [.custom-highlight]#HeadOf# and [.custom-highlight]#MemberOf#.
+Similar to the [.custom-highlight]#LegalEntityType# complex type, the [.custom-highlight]#BusinessAgentType# defines a concept with multiple properties and relationships. However, for `BusinessAgentType` in the XSD schema, we define it as a complex type that contains hierarchical relationships, such as `HeadOf` and `MemberOf`.
 
 
 [source,xml]
@@ -309,7 +310,7 @@ Similar to the [.custom-highlight]#LegalEntityType# complex type, the [.custom-h
 ----
 
 
-It’s important to observe that in this context, LegalEntityType is defined as an extension of FormalOrganizationType (which, in turn, extends OrganizationType), declared using an `<xs:extension base="...">` element, as shown in the following snippet.
+It’s important to observe that in this context, [.custom-highlight]#LegalEntityType# is defined as an extension of [.custom-highlight]#FormalOrganizationType# (which, in turn, extends [.custom-highlight]#OrganizationType#), declared using an `<xs:extension base="...">` element, as shown in the following snippet.
 
 
 [source,xml]
@@ -516,7 +517,7 @@ Since CPSV-AP provides an existing JSON-LD context, we can import it in our own 
   }
 }
 ----
-If a context does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms such as PublicService and ContactPoint. These terms must be mapped to URIs.
+If a context does not exist, define the elements explicitly. For example, CPSV-AP uses specific terms such as [.custom-highlight]#PublicService# and [.custom-highlight]#ContactPoint#. These terms must be mapped to URIs.
 [source,json]
 ----
 {
@@ -574,7 +575,7 @@ Explanation of JSON-LD keywords used:
 * *`@container`***:** Specifies how values are structured. For instance,
 ** `@set`: Explicitly defines a property as an array of values. It ensures that even if the data includes just one value, it will still be treated as an array by JSON-LD processors. This makes post-processing of JSON-LD documents easier as the data is always in array form, even if the array only contains a single value
 * *`@id`*: Provides the unique identifier (IRI) for a term or property.
-* *`@type`*: Specifies the type of a value. Commonly used for linking to classes or data types.
+* *`@type`*: Specifies the type of a value, which is commonly used for linking to classes or data types.
 * *`@import`*: Imports another JSON-LD context, allowing reuse of its terms.
 
 
@@ -707,7 +708,7 @@ Use the extended properties to describe more aspects of [.custom-highlight]#Serv
 ----
 
 
-===== Final review and validation
+_Final review and validation_
 
 Use a JSON-LD  validator (there are  online tools available, such as the https://json-ld.org/playground/[JSON-LD Playground]) to validate JSON-LD context and make sure there are no errors. They also offer visualisation features, noting that it can only be visualised if the syntax is correct. There is no standard for how RDF graphs are to be rendered, and therefore  different visualisation tools will result in different  JSON-LD  diagram-based visualisations. Below  are two examples generated from the same JSON-LD snippet, rendered by, https://json-ld.org/playground/[JSON-LD Playground] and https://issemantic.net/rdf-visualizer[:isSemantic], respectively.
 
@@ -739,6 +740,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
