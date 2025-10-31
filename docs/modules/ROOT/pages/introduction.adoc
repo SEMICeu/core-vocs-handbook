@@ -1,5 +1,5 @@
 [[sec:Introduction]]
-== Introduction
+= Introduction
 
 This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
@@ -12,12 +12,12 @@ Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance
 
 [[sec:Intended_audience]]
 
-=== Intended audience
+== Intended audience
 
 This handbook is intended for two main audiences: 1) administrative professionals, including policy officers and possibly also legal experts, and 2) technical experts and IT professionals. Public administrations involve both legal/administrative experts and technical professionals. While they may not always “speak the same language”, they must *work together* to ensure smooth digital transformation. *Semantic interoperability* provides the *common foundation* that allows them to bridge their disciplinary differences and find common ground, *enabling effective collaboration* and thereby contributing to improved public services. Each intended audience will gain new insights relevant for their respective roles.
 
 [discrete] 
-==== Administrative Professionals & Legal Experts
+=== Administrative Professionals & Legal Experts
 
 By reading this handbook, domain experts will:
 
@@ -28,7 +28,7 @@ By reading this handbook, domain experts will:
 It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions prioritising IT projects that align with interoperability goals.
 
 [discrete] 
-==== Technical Experts & IT Professionals
+=== Technical Experts & IT Professionals
 
 By engaging with this handbook as both a reference manual and a practical guide, the technical experts and IT professionals who design, implement, and maintain the software ecosystem will:
 
@@ -41,7 +41,7 @@ By engaging with this handbook as both a reference manual and a practical guide,
 It is expected that this will not only facilitate communication with the domain experts, but also further streamline software development conformant to the user specification and, ultimately, the citizens who benefit from more smoothly functioning digital services.
 
 [[sec:Structure_of_the_Handbook]]
-=== Structure of the Handbook
+== Structure of the Handbook
 
 The Handbook has two types of content:
 
@@ -52,14 +52,14 @@ The *structure of the main part of the Handbook* is as follows. First, the notio
 Finally, the appendix contains a *glossary of terms*, additional use cases not covered in this handbook, and the references.
 
 [[sec:interoperability]]
-=== Interoperability and Core Vocabularies
+== Interoperability and Core Vocabularies
 
 This section introduces what interoperability is, what makes it semantic, and how *_Core Vocabularies_*–which is where key concepts are specified in human-readable and machine-processable formats–contribute to it.
 
 Sharing data easily is indispensable for effective and efficient public services. Sharing may be done through offering one point of access, and often involves reusing the data in multiple applications across multiple departments and organisations. To make this work, the information systems need to be interoperable.
 
 [[sec:what-is-interoperability]]
-==== What is interoperability?
+=== What is interoperability?
 
 Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], interoperability is defined as “the ability of organisations to interact towards mutually beneficial goals, involving the sharing of information and knowledge between these organisations, through the business processes they support, by means of the exchange of data between their ICT systems”, where, for the purpose of EIF, ‘organisations’ refers to “public administration units or any entity acting on their behalf, or EU institutions or bodies”. It is what “enables administrations to cooperate and make public services function across borders, across sectors and across organisational boundaries”, including enabling “public sector actors to connect, cooperate and exchange data while safeguarding sovereignty and subsidiarity”, as described in the EC communication accompanying the Interoperable Europe Act [xref:references.adoc#ref-83[int-eu]].
 
@@ -76,7 +76,7 @@ The requirement for interoperability has been identified at the European Commiss
 
 [[sec:interoperability-acts]]
 [discrete]
-==== Existing acts and frameworks related to interoperability
+=== Existing acts and frameworks related to interoperability
 
 
 The European Union has formulated Acts, regulations, and frameworks that intend to foster achieving that, including the https://digital-strategy.ec.europa.eu/en/policies/data-act[Data Act] [xref:references.adoc#ref-84[data-act]], https://digital-strategy.ec.europa.eu/en/policies/data-governance-act[Data Governance Act] [xref:references.adoc#ref-81[dga]], the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], and the https://interoperable-europe.ec.europa.eu/interoperable-europe/interoperable-europe-act[Interoperable Europe Act] [xref:references.adoc#ref-3[iea24]], which underscore the importance of harmonised data practices across member states. These Acts and frameworks emphasise that true interoperability goes far beyond just connecting systems at a technical level.
@@ -102,7 +102,7 @@ There are two key reasons to seek interoperability in public administrations:
 ****
 
 [[sec:achieve-interoperability]]
-==== What is semantic interoperability and how to achieve it?
+=== What is semantic interoperability and how to achieve it?
 
 While data exchange is an obvious requirement for interoperability, there are fine but crucial distinctions between data format, syntactic, and semantic interoperability. A standardised syntax and data format to store data lets one exchange data, such as creating an SQL database dump in one tool and seamlessly reopening it in another relational database management system, or lets one send and receive emails that arrive properly in each other’s inbox.
 
@@ -111,13 +111,13 @@ Interoperability at the semantic level concerns *the meaning of that data*. One 
 Interoperability thus consists of a semantic component as well, which "refers to the meaning of data elements and the relationship between them" and "*includes developing vocabularies and schemata to describe data exchanges*" [xref:references.adoc#ref-85[eif4scc]]. According to the https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_3&format=PDF[EIF, section 3.5] [xref:references.adoc#ref-2[eif2]], *semantic interoperability* "ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties, in other words ‘what is sent is what is understood’." One recommended way to achieve semantic interoperability between public administrations is to use semantic assets, such as semantic data models, information models, ontologies, and vocabularies. SEMIC uses models called https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification:~:text=types%20of%20assets.-,What%20is%20a%20Core%20Vocabulary%20(CV)%20specification%3F,-Definition%0AA%20Core[*Core Vocabularies]*.
 
 [[sec:Core_Vocabulary]]
-==== What is a Core Vocabulary?
+=== What is a Core Vocabulary?
 
 A *_Core Vocabulary (CV)_* is a basic, reusable, and extensible specification that captures the relevant characteristics of entities, which can be used to add semantics to data and information  in a context-neutral manner [xref:references.adoc#ref-5[cv-hb]]. Its primary purpose is to provide standardised terms that can be reused across various application domains, typically realised as a https://semiceu.github.io/style-guide/1.0.0/gc-semantic-conventions.html#sec:sc-r2[lightweight ontology] (optionally accompanied by a permissive data shape) and documented in a concise specification. Core Vocabularies for SEMIC [xref:references.adoc#ref-6[sem-sg-cvs]] are maintained by the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre[SEMIC action] under the https://interoperable-europe.ec.europa.eu/interoperable-europe[Interoperable Europe] umbrella of DG DIGIT and are described in the <<sec:SEMIC-Core-Vocabularies, SEMIC Core Vocabularies>> section below.
 
 
 [[sec:SEMIC-Core-Vocabularies]]
-==== SEMIC Core Vocabularies
+=== SEMIC Core Vocabularies
 
 Since 2011, the European Commission has facilitated international working groups to forge consensus and maintain the SEMIC Core Vocabularies. A short description of these vocabularies is included in the Table below. The latest release of the SEMIC Core Vocabularies can be retrieved via the SEMIC Support Center [xref:references.adoc#ref-9[semic]] or directly from the GitHub repository [xref:references.adoc#ref-10[semic-gh]] in both human- and machine-readable formats. They are published under the CC-BY 4.0 licence [xref:references.adoc#ref-21[cc-by]]. Henceforth, when we use the term Core Vocabularies, we refer to the SEMIC Core Vocabularies specifically.
 
@@ -207,7 +207,7 @@ The Core Vocabularies are semantic data specifications [xref:references.adoc#ref
 * conceptual model specification [xref:references.adoc#ref-19[sem-sg-wcm]] expressed in UML Class Diagram notation [xref:references.adoc#ref-20[uml]].
 
 [[sec:Why_Core_Vocabulary]]
-==== Why Core Vocabularies?
+=== Why Core Vocabularies?
 
 Modern-day information system design has moved the goalposts, notably that they typically have to operate in an *ecosystem of tools and data*, which caused a number of new problems, notably:
 
@@ -233,7 +233,7 @@ Finally, an added benefit is that while multilingual XSD is possible through man
 
 [discrete]
 [[sec:CV-lifecycle]]
-==== Core Vocabularies lifecycle
+=== Core Vocabularies lifecycle
 
 The SEMIC Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [xref:references.adoc#ref-23[cv-met]] of which the most relevant section is depicted in the figure below. Assuming stakeholders and Working Group members with relevant roles are in place, requirements are defined, which are thoroughly assessed on existing standardisation efforts, evidence, and other data models. When a change is deemed necessary, it enters a drafting phase that focuses on the technical details whilst adhering to the SEMIC Style Guide, followed by public consultations. Thereafter, if deemed necessary based on the feedback, it will undergo another modelling iteration, else the changes are refined and the model finalised. The final model is formally approved, implemented, and documented, ensuring they are well-understood and agreed upon by all relevant parties.
 
@@ -243,12 +243,12 @@ image::Semic_process.png[]
 The release management of Core Vocabularies follows a structured timeline for all tasks and each release includes detailed documentation to support implementation, so that users can integrate new versions with minimal disruption. This process maintains the quality and relevance of the Core Vocabularies, and supports a dynamic and responsive framework for semantic interoperability within digital public services.
 
 [[sec:use-case-overview]]
-=== Overview of use cases for using Core Vocabularies
+== Overview of use cases for using Core Vocabularies
 
 Let us commence with a practical example that contributes to setting the stage for defining the use cases afterward.
 
 [[sec:example]]
-==== A practical example
+=== A practical example
 
 Imagine you are starting a business in another EU country. To complete the registration, you need to submit a criminal record certificate and a diploma certificate to multiple public organisations. In many countries, this process is still manual—people must physically visit different ministries, request documents, and submit them in person or via email.  Each organisation may use different formats and terminology, making it difficult for institutions to interpret and process the information correctly. This can generate mistakes during data entry due to terminological confusion that subsequently have to be corrected. Without a common reference vocabulary, these organisations interpret the data differently, making seamless exchange impossible.
 
@@ -257,7 +257,7 @@ Now, imagine an alternative scenario, such as indicated by the https://ec.europa
 Defining the _what_ is one step; the _how to achieve it_ is another.
 
 [[sec:scenario]]
-==== How to solve the scenario with semantic data specifications
+=== How to solve the scenario with semantic data specifications
 
 How can different systems and institutions "talk" to each other effectively at the level of software applications and the various types of databases? That technical level uses *data models* to structure the stored data. This first raises the questions of who is developing those data models, and how, and then how those different data models across the database and applications agree on the terminology used in them. Therefore, the challenge is not only technical but also semantic. It is not enough for systems to simply exchange data—they must also be able to interpret the meaning behind the data in a consistent way such that it will not result in errors or so-called 'dirty' (incorrect or incomplete) data. This requires a common language and a (multilingual) structured vocabulary at both the business process level and the IT systems level.
 
@@ -269,7 +269,7 @@ It is these two key ways of using CVs that will be covered in the use cases: cre
 
 
 [[sec:use-cases]]
-==== Introduction to the use cases covered in the handbook
+=== Introduction to the use cases covered in the handbook
 
 This handbook serves as a practical guide for using Core Vocabularies in various common situations. To provide clear and actionable insights, we have categorised potential use cases into two groups:
 
@@ -308,7 +308,7 @@ The use cases described below serve as a quick-access overview; complete concret
 
 [discrete]
 [[sec:uc1-create-cv]]
-==== UC1: Create a new model from a Core Vocabulary
+=== UC1: Create a new model from a Core Vocabulary
 
 For creating new models, there are two business cases for illustration. In short:
 
@@ -368,7 +368,7 @@ The main use case UC1 is summarised as follows, which is subsequently refined in
 
 [discrete]
 [[sec:uc2-map-cv]]
-==== UC2: Map an existing model to a Core Vocabulary
+=== UC2: Map an existing model to a Core Vocabulary
 
 For mapping vocabularies, there are two business cases for illustration. In short:
 

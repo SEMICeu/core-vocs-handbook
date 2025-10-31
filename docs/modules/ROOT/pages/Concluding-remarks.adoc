@@ -1,5 +1,5 @@
 [[sec:concluding-remarks]]
-== Concluding remarks
+= Concluding remarks
 
 
 This Handbook demonstrated how Core Vocabularies can be used both to create new models and to map to existing ones, and that this can be achieved using various types of models, regardless of the syntaxes. This is exemplified by the guidelines for use, which were illustrated in four tutorials with concrete examples for a selection of popular syntaxes, including XML, JSON-LD, and RDF. Through implementation in concrete use cases, the Core Vocabularies function as a shared central reference, fostering interoperability as well as reducing design time for data stores and software applications.
