@@ -79,7 +79,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 image::UC1.1.png[]
 
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models. 
 
@@ -101,7 +101,7 @@ These trade-offs between semantic interoperability and technical consistency are
 ====
 
 
-*_Phase 2: Shape XML document structure_*
+==== Phase 2: Shape XML document structure
 
 In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The _Venetian Blind_ and _Garden of Eden_ patterns stand out as preferable for their ability to allow complex types to be reused by different elements [xref:references.adoc#ref-44[dsg-ptr]].
 
@@ -147,7 +147,7 @@ Add annotations and documentation using the `xs:annotation` and `xs:documentatio
 such as an informal description of the intended meaning of a concept.
 ====
 
-*_Phase 3: Validation_*
+==== Phase 3: Validation
 
 The schema should be validated with at least one sample XML document, to verify that it is syntactically correct, semantically as intended, and that it has adequate coverage. SEMIC XSD schemas adhere to best practices and the resulting XSD schemas should also adhere to best practices, the SEMIC Style Guide, validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
@@ -161,7 +161,7 @@ Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves d
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
-*_Phase 1: Import or Define Elements_*
+==== Phase 1: Import or Define Elements
 
 
 _Managing Imports and Namespaces_
@@ -210,7 +210,7 @@ For example, the [.custom-highlight]#LegalEntity# element could be defined as fo
 
 Make sure you declare the correct namespace (e.g., http://example.com/) for all these custom elements.
 
-*_Phase 2: Shape XML Document Structure with Patterns_*
+==== Phase 2: Shape XML Document Structure with Patterns
 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
@@ -343,7 +343,7 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 </xs:complexType>
 ----
 
-*_Phase 3: Validation and Best Practices_*
+==== Phase 3: Validation and Best Practices
 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
@@ -415,7 +415,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 .Overview of the guidelines to create a new JSON-LD context definition
 image::UC1.2.png[]
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 
 When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the `@import` keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
@@ -438,7 +438,7 @@ _Example: importing an existing context._
 }
 ----
 
-*_Phase 2: Shape structure_*
+==== Phase 2: Shape structure
 
 _Main shaping of the structure_
 
@@ -484,7 +484,7 @@ To meet wishes from API consumers, one may use *aliasing* of keywords, where a J
 One can also *extend the context* by reusing terms from Core Vocabularies, which can be achieved using the `@import` keyword if included as a whole. Also, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.
 
 
-*_Phase 3: Review and validate_*
+==== Phase 3: Review and validate
 
 First, one should review the created context against any prior requirements that may have been described: is all prospected content indeed included in the context?
 
@@ -506,7 +506,7 @@ _Example: an error in the URL._
 
 This tutorial addresses the use case xref:introduction.adoc#sec:uc12[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts that are defined by reusing concepts from the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)], following ideas from https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the `@import` statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
 
@@ -745,6 +745,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
