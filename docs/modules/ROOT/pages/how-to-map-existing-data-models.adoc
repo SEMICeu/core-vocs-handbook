@@ -206,8 +206,8 @@ _Steps_
 . *Determine the purpose of the mapping project*: What are the key areas of business data that need to be interoperable between CBV and Schema.org? This is carried out in collaboration with stakeholders.
 . *Define scope of the mapping for the model and selected CV*: What parts of the Core Business Vocabulary need to be mapped to Schema.org? Are there specific concepts (e.g., contact point, organisation) that must be represented? Which version of each ontology or vocabulary will be mapped?
 . *Set specific goals of what the mapping needs to achieve*: Define the intended specific outcomes of the mapping. Besides ensuring semantic alignment between CBV and Schema.org entities, a key goal may be to clarify the relationship between 
-https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[+legal:LegalEntity+]  and 
-https://schema.org/Organization[+schema:Organization+] (Issue https://github.com/SEMICeu/Core-Business-Vocabulary/issues/38[#38]), or to declare a particular equivalence between a CBV and a Schema.org entity to query across information systems to retrieve data.
+[.custom-highlight]#https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity]# and 
+[.custom-highlight]#https://schema.org/Organization[schema:Organization]# (Issue https://github.com/SEMICeu/Core-Business-Vocabulary/issues/38[#38]), or to declare a particular equivalence between a CBV and a Schema.org entity to query across information systems to retrieve data.
 
 _Output_
 
@@ -303,7 +303,7 @@ We then look at the intersection of CBV concepts and relationships and those in 
 * Example: An existing alignment for LegalEntity to Organization was evaluated. However, it was missing relationships for properties like [.custom-highlight]#schema:legalName# and [.custom-highlight]#schema:taxID#. So, the original alignment was extended to include new mappings for these properties. There may also be new alignments when existing resources are not suitable, which is the case for this tutorial.
 
 * Example: Add alignment to answer the question: What is the relation between 
-https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[+legal:LegalEntity+] and https://schema.org/Organization[+schema:Organization+]?
+[.custom-highlight]#https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity]# and [.custom-highlight]#https://schema.org/Organization[schema:Organization]#?
 
 
 ==== Phase 4: Matching (Execute and Filter Matching Candidates)
@@ -397,7 +397,7 @@ The *result* is a validated alignment file, where each mapping is represented ba
 * The chosen relation (`align:relation`), being either subsumption “<” or equivalence “=”
 * An optional confidence measure
 * Its corresponding meaning in the ontology (owl:annotatedProperty)
-* Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM ]that, in turn, reuses the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values. Example output of adding an alignment between https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[+legal:LegalEntity+] and https://schema.org/Organization[+schema:Organization+]:
+* Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM ]that, in turn, reuses the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values. Example output of adding an alignment between [.custom-highlight]#https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity]# and [.custom-highlight]#https://schema.org/Organization[schema:Organization]#:
 
 [source,turtle]
 http://mapping.semic.eu/business/sdo/cell/21 a align:Cell;
