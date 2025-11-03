@@ -1,5 +1,5 @@
 [[sec:map-model-to-cv]]
-== Mapping an existing model to Core Vocabularies
+= Mapping an existing model to Core Vocabularies
 
 In the fields of knowledge representation and data modelling, distinct modelling languages exist and their corresponding methods and tools to create them. While such heterogeneity can be  useful, it also raises challenges for semantic interoperability.
 
@@ -14,17 +14,16 @@ The subsequent sections describe the guidelines of model mapping and thereby pro
 The use cases focus on mapping two types of models specifically: conceptual models (or application ontologies) and XSD schemas. They each have their business cases providing a rationale for why one would want to do this, which is described in the respective “Description” sentences. The respective “Guidelines” sections describe the general procedure on how to map the model that may be read by both intended audiences. The respective “Tutorial” sections are principally aimed at the technical experts and IT professionals.
 
 [[sec:map-existing-model-to-cv]]
-=== Map an existing conceptual model to a Core Vocabulary (UC2.1)
+== Map an existing conceptual model to a Core Vocabulary (UC2.1)
 
 [[sec:uc2.1-description]]
-==== Use case description
+=== Use case description
 
 Imagine different organisations using different words of the same language. One system refers to an “Organisation,” while another calls it a “LegalEntity.” Both are describing the same concept—but their data structures, labels, and assumptions differ slightly. Without a shared understanding, exchanging data between these organisations becomes error-prone, inconsistent, or simply impossible. 
 
 Let’s consider a scenario as *motivation for the use case* and the corresponding structured user story. 
 
-[quote]
-____
+****
 Sofía, a knowledge engineer working in the Department of Agriculture and Natural Resources, faces the problem of terminological overloading and mismatches. Her Fruits division uses a conceptual model that was developed to represent companies, directors, and contact details of fruit orchards and industrial forest agribusinesses, while a different one is used by the Vegetables division that needs to be aligned at a later date. To solve this, Sofía leads a project that *maps her Fruits division’s model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV)*, a semantic standard developed by SEMIC. 
 
 
@@ -32,7 +31,7 @@ Meanwhile, external platforms—such as international business directories, gove
 
 
 Sofía recognises the widespread use of http://Schema.org[Schema.org], and so she also wants to ensure that the *CBV concepts she uses can be mapped to http://Schema.org[Schema.org]’s content*. She can do this by creating semantic bridges between the models used in her division of the Department, CBV, and global vocabularies. 
-____
+****
 
 *User Story: As a* knowledge engineer at the Department of Agriculture, *I want* *to* map my division’s existing conceptual model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV) and align CBV concepts with http://Schema.org[Schema.org], *so that* our data can be interoperable with both EU semantic standards and global web vocabularies, enabling accurate data exchange.  
 
@@ -50,7 +49,7 @@ The business case translates into the following *use case specification*, which 
 |===
 
 [[sec:uc2.1-guidline]]
-==== Guidelines on how to map an existing conceptual model to a Core Vocabulary
+=== Guidelines on how to map an existing conceptual model to a Core Vocabulary
 
 This section provides general guidelines to address use case xref:introduction.adoc#sec:uc21[UC2.1], mapping an ontology to a Core Vocabulary.
 
@@ -77,7 +76,7 @@ image::UC21guidelineOverview.png[width=450, height=600]
 This section provides an overview of the guideline, which will be demonstrated in the <<sec:tutorial:map-schema.org,tutorial>> section where we map the Core Business Vocabulary to Schema.org. The reader familiar with ontology matching could skim or skip it and proceed swiftly to the tutorial section.
 
 
-*_Phase 1: Staging_*
+==== Phase 1: Staging
 
 This initial phase involves a comprehensive understanding of the project’s scope, identifying the specific goals of the mapping exercise, and the key requirements it must fulfil. Stakeholders collaborate to articulate the purpose of the alignment between the models, setting clear objectives that will guide the process. Defining these requirements upfront ensures that subsequent steps are aligned with the model matching process’ overarching goals, stakeholder expectations, and fitting the use cases.
 
@@ -85,7 +84,7 @@ This initial phase involves a comprehensive understanding of the project’s sco
 *Outputs*: Mapping project specification document comprising a well-defined scope and comprehensive list of requirements.
 
 
-*_Phase 2: Characterisation_*
+==== Phase 2: Characterisation
 
 In this phase, a thorough analysis of both source and target ontologies is conducted to ascertain their structures, vocabularies, and the semantics they encapsulate. This involves an in-depth examination of the conceptual frameworks, representation languages, and the models. Understanding the models’ respective nuances is critical for identifying potential challenges and opportunities in the matching process to determine whether the process will be feasible and meaningful.
 
@@ -101,7 +100,7 @@ Depending on the feature, one will have to inspect either the computer-processab
 *Outputs*: Analysis reports comprising a comparative characterisation table, identified difficulties, risks and amenability assessments, selected source and target for mapping.
 
 
-*_Phase 3: Reuse_*
+==== Phase 3: Reuse
 
 In the ontology matching lifecycle, the reuse phase is important in that it can facilitate the integration of already existing mappings into the project's workflow, thereby saving work and positioning one’s ontology better within the existing ecosystem. Following the initial characterisation, this phase entails the discovery and evaluation of available mappings against the project's defined requirements. These requirements are instrumental in appraising whether an existing alignment can be directly adopted, requires modifications for reuse, or if a new alignment should be declared.
 
@@ -119,7 +118,7 @@ This structured approach to reuse optimises resource utilisation, promotes effic
 *Outputs*: Assessment report on existing alignments, decisions on reuse, adaptation, or creation of a new alignment.
 
 
-*_Phase 4: Execute the Matching_*
+==== Phase 4: Execute the Matching
 
 This section summarises automatic and semi-automatic approaches to finding the alignment candidates. In case of small vocabularies and ontologies, a fully manual effort is likely more efficient.
 
@@ -143,7 +142,7 @@ Finally, in the *evaluation* activity, the alignments found are rigorously asses
 *Outputs*: Generated alignments, evaluation reports.
 
 
-*_Phase 5: Validate Alignments_*
+==== Phase 5: Validate Alignments
 
 Following the identification of alignments, this step involves the formal creation of the alignment and the rendering (generation) of specific mappings between the source and target models. This phase involves preparing, creating, and rendering activities that establish coherent actionable mappings between ontology entities. The resulting alignment is then documented, detailing the rationale, methods used, and any assumptions made during the mapping process.
 
@@ -177,7 +176,7 @@ The *Creation* step is the execution of the mapping, entailing the selection of 
 *Outputs*: Created mapping, stored versions in an alignment repository (e.g., [xref:references.adoc#ref-55[sem-map]]).
 
 
-*_Phase 6: Application_*
+==== Phase 6: Application
 
 The final phase focuses on operationalising the created mappings, ensuring it is accessible and usable by applications that require semantic interoperability between the mapped models. This involves carrying out the following tasks:
 
@@ -191,12 +190,12 @@ Regarding the second task, governance involves the creation of *maintenance prot
 
 
 [[sec:tutorial:map-schema.org]]
-==== Tutorial: Map Schema.org to the Core Business Vocabulary
+=== Tutorial: Map Schema.org to the Core Business Vocabulary
 
 This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* xref:introduction.adoc#sec:uc21[UC2.1]. By following <<sec:uc2.1-guidline, map an existing model>> *methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
 
-*_Phase 1: Staging (Defining the Requirements)_*
+==== Phase 1: Staging (Defining the Requirements)
 
 In this phase, the aim is to understand what needs to be mapped and why. +
 For this tutorial, we aim to map http://Schema.org[Schema.org] to the Core Business Vocabulary (CBV), enabling data interoperability.
@@ -222,12 +221,12 @@ A short project specification that defines the purpose of the mapping, its scope
 * *Expected Outcome*: A validated alignment file that specifies the relationships between the selected CBV and Schema.org terms in machine-readable RDF.
 
 
-_Procedure for CBV and Schema.org_
+*Procedure for CBV and Schema.org*
 
 The purpose, scope, and goals are determined by the stakeholders, including domain experts and knowledge engineers. First, the domain experts’ input is needed to demarcate the scope especially, indicating what the (sub-)topic of interest is, ideally augmented with key terms. For CBV and Schema.org, these may include terms such as: [.custom-highlight]#legal:LegalEntity# versus [.custom-highlight]#schema:Organization#. It may also need to take into account ‘externalities’, such as regulatory compliance that may dictate the use of one version of a schema over another for some business reason. For the current exercise, there are no regulatory compliance requirements in place. Therefore, the latest official releases of both vocabularies will be used (Schema.org version 29.1 and CBV version 2.2.0). Next, clear mapping goals should be established. For this exercise, the primary goal is to identify direct relationships between the two vocabularies. These relationships will then be expressed in a machine-readable format, enabling seamless data transformation between the CBV and Schema.org.
 
 [[sec:Characterisation]]
-*_Phase 2: Characterisation (Defining Source and Target models)_*
+==== Phase 2: Characterisation (Defining Source and Target models)
 
 The aim of this phase is to analyse the structure, vocabulary, and semantics of the Core Business Vocabulary that we shall take as *Target ontology* and Schema.org that will be set as *Source ontology*. The key steps and outputs are as follows.
 
@@ -243,7 +242,7 @@ _Output_
 * Optionally: a brief report containing a list of obstacles that need to be overcome before model matching can take place
 
 
-_Procedure for CBV and Schema.org_
+*Procedure for CBV and Schema.org*
 
 First, list the features on which to compare the source and the target, which concerns principally the ‘meta’ information, that is  information _about_ the artefacts themselves, rather than their  subject domain content. This includes typical features such as the artefacts’ serialisation format(s), terms’ naming conventions, and version management. These features can either hinder or support the mapping task.
 
@@ -270,7 +269,7 @@ The selected features are presented  in a table below, where for each feature th
 |===
 
 
-*_Phase 3: Reuse of Existing Mappings_*
+==== Phase 3: Reuse of Existing Mappings
 
 The aim of this phase is to avoid doing duplicate work by checking if any existing mappings between CBV and Schema.org are available for reuse, or if there are any alignments that can be adapted for this project.
 
@@ -287,7 +286,7 @@ _Output_
 ** The decisions: A new alignment needs to be created.
 
 
-_Procedure_
+*Procedure for CBV and Schema.org*
 
 There are three distinct pathways, namely: direct use, adaptive reuse, and creating a new alignment. Let’s look at each in turn. For the CBV and Schema.org, we first look for pre-existing alignments of related vocabularies. They may be declared in the files themselves, but we also can search the https://github.com/SEMICeu[SEMIC GitHub repository] for other files that may have relevant mappings already.
 
@@ -307,7 +306,7 @@ We then look at the intersection of CBV concepts and relationships and those in 
 https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[+legal:LegalEntity+] and https://schema.org/Organization[+schema:Organization+]?
 
 
-*_Phase 4: Matching (Execute and Filter Matching Candidates)_*
+==== Phase 4: Matching (Execute and Filter Matching Candidates)
 
 At this step, we will perform the actual mapping, which we shall bootstrap by producing candidate mappings between classes and between properties, typically automatically, semi-automatically, or manually, and then assess the results.
 
@@ -323,7 +322,7 @@ _Output_
 * List of alignments.
 
 
-_Procedure for CBV and Schema.org_
+*Procedure for CBV and Schema.org*
 
 In this tutorial, we use http://limes.sf.net[LIMES] [xref:references.adoc#ref-76[limes]] to automate link discovery in the mapping process between the *CBV* and *Schema.org*. While other tools could also be used, LIMES was selected for its simplicity and efficiency in performing lexical similarity-based alignments.
 
@@ -355,7 +354,7 @@ _Manual Alignment Process_
 Even though the automated tool did not produce any alignments, we can use our domain knowledge to suggest potential mappings based on the descriptions and attributes of the entities. For example, CBV’s [.custom-highlight]#LegalEntity# (that is an [.custom-highlight]#org:Organization#) maps to Schema.org’s [.custom-highlight]#Organization# based on their similar roles in representing business-related concepts, and likewise for CBV’s [.custom-highlight]#Address# (imported from Core Location Vocabulary) with Schema.org [.custom-highlight]#PostalAddress#. These kinds of alignments are made by examining the entity definitions and considering the context of their use in each ontology.
 
 
-*_Phase 5: Validate Alignments_*
+==== Phase 5: Validate Alignments
 
 After the alignments (i.e., candidate mappings) have been generated—either by automated tools or through manual assessment—each proposed mapping must be *validated* to assess if  the candidate links represent semantically meaningful relationships between classes or properties from the two ontologies.
 
@@ -375,7 +374,7 @@ _Output_
 * Final alignment in RDF for integration
 
 
-_Procedure for CBV and Schema.org_
+*Procedure for CBV and Schema.org*
 
 _Review Proposed Alignments_
 
@@ -413,7 +412,7 @@ where it can be seen that the “<” relation corresponds to rdfs:subClassOf an
 Other alignment examples and a complete file including prefixes can be viewed https://github.com/SEMICeu/Semantic-Mappings/blob/main/Core%20Business/Schema.org/Alignment-CoreBusiness-2.2.0-schemaorg.ttl[here].
 
 
-*_Phase 6: Application (Operationalise the Mappings)_*
+==== Phase 6: Application (Operationalise the Mappings)
 
 After alignments have been validated, the final step is to *apply* them in practice. This involves both *technical integration* and the establishment of a *governance framework* to ensure the mappings remain up to date and useful over time.
 
@@ -430,7 +429,7 @@ _Output_
 * Published mappings and insights for potential refinements.
 
 
-_Procedure for CBV and Schema.org_
+*Procedure for CBV and Schema.org*
 
 The mapping file (in RDF/Turtle format) resulting from our mapping exercise is *published* on the https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Business[SEMIC GitHub repository]. This allows for integration of the mapping output into validation tools used by Member States and other implementers to check CBV-compliant data against Schema.org requirements.  
 
@@ -442,13 +441,12 @@ _Real Example Using SPARQL Anything_
 
 To demonstrate the practical value of the mapping between CBV and Schema.org, we use https://github.com/SPARQL-Anything/sparql.anything[SPARQL Anything] to query instance data alongside the alignment file.
 
-*Scenario* +
-We assume:
+*Scenario: * We assume 
 
 * A data file (`core-business-ap.ttl`) contains an instance of [.custom-highlight]#legal:LegalEntity#
 * An alignment file (`Alignment-CoreBusiness-2.2.0-schemaorg.ttl`) defines a mapping from [.custom-highlight]#legal:LegalEntity# to [.custom-highlight]#schema:Organization#.
 
-*SPARQL Query*
+_SPARQL Query_
 [source,sparql]
 ----
 PREFIX xyz:   <http://sparql.xyz/facade-x/data/>
@@ -472,11 +470,11 @@ WHERE {
 }
 ----
 
-*What This Query Does*
+_What This Query Does_
 
 It checks for instances of [.custom-highlight]#legal:LegalEntity# in the data file, and if the alignment file contains a mapping for it, it infers the equivalent or related Schema.org class ([.custom-highlight]#schema:Organization#).
 
-*Output*
+_Output_
 [source,turtle]
 ----
 <http://example.org/entities/Company123> a <https://schema.org/Organization> .
@@ -484,20 +482,19 @@ It checks for instances of [.custom-highlight]#legal:LegalEntity# in the data fi
 
 
 [[sec:map-existing-shema]]
-=== Map an existing XSD Schema to a Core Vocabulary (UC2.2)
+== Map an existing XSD Schema to a Core Vocabulary (UC2.2)
 
 
 [[sec:uc2.2-description]]
-==== Use case description
+=== Use case description
 
 Let’s introduce the *motivation for the use case* for Use Case 2.2 with a scenario and structured user story. +
 
-[quote]
-____
+****
 Ella works as a *data integration specialist* at the National Registry of Certified Legal Practitioners. For over a decade, her team has maintained a robust system for managing, among others, all law firms’ data in *XML format*, supported by an *XSD schema*. This schema defines the structure of all XML documents generated and processed by the registry, capturing details such as legal entities, addresses, and contact points. It’s stable, reliable, and embedded into the internal tool and data exchange interface the organisation uses. But governments across Europe are requested to align their digital data infrastructures with *Semantic Web standards* with the goal to make public sector data *interoperable, discoverable, and reusable* across borders. Ella's National Registry has received a directive to publish its business data in *RDF*, using the SEMIC *Core Business Vocabulary (CBV)*, which is already used in EU-level platforms.  
 
 To meet this requirement, Ella must map the Registry’s *existing XSD schema to the CBV* and transform their XML data into RDF. +
-____
+****
 
 *User Story: As a* data integration specialist at a public sector organisation, *I want to* map our existing XML Schema Definition (XSD) to the Core Business Vocabulary (CBV), *so that* I can transform our XML data into semantically enriched RDF that complies with European interoperability standards, supports linked data publication, and enables cross-system data exchange. +
 
@@ -516,7 +513,7 @@ This business case translates into the following *use case specification*, which
 
 
 [[sec:uc2.2-guidline]]
-==== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
+=== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
 
 This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc22[UC2.2].
 
@@ -536,22 +533,22 @@ The main procedure consists of four phases:
 . *Transform XML data to the Core Vocabulary through mappings*, if applicable;
 . *Disseminate the documentation* according to the procedure followed including, mainly, the used and generated files, mapping declarations or rules, and validation reports, to be applied in the foreseen use cases of the transformation pipelines.
 
-*_Phase 1: Understand XSD schema and prepare test data_*
 
+==== Phase 1: Understand XSD schema and prepare test data
 
 The first task is to examine the XSD schema to understand what elements it contains and how the hierarchical structuring of content may affect the meaning of the elements. This is important both for mapping and for selecting appropriate test data. 
 
 It may be that the XSD is outdated or partial with respect to the XML files that contain the data. Therefore, if during this staging process, it appears that Phase 3 will have to be included, then it is important to also construct a representative test dataset. This dataset should consist of a carefully selected set of XML files that cover the important scenarios and use cases encountered in the production data. It should be sufficiently comprehensive to facilitate rapid transformation cycles, enabling effective testing iterations in the validation. Also, it must align with the source schema for which it is used as test data.
 
 
-*_Phase 2: Map the XSD schema_*
+==== Phase 2: Map the XSD schema
 
 Conceptual Mapping in semantic data integration–determining what elements from the source should correspond to those in the target–can be established at two distinct levels: the vocabulary level and the application profile level. These levels differ primarily in their complexity and specificity regarding the data context they address. A *Vocabulary mapping* is established  as the principal task: the XSD schema elements need to align to CV elements, focussing on terminological alignments.
 
 For the XSD file, they are the elements within the tags `<xs:element ref=”_elementLabel_”>` where the “[.custom-highlight]#elementLabel#” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a `<xs:element ref=”address”>` nested within the concept `<xs:element ref=”Person”>` has a different meaning from “[.custom-highlight]#address#” nested within the concept `<xs:element ref=”Website”>`. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
 
 
-_Option 2-i. Map XSD to a CV’s main format_
+*Option 2-i. Map XSD to a CV’s main format*
 
 Mapping may be with the intent to transform, or simply align for interoperability. More tools have been proposed for the former, and more so explicitly to an OWL flavour (RDFS/OWL full or an OWL 2 in one of its serialisations).
 
@@ -616,7 +613,7 @@ An example of each XSD element/type to a class or property would, as a minimum, 
 
 This approach results in a basic 1:1 direct alignment, which lacks contextual depth and specificity. Another approach would be to embed semantic annotations into XSD schemas using standards such as Semantic Annotations for WSDL and XML Schema (SAWSDL) [xref:references.adoc#ref-64[sawsdl]] using the *`sawsdl:modelReference`* attribute to capture this mapping. Such an approach is appropriate in the context of WSDL services.
 
-_Option 2-ii. Map a XSD to the XSD of a CV_
+*Option 2-ii. Map a XSD to the XSD of a CV*
 
 
 In a small number of cases, a CV also has an XSD schema derived from the CV’s main representation format. Then one could create an XSD-to-XSD mapping, i.e., from one’s own source XSD to the CV’s XSD target. Subsequently, it should be possible to use the CV’s existing alignment to obtain a source-XSD to target-CV alignment, by transitivity of the alignments, under the assumption that the alignment between the XSD of the CV and the CV is a 1:1 mapping. While this option is possible for the CBV already, it is currently not a main route for alignment to a CV and therefore not elaborated on further here.
@@ -624,7 +621,7 @@ In a small number of cases, a CV also has an XSD schema derived from the CV’s 
 After completing either Phase 2-i or 2-ii, one may proceed to Phase 3, if applicable, else jump to Phase 4.
 
 
-*_Phase 3: Transform XML into CV elements_*
+==== Phase 3: Transform XML into CV elements
 
 Drilling down into Phase 3 of the overall procedure, we identify three steps, as shown in the figure below.
 
@@ -640,7 +637,7 @@ image::xmlTOcv.png[]
 The *conceptual mapping* helps business and domain experts to validate the correspondences. The *technical mapping* ensures an algorithm can transform the data automatically into a format that is compatible with the CV. The *validation* contributes to consistency and accuracy of the mappings and thereby the data transformation.
 
 
-_Phase 3.1 Conceptual Mapping development_
+*Phase 3.1 Conceptual Mapping development*
 
 Besides the XSD to CV mappings, the XML elements can also be mapped in a *Vocabulary mapping*. For the XML files, an XML element or attribute is then directly mapped to an ontology class or property. For example, an XML element `<PostalAddress>` could be mapped to the [.custom-highlight]#locn:Address# class in a CV, or an element `<surname>` could be mapped to a property [.custom-highlight]#foaf:familyName# in the FOAF ontology. Such mappings can be established and written in a spreadsheet or mapping-specific software.
 
@@ -666,7 +663,7 @@ The tables below show two examples of mapping the organisation's address, city a
 *Outputs*: Conceptual Mapping documented in, e.g., a spreadsheet.
 
 
-_Phase 3.2: Technical Mapping development_
+*Phase 3.2: Technical Mapping development*
 
 The technical mapping serves as the bridge between conceptual design and practical, machine-executable implementation. This step takes as input the conceptual mapping and establishes correspondences between XPath expressions and ontology fragments.
 
@@ -683,7 +680,7 @@ A pertinent example of XSLT's application is the tool for transforming ISO-19139
 *Inputs*: Conceptual Mapping spreadsheet. +
 *Outputs*: Technical Mapping source code.
 
-_Phase 3.3: Validation of the RDF output_
+*Phase 3.3: Validation of the RDF output*
 
 Given the output of Phase 3.2 and the test data preparation from Phase 1, first transform the sample XML data into RDF, which will be used for validation testing.  +
 Two primary methods of validation should be employed to test the integrity and accuracy of the data transformation: SPARQL-based validation and SHACL-based validation, each serving distinct but complementary functions.
@@ -715,8 +712,8 @@ SPARQL-based validation is tightly linked to the mapping process itself, offerin
 *Inputs*: Sample data transformed into RDF, Conceptual Mapping, Technical Mapping, SHACL data shapes.  +
 *Outputs*: Validation reports.
 
-*_Phase 4: Dissemination_*
 
+==== Phase 4: Dissemination
 
 Once the XSD-to-XSD (to CV), XSD-to-CV, and, optionally, the XML to CV have been completed and validated, they can be packaged for dissemination and deployment. In particular if Phase 3 is needed, disseminating a mapping package facilitates their controlled use for data transformation, ensures the ability to trace the evolution of mapping rules, and standardises the exchange of such rules. This structured approach allows for efficient and reliable data transformation processes across different systems.
 
@@ -739,7 +736,7 @@ Such a package is designed to be self-contained, ensuring that it can be immedia
 
 
 [[sec:uc2.2-tutorial]]
-==== Tutorial: Map the Core Business Vocabulary from XSD to RDF
+=== Tutorial: Map the Core Business Vocabulary from XSD to RDF
 
 This tutorial addresses *Use Case* xref:introduction.adoc#sec:uc22[UC2.2], focussing on enabling *semantic interoperability* by mapping an existing *XSD schema*—specifically, the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary (CBV) XSD schema]—to its corresponding *RDF representation*. This tutorial guides you through the key steps, involving:
 
@@ -752,11 +749,11 @@ This tutorial addresses *Use Case* xref:introduction.adoc#sec:uc22[UC2.2], focus
 . Disseminating the outcome.
 
 
-*_Phase 1: Staging_*
+==== Phase 1: Staging
 
 First, you will familiarise yourself with the selected XSD schema and then prepare the test data.
 
-_Understanding the XML schema_
+*Understanding the XML schema*
 
 The CBV https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[XSD file] defines several key entities for the domain, including:
 
@@ -783,7 +780,7 @@ Here’s how the snippet of the XSD schema looks like for the AccountingDocument
 </xs:complexType>
 ----
 
-_Preparing the Test Data_
+*Preparing the Test Data*
 
 Since we will also map data and proceed through Steps 3.1-3.3 further below, it is essential to prepare representative test data in this Phase 1. This data should align with the structure defined in the XSD schema and cover various use cases and scenarios that might occur in production data. For this tutorial, we will use the https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[`SampleData_Business.xml`] file available on the https://github.com/SEMICeu/XML-schema/tree/main[SEMIC GitHub repository].  +
 We ensure that the XML data contains relevant elements, such as `<LegalEntity>`, `<LegalName>`, `<ContactPoint>`, and `<RegisteredAddress>`, which you will later map to the CBV terms. Among other content, it has the following data for `<LegalName>`:
@@ -794,9 +791,9 @@ We ensure that the XML data contains relevant elements, such as `<LegalEntity>`,
 <LegalName xml:lang="nl">Belgisch Comite voor UNICEF</LegalName>
 ----
 
-*_Phase 2: Map XSD schema elements to XSD of the CV_*
+==== Phase 2: Map XSD schema elements to XSD of the CV
 
-_Mapping XSD to CV Terms_
+*Mapping XSD to CV Terms*
 
 In this step, we map each XSD element/type to  Class or Property. These mappings often follow patterns like:
 
@@ -848,9 +845,9 @@ _Mapping Table (Partial)_
 |===
 
 
-*_Phase 3: Map XML data to the Core Vocabulary_*
+==== Phase 3: Map XML data to the Core Vocabulary
 
-_Create a Conceptual Mapping_
+*Create a Conceptual Mapping*
 
 We will create a conceptual mapping between the XSD elements and RDF terms from the CBV. This will guide the transformation of the XML data to RDF. There are two levels of conceptual mapping:
 
@@ -875,7 +872,7 @@ More precisely, you have to write down the source XPath, i.e., `*/ContactPoint` 
 |===
 
 
-_Create the Technical Mapping_
+*Create the Technical Mapping*
 
 The https://rml.io/docs/rml/introduction/[RDF Mapping Language (RML)] is suitable for the task of implementing the XML-to-RDF conceptual mappings as technical mappings. We will use RML to create machine-executable mapping rules as follows. First, the `rml:logicalSource` is declared, with the root of the tree in the XML file, which is `*/LegalEntity` in our use case that assumes there to be an `rml:source` called `SampleData_Business.xml` with instance data. Next, a `rr:subjectMap` is added to state how each `<LegalEntity>` node becomes the RDF subject—here we build an IRI from `generate-id(.)` and type it as [.custom-highlight]#legal:LegalEntity#. Finally, one or more `rr:predicateObjectMap` blocks capture the properties we need; in the simplest case we map the child element `<LegalName>` to the vocabulary property [.custom-highlight]#legal:legalName#. The complete example RML mapping code looks as follows, in Turtle syntax:
 
@@ -914,7 +911,7 @@ ex:Organization
 
 This needs to be carried out for all elements from the XML files that were selected for mapping in Phase 1.
 
-_Validate the RDF Output_
+*Validate the RDF Output*
 
 Now that we have created the mappings, we can apply them to https://github.com/SEMICeu/XML-schema/blob/main/samples/SampleData_Business.xml[sample data] using RMLMapper or a similar tool selected from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-tooling-assistant[SEMIC Tooling Assistant]. For this tutorial, we will use RMLMapper, which will read the RML mapping file and the input XML data, and then generate the corresponding RDF output. 
 
@@ -978,7 +975,7 @@ In this code snippet, observe:
 Note: The SHACL shapes of the CBV can be found https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0/shacl[here].
 
 
-*_Phase 4: Dissemination_*
+==== Phase 4: Dissemination
 
 Once the mappings are validated, the next step is to disseminate the project with the mappings as a package of documentation together with the artefacts. The package includes:
 
@@ -987,15 +984,5 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
-
-
-
-
-
-
-
-
-
-
 
 

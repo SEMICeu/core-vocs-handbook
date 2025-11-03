@@ -1,13 +1,13 @@
 :sectnums!:
 [[sec:additional-use-cases]]
-== Appendix: Additional Use Cases
+= Appendix: Additional Use Cases
 
 The additional business and use cases are depicted in the diagram below and briefly described afterwards.
 
 image::AdditionalUCs1.png[]
 
 [[sec:uc2.3]]
-=== UC2.3: Map an existing JSON Schema to a Core Vocabulary
+== UC2.3: Map an existing JSON Schema to a Core Vocabulary
 
 
 A concrete user story can be formulated as follows: +
@@ -32,7 +32,7 @@ To generalise from that to include other possible scenarios, we obtain the follo
 |===
 
 [[sec:uc3]]
-=== UC3: Create a new Semantic data specification
+== UC3: Create a new Semantic data specification
 
 
 The general case for creating a new semantic data specification is shown in the table below.
@@ -54,7 +54,7 @@ The general case for creating a new semantic data specification is shown in the 
 |===
 
 [[sec:uc3.1-des]]
-==== Use Case UC3.1: Create a new Core Vocabulary
+=== Use Case UC3.1: Create a new Core Vocabulary
 
 
 A concrete user story can be formulated as follows: +
@@ -79,7 +79,7 @@ A concrete user story can be formulated as follows: +
 |===
 
 [[sec:uc3.2-des]]
-==== Use Case UC3.2: Create a new Application Profile
+=== Use Case UC3.2: Create a new Application Profile
 
 
 A concrete user story can be formulated as follows. +
@@ -104,7 +104,7 @@ A concrete user story can be formulated as follows. +
 |===
 
 [[sec:uc4-des]]
-=== UC4: Create a new data model
+== UC4: Create a new data model
 
 
 The main use case is as follows, which is refined into two specific ones afterwards.
@@ -125,7 +125,7 @@ The main use case is as follows, which is refined into two specific ones afterwa
 |===
 
 [[sec:uc4.1]]
-==== Use Case UC4.1: Create a new ontology
+=== Use Case UC4.1: Create a new ontology
 
 A concrete user story can be formulated as follows. +
 
@@ -149,7 +149,7 @@ A concrete user story can be formulated as follows. +
 |===
 
 [[sec:uc4.2]]
-==== Use Case UC4.2: Create a new data shape
+=== Use Case UC4.2: Create a new data shape
 
 A concrete user story can be formulated as follows. +
 

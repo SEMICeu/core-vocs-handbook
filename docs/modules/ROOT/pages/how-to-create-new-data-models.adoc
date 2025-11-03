@@ -1,5 +1,5 @@
 [[sec:create-data-model-from-cv]]
-== Creating a new data model from an existing Core Vocabulary
+= Creating a new data model from an existing Core Vocabulary
 
 Technologies rise and decline in popularity, yet one of the red threads through the computational techniques over the decades is the *management of structured data*. Data needs to be stored, processed, acted upon, shared, integrated, presented, and more, all mediated by software. This also means that the structure of the data needs to be machine-readable far beyond the simple scanned hard-copy administrative forms or legal documents. Structured data mediates between entities in the real world and their representation in the software.  +
 For instance, to represent the fact “[.custom-highlight]#govtDep#1 subcontracts comp#2#”, we might have
@@ -22,16 +22,15 @@ Each model type has its business case providing a rationale why one would want t
 
 
 [[sec:create-a-new-xsd-schema]]
-=== Create a new XSD schema from a Core Vocabulary (UC1.1)
+== Create a new XSD schema from a Core Vocabulary (UC1.1)
 
 [[sec:uc1.1-description]]
-==== Use case description
+=== Use case description
 
 We will introduce the *motivation for the use case* with a user story.
 
 
-[quote]
-____
+****
 Imagine Jean-Luc, a semantic/software engineer assigned to develop a software application for  processing online forms for the Maltese Chamber of Commerce. Among the format options of online forms are Office365, CSV, and XML that each have their pros and cons. Jean-Luc chooses XML, since many other forms are already being stored in XML format.
 
 
@@ -44,7 +43,8 @@ Unfortunately, not one of them made their schema available.
 
 // [.indent]
 Given that such availability would be useful also at the EU level, he looks for guidance at the EU level. He finds The SEMIC Core Business Vocabulary, which has terminology he can reuse, not only saving time developing his own XSD schema but then also making it interoperable with all other XSD schemas that reuse the vocabulary.
-____
+****
+
 *User story:* *As a* semantic engineer working in public sector IT, *I want to* create an XML schema (XSD) by reusing elements from the existing Core Business Vocabulary (CBV), *so that* I can reduce design time and ensure consistent, interoperable, and standards-compliant e-form validation across government systems.
 
 The business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc11[general UC1.1 description] in the previous section:
@@ -65,7 +65,7 @@ The business case translates into the following *use case specification*, which 
 Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
 
 [[sec:uc1.1-guideline]]
-==== Guidelines to create a new XSD schema
+=== Guidelines to create a new XSD schema
 
 This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc11[UC1.1]. To create a new XSD schema, the following main steps need to be carried out:
 
@@ -79,7 +79,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 image::UC1.1.png[]
 
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 When working with XML schemas, particularly in relation to semantic artefacts like ontologies or data shapes, managing the imports and namespaces are vital considerations that ensure clarity, reusability, and proper integration of various data models. 
 
@@ -101,7 +101,7 @@ These trade-offs between semantic interoperability and technical consistency are
 ====
 
 
-*_Phase 2: Shape XML document structure_*
+==== Phase 2: Shape XML document structure
 
 In designing XML schemas, the selection of a design pattern has implications for the reusability and extension of the schema. The _Venetian Blind_ and _Garden of Eden_ patterns stand out as preferable for their ability to allow complex types to be reused by different elements [xref:references.adoc#ref-44[dsg-ptr]].
 
@@ -147,24 +147,24 @@ Add annotations and documentation using the `xs:annotation` and `xs:documentatio
 such as an informal description of the intended meaning of a concept.
 ====
 
-*_Phase 3: Validation_*
+==== Phase 3: Validation
 
 The schema should be validated with at least one sample XML document, to verify that it is syntactically correct, semantically as intended, and that it has adequate coverage. SEMIC XSD schemas adhere to best practices and the resulting XSD schemas should also adhere to best practices, the SEMIC Style Guide, validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
 Having created the XML representation from the Core Vocabulary, we thus created a binding between the technical and semantic layer for the interoperability of the data. Either may possibly evolve over time and changes initiated from either direction should be consulted with the other, and may require re-validation of the binding. Strategies to avoid problematic divergence are to be put in place.
 
 [[sec:uc1.1-tutorial]]
-==== Tutorial: Create an XSD schema using the Core Business Vocabulary
+=== Tutorial: Create an XSD schema using the Core Business Vocabulary
 
 Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves defining the structure, data types, and relationships for the elements of the CBV, ensuring interoperability between systems. This tutorial follows the <<sec:uc1.1-guideline, guidelines>> outlined for *Use Case*  xref:introduction.adoc#sec:uc11[*UC1.1*] "Create a New XSD Schema", showing how to design and create an XSD schema that integrates terms from the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies/core-business-vocabulary[Core Business Vocabulary] (CBV). This step-by-step guide focuses on the essential phases of the schema creation process, ensuring that the elements from CBV are correctly imported, the document structure is shaped properly, and all constraints are applied. 
 
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
-*_Phase 1: Import or Define Elements_*
+==== Phase 1: Import or Define Elements
 
 
-_Managing Imports and Namespaces_
+*Managing Imports and Namespaces*
 
 
 In XML schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
@@ -197,7 +197,7 @@ The key components are:
 * `schemaLocation="https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd[https://raw.githubusercontent.com/SEMICeu/XML-schema/main/models/CoreVoc_Business/CoreVoc_Business.xsd]"`: Points to the location of the CBV schema file on the Web.
 
 
-_Define elements_
+*Define elements*
 
 If the XSD schema of the CV does not suffice, in that you need additional elements beyond the XSD schema, then you have to define those yourself in the XSD schema you are developing. This might be an element from the CV associated with the XSD, or possibly elements from another CV or semantic artefact. +
 These new elements need to *adhere to the Core Vocabulary's namespace* to maintain consistency.  +
@@ -210,12 +210,12 @@ For example, the [.custom-highlight]#LegalEntity# element could be defined as fo
 
 Make sure you declare the correct namespace (e.g., http://example.com/) for all these custom elements.
 
-*_Phase 2: Shape XML Document Structure with Patterns_*
+==== Phase 2: Shape XML Document Structure with Patterns
 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
 
-_Venetian Blind Pattern_
+*Venetian Blind Pattern*
 
 In the Venetian Blind pattern, there is one primary global element, and all other elements are nested inside it. This approach is ideal when a central entity, such as `LegalEntity`, serves as the entry point, as seen in CBV's XSD. This pattern fits well with API design, where you typically request information about a central concept (such as [.custom-highlight]#LegalEntity#), and the response includes nested properties, including [.custom-highlight]#LegalName# and [.custom-highlight]#RegisteredAddress#, which are all organised under the main entity. +
 Here’s an example, where `LegalEntity` serves as the main entry point:
@@ -243,7 +243,7 @@ In this example:
 * It uses `LegalEntityType`, which contains various properties such as `LegalName` and `RegisteredAddress`.
 
 
-_Garden of Eden Pattern_
+*Garden of Eden Pattern*
 
 In the Garden of Eden pattern, there are multiple entry points in the XML document. This is more flexible and is suitable when no central class is inherently the main starting point. The elements that are declared _directly under_ `<xs:schema>` qualify as such entry points. In CBV these include [.custom-highlight]#LegalEntity#, [.custom-highlight]#Organization# etc., whereas nested elements, such as [.custom-highlight]#RegisteredAddress# or [.custom-highlight]#ContactPoint#, are defined _inside_ those complex types and _cannot_ start a document on their own.
 
@@ -255,7 +255,7 @@ In the Garden of Eden pattern, there are multiple entry points in the XML docume
 </xs:schema>
 ----
 
-_Define Complex Types_
+*Define Complex Types*
 
 
 After importing or defining the basic elements and structuring your XML document with patterns, the next step in creating an XSD schema is to define *complex types*. Complex types are used to represent business entities that contain multiple properties or relationships. For CBV, these types often model entities like [.custom-highlight]#LegalEntity# or [.custom-highlight]#Organization#, which have both simple and complex elements. For example, the [.custom-highlight]#LegalEntityType# and [.custom-highlight]#OrganizationType#, as follows.
@@ -327,7 +327,7 @@ It’s important to observe that in this context, [.custom-highlight]#LegalEntit
 </xs:complexType>
 ----
 
-_Finalise the XSD Schema_
+*Finalise the XSD Schema*
 
 Adding *annotations* and *documentation* to each complex type and element helps to clarify their purpose and improve the readability of the schema. For instance:
 
@@ -343,32 +343,31 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 </xs:complexType>
 ----
 
-*_Phase 3: Validation and Best Practices_*
+==== Phase 3: Validation and Best Practices
 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
 
-_Schematron Validation Rules_
+*Schematron Validation Rules*
 
 
 To ensure schema compliance, the *Schematron rules* provide automated checks. These rules cover key aspects such as type definitions, element declarations, metadata, and more. The detailed list of rules can be found https://github.com/SEMICeu/XML-schema/blob/main/rules/rules_schematron.sch[here].
 
-_Running the Validation_
+*Running the Validation*
 
 
 You can execute the rules using the provided https://github.com/SEMICeu/XML-schema/blob/main/build.xml[`build.xml`] file, which leverages https://ant.apache.org/[Apache Ant]. The process validates the schema against the Schematron rules and generates HTML reports for easy inspection.
 
 [[sec:create-a-new-json-ld-context-definition]]
-=== Create a new JSON-LD context definition from a Core Vocabulary (UC1.2)
+== Create a new JSON-LD context definition from a Core Vocabulary (UC1.2)
 [[sec:uc1.2-description]]
-==== Use case description
+=== Use case description
 
 
 Public administrations often need to share information about their services with other organisations and the public. To do this effectively, the data must be easy to understand and work seamlessly across different systems. However, public services are becoming more complex, which means we need to capture more details, concepts, and relationships to handle various use cases. This was also the case in Norway, which came to a fruitful solution. Let us imagine how that might have happened in the following scenario as *motivation for the use case*, which is followed by a user story that summarises it.
 
 // [.indent]
-[quote]
-____
+****
 Consider Nora, who works for the DiTFor, the Norwegian Digitalisation Task Force. Although Norway is not a member of the EU, it is closely associated with the EU through its membership in the *European Economic Area (EEA)* and the *Schengen Area*. As part of the EEA, Norway participates in the EU's internal market and adopts many EU laws and regulations. Therefore there is a lot of cross-border collaboration with other member states and there is a number of publicly available resources for use and reuse to facilitate interoperable  exchange, including a vocabulary that could be used for their generic framework for their digitalisation of administration of public services: the *Core Public Service Vocabulary Application Profile* (https://github.com/SEMICeu/CPSV-AP/tree/master[*CPSV-AP]*). They extended it to fit better with their context and needs, such as having introduced [.custom-highlight]#RequiredEvidence#, which provides a way to explicitly define the documentation or credentials needed to access a service, such as proof of address for a library card. The extension was published publicly as https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].
 
 Happy with the outcome, Nora emailed the municipalities so that each city and town would be able to upgrade their system in the same way with CPSV-AP-NO, and so that DiTFor could still collect and integrate the data at the national level.
@@ -378,8 +377,8 @@ Meanwhile, the City of Oslo’s transportation services department had just lear
 
 // [.indent]
 The City of Oslo received DiTFor’s notification about the CPSV-AP-NO: their data models needed to comply with the CPSV-AP-NO for the purposes of effective use and interoperability. Looking into the details, they realised that it should be possible to utilise CPSV-AP-NO for their smart data model in JSON-LD and, in fact, would save them time looking for other vocabularies and adapting those. The question became one of _how_ to do it, and so they replied to Nora’s email inquiring whether she could also provide instructions for using the Application Profile. +
+****
 
-____
 *User Story: As a* software engineer at a public sector department, *I want to* create a new JSON-LD context based on the Core Public Services Vocabulary Application profile (CPSV-AP), *so that* I can create interoperable smart data models that comply with national and European interoperability standards and support linked data publication to facilitate cross-system data exchange. +
 
 This business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc12[general UC1.2 description] in the previous section.
@@ -399,7 +398,7 @@ This business case translates into the following *use case specification*, which
 
 Having established the who, what, and why, the next step is _how_ to accomplish this. The _semantic engineer_ specifies the guidelines for JSON-LD context development from a vocabulary, which makes it easier for the _software engineer_ to implement it. The guideline is described in the next section.
 [[sec:uc1.2-guideline]]
-==== Guidelines to create a new JSON-LD context definition
+=== Guidelines to create a new JSON-LD context definition
 
 
 This section provides guidelines for addressing use case  xref:introduction.adoc#sec:uc12[UC1.2].
@@ -416,7 +415,7 @@ This is visualised in the following figure, together with key tasks and suggesti
 .Overview of the guidelines to create a new JSON-LD context definition
 image::UC1.2.png[]
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 
 When a Core Vocabulary has an associated JSON-LD context already defined, it is not only easy, but also advisable to *directly import this context* using the `@import` keyword. This enables seamless reuse and guarantees that any complex types or elements defined within the vocabulary are integrated correctly and transparently within new schemas.
@@ -439,9 +438,9 @@ _Example: importing an existing context._
 }
 ----
 
-*_Phase 2: Shape structure_*
+==== Phase 2: Shape structure
 
-_Main shaping of the structure_
+*Main shaping of the structure*
 
 Start with defining the structure of the context by *relating class terms with property terms* and then, if necessary, property terms with other classes.
 
@@ -478,14 +477,14 @@ A context can be defined per class, allowing property names such as [.custom-hig
 The choice between flat or scoped contexts should be motivated by the expected use of the data. When contexts are generated automatically or used for large-scale data exchange, the flat approach offers simplicity and reliability. When contexts are manually authored or designed for human-facing APIs, scoped contexts may be preferable for improved readability, provided that their additional complexity is manageable.
 
 
-_Improvements to the structure_
+*Improvements to the structure*
 
 To meet wishes from API consumers, one may use *aliasing* of keywords, where a JSON-LD context element is given a more easily recognisable string.
 
 One can also *extend the context* by reusing terms from Core Vocabularies, which can be achieved using the `@import` keyword if included as a whole. Also, single elements can be added, such as additional properties and mapping those to other vocabulary elements of other vocabularies.
 
 
-*_Phase 3: Review and validate_*
+==== Phase 3: Review and validate
 
 First, one should review the created context against any prior requirements that may have been described: is all prospected content indeed included in the context?
 
@@ -503,11 +502,11 @@ _Example: an error in the URL._
 ----
 
 [[sec:uc1.2-tutorial]]
-==== Tutorial: Create a JSON-LD context from the CPSV-AP Core Vocabulary
+=== Tutorial: Create a JSON-LD context from the CPSV-AP Core Vocabulary
 
 This tutorial addresses the use case xref:introduction.adoc#sec:uc12[UC1.2], and will show how to create a JSON-LD context for an Application Profile that extends CPSV-AP with new concepts that are defined by reusing concepts from the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary (CBV)], following ideas from https://github.com/Informasjonsforvaltning/cpsv-ap-no[CPSV-AP-NO].
 
-*_Phase 1: Import or define elements_*
+==== Phase 1: Import or define elements
 
 Since CPSV-AP provides an existing JSON-LD context, we can import it in our own JSON-LD context using the `@import` statement. For example, in case of https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/context/cpsv-ap.jsonld[CPSV-AP version 3.2.0], the context can be directly reused like this:
 
@@ -581,7 +580,7 @@ Explanation of JSON-LD keywords used:
 * *`@import`*: Imports another JSON-LD context, allowing reuse of its terms.
 
 
-_Example of a simple service instance_
+*Example of a simple service instance*
 
 After defining the context and structure, you can now describe an actual [.custom-highlight]#Service# instance by referencing the terms you defined earlier.
 
@@ -615,7 +614,7 @@ Try this in the JSON-LD Playground https://tinyurl.com/4vtmjdxy[here] and then c
 }
 ----
 
-_Aliasing keywords for API compatibility (REST API example)_
+*Aliasing keywords for API compatibility (REST API example)*
 
 When working with REST APIs, it is often beneficial to alias certain JSON-LD keywords for simpler or more consistent representations in client applications. For example, you might alias JSON-LD's `@id` to [.custom-highlight]#url# and `@type` to [.custom-highlight]#type# to make the data more intuitive for API consumers, especially when working with legacy systems or client-side frameworks that use specific naming conventions.
 
@@ -641,7 +640,7 @@ In this example, [.custom-highlight]#url# is an alias for `@id` and [.custom-hig
 By aliasing these terms, the API responses are simplified and more familiar to the developers interacting with the service, especially if they are accustomed to a different JSON structure.
 
 
-_Extend the context by reusing terms from Core Vocabularies_
+*Extend the context by reusing terms from Core Vocabularies*
 
 To highlight the reuse of terms from existing CVs, we can import the *Core Business Vocabulary (CBV)* context alongside the *CPSV-AP context* to gain access to business-related terms. This step ensures that you can use the additional terms from *CBV*, such as [.custom-highlight]#LegalEntity#, [.custom-highlight]#Organisation#, and [.custom-highlight]#ContactPoint#, to enrich your [.custom-highlight]#Service#** **descriptions.
 
@@ -660,7 +659,7 @@ To highlight the reuse of terms from existing CVs, we can import the *Core Busin
 ----
 
 
-_Define additional properties from the Core Business Vocabulary_
+*Define additional properties from the Core Business Vocabulary*
 
 Add CBV terms to enhance the description of the [.custom-highlight]#Service# entity by reusing existing concepts such as [.custom-highlight]#LegalEntity#, which helps to specify who provided the service.
 
@@ -678,7 +677,7 @@ Add CBV terms to enhance the description of the [.custom-highlight]#Service# ent
 ----
 
 
-_Map extended properties in a service instance_
+*Map extended properties in a service instance*
 
 Use the extended properties to describe more aspects of [.custom-highlight]#Service# instances. For https://tinyurl.com/chtayj3h[example]:
 
@@ -710,7 +709,7 @@ Use the extended properties to describe more aspects of [.custom-highlight]#Serv
 ----
 
 
-_Final review and validation_
+*Final review and validation*
 
 Use a JSON-LD  validator (there are  online tools available, such as the https://json-ld.org/playground/[JSON-LD Playground]) to validate JSON-LD context and make sure there are no errors. They also offer visualisation features, noting that it can only be visualised if the syntax is correct. There is no standard for how RDF graphs are to be rendered, and therefore  different visualisation tools will result in different  JSON-LD  diagram-based visualisations. Below  are two examples generated from the same JSON-LD snippet, rendered by, https://json-ld.org/playground/[JSON-LD Playground] and https://issemantic.net/rdf-visualizer[:isSemantic], respectively.
 
@@ -746,9 +745,6 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
-
-
-
 
 
 
