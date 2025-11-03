@@ -23,8 +23,7 @@ Imagine different organisations using different words of the same language. One 
 
 Let’s consider a scenario as *motivation for the use case* and the corresponding structured user story. 
 
-[quote]
-____
+****
 Sofía, a knowledge engineer working in the Department of Agriculture and Natural Resources, faces the problem of terminological overloading and mismatches. Her Fruits division uses a conceptual model that was developed to represent companies, directors, and contact details of fruit orchards and industrial forest agribusinesses, while a different one is used by the Vegetables division that needs to be aligned at a later date. To solve this, Sofía leads a project that *maps her Fruits division’s model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV)*, a semantic standard developed by SEMIC. 
 
 
@@ -32,7 +31,7 @@ Meanwhile, external platforms—such as international business directories, gove
 
 
 Sofía recognises the widespread use of http://Schema.org[Schema.org], and so she also wants to ensure that the *CBV concepts she uses can be mapped to http://Schema.org[Schema.org]’s content*. She can do this by creating semantic bridges between the models used in her division of the Department, CBV, and global vocabularies. 
-____
+****
 
 *User Story: As a* knowledge engineer at the Department of Agriculture, *I want* *to* map my division’s existing conceptual model to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] (CBV) and align CBV concepts with http://Schema.org[Schema.org], *so that* our data can be interoperable with both EU semantic standards and global web vocabularies, enabling accurate data exchange.  
 
@@ -492,12 +491,11 @@ It checks for instances of [.custom-highlight]#legal:LegalEntity# in the data fi
 
 Let’s introduce the *motivation for the use case* for Use Case 2.2 with a scenario and structured user story. +
 
-[quote]
-____
+****
 Ella works as a *data integration specialist* at the National Registry of Certified Legal Practitioners. For over a decade, her team has maintained a robust system for managing, among others, all law firms’ data in *XML format*, supported by an *XSD schema*. This schema defines the structure of all XML documents generated and processed by the registry, capturing details such as legal entities, addresses, and contact points. It’s stable, reliable, and embedded into the internal tool and data exchange interface the organisation uses. But governments across Europe are requested to align their digital data infrastructures with *Semantic Web standards* with the goal to make public sector data *interoperable, discoverable, and reusable* across borders. Ella's National Registry has received a directive to publish its business data in *RDF*, using the SEMIC *Core Business Vocabulary (CBV)*, which is already used in EU-level platforms.  
 
 To meet this requirement, Ella must map the Registry’s *existing XSD schema to the CBV* and transform their XML data into RDF. +
-____
+****
 
 *User Story: As a* data integration specialist at a public sector organisation, *I want to* map our existing XML Schema Definition (XSD) to the Core Business Vocabulary (CBV), *so that* I can transform our XML data into semantically enriched RDF that complies with European interoperability standards, supports linked data publication, and enables cross-system data exchange. +
 
@@ -987,6 +985,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
