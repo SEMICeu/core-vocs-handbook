@@ -1,5 +1,5 @@
 [[sec:map-model-to-cv]]
-== Mapping an existing model to Core Vocabularies
+= Mapping an existing model to Core Vocabularies
 
 In the fields of knowledge representation and data modelling, distinct modelling languages exist and their corresponding methods and tools to create them. While such heterogeneity can be  useful, it also raises challenges for semantic interoperability.
 
@@ -14,10 +14,10 @@ The subsequent sections describe the guidelines of model mapping and thereby pro
 The use cases focus on mapping two types of models specifically: conceptual models (or application ontologies) and XSD schemas. They each have their business cases providing a rationale for why one would want to do this, which is described in the respective “Description” sentences. The respective “Guidelines” sections describe the general procedure on how to map the model that may be read by both intended audiences. The respective “Tutorial” sections are principally aimed at the technical experts and IT professionals.
 
 [[sec:map-existing-model-to-cv]]
-=== Map an existing conceptual model to a Core Vocabulary (UC2.1)
+== Map an existing conceptual model to a Core Vocabulary (UC2.1)
 
 [[sec:uc2.1-description]]
-==== Use case description
+=== Use case description
 
 Imagine different organisations using different words of the same language. One system refers to an “Organisation,” while another calls it a “LegalEntity.” Both are describing the same concept—but their data structures, labels, and assumptions differ slightly. Without a shared understanding, exchanging data between these organisations becomes error-prone, inconsistent, or simply impossible. 
 
@@ -50,7 +50,7 @@ The business case translates into the following *use case specification*, which 
 |===
 
 [[sec:uc2.1-guidline]]
-==== Guidelines on how to map an existing conceptual model to a Core Vocabulary
+=== Guidelines on how to map an existing conceptual model to a Core Vocabulary
 
 This section provides general guidelines to address use case xref:introduction.adoc#sec:uc21[UC2.1], mapping an ontology to a Core Vocabulary.
 
@@ -191,7 +191,7 @@ Regarding the second task, governance involves the creation of *maintenance prot
 
 
 [[sec:tutorial:map-schema.org]]
-==== Tutorial: Map Schema.org to the Core Business Vocabulary
+=== Tutorial: Map Schema.org to the Core Business Vocabulary
 
 This tutorial demonstrates how to map http://Schema.org[Schema.org] to the https://github.com/SEMICeu/Core-Business-Vocabulary[Core Business Vocabulary] *(CBV)*, addressing *Use Case* xref:introduction.adoc#sec:uc21[UC2.1]. By following <<sec:uc2.1-guidline, map an existing model>> *methodology*, you’ll learn how to align these two vocabularies step-by-step—covering *staging, characterisation, reuse, matching, alignment, and application*—to ensure interoperability between the CBV and Schema.org.
 
@@ -484,11 +484,11 @@ It checks for instances of [.custom-highlight]#legal:LegalEntity# in the data fi
 
 
 [[sec:map-existing-shema]]
-=== Map an existing XSD Schema to a Core Vocabulary (UC2.2)
+== Map an existing XSD Schema to a Core Vocabulary (UC2.2)
 
 
 [[sec:uc2.2-description]]
-==== Use case description
+=== Use case description
 
 Let’s introduce the *motivation for the use case* for Use Case 2.2 with a scenario and structured user story. +
 
@@ -516,7 +516,7 @@ This business case translates into the following *use case specification*, which
 
 
 [[sec:uc2.2-guidline]]
-==== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
+=== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
 
 This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc22[UC2.2].
 
@@ -739,7 +739,7 @@ Such a package is designed to be self-contained, ensuring that it can be immedia
 
 
 [[sec:uc2.2-tutorial]]
-==== Tutorial: Map the Core Business Vocabulary from XSD to RDF
+=== Tutorial: Map the Core Business Vocabulary from XSD to RDF
 
 This tutorial addresses *Use Case* xref:introduction.adoc#sec:uc22[UC2.2], focussing on enabling *semantic interoperability* by mapping an existing *XSD schema*—specifically, the https://github.com/SEMICeu/XML-schema/blob/main/models/CoreVoc_Business/CoreVoc_Business.xsd[Core Business Vocabulary (CBV) XSD schema]—to its corresponding *RDF representation*. This tutorial guides you through the key steps, involving:
 

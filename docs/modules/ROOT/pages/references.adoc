@@ -1,4 +1,4 @@
-== References
+= References
 
 [[ref-78]]
 - *[af]* Alignment Format. Available at: https://moex.gitlabpages.inria.fr/alignapi/format.html

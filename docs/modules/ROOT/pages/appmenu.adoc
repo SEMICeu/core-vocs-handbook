@@ -1,5 +1,5 @@
 [[sec:app-menu]]
-== Appendix
+= Appendix
 
 * xref:Appendix.adoc#sec:additional-use-cases[Additional Use Cases]
 * xref:glossary.adoc#sec:glossary[Glossary]
