@@ -8,7 +8,7 @@ This Handbook provides a clear and straightforward guide on how to use SEMIC Cor
 
 In addition, the handbook is now explicitly intended both for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
-This handbook is organised in four chapters. Chapter 1 is aimed at first-time readers, Providing an xref:introduction.adoc[introduction], and where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
+This handbook is organised in four chapters. Chapter 1 is aimed at first-time readers and provides an xref:introduction.adoc[introduction] where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
 
 Chapters 2 and 3 serve a mixed audience, containing use cases aimed a business users, and guidelines and hands-on tutorials aimed at semantic engineers. The chapters address two principal cases:
 
