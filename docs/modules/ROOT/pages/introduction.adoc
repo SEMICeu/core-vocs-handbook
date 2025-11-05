@@ -63,19 +63,9 @@ Sharing data easily is indispensable for effective and efficient public services
 
 Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], interoperability is defined as “the ability of organisations to interact towards mutually beneficial goals, involving the sharing of information and knowledge between these organisations, through the business processes they support, by means of the exchange of data between their ICT systems”, where, for the purpose of EIF, ‘organisations’ refers to “public administration units or any entity acting on their behalf, or EU institutions or bodies”. It is what “enables administrations to cooperate and make public services function across borders, across sectors and across organisational boundaries”, including enabling “public sector actors to connect, cooperate and exchange data while safeguarding sovereignty and subsidiarity”, as described in the EC communication accompanying the Interoperable Europe Act [xref:references.adoc#ref-83[int-eu]].
 
-****
-*Sidebar 1: Interoperability as enabler of benefits.* In the context of the public sector, interoperability functions as an enabler of a number of benefits. Among others, it:
-
-* will contribute to GDP growth and will be a cost-saver: an "estimated increase of 0.4% in EU GDP" and saving individuals "up to 24 million hours a year, or EUR 543 million", whereas "[b]usinesses could save 30 billion hours or EUR 568 billion a year." (cited https://publications.jrc.ec.europa.eu/repository/handle/JRC127330[source] in [xref:references.adoc#ref-83[int-eu]])
-* will contribute positively to public values, as it already has done for multilingualism and inclusive public services. [xref:references.adoc#ref-83[int-eu]]
-* and it is "to ensure the proper functioning of the internal market", both within and between sectors [xref:references.adoc#ref-81[dga]].
-
-The requirement for interoperability has been identified at the European Commission (EC) level and different actions and regulations were established to facilitate and support interoperability. The actions stress that data must be shared with a common, agreed-upon, understanding such that the meaning of the data is preserved over time (see [xref:references.adoc#ref-1[eif]]), when it is shared between co-legislators and across agencies in whole or in part, when it is transferred between systems of different agencies, and when it is used in the various information systems implemented with distinct technologies.
-****
-
 [[sec:interoperability-acts]]
 [discrete]
-=== Existing acts and frameworks related to interoperability
+==== Existing acts and frameworks related to interoperability
 
 
 The European Union has formulated Acts, regulations, and frameworks that intend to foster achieving that, including the https://digital-strategy.ec.europa.eu/en/policies/data-act[Data Act] [xref:references.adoc#ref-84[data-act]], https://digital-strategy.ec.europa.eu/en/policies/data-governance-act[Data Governance Act] [xref:references.adoc#ref-81[dga]], the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], and the https://interoperable-europe.ec.europa.eu/interoperable-europe/interoperable-europe-act[Interoperable Europe Act] [xref:references.adoc#ref-3[iea24]], which underscore the importance of harmonised data practices across member states. These Acts and frameworks emphasise that true interoperability goes far beyond just connecting systems at a technical level.
@@ -88,16 +78,6 @@ The EIF provides specific guidance on *how to set up interoperable digital publi
 
 The Interoperable Europe Act, which entered into force on 11 April 2024, aims to *enhance cross-border interoperability and cooperation* in the public sector across the EU. It is designed to support the objectives of the Digital Decade, ensuring that 100% of key public services are available online by 2030, including those requiring cross-border data exchange. The Act addresses challenges by creating tools for interoperability within public administrations and removing legal, organizational, and technical obstacles. It envisions an emerging ‘network of networks’ of largely sovereign actors at all levels of government, each with their own legal framework and mandates, yet all interconnected”, i.e., for seamless cross-border cooperation, which is to be supported by mandatory assessments.  +
 
-****
-*Sidebar 2: Reasons for interoperability in public administrations.* There are two key reasons to seek interoperability in public administrations:
-
-. *Legal Requirements* – EU regulations and policy frameworks such as the _Data Act_, _Data Governance Act_, and the _Interoperable Europe Act_ for structured and secure data exchange. Compliance ensures smoother interactions with public authorities.
-. *Instrumental Value* – Standardised data and information exchange simplifies cross-border operations, enabling organisations to:
-** comply with regulations more easily;
-** contribute to reducing overhead costs by automating processes and paperwork across ministries that would have to be carried out only once;
-** streamline administrative tasks and data accuracy, preventing misinterpretation of data through standardised data exchange;
-** improve service delivery.
-****
 
 [[sec:achieve-interoperability]]
 === What is semantic interoperability and how to achieve it?
@@ -432,6 +412,8 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
+
 
 
 
