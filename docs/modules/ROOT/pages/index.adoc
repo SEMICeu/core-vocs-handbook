@@ -9,17 +9,13 @@ Vocabularies handbook: Using horizontal data standards for promoting interoperab
 
 In addition, the handbook is now explicitly intended both for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
-*Structure*
+This handbook is organised in four chapters. Chapter 1 is aimed at first-time readers, Providing an xref:introduction.adoc[introduction], and where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
 
-This handbook is organised in four chapters.  The first chapter is of an introductory nature, explaining the what and why. The two main chapters serve a mixed audience, containing use cases, guidelines, and hands-on instructions.
-
-For first-time readers, it is recommended to start with the  xref:introduction.adoc[introduction] is recommended, where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
-
-Readers familiar with the SEMIC Core Vocabularies and wo seek practical guidance are advised to consult the two main chapters, which describe guidelines and tutorials for:
+Chapters 2 and 3 serve a mixed audience, containing use cases, guidelines, and hands-on tutorials. The chapters address two principal cases:
 
 * xref:how-to-create-new-data-models.adoc[creating new semantic data specifications or stand-alone data models] (re-)using Core Vocabularies, and
 * xref:how-to-map-existing-data-models.adoc[mapping existing data models] to the Core Vocabularies.
 
-The final chapter contains xref:Concluding-remarks.adoc[concluding remarks] and looks ahead toward possible future considerations or extensions.
+Chapter 4 contains xref:Concluding-remarks.adoc[concluding remarks] and looks ahead toward possible future considerations or extensions.
 
 Further information about SEMIC can be found at the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre[SEMIC Support Centre] and its related https://github.com/SEMICeu[repositories on GitHub].
