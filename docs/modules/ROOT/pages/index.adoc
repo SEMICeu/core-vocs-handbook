@@ -4,8 +4,7 @@
 :url-repo: https://github.com/SEMICeu/core-vocs-handbook
 
 
-This Handbook provides a clear and straightforward guide on how to use SEMIC Core Vocabularies (CV). It supersedes the first version,  https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf[e-Government Core
-Vocabularies handbook: Using horizontal data standards for promoting interoperability]. Key updates include more detailed guidelines and examples in the form of extended tutorials to assist practical use of the Core Vocabularies, as well as including more recent popular languages, such as JSON-LD.
+This Handbook provides a clear and straightforward guide on how to use SEMIC Core Vocabularies (CV), superseding the https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf[previous version of 2015]. Key updates include more detailed guidelines and examples in the form of extended tutorials to assist practical use of the Core Vocabularies, as well as including more recent popular languages, such as JSON-LD.
 
 In addition, the handbook is now explicitly intended both for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
 
