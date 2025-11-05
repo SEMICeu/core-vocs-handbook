@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction :: SEMIC</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<link rel="stylesheet" href="../_/css/custom.css">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="..">SEMIC</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="develop">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">SEMIC Core Vocabularies Handbook</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#sec:Introduction">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#sec:Intended_audience">Intended audience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#sec:Structure_of_the_Handbook">Structure of the handbook</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#sec:interoperability">Interoperability and Core Vocabularies</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:what-is-interoperability">What is interoperability?</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:achieve-interoperability">What is semantic interoperability and how to achieve it?</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:Core_Vocabulary">What is a Core Vocabulary?</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:SEMIC-Core-Vocabularies">SEMIC Core Vocabularies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:Why_Core_Vocabulary">Why Core Vocabularies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#sec:use-case-overview">Overview of use cases for using Core Vocabularies</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:example">A practical example</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:scenario">How to solve the scenario with semantic data specifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#sec:use-cases">Introduction to the use cases covered in the handbook</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:create-data-model-from-cv">Creating a new data model from an existing Core Vocabulary</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:create-a-new-xsd-schema">Create a new XSD schema from a Core Vocabulary (UC1.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.1-description">Use case description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.1-guideline">Guidelines to create a new XSD schema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.1-tutorial">Tutorial: Create an XSD schema using the Core Business Vocabulary</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:create-a-new-json-ld-context-definition">Create a new JSON-LD context definition from a Core Vocabulary (UC1.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.2-description">Use case description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.2-guideline">Guidelines to create a new JSON-LD context definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-create-new-data-models.html#sec:uc1.2-tutorial">Tutorial: Create a JSON-LD context from the CPSV-AP Core Vocabulary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:map-model-to-cv">Mapping an existing model to Core Vocabularies</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:map-existing-model-to-cv">Map an existing conceptual model to a Core Vocabulary (UC2.1)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:uc2.1-description">Use case description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:uc2.1-guidline">Guidelines on how to map an existing conceptual model to a Core Vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:tutorial:map-schema.org">Tutorial: Map Schema.org to the Core Business Vocabulary</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:map-existing-shema">Map an existing XSD Schema to a Core Vocabulary (UC2.2)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:uc2.2-description">Use case description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:uc2.2-guidline">Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-to-map-existing-data-models.html#sec:uc2.2-tutorial">Tutorial: Map the Core Business Vocabulary from XSD to RDF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Concluding-remarks.html#sec:concluding-remarks">Concluding remarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="appmenu.html#sec:app-menu">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Appendix.html#sec:additional-use-cases">Additional Use Cases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Appendix.html#sec:uc2.3">UC2.3: Map an existing JSON Schema to a Core Vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Appendix.html#sec:uc3">UC3: Create a new Semantic data specification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="Appendix.html#sec:uc4-des">UC4: Create a new data model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html#sec:glossary">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="references.html#sec:references">References</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="handbook-as-a-whole.html#sec:handbook">Handbook as a whole</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">SEMIC Core Vocabularies Handbook</span>
+    <span class="version">develop</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../public-review/index.html">SEMIC Core Vocabularies Handbook</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../public-review/index.html">public-review</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">develop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../public-review/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">SEMIC Core Vocabularies Handbook</a></li>
+    <li><a href="#sec:Introduction">Introduction</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">develop</button>
+  <div class="version-menu">
+    <a class="version" href="../public-review/introduction.html">public-review</a>
+    <a class="version is-current" href="introduction.html">develop</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/SEMICeu/core-vocs-handbook/edit/develop/docs/modules/ROOT/pages/introduction.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.</p>
+</div>
+<div class="paragraph">
+<p>For first-time readers of this Handbook, we recommend starting with the remainder of this section, where <a href="#sec:interoperability">interoperability</a> is introduced, the role of  <a href="#sec:Core_Vocabulary">Core Vocabularies</a> is explained, and the important <a href="#sec:use-cases">use cases</a> are summarised.</p>
+</div>
+<div class="paragraph">
+<p>Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance are advised to go directly to the main part of the Handbook, which describes use cases, methodology recommendations, and tutorials for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>creating new semantic data specifications or stand-alone data models by using Core Vocabularies, and</p>
+</li>
+<li>
+<p>mapping existing data models to Core Vocabularies.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:Intended_audience"><a class="anchor" href="#sec:Intended_audience"></a>Intended audience</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This handbook is intended for two main audiences: 1) administrative professionals, including policy officers and possibly also legal experts, and 2) technical experts and IT professionals. Public administrations involve both legal/administrative experts and technical professionals. While they may not always “speak the same language”, they must <strong>work together</strong> to ensure smooth digital transformation. <strong>Semantic interoperability</strong> provides the <strong>common foundation</strong> that allows them to bridge their disciplinary differences and find common ground, <strong>enabling effective collaboration</strong> and thereby contributing to improved public services. Each intended audience will gain new insights relevant for their respective roles.</p>
+</div>
+<h3 id="_administrative_professionals_legal_experts" class="discrete">Administrative Professionals &amp; Legal Experts</h3>
+<div class="paragraph">
+<p>By reading this handbook, domain experts will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Understand the role of semantic interoperability at the EU level, which might also be of use at the national, regional, and local level.</p>
+</li>
+<li>
+<p>Gain insight about how structured data and shared vocabularies enhance legal clarity, data exchange, and cross-border cooperation.</p>
+</li>
+<li>
+<p>Gain insights into how interoperability supports public services and reduces administrative burdens.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is expected that this will facilitate coordination with technical teams to ensure that interoperability initiatives meet both legal and operational requirements and assist the administrative professionals and legal experts in making informed decisions prioritising IT projects that align with interoperability goals.</p>
+</div>
+<h3 id="_technical_experts_it_professionals" class="discrete">Technical Experts &amp; IT Professionals</h3>
+<div class="paragraph">
+<p>By engaging with this handbook as both a reference manual and a practical guide, the technical experts and IT professionals who design, implement, and maintain the software ecosystem will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Learn how to design and implement interoperable systems using the Core Vocabularies and semantic data models.</p>
+</li>
+<li>
+<p>Understand methodologies for creating, mapping, and integrating semantic data models in their systems.</p>
+</li>
+<li>
+<p>Be able to apply best practices for  data exchange, ensuring consistency and accuracy across different systems.</p>
+</li>
+<li>
+<p>Use standardised approaches to enhance data accessibility, transparency, and reuse in line with FAIR principles [<a href="references.html#ref-88" class="xref page">fair</a>].</p>
+</li>
+<li>
+<p>Ensure compliance with the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide</a> rules &amp; principles [<a href="references.html#ref-4" class="xref page">sem-sg</a>].</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is expected that this will not only facilitate communication with the domain experts, but also further streamline software development conformant to the user specification and, ultimately, the citizens who benefit from more smoothly functioning digital services.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:Structure_of_the_Handbook"><a class="anchor" href="#sec:Structure_of_the_Handbook"></a>Structure of the Handbook</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Handbook has two types of content:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Explanatory Sections</strong>: Intended for administrative professionals and legal experts. They explain interoperability, the role of Core Vocabularies, and describe relevant use cases. It helps non-technical stakeholders understand why semantic interoperability matters and how it supports policy implementation. Each use case is also accompanied by a business case scenario and a user story.</p>
+</li>
+<li>
+<p><strong>Practical Guidance Sections</strong>: Designed for technical experts, data architects, and IT professionals, which provide methodologies and step-by-step tutorials for adopting and implementing Core Vocabularies. It includes instructions on creating new semantic data specifications by extending Core Vocabularies, mapping existing data models to them, and ensuring interoperability through standardised practices.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <strong>structure of the main part of the Handbook</strong> is as follows. First, the notion of <strong>interoperability</strong> and the principal <strong>use cases</strong> will be introduced, which feature the most common, challenging, and interesting scenarios. This is followed by two key chapters, on creating new models and on mapping existing models, which describe and illustrate the principal use cases. For each use case, there is a <strong>description</strong> intended for administrative professionals and legal experts, <strong>guidelines</strong> for implementation that describe procedures how to accomplish the goal of the use case, which are then demonstrated in the <strong>tutorial</strong> for the use case. The guidelines and tutorials are aimed at the technical experts. <br>
+Finally, the appendix contains a <strong>glossary of terms</strong>, additional use cases not covered in this handbook, and the references.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:interoperability"><a class="anchor" href="#sec:interoperability"></a>Interoperability and Core Vocabularies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section introduces what interoperability is, what makes it semantic, and how <strong><em>Core Vocabularies</em></strong>–which is where key concepts are specified in human-readable and machine-processable formats–contribute to it.</p>
+</div>
+<div class="paragraph">
+<p>Sharing data easily is indispensable for effective and efficient public services. Sharing may be done through offering one point of access, and often involves reusing the data in multiple applications across multiple departments and organisations. To make this work, the information systems need to be interoperable.</p>
+</div>
+<div class="sect2">
+<h3 id="sec:what-is-interoperability"><a class="anchor" href="#sec:what-is-interoperability"></a>What is interoperability?</h3>
+<div class="paragraph">
+<p>Following the <a href="https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf">European Interoperability Framework (EIF)</a> [<a href="references.html#ref-1" class="xref page">eif</a>], interoperability is defined as “the ability of organisations to interact towards mutually beneficial goals, involving the sharing of information and knowledge between these organisations, through the business processes they support, by means of the exchange of data between their ICT systems”, where, for the purpose of EIF, ‘organisations’ refers to “public administration units or any entity acting on their behalf, or EU institutions or bodies”. It is what “enables administrations to cooperate and make public services function across borders, across sectors and across organisational boundaries”, including enabling “public sector actors to connect, cooperate and exchange data while safeguarding sovereignty and subsidiarity”, as described in the EC communication accompanying the Interoperable Europe Act [<a href="references.html#ref-83" class="xref page">int-eu</a>].</p>
+</div>
+<h4 id="sec:interoperability-acts" class="discrete">Existing acts and frameworks related to interoperability</h4>
+<div class="paragraph">
+<p>The European Union has formulated Acts, regulations, and frameworks that intend to foster achieving that, including the <a href="https://digital-strategy.ec.europa.eu/en/policies/data-act">Data Act</a> [<a href="references.html#ref-84" class="xref page">data-act</a>], <a href="https://digital-strategy.ec.europa.eu/en/policies/data-governance-act">Data Governance Act</a> [<a href="references.html#ref-81" class="xref page">dga</a>], the <a href="https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf">European Interoperability Framework (EIF)</a> [<a href="references.html#ref-1" class="xref page">eif</a>], and the <a href="https://interoperable-europe.ec.europa.eu/interoperable-europe/interoperable-europe-act">Interoperable Europe Act</a> [<a href="references.html#ref-3" class="xref page">iea24</a>], which underscore the importance of harmonised data practices across member states. These Acts and frameworks emphasise that true interoperability goes far beyond just connecting systems at a technical level.</p>
+</div>
+<div class="paragraph">
+<p>The EU Data Act is a <strong>legislative framework</strong> aimed at enhancing the EU&#8217;s data economy by improving access to data for individuals and businesses. It entered into force on January 11, 2024, and is designed to ensure fairness in data allocation and encourage data-driven innovation.</p>
+</div>
+<div class="paragraph">
+<p>The Data Governance Act (DGA) is a <strong>regulation by the European Union</strong> aimed at facilitating data sharing and increasing trust in data usage. It establishes a framework for the reuse of publicly held data and encourages the sharing of data for altruistic purposes, while also regulating data intermediaries to enhance data availability and overcome technical barriers. The act is part of the broader European strategy for data, which seeks to create a more integrated and efficient data economy.</p>
+</div>
+<div class="paragraph">
+<p>The EIF provides specific guidance on <strong>how to set up interoperable digital public services</strong>. It gives guidance, through a set of recommendations, to public administrations on how to improve governance of their interoperability activities, establish cross-organisational relationships, streamline processes supporting end-to-end digital services, and ensure that existing and new legislation do not compromise interoperability efforts.</p>
+</div>
+<div class="paragraph">
+<p>The Interoperable Europe Act, which entered into force on 11 April 2024, aims to <strong>enhance cross-border interoperability and cooperation</strong> in the public sector across the EU. It is designed to support the objectives of the Digital Decade, ensuring that 100% of key public services are available online by 2030, including those requiring cross-border data exchange. The Act addresses challenges by creating tools for interoperability within public administrations and removing legal, organizational, and technical obstacles. It envisions an emerging ‘network of networks’ of largely sovereign actors at all levels of government, each with their own legal framework and mandates, yet all interconnected”, i.e., for seamless cross-border cooperation, which is to be supported by mandatory assessments. <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:achieve-interoperability"><a class="anchor" href="#sec:achieve-interoperability"></a>What is semantic interoperability and how to achieve it?</h3>
+<div class="paragraph">
+<p>While data exchange is an obvious requirement for interoperability, there are fine but crucial distinctions between data format, syntactic, and semantic interoperability. A standardised syntax and data format to store data lets one exchange data, such as creating an SQL database dump in one tool and seamlessly reopening it in another relational database management system, or lets one send and receive emails that arrive properly in each other’s inbox.</p>
+</div>
+<div class="paragraph">
+<p>Interoperability at the semantic level concerns <strong>the meaning of that data</strong>. One may have the same format and language to represent data, such as XML, but with a tag <code>&lt;bank&gt; … &lt;/bank&gt;</code>, neither the software nor the humans can determine from just that what sort of bank is enclosed within the tags. Such meaning is defined in various artefacts such as vocabularies, thesauri, and ontologies. A <code>&lt;fin:bank&gt;</code> tag in a document may then be an implemented version of its definition at the semantic layer, where the entity has a definition and a number of properties specified in the model (abbreviated with <code>fin</code>), like that the <span class="custom-highlight">fin:bank</span> is a type of financial organisation with a board of directors and has a location for its headquarters. This enables not only correct sending and receiving of data, but also exchanging data reliably, accessing the right data when querying for information, obtaining relevant data in the query answer, and merging data.</p>
+</div>
+<div class="paragraph">
+<p>Interoperability thus consists of a semantic component as well, which "refers to the meaning of data elements and the relationship between them" and "<strong>includes developing vocabularies and schemata to describe data exchanges</strong>" [<a href="references.html#ref-85" class="xref page">eif4scc</a>]. According to the <a href="https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_3&amp;format=PDF">EIF, section 3.5</a> [<a href="references.html#ref-2" class="xref page">eif2</a>], <strong>semantic interoperability</strong> "ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties, in other words ‘what is sent is what is understood’." One recommended way to achieve semantic interoperability between public administrations is to use semantic assets, such as semantic data models, information models, ontologies, and vocabularies. SEMIC uses models called <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification:~:text=types%20of%20assets.-,What%20is%20a%20Core%20Vocabulary%20(CV)%20specification%3F,-Definition%0AA%20Core"><strong>Core Vocabularies</a></strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:Core_Vocabulary"><a class="anchor" href="#sec:Core_Vocabulary"></a>What is a Core Vocabulary?</h3>
+<div class="paragraph">
+<p>A <strong><em>Core Vocabulary (CV)</em></strong> is a basic, reusable, and extensible specification that captures the relevant characteristics of entities, which can be used to add semantics to data and information  in a context-neutral manner [<a href="references.html#ref-5" class="xref page">cv-hb</a>]. Its primary purpose is to provide standardised terms that can be reused across various application domains, typically realised as a <a href="https://semiceu.github.io/style-guide/1.0.0/gc-semantic-conventions.html#sec:sc-r2">lightweight ontology</a> (optionally accompanied by a permissive data shape) and documented in a concise specification. Core Vocabularies for SEMIC [<a href="references.html#ref-6" class="xref page">sem-sg-cvs</a>] are maintained by the <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre">SEMIC action</a> under the <a href="https://interoperable-europe.ec.europa.eu/interoperable-europe">Interoperable Europe</a> umbrella of DG DIGIT and are described in the <a href="#sec:SEMIC-Core-Vocabularies">SEMIC Core Vocabularies</a> section below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:SEMIC-Core-Vocabularies"><a class="anchor" href="#sec:SEMIC-Core-Vocabularies"></a>SEMIC Core Vocabularies</h3>
+<div class="paragraph">
+<p>Since 2011, the European Commission has facilitated international working groups to forge consensus and maintain the SEMIC Core Vocabularies. A short description of these vocabularies is included in the Table below. The latest release of the SEMIC Core Vocabularies can be retrieved via the SEMIC Support Center [<a href="references.html#ref-9" class="xref page">semic</a>] or directly from the GitHub repository [<a href="references.html#ref-10" class="xref page">semic-gh</a>] in both human- and machine-readable formats. They are published under the CC-BY 4.0 licence [<a href="references.html#ref-21" class="xref page">cc-by</a>]. Henceforth, when we use the term Core Vocabularies, we refer to the SEMIC Core Vocabularies specifically.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Vocabulary</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CPV.png" alt="Core Person Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Person Vocabulary (CPV)</strong> [<a href="references.html#ref-28" class="xref page">cpv</a>] is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a person; e.g., the name, gender, date of birth, and location.</p>
+</div>
+<div class="paragraph">
+<p>This specification enables interoperability among registers and any other ICT-based solutions exchanging and processing person-related information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CBV.png" alt="Core Business Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Business Vocabulary (CBV)</strong> [<a href="references.html#ref-29" class="xref page">cbv</a>] is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a legal entity; e.g., the legal name, activity, and address.</p>
+</div>
+<div class="paragraph">
+<p>The Core Business Vocabulary includes a minimal number of classes and properties modelled to capture the typical details recorded by business registers. It facilitates information exchange between business registers despite differences in what they record and publish.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CLV.png" alt="Core Location Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Location Vocabulary (CLV)</strong> [<a href="references.html#ref-38" class="xref page">clv</a>] is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a location, represented as an address, a geographic name, or a geometry.</p>
+</div>
+<div class="paragraph">
+<p>The Location Core Vocabulary provides a minimum set of classes and properties for describing a location represented as an address, a geographic name, or a geometry. This specification enables interoperability among land registers and any other ICT-based solutions exchanging and processing location information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CCCEV.png" alt="Core Criterion and Evidence Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Criterion and Core Evidence Vocabulary (CCCEV)</strong> [<a href="references.html#ref-41" class="xref page">cccev</a>] supports the exchange of information between organisations that define criteria and organisations that respond to these criteria by means of evidence.</p>
+</div>
+<div class="paragraph">
+<p>The CCCEV addresses specific needs of businesses, public administrations and citizens across the EU, including the following use cases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Facilitate development of interoperable information systems</strong>: the use of common vocabularies to describe criteria and evidence facilitates the development of information systems and improves their interoperability.</p>
+</li>
+<li>
+<p><strong>Create a repository of reusable criteria in machine-readable formats</strong>: the use of common vocabularies promotes the creation of a repository of criteria and evidence information.</p>
+</li>
+<li>
+<p><strong>Automate the assessment of criteria</strong>: the Core Vocabulary describing the criterion responses allows systems to easily compare the information collected from different parties and enables automatic assessment of the responses for a specific criterion.</p>
+</li>
+<li>
+<p><strong>Automate scoring of responses</strong>: weighting criteria, the assessment can be followed by an automated scoring of the responses provided by different parties.</p>
+</li>
+<li>
+<p><strong>Promote cross-border participation in public procurement</strong>: the use of the Core Vocabulary for electronic criterion and evidence allows for removing language barriers thereby improving the cross border exchange of information, and the cross-border participation in pan-European selection processes.</p>
+</li>
+<li>
+<p><strong>Calculating statistics</strong>: standardising data for criterion, criterion responses and evidence allows calculating statistical information on the most commonly used criteria for a given process, the most relevant evidence, etc.</p>
+</li>
+<li>
+<p><strong>Create a registry of mappings of criteria</strong>: using the Core Vocabulary, it is possible to create a registry of mappings to allow cross-checking of the criteria with the evidence of each particular Member State.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CPOV.png" alt="Core Public Organisation Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Public Organisation Vocabulary (CPOV)</strong> [<a href="references.html#ref-39" class="xref page">cpov</a>] provides a vocabulary for describing public organisations in the European Union.</p>
+</div>
+<div class="paragraph">
+<p>It addresses specific needs of businesses, public administrations and citizens across the European Union, including the following use cases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Facilitate information sharing</strong>: the CPOV enables G2G (Government-to-Government), G2B (Government-to-Business) and G2C (Government-to-Citizen) information sharing.</p>
+</li>
+<li>
+<p><strong>Facilitate the development of common information systems</strong>: the use of existing data models for the development of common information systems facilitates the development of those systems and improves their interoperability.</p>
+</li>
+<li>
+<p><strong>Linked Open Organograms</strong>: the Core Public Organisation Vocabulary has the potential to link organograms to each other and to high-value data sets.</p>
+</li>
+<li>
+<p><strong>Cross border information exchange</strong>: the CPOV allows the management of a cross-border repository of public services and organisations.</p>
+</li>
+<li>
+<p><strong>Find a Public Organisation by its function</strong>: the public organisation portfolio facilitates discovery of which public authorities and departments are responsible for given areas of the public task.</p>
+</li>
+<li>
+<p><strong>Increase efficiency</strong>: the CPOV helps to identify where responsibilities and functions are duplicated or overlap.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CPEV.png" alt="Core Public Event Vocabulary" width="130">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Public Event Vocabulary (CPEV)</strong>  [<a href="references.html#ref-90" class="xref page">cpov</a>] is a simplified, reusable and extensible vocabulary that captures the fundamental characteristics of a public event, e.g., the title, the date, the location, the organiser etc.</p>
+</div>
+<div class="paragraph">
+<p>It aspires to become a common model for describing public events (conferences, summits, etc.) in the European Union. This specification enables interoperability among registers and any other ICT based solutions exchanging and processing information related to public events.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/CPSV-AP.png" alt="Core Public Service Vocabulary Application Profile" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong>Core Public Service Vocabulary Application Profile (CPSV-AP)</strong> [<a href="references.html#ref-40" class="xref page">CPSV-AP</a>] is a vocabulary for describing public services and the associated life and business events.</p>
+</div>
+<div class="paragraph">
+<p>With the CPSV-AP it is possible to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide information on public services in a <strong>user-centric</strong> way, grouped logically around business or life events and other ways of classifying;</p>
+</li>
+<li>
+<p>Map different data models to a common vocabulary requiring only one single description. In turn, Points of Single Contact and eGovernment portals can <strong>federate and share information</strong>;</p>
+</li>
+<li>
+<p>Federate and publish information on Points of Single Contact and eGovernment portals in a more <strong>efficient and interoperable</strong> way.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Core Vocabularies are semantic data specifications [<a href="references.html#ref-13" class="xref page">sem-sg-wsds</a>] that are disseminated as the following artefacts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>lightweight ontology [<a href="references.html#ref-11" class="xref page">sem-sg-wio</a>] for vocabulary definition expressed in OWL [<a href="references.html#ref-12" class="xref page">owl2</a>];</p>
+</li>
+<li>
+<p>loose data shape specification [<a href="references.html#ref-13" class="xref page">sem-sg-wds</a>] expressed in [<a href="references.html#ref-14" class="xref page">shacl</a>];</p>
+</li>
+<li>
+<p>human-readable reference documentation [<a href="references.html#ref-15" class="xref page">sem-sg-wdsd</a>] in HTML (based on ReSpec [<a href="references.html#ref-16" class="xref page">respec</a>]);</p>
+</li>
+<li>
+<p>JSON-LD [<a href="references.html#ref-17" class="xref page">json-ld</a>] context definitions [<a href="references.html#ref-18" class="xref page">sem-sg-ta</a>];</p>
+</li>
+<li>
+<p>conceptual model specification [<a href="references.html#ref-19" class="xref page">sem-sg-wcm</a>] expressed in UML Class Diagram notation [<a href="references.html#ref-20" class="xref page">uml</a>].</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:Why_Core_Vocabulary"><a class="anchor" href="#sec:Why_Core_Vocabulary"></a>Why Core Vocabularies?</h3>
+<div class="paragraph">
+<p>Modern-day information system design has moved the goalposts, notably that they typically have to operate in an <strong>ecosystem of tools and data</strong>, which caused a number of new problems, notably:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Developers are reinventing the wheel by modelling the same topics over and over again in different organisations, which is a wasteful use of time and other resources.</p>
+</li>
+<li>
+<p>Consequent near-duplications and genuine differences cause, at best, delays in interoperability across systems and, at worst, legally inconsistent data, thereby harming individuals or organisations.</p>
+</li>
+<li>
+<p>A lack of a high-level common vocabulary causes engineers to create many 1:1 low-level technical mappings between resources that are buried in implementations, which become an unmaintainable mesh structure the more new resources are added and the more often the sources are updated.</p>
+</li>
+<li>
+<p>Individual formats of published datasets require more ad hoc Extract-Transform-Load scripts to reuse commonly reused data, such as cadaster data and registries of companies, imposing a higher burden on tool developers to create and maintain the data processing scripts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Core vocabularies contribute to the solution of all these problems at once thanks to providing agreed-upon shared common building blocks in commonly used domains, such as public services, events, persons and more. Core Vocabularies can be used as, <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/core-vocabularies">as formulated on the SEMIC Support Centre site</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a starting point for designing the conceptual data models and application profiles for newly developed information systems, simply through reuse of the terminology;</p>
+</li>
+<li>
+<p>the basis of a particular data model that is used to exchange data among existing information systems;</p>
+</li>
+<li>
+<p>common model to integrate data originating from disparate data sources thanks to the shared terminology;</p>
+</li>
+<li>
+<p>the foundation for defining a common export format for data and thereby facilitating the development of common import mechanisms.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Concretely, let us illustrate the problem versus the solution for languages designed for interoperability, such as XML. The XSD schema and the corresponding XML files that adhere to it help achieve syntactic interoperability for those XML files. It does not achieve interoperability <em>among</em> the XSD schemas, however, because there is no such mechanism to declare that a tag in schema <code>xs1</code>, say, <code>&lt;bank&gt;</code> is the same as <code>&lt;bank&gt;</code> in schema <code>xs2</code>. We need another mechanism to achieve that, which is provided by vocabularies that operate at a higher level of abstraction to which the XSD schemas can be linked: the <em>semantic</em> layer. <br></p>
+</div>
+<div class="paragraph">
+<p>Alternatively, one can avoid the interoperability problem by creating multiple XSD schemas from the same vocabulary which then offers semantic interoperability implicitly. When a developer wants to reuse a Core Vocabulary-based XSD, they only can be used as-is or extended into a more specific application profile, but not modified to the extent that it could to contradict the Core Vocabulary, thereby continuing to foster the intended interoperability.  <br></p>
+</div>
+<div class="paragraph">
+<p>In addition, with Core Vocabularies represented in RDFS or OWL, one can mix vocabularies and link to external concepts, whereas that is not possible with XSD where only types and elements defined in the single schema can be used.</p>
+</div>
+<div class="paragraph">
+<p>Finally, an added benefit is that while multilingual XSD is possible through manually created tags to store the multilingual information, such features are already part of standardised vocabulary languages used by the Core Vocabularies, such as SKOS, RDF, RDFS, and OWL, thereby offering a standardised approach to multilingual labels, which facilitates software development, reuse, and interoperability.</p>
+</div>
+<h3 id="sec:CV-lifecycle" class="discrete">Core Vocabularies lifecycle</h3>
+<div class="paragraph">
+<p>The SEMIC Core Vocabularies have been developed following the ‘Process and methodology for developing Core Vocabularies’ [<a href="references.html#ref-23" class="xref page">cv-met</a>] of which the most relevant section is depicted in the figure below. Assuming stakeholders and Working Group members with relevant roles are in place, requirements are defined, which are thoroughly assessed on existing standardisation efforts, evidence, and other data models. When a change is deemed necessary, it enters a drafting phase that focuses on the technical details whilst adhering to the SEMIC Style Guide, followed by public consultations. Thereafter, if deemed necessary based on the feedback, it will undergo another modelling iteration, else the changes are refined and the model finalised. The final model is formally approved, implemented, and documented, ensuring they are well-understood and agreed upon by all relevant parties.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Semic_process.png" alt="Semic process">
+</div>
+<div class="title">Figure 1. Process and methodology for developing Core Vocabularies</div>
+</div>
+<div class="paragraph">
+<p>The release management of Core Vocabularies follows a structured timeline for all tasks and each release includes detailed documentation to support implementation, so that users can integrate new versions with minimal disruption. This process maintains the quality and relevance of the Core Vocabularies, and supports a dynamic and responsive framework for semantic interoperability within digital public services.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:use-case-overview"><a class="anchor" href="#sec:use-case-overview"></a>Overview of use cases for using Core Vocabularies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let us commence with a practical example that contributes to setting the stage for defining the use cases afterward.</p>
+</div>
+<div class="sect2">
+<h3 id="sec:example"><a class="anchor" href="#sec:example"></a>A practical example</h3>
+<div class="paragraph">
+<p>Imagine you are starting a business in another EU country. To complete the registration, you need to submit a criminal record certificate and a diploma certificate to multiple public organisations. In many countries, this process is still manual—people must physically visit different ministries, request documents, and submit them in person or via email.  Each organisation may use different formats and terminology, making it difficult for institutions to interpret and process the information correctly. This can generate mistakes during data entry due to terminological confusion that subsequently have to be corrected. Without a common reference vocabulary, these organisations interpret the data differently, making seamless exchange impossible.</p>
+</div>
+<div class="paragraph">
+<p>Now, imagine an alternative scenario, such as indicated by the <a href="https://ec.europa.eu/digital-building-blocks/sites/display/OOTS/OOTSHUB+Home">Once-Only Technical System (OOTS)</a> [<a href="references.html#ref-31" class="xref page">oots</a>] for the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018R1724&amp;from=EN">Single Digital Gateway Regulation</a> [<a href="references.html#ref-87" class="xref page">sdgr</a>], where this entire process is fully automated. Instead of individuals having to visit multiple offices, the ministries and public administrations would communicate directly with each other, exchanging the necessary information in a structured and consistent manner. The citizen could simply grant approval to the administration office to fetch the data from their home country that already had recorded the relevant data. This would eliminate the need for data re-submission by citizens (according to the once-only principle) and for duplicate document submissions, as well as avoid possible data entry issues and thereby making evidence verification faster. Overall, achieving this degree of data interoperability can considerably reduce burdens for citizens and public administrations in terms of hassle, costs, and mobility.</p>
+</div>
+<div class="paragraph">
+<p>Defining the <em>what</em> is one step; the <em>how to achieve it</em> is another.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:scenario"><a class="anchor" href="#sec:scenario"></a>How to solve the scenario with semantic data specifications</h3>
+<div class="paragraph">
+<p>How can different systems and institutions "talk" to each other effectively at the level of software applications and the various types of databases? That technical level uses <strong>data models</strong> to structure the stored data. This first raises the questions of who is developing those data models, and how, and then how those different data models across the database and applications agree on the terminology used in them. Therefore, the challenge is not only technical but also semantic. It is not enough for systems to simply exchange data—they must also be able to interpret the meaning behind the data in a consistent way such that it will not result in errors or so-called 'dirty' (incorrect or incomplete) data. This requires a common language and a (multilingual) structured vocabulary at both the business process level and the IT systems level.</p>
+</div>
+<div class="paragraph">
+<p>This is where <strong>standards to declare the semantics</strong> play a crucial role. By using <strong>Core Vocabularies</strong>, public administrations can ensure that data and information are structured in a way understood by both humans and machines. Standardised models allow different organisations to recognise and process information without discrepancies, thereby reducing errors and the need for manual intervention. As a result, governments can facilitate seamless data exchange, ensuring that information is accurately expressed, shared, interpreted, and processed across systems, leading to more efficient approvals and interactions for businesses, governmental organisations, and citizens.</p>
+</div>
+<div class="paragraph">
+<p>These vocabularies can then be used by the IT personnel of the various departments to create their data models, thereby in effect <strong>avoiding incompatibility</strong> <strong>by building interoperability into the systems from the start</strong>. But what about existing systems from, e.g., a Ministry of Economic Affairs, a national Chamber of Commerce, and other organisations that are relevant to the Single Digital Gateway? Setting aside existing systems to build a new one may not be reasonable and cost effective, especially when they already have their own entrenched terminologies embedded into them or have already incorporated other models used internationally, such as <a href="https://schema.org">Schema.org</a> or the <a href="https://edmcouncil.org/frameworks/industry-models/fibo/">Financial Business Industry Ontology</a>. There is a solution to that problem, too: <strong>map the specifications at this semantic layer to make the other model interoperable with the CV</strong> and then use both through that declared mapping ‘bridge’ between them.</p>
+</div>
+<div class="paragraph">
+<p>It is these two key ways of using CVs that will be covered in the use cases: creating new data specifications availing of the CVs (possibly adding one’s own additional content to it) and mapping existing schemas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:use-cases"><a class="anchor" href="#sec:use-cases"></a>Introduction to the use cases covered in the handbook</h3>
+<div class="paragraph">
+<p>This handbook serves as a practical guide for using Core Vocabularies in various common situations. To provide clear and actionable insights, we have categorised potential use cases into two groups:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Primary Business and Technical Use Cases</strong>: These are the most common, interesting, and/or challenging scenarios, all thoroughly covered within this handbook.</p>
+</li>
+<li>
+<p><strong>Additional Business and Technical Use Cases</strong>: These briefly introduce other relevant scenarios but are not elaborated on in detail in this handbook.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <strong>business case</strong> in the current context is to be understood as a narrative user story (in terms of the technical expert terminology), which functions as <strong>motivation for the use case</strong>. They capture the who, what, and why in a broader context, including who the beneficiary of an action is, what they need, and what the benefit of it is. Such a narrative is then structured into a <strong>user story</strong> as a structured sentence that captures the essence of the business case yet also communicates genericity. For the technical reader, a <strong>use case specification</strong> is listed afterwards, which provides a schematic view as a step towards the precise technical specifications.</p>
+</div>
+<div class="paragraph">
+<p>We differentiate between use cases focussed on the creation of <em>new</em> artefacts and those involving the mapping of <em>existing</em> artefacts to Core Vocabularies. For better clarity, we numbered the use cases and organised them into two diagrams, one for the primary scenarios (see Figure 2, below) and the other for depicting the additional ones. The former are addressed in the main part of this handbook, whereas the latter are listed in the  <a href="Appendix.html" class="xref page">Appendix</a> and may be elaborated on at a later date if there is a demand from the community.</p>
+</div>
+<div class="paragraph">
+<p>The use cases are written in white-box point of style oriented towards user goals following Cockburn’s classification [<a href="references.html#ref-30" class="xref page">uc-book</a>]. We will use the following template to describe the relevant use cases:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case &lt;UC&gt;: Title of the use case</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> A succinct sentence describing the goal of the use case</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actor:</strong> The primary actor or actors of this use case</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Actors:</strong> (Optional) Other actors involved in the use case</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> Short description of the use case providing relevant information for its understanding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> An example to illustrate the application of this use case</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> (Optional) notes about this use case, especially related to its coverage in this handbook</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="_images/primary_Use_Case.png" alt="primary Use Case">
+</div>
+<div class="title">Figure 2. Primary use cases covered in this handbook</div>
+</div>
+<div class="paragraph">
+<p>The use cases described below serve as a quick-access overview; complete concrete scenarios are introduced in the respective dedicated section’s “Description” section.</p>
+</div>
+<h3 id="sec:uc1-create-cv" class="discrete">UC1: Create a new model from a Core Vocabulary</h3>
+<div class="paragraph">
+<p>For creating new models, there are two business cases for illustration. In short:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>UC1.1:</strong> Jean-Luc from the Maltese Chamber of Commerce who wants to create an XML Schema (XSD) by using the Core Business Vocabulary (CBV), so that he reduces design time and ensures consistent, interoperable, and standards-compliant e-form validation across government systems.</p>
+</li>
+<li>
+<p><strong>UC1.2:</strong> Nora from the Norwegian Digitalisation Task Force who needs to provide guidance to the City of Oslo to create a new JSON-LD context based on the Core Public Services Vocabulary Application profile (CPSV-AP). This way, the City can create smart data models compliant with national and European interoperability standards and publish linked data for cross-system data exchange.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The main use case UC1 is summarised as follows, which is subsequently refined into two more specific cases.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC1: Create a new information exchange data model</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone data schema that uses terms from Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to design and create a new data schema or information exchange data model that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> As this is a more generic use case it will be broken down into concrete use cases that focus on specific data formats.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="sec:uc11" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC1.1: Create a new XSD schema</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone XSD schema that uses terms from Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to design and create a new XSD schema that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, an XSD Schema can be used to create and validate XML data to be exchanged between information systems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> OOTS XML schema mappings [<a href="references.html#ref-31" class="xref page">oots</a>]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> A detailed methodology to be applied for this use case will be provided in the <a href="how-to-create-new-data-models.html#sec:create-a-new-xsd-schema" class="xref page">Create a new XSD schema</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="sec:uc12" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC1.2: Create a new JSON-LD context definition</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone JSON-LD context definition that uses terms from Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to design and create a new JSON-LD context definition that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, a JSON-LD context definition can be integrated in describing data, building APIs, and other operations involved in information exchange.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> Core Person Vocabulary [<a href="references.html#ref-32" class="xref page">cpv-json-ld</a>], Core Business Vocabulary [<a href="references.html#ref-33" class="xref page">cbv-json-ld</a>]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> A detailed methodology to be applied for use cases will be provided in the <a href="how-to-create-new-data-models.html#sec:create-a-new-json-ld-context-definition" class="xref page">Create a new JSON-LD context definition</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec:uc2-map-cv" class="discrete">UC2: Map an existing model to a Core Vocabulary</h3>
+<div class="paragraph">
+<p>For mapping vocabularies, there are two business cases for illustration. In short:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>UC2.1:</strong> Sofía with the Department of Agriculture’s outreach division wants to map her existing conceptual model about outreach events that already uses the Core Business Vocabulary (CBV) and align it with Schema.org. This way, the event data can be distributed across the interoperable Europe and global web vocabularies, enabling a wider reach of accurate data exchange.</p>
+</li>
+<li>
+<p><strong>UC2.2.:</strong> Ella, working for the National Registry of Certified Legal Practitioners, wants to map her existing XML Schema Definition (XSD) to the Core Business Vocabulary (CBV). This enables her to transform the XML data into semantically enriched RDF such that it complies with European interoperability standards and supports linked data publication, and thereby enabling cross-system data exchange.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The main use case UC2 is summarised as follows, which is subsequently refined into two specific ones. They serve as a quick overview; concrete scenarios are introduced in the dedicated “Description” section.</p>
+</div>
+<table id="sec:uc2" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC2: Map an existing data model to a Core Vocabulary</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a mapping of an existing (information exchange) data model, to terms from Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Actors:</strong> Domain Expert, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to design and create a mapping of an ontology, vocabulary, or some kind of data schema or information exchange data model that is not part of a more comprehensive semantic data specification, to terms from CVs. Such a mapping can be done at a conceptual level, or formally, e.g., in the form of transformation rules, and most often will include both.<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> Since this is a more generic use case it will be broken down into concrete use cases that focus on specific data models and/or data formats. Some of those use cases will be described in detail below, while others will be included in the <a href="Appendix.html" class="xref page">Appendix</a> with the additional use cases.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="sec:uc21" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC2.1: Map an existing Ontology to a Core Vocabulary</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a mapping between the terms of an existing ontology and the terms of Core Vocabularies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Actors:</strong> Domain Expert, Business Analyst, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to create a formal mapping expressed in Semantic Web terminology (for example using rdfs:subClassOf, rdfs:subPropertyOf, owl:equivalentClass, owl:equivalentProperty, owl:sameAs properties), associating the terms in an existing ontology that defines relevant concepts in a given domain, to terms defined in one or more CVs. This activity is usually performed by a semantic engineer based on input received from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping associates the terms in an existing ontology, which defines relevant concepts within a specific  domain, to terms defined in one or more SEMIC Core Vocabularies. The result of the formal mapping can be used later by software engineers to build information exchange systems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> Mapping Core Person to Schema.org [<a href="references.html#ref-34" class="xref page">map-cp2org</a>], Core Business to Schema.org [<a href="references.html#ref-35" class="xref page">map-cb2org</a>], etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> A detailed methodology to be applied for this use case will be provided in the <a href="how-to-map-existing-data-models.html#sec:map-existing-model-to-cv" class="xref page">Map an existing Model</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="sec:uc22" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"><strong>Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Define the data transformation rules for the mapping of an XSD schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Primary Actors:</strong> Semantic Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Actors:</strong> Domain Expert, Business Analyst, Software Engineer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Description:</strong> The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable.<br>
+Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Example:</strong> ISA2core SAWSDL mapping [<a href="references.html#ref-36" class="xref page">isa2-map</a>]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Note:</strong> A detailed methodology to be applied for this use case will be provided in the <a href="how-to-map-existing-data-models.html#sec:map-existing-shema" class="xref page">Map an existing XSD schema</a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The additional use cases are described in the <a href="Appendix.html#sec:additional-use-cases" class="xref page">Appendix</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the European Comission and is licensed under the terms of EUPL-1.2 license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
