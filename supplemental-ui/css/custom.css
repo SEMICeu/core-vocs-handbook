@@ -1,0 +1,30 @@
+.custom-highlight1 {
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 0.2em;
+    padding: 0.05em 0.3em;
+}
+
+.custom-highlight2 {
+ font-family: "Segoe UI", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.custom-highlight {
+  font-family: "Helvetica";
+  color: black;  
+}
+
+.doc .sidebarblock {
+    background-color: #fdfdfd;
+    border-top: 2px solid #e0dede;
+    border-bottom: 2px solid #e0dede;
+    padding: 1em 2em;
+    margin: 1em 3em 1em;
+    border-radius: 0;
+}
+
+.indentation {
+    margin-left: 3.5em;
+}
