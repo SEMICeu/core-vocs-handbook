@@ -4,15 +4,22 @@
 :url-repo: https://github.com/SEMICeu/core-vocs-handbook
 
 
-This Handbook provides a clear and straightforward guide on how to use SEMIC Core Vocabularies (CV). It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
+This Handbook provides a clear and straightforward guide on how to use SEMIC Core Vocabularies (CV). It supersedes the first version,  https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf[e-Government Core
+Vocabularies handbook: Using horizontal data standards for promoting interoperability]. Key updates include more detailed guidelines and examples in the form of extended tutorials to assist practical use of the Core Vocabularies, as well as including more recent popular languages, such as JSON-LD.
+
+In addition, the handbook is now explicitly intended both for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.
+
+*Structure*
 
 This handbook is organised in four chapters.  The first chapter is of an introductory nature, explaining the what and why. The two main chapters serve a mixed audience, containing use cases, guidelines, and hands-on instructions.
 
-For first-time readers of this Handbook, starting with the  xref:introduction.adoc[introduction] is recommended, where xref:introduction.adoc#sec:interoperability[interoperability] is introduced, the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies] is explained, and important xref:introduction.adoc#sec:use-cases[use cases] are briefly described.
+For first-time readers, it is recommended to start with the  xref:introduction.adoc[introduction] is recommended, where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
 
-Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance are advised to go directly the guidelines and tutorials in the two main chapters, which describe methodology recommendations and examples for:
+Readers familiar with the SEMIC Core Vocabularies and wo seek practical guidance are advised to consult the two main chapters, which describe guidelines and tutorials for:
 
 * xref:how-to-create-new-data-models.adoc[creating new semantic data specifications or stand-alone data models] (re-)using Core Vocabularies, and
 * xref:how-to-map-existing-data-models.adoc[mapping existing data models] to the Core Vocabularies.
 
 The final chapter contains xref:Concluding-remarks.adoc[concluding remarks] and looks ahead toward possible future considerations or extensions.
+
+Further information about SEMIC can be found at the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre[SEMIC Support Centre] and its related https://github.com/SEMICeu[repositories on GitHub].
