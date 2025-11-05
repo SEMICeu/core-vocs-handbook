@@ -17,4 +17,6 @@ Chapters 2 and 3 serve a mixed audience, containing use cases aimed at business 
 
 Chapter 4 contains xref:Concluding-remarks.adoc[concluding remarks] and looks ahead toward possible future considerations or extensions.
 
-Further information about SEMIC can be found at the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre[SEMIC Support Centre] and its related https://github.com/SEMICeu[repositories on GitHub].
+'''
+
+More information about SEMIC can be found at the https://interoperable-europe.ec.europa.eu/collection/semic-support-centre[SEMIC Support Centre] and its related https://github.com/SEMICeu[repositories on GitHub].
