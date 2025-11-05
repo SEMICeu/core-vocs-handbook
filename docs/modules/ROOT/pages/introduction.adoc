@@ -65,7 +65,7 @@ Following the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.p
 
 [[sec:interoperability-acts]]
 [discrete]
-=== Existing acts and frameworks related to interoperability
+==== Existing acts and frameworks related to interoperability
 
 
 The European Union has formulated Acts, regulations, and frameworks that intend to foster achieving that, including the https://digital-strategy.ec.europa.eu/en/policies/data-act[Data Act] [xref:references.adoc#ref-84[data-act]], https://digital-strategy.ec.europa.eu/en/policies/data-governance-act[Data Governance Act] [xref:references.adoc#ref-81[dga]], the https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf[European Interoperability Framework (EIF)] [xref:references.adoc#ref-1[eif]], and the https://interoperable-europe.ec.europa.eu/interoperable-europe/interoperable-europe-act[Interoperable Europe Act] [xref:references.adoc#ref-3[iea24]], which underscore the importance of harmonised data practices across member states. These Acts and frameworks emphasise that true interoperability goes far beyond just connecting systems at a technical level.
@@ -412,6 +412,7 @@ Such activity can be done by semantic engineers based on input from domain exper
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
