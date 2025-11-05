@@ -10,7 +10,7 @@ In addition, the handbook is now explicitly intended both for business users who
 
 This handbook is organised in four chapters. Chapter 1 is aimed at first-time readers and provides an xref:introduction.adoc[introduction] where xref:introduction.adoc#sec:interoperability[interoperability], the role of xref:introduction.adoc#sec:Core_Vocabulary[Core Vocabularies], and important xref:introduction.adoc#sec:use-cases[use cases] are described briefly.
 
-Chapters 2 and 3 serve a mixed audience, containing use cases aimed a business users, and guidelines and hands-on tutorials aimed at semantic engineers. The chapters address two principal cases:
+Chapters 2 and 3 serve a mixed audience, containing use cases aimed at business users, and guidelines and hands-on tutorials aimed at semantic engineers. The chapters address two principal cases:
 
 * xref:how-to-create-new-data-models.adoc[creating new semantic data specifications or stand-alone data models] (re-)using Core Vocabularies, and
 * xref:how-to-map-existing-data-models.adoc[mapping existing data models] to the Core Vocabularies.
