@@ -162,6 +162,12 @@
 [[ref-24]]
 - *[sem-sg-reuse]* The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html
 
+[[ref-42]]
+- *[sem-sg-guideline]* The SEMIC Style Guide for Semantic Engineers: Guidelines and conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html
+
+[[ref-43]]
+- *[sem-sg-date-shape]* The SEMIC Style Guide for Semantic Engineers: Data shape conventions. Available at: https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html
+
 [[ref-18]]
 - *[sem-sg-ta]* The SEMIC Style Guide for Semantic Engineers: Technical artefacts and concerns. Available at: https://semiceu.github.io/style-guide/1.0.0/arhitectural-clarifications.html#sec:technical-concerns-and-artefacts
 

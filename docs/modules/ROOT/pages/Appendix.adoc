@@ -48,9 +48,9 @@ The general case for creating a new semantic data specification is shown in the 
 
 *Description:* The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.
 
-*Example:* The eProcurement Ontology [xref:references.adoc#ref:37[epo]] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
+*Example:* The eProcurement Ontology [xref:references.adoc#ref-37[epo]] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.
 
-*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref-24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 [[sec:uc3.1-des]]
@@ -73,9 +73,9 @@ A concrete user story can be formulated as follows: +
 
 *Description:* The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.
 
-*Example:* The Core Business Vocabulary (CBV) [xref:references.adoc#ref:29[cbv]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organization Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
+*Example:* The Core Business Vocabulary (CBV) [xref:references.adoc#ref-29[cbv]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref-38[clv]] and Core Public Organization Vocabulary (CPOV) [xref:references.adoc#ref-39[cpov]].
 
-*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref-24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 [[sec:uc3.2-des]]
@@ -98,9 +98,9 @@ A concrete user story can be formulated as follows. +
 
 *Description:* The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.
 
-*Example:* The Core Public Service Vocabulary Application Profile (CPSV-AP) [xref:references.adoc#ref:40[cpsv-ap]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]] and Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]].
+*Example:* The Core Public Service Vocabulary Application Profile (CPSV-AP) [xref:references.adoc#ref-40[cpsv-ap]] is built reusing terms from the Core Location Vocabulary (CLV) [xref:references.adoc#ref-38[clv]] and Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref-39[cpov]].
 
-*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref:24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the xref:references.adoc#ref-24[Clarification on “reuse”] section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.
 |===
 
 [[sec:uc4-des]]
@@ -143,9 +143,9 @@ A concrete user story can be formulated as follows. +
 
 *Description:* The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible.
 
-*Example:* The eProcurement Ontology (ePO) [xref:references.adoc#ref:37[epo]] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [xref:references.adoc#ref:38[clv]], Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref:39[cpov]] and Core Criterion and Core Evidence Vocabulary (CCCEV) [xref:references.adoc#ref:41[cccev]].
+*Example:* The eProcurement Ontology (ePO) [xref:references.adoc#ref-37[epo]] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [xref:references.adoc#ref-38[clv]], Core Public Organisation Vocabulary (CPOV) [xref:references.adoc#ref-39[cpov]] and Core Criterion and Core Evidence Vocabulary (CCCEV) [xref:references.adoc#ref-41[cccev]].
 
-*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] section and the various xref:references.adoc#ref:42[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref-24[Clarification on “reuse”] section and the various xref:references.adoc#ref-42[Guidelines and conventions] subsections), and therefore will not be addressed in this handbook.
 |===
 
 [[sec:uc4.2]]
@@ -167,7 +167,7 @@ A concrete user story can be formulated as follows. +
 
 *Description:* The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs.
 
-*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref:24[Clarification on “reuse”] and xref:references.adoc#ref:43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
+*Note:* Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the xref:references.adoc#ref-24[Clarification on “reuse”] and xref:references.adoc#ref-43[Data shape conventions] sections), and therefore will not be addressed in this handbook.
 |===
 
 
