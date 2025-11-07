@@ -1038,18 +1038,21 @@ The <strong>result</strong> is a validated alignment file, where each mapping is
 <p>An optional confidence measure</p>
 </li>
 <li>
-<p>Its corresponding meaning in the ontology (owl:annotatedProperty)</p>
+<p>Its corresponding meaning in the ontology (<code>owl:annotatedProperty</code>)</p>
 </li>
 <li>
-<p>Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping <a href="https://w3id.org/sssom/">SSSOM </a>that, in turn, reuses the Semantic Mapping Vocabulary <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">SEMAPV</a> for the mapping justification values. Example output of adding an alignment between <span class="custom-highlight"><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a></span> and <span class="custom-highlight"><a href="https://schema.org/Organization">schema:Organization</a></span>:</p>
+<p>Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping <a href="https://w3id.org/sssom/">SSSOM </a>that, in turn, reuses the Semantic Mapping Vocabulary <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">SEMAPV</a> for the mapping justification values.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Example output of adding an alignment between <span class="custom-highlight"><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a></span> and <span class="custom-highlight"><a href="https://schema.org/Organization">schema:Organization</a></span>:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">http://mapping.semic.eu/business/sdo/cell/21 a align:Cell;
-align:entity1 http://www.w3.org/ns/legal#LegalEntity;
-align:entity2 https://schema.org/Organization;
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">&lt;http://mapping.semic.eu/business/sdo/cell/21&gt; a align:Cell;
+align:entity1 &lt;http://www.w3.org/ns/legal#LegalEntity&gt;;
+align:entity2 &lt;https://schema.org/Organization&gt;;
 align:relation "&lt;";
 align:measure "1"^^xsd:float;
 owl:annotatedProperty rdfs:subClassOf;
