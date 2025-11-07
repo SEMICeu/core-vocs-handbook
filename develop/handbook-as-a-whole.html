@@ -395,7 +395,7 @@
 <p>This Handbook explains the role of Core Vocabularies in enabling semantic interoperability at the EU level and provides a practical guide for public administrations to use them. It is intended for business users who wish to understand how the Core Vocabularies can be useful, and for semantic engineers who seek straightforward guidance for specific use cases.</p>
 </div>
 <div class="paragraph">
-<p>For first-time readers of this Handbook, we recommend starting with the remainder of this section, where <a href="#sec:interoperability">interoperability</a> is introduced, the role of  <a href="#sec:Core_Vocabulary">Core Vocabularies</a> is explained, and the important <a href="#sec:use-cases">use cases</a> are summarised.</p>
+<p>For first-time readers of this Handbook, we recommend starting with the remainder of this section, where <a href="#sec:interoperability">interoperability</a> is introduced, the role of <a href="#sec:Core_Vocabulary">Core Vocabularies</a> is explained, and the important <a href="#sec:use-cases">use cases</a> are summarised.</p>
 </div>
 <div class="paragraph">
 <p>Readers familiar with the SEMIC Core Vocabularies and seeking practical guidance are advised to go directly to the main part of the Handbook, which describes use cases, methodology recommendations, and tutorials for:</p>
@@ -521,7 +521,7 @@ Finally, the appendix contains a <strong>glossary of terms</strong>, additional 
 <p>Interoperability at the semantic level concerns <strong>the meaning of that data</strong>. One may have the same format and language to represent data, such as XML, but with a tag <code>&lt;bank&gt; … &lt;/bank&gt;</code>, neither the software nor the humans can determine from just that what sort of bank is enclosed within the tags. Such meaning is defined in various artefacts such as vocabularies, thesauri, and ontologies. A <code>&lt;fin:bank&gt;</code> tag in a document may then be an implemented version of its definition at the semantic layer, where the entity has a definition and a number of properties specified in the model (abbreviated with <code>fin</code>), like that the <span class="custom-highlight">fin:bank</span> is a type of financial organisation with a board of directors and has a location for its headquarters. This enables not only correct sending and receiving of data, but also exchanging data reliably, accessing the right data when querying for information, obtaining relevant data in the query answer, and merging data.</p>
 </div>
 <div class="paragraph">
-<p>Interoperability thus consists of a semantic component as well, which "refers to the meaning of data elements and the relationship between them" and "<strong>includes developing vocabularies and schemata to describe data exchanges</strong>" [<a href="references.html#ref-85" class="xref page">eif4scc</a>]. According to the <a href="https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_3&amp;format=PDF">EIF, section 3.5</a> [<a href="references.html#ref-2" class="xref page">eif2</a>], <strong>semantic interoperability</strong> "ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties, in other words ‘what is sent is what is understood’." One recommended way to achieve semantic interoperability between public administrations is to use semantic assets, such as semantic data models, information models, ontologies, and vocabularies. SEMIC uses models called <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification:~:text=types%20of%20assets.-,What%20is%20a%20Core%20Vocabulary%20(CV)%20specification%3F,-Definition%0AA%20Core"><strong>Core Vocabularies</a></strong>.</p>
+<p>Interoperability thus consists of a semantic component as well, which "refers to the meaning of data elements and the relationship between them" and "<strong>includes developing vocabularies and schemata to describe data exchanges</strong>" [<a href="references.html#ref-85" class="xref page">eif4scc</a>]. According to the <a href="https://eur-lex.europa.eu/resource.html?uri=cellar:2c2f2554-0faf-11e7-8a35-01aa75ed71a1.0017.02/DOC_3&amp;format=PDF">EIF, section 3.5</a> [<a href="references.html#ref-2" class="xref page">eif2</a>], <strong>semantic interoperability</strong> "ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties, in other words ‘what is sent is what is understood’." One recommended way to achieve semantic interoperability between public administrations is to use semantic assets, such as semantic data models, information models, ontologies, and vocabularies. SEMIC uses models called   <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification"><strong>Core Vocabularies</a></strong>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2901,18 +2901,21 @@ The <strong>result</strong> is a validated alignment file, where each mapping is
 <p>An optional confidence measure</p>
 </li>
 <li>
-<p>Its corresponding meaning in the ontology (owl:annotatedProperty)</p>
+<p>Its corresponding meaning in the ontology (<code>owl:annotatedProperty</code>)</p>
 </li>
 <li>
-<p>Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping <a href="https://w3id.org/sssom/">SSSOM </a>that, in turn, reuses the Semantic Mapping Vocabulary <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">SEMAPV</a> for the mapping justification values. Example output of adding an alignment between <span class="custom-highlight"><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a></span> and <span class="custom-highlight"><a href="https://schema.org/Organization">schema:Organization</a></span>:</p>
+<p>Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping <a href="https://w3id.org/sssom/">SSSOM </a>that, in turn, reuses the Semantic Mapping Vocabulary <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">SEMAPV</a> for the mapping justification values.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Example output of adding an alignment between <span class="custom-highlight"><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity">legal:LegalEntity</a></span> and <span class="custom-highlight"><a href="https://schema.org/Organization">schema:Organization</a></span>:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">http://mapping.semic.eu/business/sdo/cell/21 a align:Cell;
-align:entity1 http://www.w3.org/ns/legal#LegalEntity;
-align:entity2 https://schema.org/Organization;
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">&lt;http://mapping.semic.eu/business/sdo/cell/21&gt; a align:Cell;
+align:entity1 &lt;http://www.w3.org/ns/legal#LegalEntity&gt;;
+align:entity2 &lt;https://schema.org/Organization&gt;;
 align:relation "&lt;";
 align:measure "1"^^xsd:float;
 owl:annotatedProperty rdfs:subClassOf;
@@ -3967,8 +3970,8 @@ Note: The SHACL shapes of the CBV can be found <a href="https://github.com/SEMIC
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new semantic data specification that reuses terms from Core Vocabularies.</p>
 <p class="tableblock"><strong>Primary Actor:</strong> Semantic Engineer</p>
 <p class="tableblock"><strong>Description:</strong> The goal is to design and create a semantic data specification that represents the concepts in a particular domain, while reusing terms from existing CVs as much as possible for concepts that are already covered by CVs. Creating semantic data specifications using this approach will support better interoperability.</p>
-<p class="tableblock"><strong>Example:</strong> The eProcurement Ontology [<a href="references.html#ref:37" class="xref page">epo</a>] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.</p>
-<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref:24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
+<p class="tableblock"><strong>Example:</strong> The eProcurement Ontology [<a href="references.html#ref-37" class="xref page">epo</a>] is a domain-specific semantic data specification built by reusing terms from multiple Core Vocabularies.</p>
+<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref-24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3992,8 +3995,8 @@ Note: The SHACL shapes of the CBV can be found <a href="https://github.com/SEMIC
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new Core Vocabulary that reuses terms from other Core Vocabularies.</p>
 <p class="tableblock"><strong>Primary Actor:</strong> Semantic Engineer</p>
 <p class="tableblock"><strong>Description:</strong> The goal is to design and create a new Core Vocabulary that represents the concepts of a generic domain of high potential reusability, while reusing terms from existing CVs as much as possible for concepts that are already covered by those CVs.</p>
-<p class="tableblock"><strong>Example:</strong> The Core Business Vocabulary (CBV) [<a href="references.html#ref:29" class="xref page">cbv</a>] is built reusing terms from the Core Location Vocabulary (CLV) [<a href="references.html#ref:38" class="xref page">clv</a>] and Core Public Organization Vocabulary (CPOV) [<a href="references.html#ref:39" class="xref page">cpov</a>].</p>
-<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref:24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
+<p class="tableblock"><strong>Example:</strong> The Core Business Vocabulary (CBV) [<a href="references.html#ref-29" class="xref page">cbv</a>] is built reusing terms from the Core Location Vocabulary (CLV) [<a href="references.html#ref-38" class="xref page">clv</a>] and Core Public Organization Vocabulary (CPOV) [<a href="references.html#ref-39" class="xref page">cpov</a>].</p>
+<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref-24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4018,8 +4021,8 @@ Note: The SHACL shapes of the CBV can be found <a href="https://github.com/SEMIC
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new Application Profile that reuses terms from other Core Vocabularies and specifies how they should be used.</p>
 <p class="tableblock"><strong>Primary Actor:</strong> Semantic Engineer</p>
 <p class="tableblock"><strong>Description:</strong> The goal is to design and create a new Application Profile that represents all the concepts and restrictions on those concepts that are relevant in a particular application domain, while reusing terms from existing CVs as much as possible.</p>
-<p class="tableblock"><strong>Example:</strong> The Core Public Service Vocabulary Application Profile (CPSV-AP) [<a href="references.html#ref:40" class="xref page">cpsv-ap</a>] is built reusing terms from the Core Location Vocabulary (CLV) [<a href="references.html#ref:38" class="xref page">clv</a>] and Core Public Organisation Vocabulary (CPOV) [<a href="references.html#ref:39" class="xref page">cpov</a>].</p>
-<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref:24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
+<p class="tableblock"><strong>Example:</strong> The Core Public Service Vocabulary Application Profile (CPSV-AP) [<a href="references.html#ref-40" class="xref page">cpsv-ap</a>] is built reusing terms from the Core Location Vocabulary (CLV) [<a href="references.html#ref-38" class="xref page">clv</a>] and Core Public Organisation Vocabulary (CPOV) [<a href="references.html#ref-39" class="xref page">cpov</a>].</p>
+<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the <a href="references.html#ref-24" class="xref page">Clarification on “reuse”</a> section of the SEMIC Style Guide, and therefore will not be addressed in this handbook.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4066,8 +4069,8 @@ Note: The SHACL shapes of the CBV can be found <a href="https://github.com/SEMIC
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone ontology that reuses terms from Core Vocabularies.</p>
 <p class="tableblock"><strong>Primary Actor:</strong> Semantic Engineer</p>
 <p class="tableblock"><strong>Description:</strong> The goal is to design and create a new ontology that is not part of a more comprehensive semantic data specification, describing the concepts that are relevant in a particular domain or application context, while reusing terms from existing CVs as much as possible.</p>
-<p class="tableblock"><strong>Example:</strong> The eProcurement Ontology (ePO) [<a href="references.html#ref:37" class="xref page">epo</a>] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [<a href="references.html#ref:38" class="xref page">clv</a>], Core Public Organisation Vocabulary (CPOV) [<a href="references.html#ref:39" class="xref page">cpov</a>] and Core Criterion and Core Evidence Vocabulary (CCCEV) [<a href="references.html#ref:41" class="xref page">cccev</a>].</p>
-<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the <a href="references.html#ref:24" class="xref page">Clarification on “reuse”</a> section and the various <a href="references.html#ref:42" class="xref page">Guidelines and conventions</a> subsections), and therefore will not be addressed in this handbook.</p></td>
+<p class="tableblock"><strong>Example:</strong> The eProcurement Ontology (ePO) [<a href="references.html#ref-37" class="xref page">epo</a>] is built reusing terms from multiple CVs, including the Core Location Vocabulary (CLV) [<a href="references.html#ref-38" class="xref page">clv</a>], Core Public Organisation Vocabulary (CPOV) [<a href="references.html#ref-39" class="xref page">cpov</a>] and Core Criterion and Core Evidence Vocabulary (CCCEV) [<a href="references.html#ref-41" class="xref page">cccev</a>].</p>
+<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the <a href="references.html#ref-24" class="xref page">Clarification on “reuse”</a> section and the various <a href="references.html#ref-42" class="xref page">Guidelines and conventions</a> subsections), and therefore will not be addressed in this handbook.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4092,7 +4095,7 @@ Note: The SHACL shapes of the CBV can be found <a href="https://github.com/SEMIC
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Goal:</strong> Create a new standalone data shape that specifies restrictions on the use of terms from Core Vocabularies.</p>
 <p class="tableblock"><strong>Primary Actor:</strong> Semantic Engineer</p>
 <p class="tableblock"><strong>Description:</strong> The goal is to design and create a new data shape that is not part of a more comprehensive semantic data specification, describing the expected use of concepts that are relevant in a particular domain or application context, including the use of terms from existing CVs.</p>
-<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the <a href="references.html#ref:24" class="xref page">Clarification on “reuse”</a> and <a href="references.html#ref:43" class="xref page">Data shape conventions</a> sections), and therefore will not be addressed in this handbook.</p></td>
+<p class="tableblock"><strong>Note:</strong> Recommendation on how to address this use case can be found in the SEMIC Style Guide (more specifically in the <a href="references.html#ref-24" class="xref page">Clarification on “reuse”</a> and <a href="references.html#ref-43" class="xref page">Data shape conventions</a> sections), and therefore will not be addressed in this handbook.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4602,6 +4605,20 @@ Thus, while exchange data models are essential for the technical realisation of 
 <ul>
 <li>
 <p><strong>[sem-sg-reuse]</strong> The SEMIC Style Guide for Semantic Engineers: Clarifications on "reuse". Available at: <a href="https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html" class="bare">https://semiceu.github.io/style-guide/1.0.0/clarification-on-reuse.html</a></p>
+</li>
+</ul>
+</div>
+<div id="ref-42" class="ulist">
+<ul>
+<li>
+<p><strong>[sem-sg-guideline]</strong> The SEMIC Style Guide for Semantic Engineers: Guidelines and conventions. Available at: <a href="https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html" class="bare">https://semiceu.github.io/style-guide/1.0.0/guidelines-and-conventions.html</a></p>
+</li>
+</ul>
+</div>
+<div id="ref-43" class="ulist">
+<ul>
+<li>
+<p><strong>[sem-sg-date-shape]</strong> The SEMIC Style Guide for Semantic Engineers: Data shape conventions. Available at: <a href="https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html" class="bare">https://semiceu.github.io/style-guide/1.0.0/gc-data-shape-conventions.html</a></p>
 </li>
 </ul>
 </div>
