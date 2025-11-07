@@ -397,8 +397,10 @@ The *result* is a validated alignment file, where each mapping is represented ba
 * The aligned entities (`align:entity1` and `align:entity2`)
 * The chosen relation (`align:relation`), being either subsumption “<” or equivalence “=”
 * An optional confidence measure
-* Its corresponding meaning in the ontology (owl:annotatedProperty)
-* Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM ]that, in turn, reuses the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values. Example output of adding an alignment between [.custom-highlight]#https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity]# and [.custom-highlight]#https://schema.org/Organization[schema:Organization]#:
+* Its corresponding meaning in the ontology (`owl:annotatedProperty`)
+* Further information on a mapping justification, which reuses the Simple Standard for Sharing Ontological Mapping https://w3id.org/sssom/[SSSOM ]that, in turn, reuses the Semantic Mapping Vocabulary https://mapping-commons.github.io/semantic-mapping-vocabulary/[SEMAPV] for the mapping justification values.
+
+Example output of adding an alignment between [.custom-highlight]#https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity[legal:LegalEntity]# and [.custom-highlight]#https://schema.org/Organization[schema:Organization]#:
 
 [source,turtle]
 <http://mapping.semic.eu/business/sdo/cell/21> a align:Cell;
