@@ -11,10 +11,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: "Generate site using antora site action"
-        uses: kameshsampath/antora-site-action@master
+      - name: "Install Node 16"
+        uses: actions/setup-node@v4
         with:
-          antora_playbook: antora-playbook.yml
+          node-version: 16
+      - name: "Install Antora"
+        run: npm install
+      - name: "Generate site using antora site action"
+        run: npx antora --fetch antora-playbook.yml
       - name: "Upload generated site"
         uses: actions/upload-artifact@v4
         with:
@@ -27,10 +31,10 @@ jobs:
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     steps:
-      - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+      - name: "Install Node 16"
+        uses: actions/setup-node@v4
         with:
-          version: 12.x
+          node-version: 16
       - name: Checkout
         uses: actions/checkout@v4
       - name: Download generated site
