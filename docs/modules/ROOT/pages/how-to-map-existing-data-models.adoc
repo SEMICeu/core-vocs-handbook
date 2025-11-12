@@ -521,9 +521,9 @@ This business case translates into the following *use case specification*, which
 
 This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc22[UC2.2].
 
-To create an XSD mapping, one needs to decide on the purpose and level of specificity of the XSD schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a full-fledged executable set of rules for data transformation. In most cases, the reason why this mapping is done, is to also transform the corresponding XML files adhering to the XSD schema into RDF. Therefore, we include this step in the guideline.
+To create an XSD mapping, one needs to decide on the purpose and level of specificity of the XSD Schema mapping. It can range from producing a lightweight alignment at the level of vocabulary down to a full-fledged executable set of rules for data transformation. In most cases, the reason why this mapping is done, is to also transform the corresponding XML files adhering to the XSD schema into RDF. Therefore, we include this step in the guideline.
 
-In this section we describe the procedures to follow, which vary by selected material and ultimate goal in the broader context. The diagram below depicts the general process to create an XSD schema mapping and corresponding XML mappings, which is described afterwards.
+In this section we describe the procedures to follow, which vary by selected material and ultimate goal in the broader context. The diagram below depicts the general process to create an XSD Schema mapping and corresponding XML mappings, which is described afterwards.
 
 .Overview of the guidelines for Mapping an Existing XSD Schema
 image::UC2.2.png[]
@@ -538,7 +538,7 @@ The main procedure consists of four phases:
 . *Disseminate the documentation* according to the procedure followed including, mainly, the used and generated files, mapping declarations or rules, and validation reports, to be applied in the foreseen use cases of the transformation pipelines.
 
 
-==== Phase 1: Understand XSD schema and prepare test data
+==== Phase 1: Understand the XSD schema and prepare test data
 
 The first task is to examine the XSD schema to understand what elements it contains and how the hierarchical structuring of content may affect the meaning of the elements. This is important both for mapping and for selecting appropriate test data. 
 
@@ -547,7 +547,7 @@ It may be that the XSD is outdated or partial with respect to the XML files that
 
 ==== Phase 2: Map the XSD schema
 
-Conceptual Mapping in semantic data integration–determining what elements from the source should correspond to those in the target–can be established at two distinct levels: the vocabulary level and the application profile level. These levels differ primarily in their complexity and specificity regarding the data context they address. A *Vocabulary mapping* is established  as the principal task: the XSD schema elements need to align to CV elements, focussing on terminological alignments.
+Conceptual Mapping in semantic data integration–determining what elements from the source should correspond to those in the target–can be established at two distinct levels: the vocabulary level and the application profile level. These levels differ primarily in their complexity and specificity regarding the data context they address. A *Vocabulary mapping* is established  as the principal task: the XSD schema's elements need to align to CV elements, focussing on terminological alignments.
 
 For the XSD file, they are the elements within the tags `<xs:element ref=”_elementLabel_”>` where the “[.custom-highlight]#elementLabel#” first has to be contextually interpreted if no definition is given in the XSD file, and then mapped to a concept from the chosen CV. For instance, a `<xs:element ref=”address”>` nested within the concept `<xs:element ref=”Person”>` has a different meaning from “[.custom-highlight]#address#” nested within the concept `<xs:element ref=”Website”>`. This thus also requires careful management of the mappings, where the whole XPath is documented, rather than only the name of the element, because the whole path is needed for disambiguation.
 
@@ -795,7 +795,7 @@ We ensure that the XML data contains relevant elements, such as `<LegalEntity>`,
 <LegalName xml:lang="nl">Belgisch Comite voor UNICEF</LegalName>
 ----
 
-==== Phase 2: Map XSD schema elements to XSD of the CV
+==== Phase 2: Map XSD Schema elements to XSD of the CV
 
 *Mapping XSD to CV Terms*
 
@@ -859,7 +859,7 @@ We will create a conceptual mapping between the XSD elements and RDF terms from 
 * *Application Profile Level Mapping*: At this level, you use *XPath* expressions to extract specific data from the XML structure, ensuring a more precise mapping to the Core Vocabulary.
 ** Example: Mapping the address fields from the XML to a specific property, such as [.custom-highlight]#locn:postCode# or [.custom-highlight]#locn:postName#. In both cases, the target is declared in two components: the target property path and the target class path, to ensure it is mapped in the right context. For instance, a [.custom-highlight]#locn:postName# of a legal entity may well have different components compared to a [.custom-highlight]#locn:postName# of the address of a physical building.
 
-Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
+Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD Schema specification) an instance of that contact point:
 
 .Visualisation of an orchestration of mappings between the XSD schema, its XML file compliant with it, and the CV
 image::snippetCBV.png[]
@@ -988,6 +988,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
