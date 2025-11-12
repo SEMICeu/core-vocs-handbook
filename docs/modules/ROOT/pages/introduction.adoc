@@ -201,9 +201,9 @@ Core vocabularies contribute to the solution of all these problems at once thank
 * common model to integrate data originating from disparate data sources thanks to the shared terminology;
 * the foundation for defining a common export format for data and thereby facilitating the development of common import mechanisms.
 
-Concretely, let us illustrate the problem versus the solution for languages designed for interoperability, such as XML. The XSD Schema and the corresponding XML files that adhere to it help achieve syntactic interoperability for those XML files. It does not achieve interoperability _among_ the XSD Schemas, however, because there is no such mechanism to declare that a tag in schema `xs1`, say, `<bank>` is the same as `<bank>` in schema `xs2`. We need another mechanism to achieve that, which is provided by vocabularies that operate at a higher level of abstraction to which the XSD Schemas can be linked: the _semantic_ layer.  +
+Concretely, let us illustrate the problem versus the solution for languages designed for interoperability, such as XML. The XSD schema and the corresponding XML files that adhere to it help achieve syntactic interoperability for those XML files. It does not achieve interoperability _among_ the XSD schemas, however, because there is no such mechanism to declare that a tag in schema `xs1`, say, `<bank>` is the same as `<bank>` in schema `xs2`. We need another mechanism to achieve that, which is provided by vocabularies that operate at a higher level of abstraction to which the XSD schemas can be linked: the _semantic_ layer.  +
 
-Alternatively, one can avoid the interoperability problem by creating multiple XSD Schemas from the same vocabulary which then offers semantic interoperability implicitly. When a developer wants to reuse a Core Vocabulary-based XSD, they only can be used as-is or extended into a more specific application profile, but not modified to the extent that it could to contradict the Core Vocabulary, thereby continuing to foster the intended interoperability.   +
+Alternatively, one can avoid the interoperability problem by creating multiple XSD schemas from the same vocabulary which then offers semantic interoperability implicitly. When a developer wants to reuse a Core Vocabulary-based XSD, they only can be used as-is or extended into a more specific application profile, but not modified to the extent that it could to contradict the Core Vocabulary, thereby continuing to foster the intended interoperability.   +
 
 In addition, with Core Vocabularies represented in RDFS or OWL, one can mix vocabularies and link to external concepts, whereas that is not possible with XSD where only types and elements defined in the single schema can be used.
 
@@ -290,7 +290,7 @@ The use cases described below serve as a quick-access overview; complete concret
 
 For creating new models, there are two business cases for illustration. In short:
 
-* *UC1.1:* Jean-Luc from the Maltese Chamber of Commerce who wants to create an XML Schema (XSD) by using the Core Business Vocabulary (CBV), so that he reduces design time and ensures consistent, interoperable, and standards-compliant e-form validation across government systems.
+* *UC1.1:* Jean-Luc from the Maltese Chamber of Commerce who wants to create an XML schema (XSD) by using the Core Business Vocabulary (CBV), so that he reduces design time and ensures consistent, interoperable, and standards-compliant e-form validation across government systems.
 * *UC1.2:* Nora from the Norwegian Digitalisation Task Force who needs to provide guidance to the City of Oslo to create a new JSON-LD context based on the Core Public Services Vocabulary Application profile (CPSV-AP). This way, the City can create smart data models compliant with national and European interoperability standards and publish linked data for cross-system data exchange.
 
 The main use case UC1 is summarised as follows, which is subsequently refined into two more specific cases.
@@ -312,18 +312,18 @@ The main use case UC1 is summarised as follows, which is subsequently refined in
 [[sec:uc11]]
 |===
 |{set:cellbgcolor: #a8c6f7}
-*Use Case UC1.1: Create a new XSD Schema*
+*Use Case UC1.1: Create a new XSD schema*
 
 |{set:cellbgcolor: #f5f8fc}
-*Goal:* Create a new standalone XSD Schema that uses terms from Core Vocabularies.
+*Goal:* Create a new standalone XSD schema that uses terms from Core Vocabularies.
 
 |*Primary Actors:* Semantic Engineer, Software Engineer
 
-|*Description:* The goal is to design and create a new XSD Schema that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, an XSD Schema can be used to create and validate XML data to be exchanged between information systems.
+|*Description:* The goal is to design and create a new XSD schema that is not part of a more comprehensive semantic data specification, relying on terms from existing CVs as much as possible. As an information exchange data model, an XSD schema can be used to create and validate XML data to be exchanged between information systems.
 
 |*Example:* OOTS XML schema mappings [xref:references.adoc#ref-31[oots]]
 
-|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD Schema] section.
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-create-new-data-models.adoc#sec:create-a-new-xsd-schema[Create a new XSD schema] section.
 |===
 
 [[sec:uc12]]
@@ -394,24 +394,25 @@ The main use case UC2 is summarised as follows, which is subsequently refined in
 [[sec:uc22]]
 |===
 |{set:cellbgcolor: #a8c6f7}
-*Use Case UC2.2: Map an existing XSD Schema to a Core Vocabulary*
+*Use Case UC2.2: Map an existing XSD schema to a Core Vocabulary*
 
 |{set:cellbgcolor: #f5f8fc}
-*Goal:* Define the data transformation rules for the mapping of an XSD Schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD Schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+*Goal:* Define the data transformation rules for the mapping of an XSD schema to terms from Core Vocabularies. Create a mapping of XML data that conforms to an existing XSD schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
 
 |*Primary Actors:* Semantic Engineer
 
 |*Actors:* Domain Expert, Business Analyst, Software Engineer
 
-|*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD Schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
-Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML Elements defined in an XSD Schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+|*Description:* The goal is to create a formal mapping using Semantic Web technologies (e.g. RML or other languages), to allow automated translation of XML data conforming to a certain XSD schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. This use case required definitions of an Application Profile for a Core Vocabulary because the CV alone does not specify sufficient instantiation constraints to be precisely mappable. +
+Such activity can be done by semantic engineers based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the XML elements defined in an XSD schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 
 |*Example:* ISA2core SAWSDL mapping [xref:references.adoc#ref-36[isa2-map]]
 
-|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-existing-shema[Map an existing XSD Schema] section.
+|*Note:* A detailed methodology to be applied for this use case will be provided in the xref:how-to-map-existing-data-models.adoc#sec:map-existing-shema[Map an existing XSD schema] section.
 |===
 
 The additional use cases are described in the xref:Appendix.adoc#sec:additional-use-cases[Appendix].
+
 
 
 
