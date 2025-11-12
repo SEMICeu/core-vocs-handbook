@@ -106,7 +106,7 @@
 - *[ml-lr]* Ben De Meester, Pieter Heyvaert, Ruben Verborgh and Anastasia Dimou. Mapping Languages: Analysis of Comparative Characteristics. KGB@ESWC 2019: 37–45. Available at: https://ceur-ws.org/Vol-2489/paper4.pdf
 
 [[ref-46]]
-- *[niem]* The National Information Exchange Model (NIEM). Available at: https://www.niem.gov/niem-standard
+- *[niem]* The National Information Exchange Model (NIEM). Available at: https://niemopen.org/
 
 [[ref-82]]
 - *[ols]* Ontology Lookup Service. Available at: https://www.ebi.ac.uk/ols4/
@@ -224,4 +224,5 @@
 
 [[ref-69]]
 - *[yarrrml]* YARRRML. Available at: https://rml.io/yarrrml/spec/
+
 
