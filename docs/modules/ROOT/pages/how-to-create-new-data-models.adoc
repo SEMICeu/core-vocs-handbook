@@ -60,7 +60,7 @@ The business case translates into the following *use case specification*, which 
 
 |===
 
-Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
+Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD Schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
 
 [[sec:uc1.1-guideline]]
 === Guidelines to create a new XSD schema
@@ -74,7 +74,7 @@ This section provides detailed instructions for addressing use case xref:introdu
 This is visualised in the following figure, together with key tasks and suggestions.
 
 .Overview of the guidelines to create a new XSD schema
-image::UC1.1.png[]
+image::UC1.1.png[width=500]
 
 
 ==== Phase 1: Import or define elements
@@ -87,7 +87,7 @@ The imported elements are then employed in the definition of a specific document
 
 In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create the XML element definitions in the new XSD schema corresponding to the reused URIs. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency; for the Core Vocabularies, they must be defined within the http://data.europa.eu/m8g/%E2%80%9D[http://data.europa.eu/m8g/] namespace. 
 
-Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the Core Vocabulary’s data shape—specifically, which properties are optional and which are mandatory–within the XSD schema element definitions.
+Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the Core Vocabulary’s data shape—specifically, which properties are optional and which are mandatory–within the XSD Schema element definitions.
 
 [NOTE]
 ====
@@ -109,7 +109,7 @@ Adopting Venetian Blind pattern reduces the variability in its application and d
 
 On the other hand, the *Garden of Eden pattern* allows for multiple global elements, providing various entry points into the XML document. This pattern accommodates ontologies where no single class is inherently central, mirroring the flexibility of graph representations in ontologies that do not have a strict hierarchical starting point.
 
-Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as NIEM [xref:references.adoc#ref-82[niem]] and UBL [xref:references.adoc#ref-47[ubl]], which recommend such flexibility for broader applicability and ease of information representation.
+Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as NIEM [xref:references.adoc#ref-46[niem]] and UBL [xref:references.adoc#ref-47[ubl]], which recommend such flexibility for broader applicability and ease of information representation.
 
 However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a SOAP API [xref:references.adoc#ref-48[soap-api]], the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.
 
@@ -159,13 +159,13 @@ Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves d
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
-==== Phase 1: Import or Define Elements
+==== Phase 1: Import or define elements
 
 
 *Managing Imports and Namespaces*
 
 
-In XML schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
+In XML Schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
 For example, CBV comes with https://github.com/SEMICeu/XML-schema/tree/main/models/CoreVoc_Business[its own XSD schema], the following import statement imports all definitions related to CBV elements into your XSD schema (explained afterwards):
 
 [source,xml]
@@ -208,7 +208,7 @@ For example, the [.custom-highlight]#LegalEntity# element could be defined as fo
 
 Make sure you declare the correct namespace (e.g., http://example.com/) for all these custom elements.
 
-==== Phase 2: Shape XML Document Structure with Patterns
+==== Phase 2: Shape the XML document structure with patterns
 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
@@ -325,7 +325,7 @@ It’s important to observe that in this context, [.custom-highlight]#LegalEntit
 </xs:complexType>
 ----
 
-*Finalise the XSD Schema*
+*Finalise the XSD schema*
 
 Adding *annotations* and *documentation* to each complex type and element helps to clarify their purpose and improve the readability of the schema. For instance:
 
@@ -341,7 +341,7 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 </xs:complexType>
 ----
 
-==== Phase 3: Validation and Best Practices
+==== Phase 3: Validation and best practices
 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
@@ -409,7 +409,7 @@ The three key phases are:
 This is visualised in the following figure, together with key tasks and suggestions.
 
 .Overview of the guidelines to create a new JSON-LD context definition
-image::UC1.2.png[]
+image::UC1.2.png[width=520]
 
 ==== Phase 1: Import or define elements
 
@@ -741,6 +741,10 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
+
+
+
 
 
 
