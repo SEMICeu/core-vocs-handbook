@@ -249,7 +249,7 @@ First, list the features on which to compare the source and the target, which co
 
 Let’s consider three of them and consider how they apply  to our case.: +
 1) Are the files available in the same *format*? This is indeed the case for CBV and Schema.org, and even leaves the choice for using their RDF or JSON-LD format. +
-2) The *natural language* of CVB and Schema.org, that is, the rendering of the entities’ names and labels, are both in one language, and so translating entities’ names is not needed +
+2) The *natural language* of CBV and Schema.org, that is, the rendering of the entities’ names and labels, are both in one language, and so translating entities’ names is not needed +
 3) Regarding frequency of *version* updates, there is a notable difference. CBV is relatively stable with two main releases, whereas Schema.org has frequent releases and it is currently in its 29th main release cycle.  +
 The selected features are presented  in a table below, where for each feature the corresponding values for  CBV and Schema.org are provided for comparison. For the CBV and Schema.org metadata comparison, we had to consult the documentation, the developer release pages, and directly inspect the available files.
 
@@ -291,7 +291,7 @@ _Output_
 
 There are three distinct pathways, namely: direct use, adaptive reuse, and creating a new alignment. Let’s look at each in turn. For the CBV and Schema.org, we first look for pre-existing alignments of related vocabularies. They may be declared in the files themselves, but we also can search the https://github.com/SEMICeu[SEMIC GitHub repository] for other files that may have relevant mappings already.
 
-In the SEMIC repository, there are several vocabularies that have alignments to Schema.org already, which may be reusable. They are listed in the following table, along with the location and the latest version  available at the the day of the exercise  (recall the link:./how-to-map-existing-data-models.adoc#sec:Characterisation[Source and Target Characterisation] above).
+In the SEMIC repository, there are several vocabularies that have alignments to Schema.org already, which may be reusable. They are listed in the following table, along with the location and the latest version  available at the the day of the exercise  (recall the xref:how-to-map-existing-data-models.adoc#sec:Characterisation[Source and Target Characterisation] above).
 
 |===
 |*Mapping From*|*Mapping To*|*Location*|*Version*
@@ -629,7 +629,7 @@ After completing either Phase 2-i or 2-ii, one may proceed to Phase 3, if applic
 
 Drilling down into Phase 3 of the overall procedure, we identify three steps, as shown in the figure below.
 
-.Overivew of the subprocess of transforming XML into CV elements
+.Overview of the subprocess of transforming XML into CV elements
 image::xmlTOcv.png[]
 
 *Transforming the XML data to the Core Vocabulary by means of mappings* consists of:
@@ -861,7 +861,7 @@ We will create a conceptual mapping between the XSD elements and RDF terms from 
 
 Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
 
-.Visualisation of an orchstration of mappigns between the XSD schema, its XML file compliant with it, and the CV
+.Visualisation of an orchestration of mappings between the XSD schema, its XML file compliant with it, and the CV
 image::snippetCBV.png[]
 
 More precisely, you have to write down the source XPath, i.e., `*/ContactPoint` in the figure, and how it is represented in the target specification, defining a target property path and a target class path. Examples of the Conceptual Mapping for five selected elements of the XSD schema are presented below, where the full URIs have been abbreviated:
@@ -988,5 +988,6 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
