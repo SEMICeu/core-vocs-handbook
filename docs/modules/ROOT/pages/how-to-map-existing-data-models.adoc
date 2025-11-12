@@ -5,7 +5,7 @@ In the fields of knowledge representation and data modelling, distinct modelling
 
 The idea of unifying this broad spectrum of approaches under a single model and a single representation language is conceptually appealing but pragmatically unfeasible. Also, the diversity reflects the varied domains, perspectives, and requirements these approaches and modelling languages serve.
 
-To navigate this complexity, a nuanced approach is required—one that seeks to establish connections across models without imposing uniformity. Here, the notions of ontology matching and model alignment methodologies more generation come into play, using the term ‘ontology’ loosely in this context (i.e., it may also refer to similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies). The mapping endeavour encompasses not only ontological artefacts, vocabularies, and application profiles, but also various technical artefacts, such as data shapes defined in SHACL, XSD schemas for XML and to JSON Schemas for JSON data. Thus, mapping in this broader sense involves creating links between these semantic and technical artefacts and Core Vocabularies.
+To navigate this complexity, a nuanced approach is required—one that seeks to establish connections across models without imposing uniformity. Here, the notions of ontology matching and model alignment methodologies more generation come into play, using the term ‘ontology’ loosely in this context (i.e., it may also refer to similar artefacts, such as OWL-formalised conceptual data models or structured controlled vocabularies). The mapping endeavour encompasses not only ontological artefacts, vocabularies, and application profiles, but also various technical artefacts, such as data shapes defined in SHACL, XSD schemas for XML and to JSON schemas for JSON data. Thus, mapping in this broader sense involves creating links between these semantic and technical artefacts and Core Vocabularies.
 
 The past three decades have witnessed extensive efforts in ontology and attendant model matching, resulting in a plethora of tools, methods, and technologies. These strategies range from concept-based methods that focus on the semantic congruence and contextual relevance of the model elements, to formal methods for finding, aligning, and transforming content to cater for various mapping needs.
 
@@ -505,7 +505,7 @@ To meet this requirement, Ella must map the Registry’s *existing XSD schema to
 This business case translates into the following *use case specification*, which is instantiated from the xref:introduction.adoc#sec:uc22[general UC2.2 description]:
 
 |===
-|*Use Case UC 2.2: Map an existing XSD Schema to a Core Vocabulary*
+|*Use Case UC 2.2: Map an existing XSD schema to a Core Vocabulary*
 |{set:cellbgcolor: #f5f8fc}
 *Goal:* Map the National Registry of Certified Legal Practitioners’ XSD schema and XML data into SEMIC’s Core Business Vocabulary.
 
@@ -517,7 +517,7 @@ This business case translates into the following *use case specification*, which
 
 
 [[sec:uc2.2-guidline]]
-=== Guidelines for Mapping an Existing XSD Schema to a Core Vocabulary
+=== Guidelines for Mapping an Existing XSD schema to a Core Vocabulary
 
 This section provides detailed instructions for addressing use case xref:introduction.adoc#sec:uc22[UC2.2].
 
@@ -525,12 +525,12 @@ To create an XSD mapping, one needs to decide on the purpose and level of specif
 
 In this section we describe the procedures to follow, which vary by selected material and ultimate goal in the broader context. The diagram below depicts the general process to create an XSD Schema mapping and corresponding XML mappings, which is described afterwards.
 
-.Overview of the guidelines for Mapping an Existing XSD Schema
+.Overview of the guidelines for Mapping an Existing XSD schema
 image::UC2.2.png[]
 
 The main procedure consists of four phases:
 
-. *Staging*:** **to understand the XSD Schema and prepare test data, to ensure any preparations are completed before the mapping process;
+. *Staging*:** **to understand the XSD schema and prepare test data, to ensure any preparations are completed before the mapping process;
 . *Map the XSD schema* to the Core Vocabulary, for which there are two options:
 .. Map the schema to the CV in its native format, which is the main scenario;
 .. Map the schema to the XSD version of the CV, if such an XSD file is available;
@@ -663,7 +663,7 @@ The tables below show two examples of mapping the organisation's address, city a
 |*Target Class Path*|org:Organization / locn:Address / rdf:PlainLiteral
 |===
 
-*Inputs*: XSD Schemas, Ontologies, SHACL Data Shapes, Source and Target Documentation, Sample XML data. Both vocabulary and profile mappings are typically crafted and validated by domain experts, data-savvy business stakeholders, and in collaboration with semantic engineers and CV experts. +
+*Inputs*: XSD schemas, Ontologies, SHACL Data Shapes, Source and Target Documentation, Sample XML data. Both vocabulary and profile mappings are typically crafted and validated by domain experts, data-savvy business stakeholders, and in collaboration with semantic engineers and CV experts. +
 *Outputs*: Conceptual Mapping documented in, e.g., a spreadsheet.
 
 
@@ -795,9 +795,9 @@ We ensure that the XML data contains relevant elements, such as `<LegalEntity>`,
 <LegalName xml:lang="nl">Belgisch Comite voor UNICEF</LegalName>
 ----
 
-==== Phase 2: Map XSD Schema elements to XSD of the CV
+==== Phase 2: Map XSD Schema elements to the XSD of the CV
 
-*Mapping XSD to CV Terms*
+*Mapping XSD elements to CV Terms*
 
 In this step, we map each XSD element/type to  Class or Property. These mappings often follow patterns like:
 
@@ -859,7 +859,7 @@ We will create a conceptual mapping between the XSD elements and RDF terms from 
 * *Application Profile Level Mapping*: At this level, you use *XPath* expressions to extract specific data from the XML structure, ensuring a more precise mapping to the Core Vocabulary.
 ** Example: Mapping the address fields from the XML to a specific property, such as [.custom-highlight]#locn:postCode# or [.custom-highlight]#locn:postName#. In both cases, the target is declared in two components: the target property path and the target class path, to ensure it is mapped in the right context. For instance, a [.custom-highlight]#locn:postName# of a legal entity may well have different components compared to a [.custom-highlight]#locn:postName# of the address of a physical building.
 
-Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD Schema specification) an instance of that contact point:
+Conceptually, we thus map between the same things across the files, as illustrated in the following figure, which links the XSD element `ContactPoint` (highlighted with a green oval) to the [.custom-highlight]#cv:ContactPoint# that, in turn, makes the contact point of the data (that adheres to the XSD schema specification) an instance of that contact point:
 
 .Visualisation of an orchestration of mappings between the XSD schema, its XML file compliant with it, and the CV
 image::snippetCBV.png[]
@@ -988,6 +988,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
