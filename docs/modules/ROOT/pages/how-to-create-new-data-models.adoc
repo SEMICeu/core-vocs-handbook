@@ -109,7 +109,7 @@ Adopting Venetian Blind pattern reduces the variability in its application and d
 
 On the other hand, the *Garden of Eden pattern* allows for multiple global elements, providing various entry points into the XML document. This pattern accommodates ontologies where no single class is inherently central, mirroring the flexibility of graph representations in ontologies that do not have a strict hierarchical starting point.
 
-Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as NIEM [xref:references.adoc#ref-82[niem]] and UBL [xref:references.adoc#ref-47[ubl]], which recommend such flexibility for broader applicability and ease of information representation.
+Adopting the Garden of Eden pattern provides a less constrained approach, enabling users to represent information starting from different elements that may hold significance in different contexts. This approach has been adopted by standardisation initiatives such as NIEM [xref:references.adoc#ref-46[niem]] and UBL [xref:references.adoc#ref-47[ubl]], which recommend such flexibility for broader applicability and ease of information representation.
 
 However, the Garden of Eden pattern does not lead to a schema that can be used in final application scenarios, because it does not ensure a single stable document structure but leaves the possibility for variations. This schema pattern requires an additional composition specification. For example, if it is used in a SOAP API [xref:references.adoc#ref-48[soap-api]], the developers can decide on using multiple starting points to facilitate exchange of granular messages specific per API endpoint. This way the XSD schema remains reusable for different API endpoints and even API implementations.
 
@@ -741,6 +741,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
