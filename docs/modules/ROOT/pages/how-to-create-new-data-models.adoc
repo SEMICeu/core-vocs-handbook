@@ -74,7 +74,7 @@ This section provides detailed instructions for addressing use case xref:introdu
 This is visualised in the following figure, together with key tasks and suggestions.
 
 .Overview of the guidelines to create a new XSD schema
-image::UC1.1.png[]
+image::UC1.1.png[width=500]
 
 
 ==== Phase 1: Import or define elements
@@ -409,7 +409,7 @@ The three key phases are:
 This is visualised in the following figure, together with key tasks and suggestions.
 
 .Overview of the guidelines to create a new JSON-LD context definition
-image::UC1.2.png[]
+image::UC1.2.png[width=520]
 
 ==== Phase 1: Import or define elements
 
@@ -741,6 +741,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
