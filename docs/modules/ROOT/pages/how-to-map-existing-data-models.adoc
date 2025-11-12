@@ -630,7 +630,7 @@ After completing either Phase 2-i or 2-ii, one may proceed to Phase 3, if applic
 Drilling down into Phase 3 of the overall procedure, we identify three steps, as shown in the figure below.
 
 .Overview of the subprocess of transforming XML into CV elements
-image::xmlTOcv.png[]
+image::xmlTOcv.png[width=520]
 
 *Transforming the XML data to the Core Vocabulary by means of mappings* consists of:
 
@@ -988,6 +988,7 @@ Once the mappings are validated, the next step is to disseminate the project wit
 * Technical Mapping Files: These include the RML or code for data transformation, which were developed in Phase 3.
 * Test Data: The representative set of XML files for testing the mappings that were created in Phase 1.
 * Validation Reports: The SPARQL and SHACL validation results obtained from Phase 4.
+
 
 
 
