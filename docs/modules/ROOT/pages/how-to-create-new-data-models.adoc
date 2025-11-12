@@ -22,7 +22,7 @@ Each model type has its business case providing a rationale why one would want t
 
 
 [[sec:create-a-new-xsd-schema]]
-== Create a new XSD Schema from a Core Vocabulary (UC1.1)
+== Create a new XSD schema from a Core Vocabulary (UC1.1)
 
 [[sec:uc1.1-description]]
 === Use case description
@@ -159,7 +159,7 @@ Creating an *XSD schema* using the *Core Business Vocabulary* *(CBV)* involves d
 To recap the process, we first will import or define elements, shape the structure with patterns, define complex types, and finalise the schema.
 
 
-==== Phase 1: Import or Define Elements
+==== Phase 1: Import or define elements
 
 
 *Managing Imports and Namespaces*
@@ -208,7 +208,7 @@ For example, the [.custom-highlight]#LegalEntity# element could be defined as fo
 
 Make sure you declare the correct namespace (e.g., http://example.com/) for all these custom elements.
 
-==== Phase 2: Shape XML Document Structure with Patterns
+==== Phase 2: Shape the XML document structure with patterns
 
 At this phase, we focus on structuring the XML document using appropriate XML Schema Design Patterns [xref:references.adoc#ref-44[dsg-ptr]]. The *Venetian Blind* and *Garden of Eden* patterns are two methods for organizing the schema.
 
@@ -341,7 +341,7 @@ Adding *annotations* and *documentation* to each complex type and element helps 
 </xs:complexType>
 ----
 
-==== Phase 3: Validation and Best Practices
+==== Phase 3: Validation and best practices
 
 
 Finally, test your new schema by validating *sample XML documents* using *XML validation tools* (e.g., https://www.xmlvalidation.com/[XMLValidation]) to ensure that the schema is syntactically correct and works as expected. The Core Business Vocabulary (CBV) follows several best practices and validation https://github.com/SEMICeu/XML-schema/blob/main/rules/rules.md[rules] to maintain consistency, clarity, and reusability across schemas. These rules include naming conventions, documentation standards, and structural rules.
@@ -741,6 +741,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
