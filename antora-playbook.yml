@@ -9,9 +9,10 @@ antora:
 
 content:
   sources:
-    - url: https://github.com/SEMICeu/core-vocs-handbook
-      branches: [ main, develop ]
-      start_path: docs
+   - url: .
+     start_path: docs
+     branches: HEAD
+
 
 ui:
   bundle:
