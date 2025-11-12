@@ -22,7 +22,7 @@ Each model type has its business case providing a rationale why one would want t
 
 
 [[sec:create-a-new-xsd-schema]]
-== Create a new XSD schema from a Core Vocabulary (UC1.1)
+== Create a new XSD Schema from a Core Vocabulary (UC1.1)
 
 [[sec:uc1.1-description]]
 === Use case description
@@ -60,7 +60,7 @@ The business case translates into the following *use case specification*, which 
 
 |===
 
-Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
+Having established the who, what, and why, the next step is _how_ to accomplish this. An established guideline of good practice for XSD Schema development from a vocabulary is consulted to guide the process. This guideline is described in the next section.
 
 [[sec:uc1.1-guideline]]
 === Guidelines to create a new XSD schema
@@ -87,7 +87,7 @@ The imported elements are then employed in the definition of a specific document
 
 In cases where the Core Vocabulary does not provide an XSD schema, it is necessary to create the XML element definitions in the new XSD schema corresponding to the reused URIs. Crucially, these new elements must adhere to the namespace defined by the Core Vocabulary to maintain consistency; for the Core Vocabularies, they must be defined within the http://data.europa.eu/m8g/%E2%80%9D[http://data.europa.eu/m8g/] namespace. 
 
-Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the Core Vocabulary’s data shape—specifically, which properties are optional and which are mandatory–within the XSD schema element definitions.
+Furthermore, when integrating these elements into a new schema, it is essential to reflect the constraints from the Core Vocabulary’s data shape—specifically, which properties are optional and which are mandatory–within the XSD Schema element definitions.
 
 [NOTE]
 ====
@@ -165,7 +165,7 @@ To recap the process, we first will import or define elements, shape the structu
 *Managing Imports and Namespaces*
 
 
-In XML schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
+In XML Schema development, managing *imports* and *namespaces* is crucial to ensure that elements from external vocabularies are reused and integrated consistently. This step ensures that the schema obtains and maintains semantics, will be *reusable*, and is correctly aligned with the Core Business Vocabulary (CBV). +
 For example, CBV comes with https://github.com/SEMICeu/XML-schema/tree/main/models/CoreVoc_Business[its own XSD schema], the following import statement imports all definitions related to CBV elements into your XSD schema (explained afterwards):
 
 [source,xml]
@@ -325,7 +325,7 @@ It’s important to observe that in this context, [.custom-highlight]#LegalEntit
 </xs:complexType>
 ----
 
-*Finalise the XSD Schema*
+*Finalise the XSD schema*
 
 Adding *annotations* and *documentation* to each complex type and element helps to clarify their purpose and improve the readability of the schema. For instance:
 
@@ -741,6 +741,7 @@ _How to resolve the error_
 
 
 Ensure that the `@import` URLs point to valid and accessible JSON-LD contexts. Verify the links in a browser or test them in a https://curl.se/[cURL] command to ensure they return the correct JSON-LD data  (cURL is used in command lines or scripts to transfer data). Update the URLs to the correct ones.
+
 
 
 
