@@ -7,7 +7,7 @@ The additional business and use cases are depicted in the diagram below and brie
 image::AdditionalUCs1.png[]
 
 [[sec:uc2.3]]
-== UC2.3: Map an existing JSON Schema to a Core Vocabulary
+== UC2.3: Map an existing JSON schema to a Core Vocabulary
 
 
 A concrete user story can be formulated as follows: +
@@ -19,16 +19,16 @@ To generalise from that to include other possible scenarios, we obtain the follo
 [[sec:uc23]]
 |===
 |{set:cellbgcolor: #a8c6f7}
-*Use Case UC2.3: Map an existing JSON Schema to a Core Vocabulary*
+*Use Case UC2.3: Map an existing JSON schema to a Core Vocabulary*
 
 |{set:cellbgcolor: #f5f8fc}
-*Goal:* Define data transformation rules from an JSON schema to terms from Core Vocabularies. Create a mapping of JSON data that was created according to an existing JSON schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
+*Goal:* Define data transformation rules from a JSON schema to terms from Core Vocabularies. Create a mapping of JSON data that was created according to an existing JSON schema to an RDF representation that conforms to a Core Vocabulary for formal data transformation.
 
 *Primary Actors:* Semantic Engineer
 
 *Actors:* Domain Expert, Business Analyst, Software Engineer
 
-*Description:* The goal is to create a formal mapping using Semantic Web technology (e.g., RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in an JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
+*Description:* The goal is to create a formal mapping using Semantic Web technology (e.g., RML or other languages), to allow automated translation of JSON data conforming to a certain JSON schema, to RDF data expressed in terms defined in one or more SEMIC Core Vocabularies. Such activity can be done by semantic engineers, based on input from domain experts and/or business analysts, who can assist with the creation of a conceptual mapping. The conceptual mapping is usually used as the basis for the formal mapping. The conceptual mapping can be a simple correspondence table associating the JSON data model elements defined in a JSON schema, to terms defined in one or more SEMIC Core Vocabularies. In some cases the creation of the conceptual mapping can be done by the semantic engineers themselves, or even by the software engineers building information exchange systems.
 |===
 
 [[sec:uc3]]
@@ -172,6 +172,7 @@ A concrete user story can be formulated as follows. +
 
 
 '''
+
 
 
 
