@@ -17,14 +17,28 @@
 }
 
 .doc .sidebarblock {
-    background-color: #fdfdfd;
-    border-top: 2px solid #e0dede;
-    border-bottom: 2px solid #e0dede;
-    padding: 1em 2em;
-    margin: 1em 3em 1em;
-    border-radius: 0;
+  background-color: #fdfdfd;
+  border-top: 2px solid #e0dede;
+  border-bottom: 2px solid #e0dede;
+  padding: 1em 2em;
+  margin: 1em 3em 1em;
+  border-radius: 0;
 }
 
 .indentation {
     margin-left: 3.5em;
+}
+
+
+.doc h4 {
+  font-size: 1.1em;
+}
+
+.doc h5 {
+  font-size: 1.1em;
+}
+
+.doc h6 {
+  font-size: 0.98em;
+  font-weight: 450;
 }
