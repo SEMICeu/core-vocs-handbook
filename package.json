@@ -1,7 +1,7 @@
 {
   "name": "handbook",
   "version": "2.0.0",
-  "description": "[Core Vocabularies Handbook](https://semiceu.github.io/core-vocs-handbook/public-review/index.html)",
+  "description": "[Core Vocabularies Handbook](https://semiceu.github.io/core-vocs-handbook/2.0.0/index.html)",
   "main": "index.js",
   "directories": {
     "doc": "docs"
