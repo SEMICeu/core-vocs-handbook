@@ -1,6 +1,6 @@
 site:
   title: SEMIC
-  start_page: ROOT::index.adoc
+  start_page: 2.0.0@ROOT::index.adoc
 
 antora:
   extensions:
